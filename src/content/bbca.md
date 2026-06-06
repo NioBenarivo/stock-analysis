@@ -12,6 +12,7 @@ metrics:
     label: CASA Ratio (%)
     type: area
     unit: '%'
+    dualWith: casa_balance
     data:
       - { year: 2015, value: 75.8 }
       - { year: 2016, value: 76.3 }
@@ -23,6 +24,37 @@ metrics:
       - { year: 2022, value: 80.6 }
       - { year: 2023, value: 80.1 }
       - { year: 2024, value: 81.5 }
+      - { period: "Q1 2023", value: 79.8 }
+      - { period: "Q2 2023", value: 80.0 }
+      - { period: "Q3 2023", value: 80.2 }
+      - { period: "Q4 2023", value: 80.1 }
+      - { period: "Q1 2024", value: 81.0 }
+      - { period: "Q2 2024", value: 81.3 }
+      - { period: "Q3 2024", value: 81.4 }
+      - { period: "Q4 2024", value: 81.5 }
+  - id: casa_balance
+    label: CASA Balance
+    type: area
+    unit: 'Rp(B)'
+    data:
+      - { year: 2015, value: 345000 }
+      - { year: 2016, value: 378000 }
+      - { year: 2017, value: 420000 }
+      - { year: 2018, value: 453000 }
+      - { year: 2019, value: 503000 }
+      - { year: 2020, value: 614000 }
+      - { year: 2021, value: 718000 }
+      - { year: 2022, value: 748000 }
+      - { year: 2023, value: 768000 }
+      - { year: 2024, value: 799000 }
+      - { period: "Q1 2023", value: 755000 }
+      - { period: "Q2 2023", value: 760000 }
+      - { period: "Q3 2023", value: 763000 }
+      - { period: "Q4 2023", value: 768000 }
+      - { period: "Q1 2024", value: 780000 }
+      - { period: "Q2 2024", value: 787000 }
+      - { period: "Q3 2024", value: 792000 }
+      - { period: "Q4 2024", value: 799000 }
   - id: npl_ratio
     label: NPL Ratio (%)
     type: line
@@ -83,6 +115,14 @@ metrics:
       - { year: 2022, value: 3.0 }
       - { year: 2023, value: 3.4 }
       - { year: 2024, value: 3.5 }
+      - { period: "Q1 2023", value: 3.2 }
+      - { period: "Q2 2023", value: 3.3 }
+      - { period: "Q3 2023", value: 3.4 }
+      - { period: "Q4 2023", value: 3.4 }
+      - { period: "Q1 2024", value: 3.4 }
+      - { period: "Q2 2024", value: 3.5 }
+      - { period: "Q3 2024", value: 3.5 }
+      - { period: "Q4 2024", value: 3.6 }
 ---
 
 ## Thesis
@@ -95,8 +135,9 @@ The bank's technology infrastructure (myBCA, Sakuku, Halo BCA) has kept it ahead
 
 BBCA's CASA ratio has remained above 75% for the entire decade. This is the single most important competitive advantage in Indonesian banking. CASA = cheap, stable funding. Peers like BMRI and BBRI hover in the 55–65% range.
 
-```chart
-casa_ratio
+```dual
+percent: casa_ratio
+nominal: casa_balance
 ```
 
 The implication: when rates rise, BBCA's cost of funds barely moves while loan yields reset upward — a structural tailwind to NIM that peers simply cannot match.

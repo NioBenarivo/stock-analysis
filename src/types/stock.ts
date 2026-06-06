@@ -11,7 +11,8 @@ export interface Metric {
   id: string
   label: string
   type: ChartType
-  unit: string     // '%', 'IDR T', 'x', etc.
+  unit: string        // '%', 'Rp(B)', 'x', etc.
+  dualWith?: string   // id of a paired metric for the % ↔ nominal toggle
   data: MetricDataPoint[]
 }
 

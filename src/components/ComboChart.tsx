@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BarChart2, Table } from 'lucide-react'
+import { BarChart2, Table, Maximize2 } from 'lucide-react'
 import {
   ResponsiveContainer,
   ComposedChart,
@@ -10,12 +10,13 @@ import {
   Tooltip,
   CartesianGrid,
   Legend,
+  LabelList,
 } from 'recharts'
 import type { Metric } from '../types/stock'
 import { useIsDark } from '../hooks/useIsDark'
 import { fmtValue, fmtTick } from '../utils/format'
-
-const COLORS = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6']
+import { METRIC_COLOR_LIST, resolveColor } from '../utils/colors'
+import FullscreenModal from './FullscreenModal'
 
 function CustomTooltip({
   active,
@@ -55,6 +56,7 @@ interface Props {
 
 export default function ComboChart({ leftMetrics, rightMetrics }: Props) {
   const [view, setView] = useState<'chart' | 'table'>('chart')
+  const [fullscreen, setFullscreen] = useState(false)
   const isDark = useIsDark()
 
   const tick = isDark ? '#64748b' : '#94a3b8'
@@ -78,24 +80,19 @@ export default function ComboChart({ leftMetrics, rightMetrics }: Props) {
   const leftIds = leftMetrics.map((m) => m.id)
 
   return (
-    <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800 p-5 shadow-md shadow-slate-200/60 dark:shadow-none">
+    <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800 p-3 shadow-md shadow-slate-200/60 dark:shadow-none">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-3 text-xs text-slate-400 dark:text-slate-500">
           {leftMetrics.length > 0 && <span>Left: {leftUnit}</span>}
           {rightMetrics.length > 0 && <span>Right: {rightUnit}</span>}
         </div>
-        <div className="flex items-center gap-0.5 bg-slate-100 dark:bg-slate-800 rounded-lg p-0.5">
-          <button
-            onClick={() => setView('chart')}
-            className={`p-1.5 rounded-md transition-colors ${view === 'chart' ? 'bg-white dark:bg-slate-700 shadow-sm text-slate-700 dark:text-white' : 'text-slate-400 hover:text-slate-600 dark:hover:text-slate-300'}`}
-          >
-            <BarChart2 className="w-3.5 h-3.5" />
-          </button>
-          <button
-            onClick={() => setView('table')}
-            className={`p-1.5 rounded-md transition-colors ${view === 'table' ? 'bg-white dark:bg-slate-700 shadow-sm text-slate-700 dark:text-white' : 'text-slate-400 hover:text-slate-600 dark:hover:text-slate-300'}`}
-          >
-            <Table className="w-3.5 h-3.5" />
+        <div className="flex items-center gap-1.5">
+          <div className="flex items-center gap-0.5 bg-slate-100 dark:bg-slate-800 rounded-lg p-0.5">
+            <button onClick={() => setView('chart')} className={`p-1.5 rounded-md transition-colors ${view === 'chart' ? 'bg-white dark:bg-slate-700 shadow-sm text-slate-700 dark:text-white' : 'text-slate-400 hover:text-slate-600 dark:hover:text-slate-300'}`}><BarChart2 className="w-3.5 h-3.5" /></button>
+            <button onClick={() => setView('table')} className={`p-1.5 rounded-md transition-colors ${view === 'table' ? 'bg-white dark:bg-slate-700 shadow-sm text-slate-700 dark:text-white' : 'text-slate-400 hover:text-slate-600 dark:hover:text-slate-300'}`}><Table className="w-3.5 h-3.5" /></button>
+          </div>
+          <button onClick={() => setFullscreen(true)} className="p-1.5 rounded-md text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+            <Maximize2 className="w-3.5 h-3.5" />
           </button>
         </div>
       </div>
@@ -129,45 +126,42 @@ export default function ComboChart({ leftMetrics, rightMetrics }: Props) {
           </table>
         </div>
       ) : (
-        <ResponsiveContainer width="100%" height={260}>
-          <ComposedChart data={data} margin={{ top: 4, right: 8, bottom: 0, left: 0 }}>
-            <CartesianGrid strokeDasharray="3 3" stroke={grid} vertical={false} />
-            <XAxis
-              dataKey="year"
-              tick={{ fontSize: 11, fill: tick }}
-              tickLine={false}
-              axisLine={false}
-            />
-            <YAxis
-              yAxisId="left"
-              tick={{ fontSize: 11, fill: tick }}
-              tickLine={false}
-              axisLine={false}
-              tickFormatter={(v) => fmtTick(v, leftUnit)}
-              width={60}
-              domain={['auto', 'auto']}
-            />
-            <YAxis
-              yAxisId="right"
-              orientation="right"
-              tick={{ fontSize: 11, fill: tick }}
-              tickLine={false}
-              axisLine={false}
-              tickFormatter={(v) => fmtTick(v, rightUnit)}
-              width={60}
-              domain={['auto', 'auto']}
-            />
-            <Tooltip content={<CustomTooltip leftUnit={leftUnit} rightUnit={rightUnit} leftIds={leftIds} isDark={isDark} />} />
-            <Legend iconType="circle" iconSize={8} wrapperStyle={{ fontSize: 12, paddingTop: 12, color: isDark ? '#94a3b8' : '#64748b' }} />
-            {leftMetrics.map((m, i) => (
-              <Bar key={m.id} yAxisId="left" dataKey={m.id} name={m.label} fill={COLORS[i % COLORS.length]} radius={[3, 3, 0, 0]} />
-            ))}
-            {rightMetrics.map((m, i) => (
-              <Line key={m.id} yAxisId="right" type="monotone" dataKey={m.id} name={m.label} stroke={COLORS[(leftMetrics.length + i) % COLORS.length]} strokeWidth={2} dot={false} activeDot={{ r: 4, strokeWidth: 0 }} />
-            ))}
-          </ComposedChart>
-        </ResponsiveContainer>
+        renderChart(260)
+      )}
+
+      {fullscreen && (
+        <FullscreenModal title={[...leftMetrics, ...rightMetrics].map((m) => m.label).join(' + ')} onClose={() => setFullscreen(false)}>
+          {renderChart(480)}
+        </FullscreenModal>
       )}
     </div>
   )
+
+  function renderChart(h: number) {
+    return (
+      <ResponsiveContainer width="100%" height={h}>
+        <ComposedChart data={data} margin={{ top: 24, right: 48, bottom: 0, left: 0 }}>
+          <CartesianGrid strokeDasharray="3 3" stroke={grid} vertical={false} />
+          <XAxis dataKey="year" tick={{ fontSize: 11, fill: tick }} tickLine={false} axisLine={false} interval={0} />
+          <YAxis yAxisId="left" tick={{ fontSize: 11, fill: tick }} tickLine={false} axisLine={false} tickFormatter={(v) => fmtTick(v, leftUnit === '%' ? '%' : '')} width={40} domain={['auto', 'auto']} />
+          <YAxis yAxisId="right" orientation="right" tick={{ fontSize: 11, fill: tick }} tickLine={false} axisLine={false} tickFormatter={(v) => fmtTick(v, rightUnit === '%' ? '%' : '')} width={40} domain={['auto', 'auto']} />
+          <Tooltip content={<CustomTooltip leftUnit={leftUnit} rightUnit={rightUnit} leftIds={leftIds} isDark={isDark} />} />
+          <Legend iconType="circle" iconSize={8} wrapperStyle={{ fontSize: 12, paddingTop: 12, color: isDark ? '#94a3b8' : '#64748b' }} />
+          {leftMetrics.map((m, i) => (
+            <Bar key={m.id} yAxisId="left" dataKey={m.id} name={m.label} fill={resolveColor(m.color, METRIC_COLOR_LIST[i % METRIC_COLOR_LIST.length])} radius={[3, 3, 0, 0]}>
+              <LabelList dataKey={m.id} position="top" offset={6} formatter={(v) => fmtTick(Number(v), leftUnit === '%' ? '%' : '')} style={{ fontSize: 10, fill: tick, fontWeight: 500 }} />
+            </Bar>
+          ))}
+          {rightMetrics.map((m, i) => {
+            const color = resolveColor(m.color, METRIC_COLOR_LIST[(leftMetrics.length + i) % METRIC_COLOR_LIST.length])
+            return (
+              <Line key={m.id} yAxisId="right" type="monotone" dataKey={m.id} name={m.label} stroke={color} strokeWidth={2} dot={{ r: 3, fill: color, strokeWidth: 0 }} activeDot={{ r: 4, strokeWidth: 0 }}>
+                <LabelList dataKey={m.id} position="top" offset={8} formatter={(v) => fmtTick(Number(v), rightUnit === '%' ? '%' : '')} style={{ fontSize: 10, fill: color, fontWeight: 500 }} />
+              </Line>
+            )
+          })}
+        </ComposedChart>
+      </ResponsiveContainer>
+    )
+  }
 }

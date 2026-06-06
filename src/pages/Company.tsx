@@ -5,13 +5,13 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { getAnalysis, analyses } from '../data/content'
 import type { Metric, StockAnalysis } from '../types/stock'
+import { METRIC_COLOR_LIST } from '../utils/colors'
 import Layout from '../components/Layout'
 import MetricChart from '../components/MetricChart'
 import ComparisonChart from '../components/ComparisonChart'
 import ComboChart from '../components/ComboChart'
 import DualMetricChart from '../components/DualMetricChart'
-
-const METRIC_COLORS = ['#3b82f6', '#8b5cf6', '#f59e0b', '#10b981', '#ef4444']
+import StackedBarChart from '../components/StackedBarChart'
 
 function CompanyLogo({ domain, ticker }: { domain: string; ticker: string }) {
   const [failed, setFailed] = useState(false)
@@ -49,7 +49,7 @@ function makeCodeRenderer(metrics: Metric[] | undefined, allAnalyses: StockAnaly
       if (metric) {
         return (
           <div className="not-prose my-6">
-            <MetricChart metric={metric} color={METRIC_COLORS[colorIndex % METRIC_COLORS.length]} />
+            <MetricChart metric={metric} color={METRIC_COLOR_LIST[colorIndex % METRIC_COLOR_LIST.length]} />
           </div>
         )
       }
@@ -85,6 +85,18 @@ function makeCodeRenderer(metrics: Metric[] | undefined, allAnalyses: StockAnaly
         return (
           <div className="not-prose my-6">
             <ComboChart leftMetrics={leftMetrics} rightMetrics={rightMetrics} />
+          </div>
+        )
+      }
+    }
+
+    if (lang === 'stack' && metrics) {
+      const ids = content.split('\n').map((s) => s.trim()).filter(Boolean)
+      const stackMetrics = ids.map((id) => metrics.find((m) => m.id === id)).filter((m): m is Metric => m !== undefined)
+      if (stackMetrics.length > 0) {
+        return (
+          <div className="not-prose my-6">
+            <StackedBarChart metrics={stackMetrics} />
           </div>
         )
       }

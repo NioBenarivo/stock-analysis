@@ -24,6 +24,6 @@ export function fmtTick(value: number, unit: string): string {
   } else {
     compact = String(value)
   }
-  if (u === '%') return `${compact}%`
+  if (u === '%') return `${Math.round(value)}%`
   return u ? `${compact} ${u}` : compact
 }

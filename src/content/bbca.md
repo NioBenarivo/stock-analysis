@@ -8,121 +8,165 @@ visibility: public
 title: Indonesia's Premier Franchise Bank
 subtitle: CASA dominance and best-in-class asset quality make BBCA a compounding machine
 metrics:
-  - id: casa_ratio
-    label: CASA Ratio (%)
-    type: area
-    unit: '%'
-    dualWith: casa_balance
-    data:
-      - { year: 2015, value: 75.8 }
-      - { year: 2016, value: 76.3 }
-      - { year: 2017, value: 77.1 }
-      - { year: 2018, value: 76.5 }
-      - { year: 2019, value: 77.2 }
-      - { year: 2020, value: 79.4 }
-      - { year: 2021, value: 81.2 }
-      - { year: 2022, value: 80.6 }
-      - { year: 2023, value: 80.1 }
-      - { year: 2024, value: 81.5 }
-      - { period: "Q1 2023", value: 79.8 }
-      - { period: "Q2 2023", value: 80.0 }
-      - { period: "Q3 2023", value: 80.2 }
-      - { period: "Q4 2023", value: 80.1 }
-      - { period: "Q1 2024", value: 81.0 }
-      - { period: "Q2 2024", value: 81.3 }
-      - { period: "Q3 2024", value: 81.4 }
-      - { period: "Q4 2024", value: 81.5 }
-  - id: casa_balance
-    label: CASA Balance
-    type: area
-    unit: 'Rp(B)'
-    data:
-      - { year: 2015, value: 345000 }
-      - { year: 2016, value: 378000 }
-      - { year: 2017, value: 420000 }
-      - { year: 2018, value: 453000 }
-      - { year: 2019, value: 503000 }
-      - { year: 2020, value: 614000 }
-      - { year: 2021, value: 718000 }
-      - { year: 2022, value: 748000 }
-      - { year: 2023, value: 768000 }
-      - { year: 2024, value: 799000 }
-      - { period: "Q1 2023", value: 755000 }
-      - { period: "Q2 2023", value: 760000 }
-      - { period: "Q3 2023", value: 763000 }
-      - { period: "Q4 2023", value: 768000 }
-      - { period: "Q1 2024", value: 780000 }
-      - { period: "Q2 2024", value: 787000 }
-      - { period: "Q3 2024", value: 792000 }
-      - { period: "Q4 2024", value: 799000 }
-  - id: npl_ratio
-    label: NPL Ratio (%)
-    type: line
-    unit: '%'
-    data:
-      - { year: 2015, value: 0.7 }
-      - { year: 2016, value: 1.3 }
-      - { year: 2017, value: 1.5 }
-      - { year: 2018, value: 1.4 }
-      - { year: 2019, value: 1.3 }
-      - { year: 2020, value: 1.8 }
-      - { year: 2021, value: 2.4 }
-      - { year: 2022, value: 1.7 }
-      - { year: 2023, value: 1.4 }
-      - { year: 2024, value: 1.1 }
-  - id: credit_growth
-    label: Loan Growth YoY (%)
+  # THIRD PARTY FUND (DPK)
+  - id: dpk
+    label: Third Party Fund
     type: bar
-    unit: '%'
+    unit: 'Rp(Tn)'
     data:
-      - { year: 2015, value: 12.9 }
-      - { year: 2016, value: 10.6 }
-      - { year: 2017, value: 11.2 }
-      - { year: 2018, value: 14.7 }
-      - { year: 2019, value: 8.8 }
-      - { year: 2020, value: 3.5 }
-      - { year: 2021, value: 10.0 }
-      - { year: 2022, value: 11.5 }
-      - { year: 2023, value: 14.7 }
-      - { year: 2024, value: 13.8 }
-  - id: nim
-    label: Net Interest Margin (%)
+      - { year: 2015, value: 474 }
+      - { year: 2016, value: 530 }
+      - { year: 2017, value: 581 }
+      - { year: 2018, value: 630 }
+      - { year: 2019, value: 705 }
+      - { year: 2020, value: 841 }
+      - { year: 2021, value: 976 }
+      - { year: 2022, value: 1040 }
+      - { year: 2023, value: 1102 }
+      - { year: 2024, value: 1134 }
+      - { year: 2025, value: 1249 }
+
+  # CASA RATIO
+  - id: casa_ratio
+    label: CASA Ratio
+    type: area
+    unit: '%'
+    dualWith: casa
+    formula: "casa / dpk * 100"
+  
+  # CASA STACK DEPOSIT
+  - id: casa_stack_deposit
+    label: DPK Composition
+    type: bar
+    unit: 'Rp(Tn)'
+    stackWith: [casa, time_deposit]
+
+  # CASA
+  - id: casa
+    label: CASA
+    type: area
+    unit: 'Rp(Tn)'
+    data:
+      - { year: 2015, value: 361 }
+      - { year: 2016, value: 408 }
+      - { year: 2017, value: 443 }
+      - { year: 2018, value: 483 }
+      - { year: 2019, value: 532 }
+      - { year: 2020, value: 644 }
+      - { year: 2021, value: 767 }
+      - { year: 2022, value: 848 }
+      - { year: 2023, value: 885 }
+      - { year: 2024, value: 924 }
+      - { year: 2025, value: 1045 }
+      # 2021
+      - { period: "Q1 2021", value: 656 }
+      - { period: "Q2 2021", value: 697 }
+      - { period: "Q3 2021", value: 722 }
+      - { period: "Q4 2021", value: 767 }
+      # 2022
+      - { period: "Q1 2022", value: 798 }
+      - { period: "Q2 2022", value: 818 }
+      - { period: "Q3 2022", value: 830 }
+      - { period: "Q4 2022", value: 848 }
+      # 2023 
+      - { period: "Q1 2023", value: 843 }
+      - { period: "Q2 2023", value: 865 }
+      - { period: "Q3 2023", value: 870 }
+      - { period: "Q4 2023", value: 885 }
+      # 2024
+      - { period: "Q1 2024", value: 905 }
+      - { period: "Q2 2024", value: 915 }
+      - { period: "Q3 2024", value: 915 }
+      - { period: "Q4 2024", value: 924 }
+      # 2025
+      - { period: "Q1 2025", value: 979 }
+      - { period: "Q2 2025", value: 982 }
+      - { period: "Q3 2025", value: 999 }
+      - { period: "Q4 2025", value: 1045 }
+      # 2026
+      - { period: "Q1 2026", value: 1089 }
+
+  # TIME DEPOSIT RATIO
+  - id: time_deposit_ratio
+    label: Time Deposit Ratio
+    type: area
+    unit: '%'
+    dualWith: time_deposit
+    formula: "time_deposit / dpk * 100"
+
+  # TIME DEPOSIT
+  - id: time_deposit
+    label: Time Deposit
+    type: area
+    unit: 'Rp(Tn)'
+    data:
+      - { year: 2015, value: 108 }
+      - { year: 2016, value: 122 }
+      - { year: 2017, value: 137 }
+      - { year: 2018, value: 147 }
+      - { year: 2019, value: 173 }
+      - { year: 2020, value: 197 }
+      - { year: 2021, value: 209 }
+      - { year: 2022, value: 192 }
+      - { year: 2023, value: 217 }
+      - { year: 2024, value: 210 }
+      - { year: 2025, value: 204 }
+      # 2021
+      - { period: "Q1 2021", value: 194 }
+      - { period: "Q2 2021", value: 198 }
+      - { period: "Q3 2021", value: 202 }
+      - { period: "Q4 2021", value: 209 }
+      # 2022
+      - { period: "Q1 2022", value: 200 }
+      - { period: "Q2 2022", value: 193 }
+      - { period: "Q3 2022", value: 195 }
+      - { period: "Q4 2022", value: 192 }
+      # 2023 
+      - { period: "Q1 2023", value: 195 }
+      - { period: "Q2 2023", value: 207 }
+      - { period: "Q3 2023", value: 219 }
+      - { period: "Q4 2023", value: 217 }
+      # 2024
+      - { period: "Q1 2024", value: 216 }
+      - { period: "Q2 2024", value: 210 }
+      - { period: "Q3 2024", value: 210 }
+      - { period: "Q4 2024", value: 210 }
+      # 2025
+      - { period: "Q1 2025", value: 214 }
+      - { period: "Q2 2025", value: 208 }
+      - { period: "Q3 2025", value: 206 }
+      - { period: "Q4 2025", value: 204 }
+      # 2026
+      - { period: "Q1 2026", value: 203 }
+  
+
+  # CREDIT / LOAN
+  - id: loan_growth_pct
+    label: Loan YoY Growth
     type: line
     unit: '%'
+    color: 'indigo'
+    formula: "yoy(loan_value)"
+
+  - id: loan_value
+    label: Loan Value
+    type: bar
+    unit: 'Rp(Tn)'
+    color: 'orange'
+    comboWith: loan_growth_pct
     data:
-      - { year: 2015, value: 6.6 }
-      - { year: 2016, value: 6.8 }
-      - { year: 2017, value: 6.2 }
-      - { year: 2018, value: 6.1 }
-      - { year: 2019, value: 6.2 }
-      - { year: 2020, value: 5.7 }
-      - { year: 2021, value: 5.3 }
-      - { year: 2022, value: 5.3 }
-      - { year: 2023, value: 5.8 }
-      - { year: 2024, value: 5.6 }
-  - id: roa
-    label: Return on Assets (%)
-    type: line
-    unit: '%'
-    data:
-      - { year: 2015, value: 3.0 }
-      - { year: 2016, value: 3.1 }
-      - { year: 2017, value: 3.1 }
-      - { year: 2018, value: 3.1 }
-      - { year: 2019, value: 3.1 }
-      - { year: 2020, value: 2.6 }
-      - { year: 2021, value: 2.9 }
-      - { year: 2022, value: 3.0 }
-      - { year: 2023, value: 3.4 }
-      - { year: 2024, value: 3.5 }
-      - { period: "Q1 2023", value: 3.2 }
-      - { period: "Q2 2023", value: 3.3 }
-      - { period: "Q3 2023", value: 3.4 }
-      - { period: "Q4 2023", value: 3.4 }
-      - { period: "Q1 2024", value: 3.4 }
-      - { period: "Q2 2024", value: 3.5 }
-      - { period: "Q3 2024", value: 3.5 }
-      - { period: "Q4 2024", value: 3.6 }
+      - { year: 2015, value: 388 }
+      - { year: 2016, value: 416 }
+      - { year: 2017, value: 468 }
+      - { year: 2018, value: 538 }
+      - { year: 2019, value: 604 }
+      - { year: 2020, value: 589 }
+      - { year: 2021, value: 637 }
+      - { year: 2022, value: 711 }
+      - { year: 2023, value: 810 }
+      - { year: 2024, value: 922 }
+      - { year: 2025, value: 993 }
+      # 2026
 ---
 
 ## Thesis
@@ -137,7 +181,14 @@ BBCA's CASA ratio has remained above 75% for the entire decade. This is the sing
 
 ```dual
 percent: casa_ratio
-nominal: casa_balance
+nominal: casa
+```
+
+The DPK breakdown shows how CASA dominates the funding mix while time deposits remain a smaller, more expensive slice.
+
+```stack
+casa
+time_deposit
 ```
 
 The implication: when rates rise, BBCA's cost of funds barely moves while loan yields reset upward — a structural tailwind to NIM that peers simply cannot match.
@@ -154,8 +205,9 @@ npl_ratio
 
 Loan growth has been consistently strong, averaging ~11% per year over the decade. Consumer (mortgage and vehicle) and corporate lending are the main drivers. The 2020 dip was COVID-driven and quickly recovered.
 
-```chart
-credit_growth
+```combo
+left: loan_value
+right: loan_growth_pct
 ```
 
 ## Profitability

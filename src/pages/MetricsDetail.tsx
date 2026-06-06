@@ -1,11 +1,13 @@
 import { useParams, useNavigate } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
 import { getAnalysis } from '../data/content'
+import { METRIC_COLOR_LIST } from '../utils/colors'
 import Layout from '../components/Layout'
 import MetricChart from '../components/MetricChart'
 import DualMetricChart from '../components/DualMetricChart'
+import StackedBarChart from '../components/StackedBarChart'
+import ComboChart from '../components/ComboChart'
 
-const METRIC_COLORS = ['#3b82f6', '#8b5cf6', '#f59e0b', '#10b981', '#ef4444']
 
 export default function MetricsDetail() {
   const { id } = useParams<{ id: string }>()
@@ -47,17 +49,23 @@ export default function MetricsDetail() {
         {/* Charts grid */}
         <div className="grid grid-cols-2 gap-4 mb-8">
           {(() => {
-            // IDs that are the secondary half of a dual pair — rendered inside DualMetricChart, not standalone
             const secondaryIds = new Set(metrics.map((m) => m.dualWith).filter(Boolean))
+            const stackMemberIds = new Set(metrics.flatMap((m) => m.stackWith ?? []))
+            const comboLineIds = new Set(metrics.map((m) => m.comboWith).filter(Boolean))
             return metrics
-              .filter((m) => !secondaryIds.has(m.id))
+              .filter((m) => !secondaryIds.has(m.id) && !stackMemberIds.has(m.id) && !comboLineIds.has(m.id))
               .map((metric, i) => {
                 const paired = metric.dualWith ? metrics.find((m) => m.id === metric.dualWith) : undefined
-                return paired ? (
-                  <DualMetricChart key={metric.id} percentMetric={metric} nominalMetric={paired} />
-                ) : (
-                  <MetricChart key={metric.id} metric={metric} color={METRIC_COLORS[i % METRIC_COLORS.length]} />
-                )
+                if (paired) return <DualMetricChart key={metric.id} percentMetric={metric} nominalMetric={paired} />
+                if (metric.stackWith?.length) {
+                  const stackMetrics = metric.stackWith.map((id) => metrics.find((m) => m.id === id)).filter((m): m is typeof metric => m !== undefined)
+                  return <StackedBarChart key={metric.id} metrics={stackMetrics} />
+                }
+                if (metric.comboWith) {
+                  const lineMetric = metrics.find((m) => m.id === metric.comboWith)
+                  if (lineMetric) return <ComboChart key={metric.id} leftMetrics={[metric]} rightMetrics={[lineMetric]} />
+                }
+                return <MetricChart key={metric.id} metric={metric} color={METRIC_COLOR_LIST[i % METRIC_COLOR_LIST.length]} />
               })
           })()}
         </div>
@@ -82,7 +90,6 @@ function SummaryTable({ metrics, showFreqToggle }: { metrics: Metric[]; showFreq
           .sort((a, b) => Number(b) - Number(a))
       : [...new Set(metrics.flatMap((m) => m.data.filter((d) => d.period !== undefined).map((d) => d.period!)))]
           .sort((a, b) => {
-            // Sort "Q1 2024" style strings chronologically
             const [qa, ya] = a.split(' ')
             const [qb, yb] = b.split(' ')
             return Number(yb) - Number(ya) || qa.localeCompare(qb) * -1

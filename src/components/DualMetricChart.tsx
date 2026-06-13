@@ -2,10 +2,17 @@ import { useState } from 'react'
 import { BarChart2, Table, Maximize2 } from 'lucide-react'
 import {
   ResponsiveContainer,
-  LineChart, Line,
-  BarChart, Bar,
-  AreaChart, Area,
-  XAxis, YAxis, Tooltip, CartesianGrid, LabelList,
+  LineChart,
+  Line,
+  BarChart,
+  Bar,
+  AreaChart,
+  Area,
+  XAxis,
+  YAxis,
+  Tooltip,
+  CartesianGrid,
+  LabelList,
 } from 'recharts'
 import type { Metric } from '../types/stock'
 import { useIsDark } from '../hooks/useIsDark'
@@ -43,9 +50,11 @@ export default function DualMetricChart({ percentMetric, nominalMetric }: Props)
   const color = resolveColor(metric.color, unit === 'percent' ? COLORS[0] : COLORS[1])
 
   const effectiveFreq =
-    freq === 'periodic' && getPeriodic(metric).length === 0 ? 'annual'
-    : freq === 'annual' && getAnnual(metric).length === 0 ? 'periodic'
-    : freq
+    freq === 'periodic' && getPeriodic(metric).length === 0
+      ? 'annual'
+      : freq === 'annual' && getAnnual(metric).length === 0
+        ? 'periodic'
+        : freq
 
   const activeData = effectiveFreq === 'annual' ? getAnnual(metric) : getPeriodic(metric)
   const data = activeData.map((d) => ({ ...d, label: d.period ?? String(d.year) }))
@@ -67,7 +76,12 @@ export default function DualMetricChart({ percentMetric, nominalMetric }: Props)
   const axes = (
     <>
       <CartesianGrid strokeDasharray="3 3" stroke={grid} vertical={false} />
-      <XAxis dataKey="label" tick={{ fontSize: 11, fill: tick }} tickLine={false} axisLine={false} />
+      <XAxis
+        dataKey="label"
+        tick={{ fontSize: 11, fill: tick }}
+        tickLine={false}
+        axisLine={false}
+      />
       <YAxis
         tick={{ fontSize: 11, fill: tick }}
         tickLine={false}
@@ -94,7 +108,7 @@ export default function DualMetricChart({ percentMetric, nominalMetric }: Props)
       {metric.type === 'bar' ? (
         <BarChart {...shared}>
           {axes}
-          <Bar dataKey="value" fill={color} radius={[3, 3, 0, 0]} />
+          <Bar dataKey="value" fill={color} radius={[3, 3, 0, 0]} animationDuration={450} animationEasing="ease-out" />
         </BarChart>
       ) : metric.type === 'area' ? (
         <AreaChart {...shared}>
@@ -105,12 +119,33 @@ export default function DualMetricChart({ percentMetric, nominalMetric }: Props)
             </linearGradient>
           </defs>
           {axes}
-          <Area type="monotone" dataKey="value" stroke={color} strokeWidth={2} fill={`url(#dual-grad-${metric.id})`} dot={{ r: 3, fill: color, strokeWidth: 0 }} activeDot={{ r: 4, fill: color, strokeWidth: 0 }}>{labelList}</Area>
+          <Area
+            type="monotone"
+            dataKey="value"
+            stroke={color}
+            strokeWidth={2}
+            fill={`url(#dual-grad-${metric.id})`}
+            dot={{ r: 3, fill: color, strokeWidth: 0 }}
+            activeDot={{ r: 4, fill: color, strokeWidth: 0 }}
+            animationDuration={450} animationEasing="ease-out"
+          >
+            {labelList}
+          </Area>
         </AreaChart>
       ) : (
         <LineChart {...shared}>
           {axes}
-          <Line type="monotone" dataKey="value" stroke={color} strokeWidth={2} dot={{ r: 3, fill: color, strokeWidth: 0 }} activeDot={{ r: 4, fill: color, strokeWidth: 0 }}>{labelList}</Line>
+          <Line
+            type="monotone"
+            dataKey="value"
+            stroke={color}
+            strokeWidth={2}
+            dot={{ r: 3, fill: color, strokeWidth: 0 }}
+            activeDot={{ r: 4, fill: color, strokeWidth: 0 }}
+            animationDuration={450} animationEasing="ease-out"
+          >
+            {labelList}
+          </Line>
         </LineChart>
       )}
     </ResponsiveContainer>
@@ -118,8 +153,16 @@ export default function DualMetricChart({ percentMetric, nominalMetric }: Props)
 
   const tableRows =
     effectiveFreq === 'annual'
-      ? [...new Set([...getAnnual(percentMetric), ...getAnnual(nominalMetric)].map((d) => String(d.year)))].sort((a, b) => Number(b) - Number(a))
-      : [...new Set([...getPeriodic(percentMetric), ...getPeriodic(nominalMetric)].map((d) => d.period!))].sort((a, b) => {
+      ? [
+          ...new Set(
+            [...getAnnual(percentMetric), ...getAnnual(nominalMetric)].map((d) => String(d.year)),
+          ),
+        ].sort((a, b) => Number(b) - Number(a))
+      : [
+          ...new Set(
+            [...getPeriodic(percentMetric), ...getPeriodic(nominalMetric)].map((d) => d.period!),
+          ),
+        ].sort((a, b) => {
           const [qa, ya] = a.split(' ')
           const [qb, yb] = b.split(' ')
           return Number(yb) - Number(ya) || qa.localeCompare(qb) * -1
@@ -128,23 +171,58 @@ export default function DualMetricChart({ percentMetric, nominalMetric }: Props)
   return (
     <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800 p-3 shadow-md shadow-slate-200/60 dark:shadow-none">
       <div className="flex items-center justify-between mb-4 gap-2">
-        <p className="text-sm font-semibold text-slate-700 dark:text-slate-200 min-w-0 truncate">{metric.label}</p>
+        <p className="text-sm font-semibold text-slate-700 dark:text-slate-200 min-w-0 truncate">
+          {metric.label}
+        </p>
         <div className="flex items-center gap-1.5 shrink-0">
           {showFreqToggle && (
             <div className="flex items-center gap-0.5 bg-slate-100 dark:bg-slate-800 rounded-lg p-0.5 text-xs">
-              <button onClick={() => setFreq('annual')} className={`px-2 py-1 rounded-md transition-colors ${freq === 'annual' ? 'bg-white dark:bg-slate-700 shadow-sm text-slate-700 dark:text-white font-medium' : 'text-slate-400 hover:text-slate-600 dark:hover:text-slate-300'}`}>Annual</button>
-              <button onClick={() => setFreq('periodic')} className={`px-2 py-1 rounded-md transition-colors ${freq === 'periodic' ? 'bg-white dark:bg-slate-700 shadow-sm text-slate-700 dark:text-white font-medium' : 'text-slate-400 hover:text-slate-600 dark:hover:text-slate-300'}`}>Quarterly</button>
+              <button
+                onClick={() => setFreq('annual')}
+                className={`px-2 py-1 rounded-md transition-colors ${freq === 'annual' ? 'bg-white dark:bg-slate-700 shadow-sm text-slate-700 dark:text-white font-medium' : 'text-slate-400 hover:text-slate-600 dark:hover:text-slate-300'}`}
+              >
+                Annual
+              </button>
+              <button
+                onClick={() => setFreq('periodic')}
+                className={`px-2 py-1 rounded-md transition-colors ${freq === 'periodic' ? 'bg-white dark:bg-slate-700 shadow-sm text-slate-700 dark:text-white font-medium' : 'text-slate-400 hover:text-slate-600 dark:hover:text-slate-300'}`}
+              >
+                Quarterly
+              </button>
             </div>
           )}
           <div className="flex items-center gap-0.5 bg-slate-100 dark:bg-slate-800 rounded-lg p-0.5 text-xs">
-            <button onClick={() => setUnit('percent')} className={`px-2 py-1 rounded-md transition-colors font-medium ${unit === 'percent' ? 'bg-white dark:bg-slate-700 shadow-sm text-blue-600 dark:text-blue-400' : 'text-slate-400 hover:text-slate-600 dark:hover:text-slate-300'}`}>{percentMetric.unit}</button>
-            <button onClick={() => setUnit('nominal')} className={`px-2 py-1 rounded-md transition-colors font-medium ${unit === 'nominal' ? 'bg-white dark:bg-slate-700 shadow-sm text-emerald-600 dark:text-emerald-400' : 'text-slate-400 hover:text-slate-600 dark:hover:text-slate-300'}`}>{nominalMetric.unit}</button>
+            <button
+              onClick={() => setUnit('percent')}
+              className={`px-2 py-1 rounded-md transition-colors font-medium ${unit === 'percent' ? 'bg-white dark:bg-slate-700 shadow-sm text-blue-600 dark:text-blue-400' : 'text-slate-400 hover:text-slate-600 dark:hover:text-slate-300'}`}
+            >
+              {percentMetric.unit}
+            </button>
+            <button
+              onClick={() => setUnit('nominal')}
+              className={`px-2 py-1 rounded-md transition-colors font-medium ${unit === 'nominal' ? 'bg-white dark:bg-slate-700 shadow-sm text-emerald-600 dark:text-emerald-400' : 'text-slate-400 hover:text-slate-600 dark:hover:text-slate-300'}`}
+            >
+              {nominalMetric.unit}
+            </button>
           </div>
           <div className="flex items-center gap-0.5 bg-slate-100 dark:bg-slate-800 rounded-lg p-0.5">
-            <button onClick={() => setView('chart')} className={`p-1.5 rounded-md transition-colors ${view === 'chart' ? 'bg-white dark:bg-slate-700 shadow-sm text-slate-700 dark:text-white' : 'text-slate-400 hover:text-slate-600 dark:hover:text-slate-300'}`}><BarChart2 className="w-3.5 h-3.5" /></button>
-            <button onClick={() => setView('table')} className={`p-1.5 rounded-md transition-colors ${view === 'table' ? 'bg-white dark:bg-slate-700 shadow-sm text-slate-700 dark:text-white' : 'text-slate-400 hover:text-slate-600 dark:hover:text-slate-300'}`}><Table className="w-3.5 h-3.5" /></button>
+            <button
+              onClick={() => setView('chart')}
+              className={`p-1.5 rounded-md transition-colors ${view === 'chart' ? 'bg-white dark:bg-slate-700 shadow-sm text-slate-700 dark:text-white' : 'text-slate-400 hover:text-slate-600 dark:hover:text-slate-300'}`}
+            >
+              <BarChart2 className="w-3.5 h-3.5" />
+            </button>
+            <button
+              onClick={() => setView('table')}
+              className={`p-1.5 rounded-md transition-colors ${view === 'table' ? 'bg-white dark:bg-slate-700 shadow-sm text-slate-700 dark:text-white' : 'text-slate-400 hover:text-slate-600 dark:hover:text-slate-300'}`}
+            >
+              <Table className="w-3.5 h-3.5" />
+            </button>
           </div>
-          <button onClick={() => setFullscreen(true)} className="p-1.5 rounded-md text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+          <button
+            onClick={() => setFullscreen(true)}
+            className="p-1.5 rounded-md text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+          >
             <Maximize2 className="w-3.5 h-3.5" />
           </button>
         </div>
@@ -156,25 +234,38 @@ export default function DualMetricChart({ percentMetric, nominalMetric }: Props)
             <thead>
               <tr className="border-b border-slate-100 dark:border-slate-800">
                 <th className="text-left text-slate-400 font-medium pb-2">Period</th>
-                <th className="text-right text-slate-400 font-medium pb-2">{percentMetric.label}</th>
-                <th className="text-right text-slate-400 font-medium pb-2">{nominalMetric.label}</th>
+                <th className="text-right text-slate-400 font-medium pb-2">
+                  {percentMetric.label}
+                </th>
+                <th className="text-right text-slate-400 font-medium pb-2">
+                  {nominalMetric.label}
+                </th>
               </tr>
             </thead>
             <tbody>
               {tableRows.map((row) => {
-                const pPoint = effectiveFreq === 'annual'
-                  ? getAnnual(percentMetric).find((d) => String(d.year) === row)
-                  : getPeriodic(percentMetric).find((d) => d.period === row)
-                const nPoint = effectiveFreq === 'annual'
-                  ? getAnnual(nominalMetric).find((d) => String(d.year) === row)
-                  : getPeriodic(nominalMetric).find((d) => d.period === row)
+                const pPoint =
+                  effectiveFreq === 'annual'
+                    ? getAnnual(percentMetric).find((d) => String(d.year) === row)
+                    : getPeriodic(percentMetric).find((d) => d.period === row)
+                const nPoint =
+                  effectiveFreq === 'annual'
+                    ? getAnnual(nominalMetric).find((d) => String(d.year) === row)
+                    : getPeriodic(nominalMetric).find((d) => d.period === row)
                 return (
-                  <tr key={row} className="border-b border-slate-50 dark:border-slate-800 last:border-0">
+                  <tr
+                    key={row}
+                    className="border-b border-slate-50 dark:border-slate-800 last:border-0"
+                  >
                     <td className="py-1.5 text-slate-600 dark:text-slate-400">{row}</td>
-                    <td className={`py-1.5 text-right font-medium tabular-nums ${unit === 'percent' ? 'text-blue-600 dark:text-blue-400' : 'text-slate-900 dark:text-white'}`}>
+                    <td
+                      className={`py-1.5 text-right font-medium tabular-nums ${unit === 'percent' ? 'text-blue-600 dark:text-blue-400' : 'text-slate-900 dark:text-white'}`}
+                    >
                       {pPoint ? fmtValue(pPoint.value, percentMetric.unit) : '—'}
                     </td>
-                    <td className={`py-1.5 text-right font-medium tabular-nums ${unit === 'nominal' ? 'text-emerald-600 dark:text-emerald-400' : 'text-slate-900 dark:text-white'}`}>
+                    <td
+                      className={`py-1.5 text-right font-medium tabular-nums ${unit === 'nominal' ? 'text-emerald-600 dark:text-emerald-400' : 'text-slate-900 dark:text-white'}`}
+                    >
                       {nPoint ? fmtValue(nPoint.value, nominalMetric.unit) : '—'}
                     </td>
                   </tr>

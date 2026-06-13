@@ -34,14 +34,18 @@ function CompanyCard({ stock }: { stock: StockAnalysis }) {
     >
       <div className="flex items-center gap-3">
         <CompanyLogo domain={stock.logoDomain} ticker={stock.ticker} />
-        <span className="text-sm font-semibold text-slate-500 dark:text-slate-400">{stock.ticker}</span>
+        <span className="text-sm font-semibold text-slate-500 dark:text-slate-400">
+          {stock.ticker}
+        </span>
       </div>
 
       <div>
         <p className="text-slate-900 dark:text-white font-semibold text-base leading-snug group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
           {stock.title}
         </p>
-        <p className="text-slate-500 dark:text-slate-400 text-sm mt-1 leading-snug">{stock.subtitle}</p>
+        <p className="text-slate-500 dark:text-slate-400 text-sm mt-1 leading-snug">
+          {stock.subtitle}
+        </p>
       </div>
     </Link>
   )
@@ -55,11 +59,12 @@ export default function Home() {
   const filtered = useMemo(() => {
     const q = search.toLowerCase()
     if (!q) return publicAnalyses
-    return publicAnalyses.filter((s) =>
-      s.ticker.toLowerCase().includes(q) ||
-      s.companyName.toLowerCase().includes(q) ||
-      s.sector.toLowerCase().includes(q) ||
-      s.title.toLowerCase().includes(q)
+    return publicAnalyses.filter(
+      (s) =>
+        s.ticker.toLowerCase().includes(q) ||
+        s.companyName.toLowerCase().includes(q) ||
+        s.sector.toLowerCase().includes(q) ||
+        s.title.toLowerCase().includes(q),
     )
   }, [search, publicAnalyses])
 
@@ -68,7 +73,9 @@ export default function Home() {
       <div className="max-w-5xl mx-auto px-10 py-10">
         <div className="mb-8">
           <h1 className="text-2xl font-semibold text-slate-900 dark:text-white">All Companies</h1>
-          <p className="text-slate-500 dark:text-slate-400 text-sm mt-1">{publicAnalyses.length} analyses</p>
+          <p className="text-slate-500 dark:text-slate-400 text-sm mt-1">
+            {publicAnalyses.length} analyses
+          </p>
         </div>
 
         <div className="relative mb-8">
@@ -83,7 +90,9 @@ export default function Home() {
         </div>
 
         {filtered.length === 0 ? (
-          <div className="text-center py-20 text-slate-400 dark:text-slate-600 text-sm">No companies match your search.</div>
+          <div className="text-center py-20 text-slate-400 dark:text-slate-600 text-sm">
+            No companies match your search.
+          </div>
         ) : (
           <div className="grid grid-cols-3 gap-4">
             {filtered.map((stock) => (

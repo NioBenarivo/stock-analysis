@@ -2,8 +2,13 @@ import { useState } from 'react'
 import { BarChart2, Table, Maximize2 } from 'lucide-react'
 import {
   ResponsiveContainer,
-  BarChart, Bar,
-  XAxis, YAxis, Tooltip, CartesianGrid, LabelList,
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+  CartesianGrid,
+  LabelList,
 } from 'recharts'
 import type { Metric } from '../types/stock'
 import { useIsDark } from '../hooks/useIsDark'
@@ -27,9 +32,11 @@ export default function StackedBarChart({ metrics }: Props) {
   const [fullscreen, setFullscreen] = useState(false)
 
   const effectiveFreq =
-    freq === 'periodic' && !hasPeriodic ? 'annual'
-    : freq === 'annual' && !hasAnnual ? 'periodic'
-    : freq
+    freq === 'periodic' && !hasPeriodic
+      ? 'annual'
+      : freq === 'annual' && !hasAnnual
+        ? 'periodic'
+        : freq
 
   const allLabels = [
     ...new Set(
@@ -65,7 +72,9 @@ export default function StackedBarChart({ metrics }: Props) {
   const unit = metrics[0]?.unit ?? ''
   const tick = isDark ? '#64748b' : '#94a3b8'
   const grid = isDark ? '#1e293b' : '#f1f5f9'
-  const colors = metrics.map((m, i) => resolveColor(m.color, METRIC_COLOR_LIST[i % METRIC_COLOR_LIST.length]))
+  const colors = metrics.map((m, i) =>
+    resolveColor(m.color, METRIC_COLOR_LIST[i % METRIC_COLOR_LIST.length]),
+  )
 
   return (
     <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800 p-3 shadow-md shadow-slate-200/60 dark:shadow-none">
@@ -112,7 +121,10 @@ export default function StackedBarChart({ metrics }: Props) {
               <Table className="w-3.5 h-3.5" />
             </button>
           </div>
-          <button onClick={() => setFullscreen(true)} className="p-1.5 rounded-md text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+          <button
+            onClick={() => setFullscreen(true)}
+            className="p-1.5 rounded-md text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+          >
             <Maximize2 className="w-3.5 h-3.5" />
           </button>
         </div>
@@ -125,16 +137,26 @@ export default function StackedBarChart({ metrics }: Props) {
               <tr className="border-b border-slate-100 dark:border-slate-800">
                 <th className="text-left text-slate-400 font-medium pb-2">Period</th>
                 {metrics.map((m) => (
-                  <th key={m.id} className="text-right text-slate-400 font-medium pb-2">{m.label}</th>
+                  <th key={m.id} className="text-right text-slate-400 font-medium pb-2">
+                    {m.label}
+                  </th>
                 ))}
               </tr>
             </thead>
             <tbody>
               {data.map((row) => (
-                <tr key={row.label as string} className="border-b border-slate-50 dark:border-slate-800 last:border-0">
-                  <td className="py-1.5 text-slate-600 dark:text-slate-400">{row.label as string}</td>
+                <tr
+                  key={row.label as string}
+                  className="border-b border-slate-50 dark:border-slate-800 last:border-0"
+                >
+                  <td className="py-1.5 text-slate-600 dark:text-slate-400">
+                    {row.label as string}
+                  </td>
                   {metrics.map((m) => (
-                    <td key={m.id} className="py-1.5 text-right font-medium text-slate-900 dark:text-white tabular-nums">
+                    <td
+                      key={m.id}
+                      className="py-1.5 text-right font-medium text-slate-900 dark:text-white tabular-nums"
+                    >
                       {fmtValue(row[m.id] as number, m.unit)}
                     </td>
                   ))}
@@ -148,7 +170,10 @@ export default function StackedBarChart({ metrics }: Props) {
       )}
 
       {fullscreen && (
-        <FullscreenModal title={metrics.map((m) => m.label).join(' + ')} onClose={() => setFullscreen(false)}>
+        <FullscreenModal
+          title={metrics.map((m) => m.label).join(' + ')}
+          onClose={() => setFullscreen(false)}
+        >
           {renderChart(480)}
         </FullscreenModal>
       )}
@@ -160,16 +185,50 @@ export default function StackedBarChart({ metrics }: Props) {
       <ResponsiveContainer width="100%" height={h}>
         <BarChart data={data} margin={{ top: 20, right: 28, bottom: 0, left: 0 }}>
           <CartesianGrid strokeDasharray="3 3" stroke={grid} vertical={false} />
-          <XAxis dataKey="label" tick={{ fontSize: 11, fill: tick }} tickLine={false} axisLine={false} interval={0} />
-          <YAxis tick={{ fontSize: 11, fill: tick }} tickLine={false} axisLine={false} tickFormatter={(v) => fmtTick(v, unit === '%' ? '%' : '')} width={48} />
+          <XAxis
+            dataKey="label"
+            tick={{ fontSize: 11, fill: tick }}
+            tickLine={false}
+            axisLine={false}
+            interval={0}
+          />
+          <YAxis
+            tick={{ fontSize: 11, fill: tick }}
+            tickLine={false}
+            axisLine={false}
+            tickFormatter={(v) => fmtTick(v, unit === '%' ? '%' : '')}
+            width={48}
+          />
           <Tooltip
-            contentStyle={{ background: isDark ? '#1e293b' : 'white', border: `1px solid ${isDark ? '#334155' : '#e2e8f0'}`, borderRadius: 8, fontSize: 12, color: isDark ? '#f8fafc' : '#0f172a' }}
-            formatter={(v, name) => { const m = metrics.find((x) => x.id === name); return [fmtValue(Number(v), m?.unit ?? ''), m?.label ?? String(name)] }}
+            contentStyle={{
+              background: isDark ? '#1e293b' : 'white',
+              border: `1px solid ${isDark ? '#334155' : '#e2e8f0'}`,
+              borderRadius: 8,
+              fontSize: 12,
+              color: isDark ? '#f8fafc' : '#0f172a',
+            }}
+            formatter={(v, name) => {
+              const m = metrics.find((x) => x.id === name)
+              return [fmtValue(Number(v), m?.unit ?? ''), m?.label ?? String(name)]
+            }}
           />
           {metrics.map((m, i) => (
-            <Bar key={m.id} dataKey={m.id} stackId="stack" fill={colors[i]} radius={i === metrics.length - 1 ? [3, 3, 0, 0] : [0, 0, 0, 0]}>
+            <Bar
+              key={m.id}
+              dataKey={m.id}
+              stackId="stack"
+              fill={colors[i]}
+              radius={i === metrics.length - 1 ? [3, 3, 0, 0] : [0, 0, 0, 0]}
+              animationDuration={450} animationEasing="ease-out"
+            >
               {i === metrics.length - 1 && (
-                <LabelList dataKey="__total" position="top" offset={8} formatter={(v) => fmtTick(Number(v), unit === '%' ? '%' : '')} style={{ fontSize: 10, fill: tick, fontWeight: 500 }} />
+                <LabelList
+                  dataKey="__total"
+                  position="top"
+                  offset={8}
+                  formatter={(v) => fmtTick(Number(v), unit === '%' ? '%' : '')}
+                  style={{ fontSize: 10, fill: tick, fontWeight: 500 }}
+                />
               )}
             </Bar>
           ))}

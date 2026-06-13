@@ -10,7 +10,9 @@ interface Props {
 
 export default function FullscreenModal({ title, onClose, children }: Props) {
   useEffect(() => {
-    const handler = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose() }
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose()
+    }
     window.addEventListener('keydown', handler)
     return () => window.removeEventListener('keydown', handler)
   }, [onClose])
@@ -33,11 +35,9 @@ export default function FullscreenModal({ title, onClose, children }: Props) {
             <X className="w-4 h-4" />
           </button>
         </div>
-        <div className="p-5">
-          {children}
-        </div>
+        <div className="p-5">{children}</div>
       </div>
     </div>,
-    document.body
+    document.body,
   )
 }

@@ -1,10 +1,13 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
-import { getAnalysis, analyses } from '../data/content'
-import type { Metric, StockAnalysis } from '../types/stock'
+import { getAnalysis } from '../data/content'
+import { hydrateMetrics } from '../data/sheets'
+import type { SheetData } from '../data/sheets'
+import { useSheetData } from '../hooks/useSheetData'
+import type { Metric } from '../types/stock'
 import { METRIC_COLOR_LIST } from '../utils/colors'
 import Layout from '../components/Layout'
 import MetricChart from '../components/MetricChart'
@@ -32,7 +35,7 @@ function CompanyLogo({ domain, ticker }: { domain: string; ticker: string }) {
   )
 }
 
-function makeCodeRenderer(metrics: Metric[] | undefined, allAnalyses: StockAnalysis[]) {
+function makeCodeRenderer(metrics: Metric[] | undefined, sheetData: SheetData | null) {
   return function CodeBlock({
     className,
     children,
@@ -49,16 +52,28 @@ function makeCodeRenderer(metrics: Metric[] | undefined, allAnalyses: StockAnaly
       if (metric) {
         return (
           <div className="not-prose my-6">
-            <MetricChart metric={metric} color={METRIC_COLOR_LIST[colorIndex % METRIC_COLOR_LIST.length]} />
+            <MetricChart
+              metric={metric}
+              color={METRIC_COLOR_LIST[colorIndex % METRIC_COLOR_LIST.length]}
+            />
           </div>
         )
       }
     }
 
     if (lang === 'dual' && metrics) {
-      const lines = content.split('\n').map((s) => s.trim()).filter(Boolean)
-      const percentId = lines.find((l) => l.startsWith('percent:'))?.replace('percent:', '').trim()
-      const nominalId = lines.find((l) => l.startsWith('nominal:'))?.replace('nominal:', '').trim()
+      const lines = content
+        .split('\n')
+        .map((s) => s.trim())
+        .filter(Boolean)
+      const percentId = lines
+        .find((l) => l.startsWith('percent:'))
+        ?.replace('percent:', '')
+        .trim()
+      const nominalId = lines
+        .find((l) => l.startsWith('nominal:'))
+        ?.replace('nominal:', '')
+        .trim()
       const percentMetric = metrics.find((m) => m.id === percentId)
       const nominalMetric = metrics.find((m) => m.id === nominalId)
       if (percentMetric && nominalMetric) {
@@ -73,14 +88,33 @@ function makeCodeRenderer(metrics: Metric[] | undefined, allAnalyses: StockAnaly
     if (lang === 'combo' && metrics) {
       const leftIds: string[] = []
       const rightIds: string[] = []
-      for (const line of content.split('\n').map((s) => s.trim()).filter(Boolean)) {
+      for (const line of content
+        .split('\n')
+        .map((s) => s.trim())
+        .filter(Boolean)) {
         if (line.startsWith('left:'))
-          leftIds.push(...line.replace('left:', '').split(',').map((s) => s.trim()).filter(Boolean))
+          leftIds.push(
+            ...line
+              .replace('left:', '')
+              .split(',')
+              .map((s) => s.trim())
+              .filter(Boolean),
+          )
         else if (line.startsWith('right:'))
-          rightIds.push(...line.replace('right:', '').split(',').map((s) => s.trim()).filter(Boolean))
+          rightIds.push(
+            ...line
+              .replace('right:', '')
+              .split(',')
+              .map((s) => s.trim())
+              .filter(Boolean),
+          )
       }
-      const leftMetrics = leftIds.map((id) => metrics.find((m) => m.id === id)).filter((m): m is Metric => m !== undefined)
-      const rightMetrics = rightIds.map((id) => metrics.find((m) => m.id === id)).filter((m): m is Metric => m !== undefined)
+      const leftMetrics = leftIds
+        .map((id) => metrics.find((m) => m.id === id))
+        .filter((m): m is Metric => m !== undefined)
+      const rightMetrics = rightIds
+        .map((id) => metrics.find((m) => m.id === id))
+        .filter((m): m is Metric => m !== undefined)
       if (leftMetrics.length > 0 || rightMetrics.length > 0) {
         return (
           <div className="not-prose my-6">
@@ -91,8 +125,13 @@ function makeCodeRenderer(metrics: Metric[] | undefined, allAnalyses: StockAnaly
     }
 
     if (lang === 'stack' && metrics) {
-      const ids = content.split('\n').map((s) => s.trim()).filter(Boolean)
-      const stackMetrics = ids.map((id) => metrics.find((m) => m.id === id)).filter((m): m is Metric => m !== undefined)
+      const ids = content
+        .split('\n')
+        .map((s) => s.trim())
+        .filter(Boolean)
+      const stackMetrics = ids
+        .map((id) => metrics.find((m) => m.id === id))
+        .filter((m): m is Metric => m !== undefined)
       if (stackMetrics.length > 0) {
         return (
           <div className="not-prose my-6">
@@ -104,25 +143,29 @@ function makeCodeRenderer(metrics: Metric[] | undefined, allAnalyses: StockAnaly
 
     if (lang === 'compare') {
       const metricId = content
-      const series = allAnalyses
-        .filter((a) => a.metrics?.some((m) => m.id === metricId))
-        .map((a) => {
-          const metric = a.metrics!.find((m) => m.id === metricId)!
-          return {
-            ticker: a.ticker,
-            unit: metric.unit,
-            label: metric.label,
-            data: metric.data
-              .filter((d) => d.year !== undefined)
-              .map((d) => ({ year: d.year!, value: d.value })),
+
+      // Use sheet data when available — all tickers for this metric live in sheetData[metricId]
+      if (sheetData?.[metricId]) {
+        const metricSchema = metrics?.find((m) => m.id === metricId)
+        if (metricSchema) {
+          const series = Object.entries(sheetData[metricId])
+            .map(([ticker, data]) => ({
+              ticker,
+              label: metricSchema.label,
+              unit: metricSchema.unit,
+              data: data
+                .filter((d) => d.year !== undefined)
+                .map((d) => ({ year: d.year!, value: d.value })),
+            }))
+            .filter((s) => s.data.length > 0)
+          if (series.length > 0) {
+            return (
+              <div className="not-prose my-6">
+                <ComparisonChart label={series[0].label} unit={series[0].unit} series={series} />
+              </div>
+            )
           }
-        })
-      if (series.length > 0) {
-        return (
-          <div className="not-prose my-6">
-            <ComparisonChart label={series[0].label} unit={series[0].unit} series={series} />
-          </div>
-        )
+        }
       }
     }
 
@@ -135,11 +178,20 @@ export default function Company() {
   const navigate = useNavigate()
 
   const stock = getAnalysis(id ?? '')
+  const { data: sheetData } = useSheetData(stock?.sector ?? '')
+
+  const metrics = useMemo(() => {
+    if (!stock?.metrics) return undefined
+    if (sheetData) return hydrateMetrics(stock.metrics, stock.ticker, sheetData)
+    return stock.metrics.map((m) => ({ ...m, data: m.data ?? [] }))
+  }, [stock, sheetData])
 
   if (!stock) {
     return (
       <Layout>
-        <div className="flex items-center justify-center h-64 text-slate-400">Company not found.</div>
+        <div className="flex items-center justify-center h-64 text-slate-400">
+          Company not found.
+        </div>
       </Layout>
     )
   }
@@ -160,8 +212,12 @@ export default function Company() {
         <div className="flex items-center gap-5 mb-10">
           <CompanyLogo domain={stock.logoDomain} ticker={stock.ticker} />
           <div className="flex-1 min-w-0">
-            <h1 className="text-2xl font-semibold text-slate-900 dark:text-white">{stock.ticker}</h1>
-            <p className="text-slate-500 dark:text-slate-400 text-sm mt-0.5">{stock.companyName} · {stock.sector}</p>
+            <h1 className="text-2xl font-semibold text-slate-900 dark:text-white">
+              {stock.ticker}
+            </h1>
+            <p className="text-slate-500 dark:text-slate-400 text-sm mt-0.5">
+              {stock.companyName} · {stock.sector}
+            </p>
           </div>
         </div>
 
@@ -169,25 +225,33 @@ export default function Company() {
         {stock.body && (
           <div>
             <div className="mb-6 pb-6 border-b border-slate-200 dark:border-slate-800">
-              <h2 className="text-xl font-semibold text-slate-900 dark:text-white">{stock.title}</h2>
+              <h2 className="text-xl font-semibold text-slate-900 dark:text-white">
+                {stock.title}
+              </h2>
               <p className="text-slate-500 dark:text-slate-400 text-sm mt-1">{stock.subtitle}</p>
               <p className="text-xs text-slate-400 dark:text-slate-500 mt-2">
-                {new Date(stock.dateAnalyzed).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+                {new Date(stock.dateAnalyzed).toLocaleDateString('en-US', {
+                  month: 'long',
+                  day: 'numeric',
+                  year: 'numeric',
+                })}
               </p>
             </div>
 
-            <div className="prose prose-slate dark:prose-invert max-w-none
+            <div
+              className="prose prose-slate dark:prose-invert max-w-none
               prose-headings:font-semibold
               prose-h2:text-lg prose-h2:mt-8 prose-h2:mb-3
               prose-h3:text-base prose-h3:mt-6 prose-h3:mb-2
               prose-p:leading-relaxed prose-p:my-4
               prose-strong:font-semibold
-            ">
+            "
+            >
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
                 components={{
                   pre: ({ children }) => <div>{children}</div>,
-                  code: makeCodeRenderer(stock.metrics, analyses),
+                  code: makeCodeRenderer(metrics, sheetData),
                 }}
               >
                 {stock.body}

@@ -2,23 +2,31 @@ import { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { Search } from 'lucide-react'
 import { analyses } from '../data/content'
+import { hydrateMetrics } from '../data/sheets'
+import { useSheetData } from '../hooks/useSheetData'
 import type { StockAnalysis } from '../types/stock'
 import Layout from '../components/Layout'
 
 const stocksWithMetrics = analyses.filter((s) => s.metrics && s.metrics.length > 0)
 
 function StockCard({ stock }: { stock: StockAnalysis }) {
-  const latest = useMemo(() => {
+  const { data: sheetData } = useSheetData(stock.sector)
+
+  const resolvedMetrics = useMemo(() => {
     if (!stock.metrics) return []
-    const latestYear = Math.max(
-      ...stock.metrics.flatMap((m) => m.data.map((d) => d.year ?? 0)),
-    )
-    return stock.metrics.map((m) => ({
+    if (sheetData) return hydrateMetrics(stock.metrics, stock.ticker, sheetData)
+    return stock.metrics.map((m) => ({ ...m, data: m.data ?? [] }))
+  }, [stock, sheetData])
+
+  const latest = useMemo(() => {
+    if (!resolvedMetrics.length) return []
+    const latestYear = Math.max(...resolvedMetrics.flatMap((m) => m.data.map((d) => d.year ?? 0)))
+    return resolvedMetrics.map((m) => ({
       label: m.label,
       unit: m.unit,
       value: m.data.find((d) => d.year === latestYear)?.value,
     }))
-  }, [stock])
+  }, [resolvedMetrics])
 
   return (
     <Link
@@ -30,7 +38,9 @@ function StockCard({ stock }: { stock: StockAnalysis }) {
           <p className="text-sm font-semibold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
             {stock.ticker}
           </p>
-          <p className="text-xs text-slate-400 dark:text-slate-500 truncate mt-0.5">{stock.companyName}</p>
+          <p className="text-xs text-slate-400 dark:text-slate-500 truncate mt-0.5">
+            {stock.companyName}
+          </p>
         </div>
         <span className="text-xs text-slate-400 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full px-2 py-0.5 whitespace-nowrap shrink-0">
           {stock.sector}
@@ -91,7 +101,9 @@ export default function Metrics() {
         </div>
 
         {filtered.length === 0 ? (
-          <div className="text-center py-20 text-slate-400 dark:text-slate-600 text-sm">No stocks match your search.</div>
+          <div className="text-center py-20 text-slate-400 dark:text-slate-600 text-sm">
+            No stocks match your search.
+          </div>
         ) : (
           <div className="grid grid-cols-3 gap-4">
             {filtered.map((stock) => (

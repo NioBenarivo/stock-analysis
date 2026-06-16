@@ -10,11 +10,8 @@ import { useSheetData } from '../hooks/useSheetData'
 import type { Metric } from '../types/stock'
 import { METRIC_COLOR_LIST } from '../utils/colors'
 import Layout from '../components/Layout'
-import MetricChart from '../components/MetricChart'
+import ChartRenderer from '../components/ChartRenderer'
 import ComparisonChart from '../components/ComparisonChart'
-import ComboChart from '../components/ComboChart'
-import DualMetricChart from '../components/DualMetricChart'
-import StackedBarChart from '../components/StackedBarChart'
 
 function CompanyLogo({ domain, ticker }: { domain: string; ticker: string }) {
   const [failed, setFailed] = useState(false)
@@ -46,14 +43,33 @@ function makeCodeRenderer(metrics: Metric[] | undefined, sheetData: SheetData | 
     const lang = className?.replace('language-', '')
     const content = String(children).trim()
 
-    if (lang === 'chart' && metrics) {
-      const metric = metrics.find((m) => m.id === content)
-      const colorIndex = metrics.findIndex((m) => m.id === content)
+    if (metrics && (lang === 'chart' || lang === 'dual' || lang === 'combo' || lang === 'stack')) {
+      const lines = content.split('\n').map((s) => s.trim()).filter(Boolean)
+      const data = lines.filter((l) => !l.startsWith('note:'))
+
+      let metric: Metric | undefined
+
+      if (lang === 'chart') {
+        metric = metrics.find((m) => m.id === data[0])
+      } else if (lang === 'dual') {
+        const id = data.find((l) => l.startsWith('percent:'))?.replace('percent:', '').trim()
+        metric = metrics.find((m) => m.id === id)
+      } else if (lang === 'combo') {
+        const id = data.find((l) => l.startsWith('left:'))?.replace('left:', '').split(',')[0].trim()
+        metric = metrics.find((m) => m.id === id)
+      } else if (lang === 'stack') {
+        metric = metrics.find(
+          (m) => m.stackWith?.length === data.length && data.every((id) => m.stackWith!.includes(id)),
+        )
+      }
+
       if (metric) {
+        const colorIndex = metrics.findIndex((m) => m.id === metric!.id)
         return (
           <div className="not-prose my-6">
-            <MetricChart
+            <ChartRenderer
               metric={metric}
+              metrics={metrics}
               color={METRIC_COLOR_LIST[colorIndex % METRIC_COLOR_LIST.length]}
             />
           </div>
@@ -61,90 +77,9 @@ function makeCodeRenderer(metrics: Metric[] | undefined, sheetData: SheetData | 
       }
     }
 
-    if (lang === 'dual' && metrics) {
-      const lines = content
-        .split('\n')
-        .map((s) => s.trim())
-        .filter(Boolean)
-      const percentId = lines
-        .find((l) => l.startsWith('percent:'))
-        ?.replace('percent:', '')
-        .trim()
-      const nominalId = lines
-        .find((l) => l.startsWith('nominal:'))
-        ?.replace('nominal:', '')
-        .trim()
-      const percentMetric = metrics.find((m) => m.id === percentId)
-      const nominalMetric = metrics.find((m) => m.id === nominalId)
-      if (percentMetric && nominalMetric) {
-        return (
-          <div className="not-prose my-6">
-            <DualMetricChart percentMetric={percentMetric} nominalMetric={nominalMetric} />
-          </div>
-        )
-      }
-    }
-
-    if (lang === 'combo' && metrics) {
-      const leftIds: string[] = []
-      const rightIds: string[] = []
-      for (const line of content
-        .split('\n')
-        .map((s) => s.trim())
-        .filter(Boolean)) {
-        if (line.startsWith('left:'))
-          leftIds.push(
-            ...line
-              .replace('left:', '')
-              .split(',')
-              .map((s) => s.trim())
-              .filter(Boolean),
-          )
-        else if (line.startsWith('right:'))
-          rightIds.push(
-            ...line
-              .replace('right:', '')
-              .split(',')
-              .map((s) => s.trim())
-              .filter(Boolean),
-          )
-      }
-      const leftMetrics = leftIds
-        .map((id) => metrics.find((m) => m.id === id))
-        .filter((m): m is Metric => m !== undefined)
-      const rightMetrics = rightIds
-        .map((id) => metrics.find((m) => m.id === id))
-        .filter((m): m is Metric => m !== undefined)
-      if (leftMetrics.length > 0 || rightMetrics.length > 0) {
-        return (
-          <div className="not-prose my-6">
-            <ComboChart leftMetrics={leftMetrics} rightMetrics={rightMetrics} />
-          </div>
-        )
-      }
-    }
-
-    if (lang === 'stack' && metrics) {
-      const ids = content
-        .split('\n')
-        .map((s) => s.trim())
-        .filter(Boolean)
-      const stackMetrics = ids
-        .map((id) => metrics.find((m) => m.id === id))
-        .filter((m): m is Metric => m !== undefined)
-      if (stackMetrics.length > 0) {
-        return (
-          <div className="not-prose my-6">
-            <StackedBarChart metrics={stackMetrics} />
-          </div>
-        )
-      }
-    }
-
     if (lang === 'compare') {
-      const metricId = content
-
-      // Use sheet data when available — all tickers for this metric live in sheetData[metricId]
+      const lines = content.split('\n').map((s) => s.trim()).filter(Boolean)
+      const metricId = lines.find((l) => !l.startsWith('note:')) ?? content
       if (sheetData?.[metricId]) {
         const metricSchema = metrics?.find((m) => m.id === metricId)
         if (metricSchema) {
@@ -153,15 +88,16 @@ function makeCodeRenderer(metrics: Metric[] | undefined, sheetData: SheetData | 
               ticker,
               label: metricSchema.label,
               unit: metricSchema.unit,
-              data: data
-                .filter((d) => d.year !== undefined)
-                .map((d) => ({ year: d.year!, value: d.value })),
+              data: data.filter((d) => d.year !== undefined).map((d) => ({ year: d.year!, value: d.value })),
             }))
             .filter((s) => s.data.length > 0)
           if (series.length > 0) {
             return (
               <div className="not-prose my-6">
                 <ComparisonChart label={series[0].label} unit={series[0].unit} series={series} />
+                {metricSchema.note && (
+                  <p className="mt-1.5 text-xs text-slate-400 dark:text-slate-500 italic px-1">{metricSchema.note}</p>
+                )}
               </div>
             )
           }

@@ -18,6 +18,7 @@ export interface Metric {
   dualWith?: string
   stackWith?: string[]
   comboWith?: string
+  note?: string
   data: MetricDataPoint[]
 }
 

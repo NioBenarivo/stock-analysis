@@ -38,7 +38,7 @@ The implication: when rates rise, BBCA's cost of funds barely moves while loan y
 NPL peaked at 2.4% in 2021 during the COVID restructuring period, but has since normalized sharply — among the lowest in the industry. BCA runs one of the most conservative underwriting standards in Indonesian banking, with a clear focus on quality over volume.
 
 ```chart
-npl_ratio
+npl
 ```
 
 ## Credit Growth
@@ -46,8 +46,20 @@ npl_ratio
 Loan growth has been consistently strong, averaging ~11% per year over the decade. Consumer (mortgage and vehicle) and corporate lending are the main drivers. The 2020 dip was COVID-driven and quickly recovered.
 
 ```combo
-left: loan_value
-right: loan_growth_pct
+left: loan
+right: loan_growth
+```
+
+## Loan Composition by Segment
+
+Corporate has been the dominant and growing segment, rising from 36% in 2015 to 48% in 2025. Starting 2023, BCA began separately reporting SME from Commercial, giving a clearer picture of the mid-market segment.
+
+```stack
+loan_segment_corporate
+loan_segment_commercial
+loan_segment_sme
+loan_segment_consumer
+note: *2015–2022: SME was reported combined within Commercial. Separated from 2023 onwards.
 ```
 
 ## Profitability

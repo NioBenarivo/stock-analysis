@@ -7,10 +7,7 @@ import type { SheetData } from '../data/sheets'
 import { useSheetData } from '../hooks/useSheetData'
 import { METRIC_COLOR_LIST } from '../utils/colors'
 import Layout from '../components/Layout'
-import MetricChart from '../components/MetricChart'
-import DualMetricChart from '../components/DualMetricChart'
-import StackedBarChart from '../components/StackedBarChart'
-import ComboChart from '../components/ComboChart'
+import ChartRenderer from '../components/ChartRenderer'
 import ComparisonChart from '../components/ComparisonChart'
 import type { Metric } from '../types/stock'
 import { fmtValue } from '../utils/format'
@@ -78,54 +75,15 @@ export default function MetricsDetail() {
                 (m) =>
                   !secondaryIds.has(m.id) && !stackMemberIds.has(m.id) && !comboLineIds.has(m.id),
               )
-              .map((metric, i) => {
-                const paired = metric.dualWith
-                  ? metrics.find((m) => m.id === metric.dualWith)
-                  : undefined
-                const mountDelay = i * 100
-                if (paired)
-                  return (
-                    <ChartSlot key={metric.id} mountDelay={mountDelay}>
-                      <DualMetricChart
-                        percentMetric={metric}
-                        nominalMetric={paired}
-  
-                      />
-                    </ChartSlot>
-                  )
-                if (metric.stackWith?.length) {
-                  const stackMetrics = metric.stackWith
-                    .map((id) => metrics.find((m) => m.id === id))
-                    .filter((m): m is typeof metric => m !== undefined)
-                  return (
-                    <ChartSlot key={metric.id} mountDelay={mountDelay}>
-                      <StackedBarChart metrics={stackMetrics} />
-                    </ChartSlot>
-                  )
-                }
-                if (metric.comboWith) {
-                  const lineMetric = metrics.find((m) => m.id === metric.comboWith)
-                  if (lineMetric)
-                    return (
-                      <ChartSlot key={metric.id} mountDelay={mountDelay}>
-                        <ComboChart
-                          leftMetrics={[metric]}
-                          rightMetrics={[lineMetric]}
-    
-                        />
-                      </ChartSlot>
-                    )
-                }
-                return (
-                  <ChartSlot key={metric.id} mountDelay={mountDelay}>
-                    <MetricChart
-                      metric={metric}
-                      color={METRIC_COLOR_LIST[i % METRIC_COLOR_LIST.length]}
-
-                    />
-                  </ChartSlot>
-                )
-              })
+              .map((metric, i) => (
+                <ChartSlot key={metric.id} mountDelay={i * 100}>
+                  <ChartRenderer
+                    metric={metric}
+                    metrics={metrics}
+                    color={METRIC_COLOR_LIST[i % METRIC_COLOR_LIST.length]}
+                  />
+                </ChartSlot>
+              ))
           })()}
         </div>
         )}

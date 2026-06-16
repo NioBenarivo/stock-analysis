@@ -32,6 +32,8 @@ export interface StockFrontmatter {
   subtitle: string
   visibility?: 'public' | 'private'
   metrics?: Metric[]
+  /** Merged on top of the sector template: same id = replace, new id = append */
+  metricOverrides?: Metric[]
 }
 
 export interface StockAnalysis extends StockFrontmatter {

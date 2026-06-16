@@ -6,20 +6,11 @@ import type { SheetData } from '../data/sheets'
 export function useSheetData(sector: string): { data: SheetData | null; loading: boolean } {
   const url = SECTOR_SHEETS[sector] ?? ''
   const [data, setData] = useState<SheetData | null>(null)
-  const [loading, setLoading] = useState(!!url)
 
   useEffect(() => {
-    if (!url) {
-      setLoading(false)
-      setData(null)
-      return
-    }
-    setLoading(true)
-    fetchSheetData(url).then((d) => {
-      setData(d)
-      setLoading(false)
-    })
+    if (!url) return
+    fetchSheetData(url).then(setData)
   }, [url])
 
-  return { data, loading }
+  return { data, loading: !!url && data === null }
 }

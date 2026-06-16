@@ -6,6 +6,29 @@ sector: Banking
 dateAnalyzed: 2026-06-06
 title: State-Owned Bank Modernizing Under New Leadership
 subtitle: Improving CASA mix and digital push, but still closing the gap to BBCA
+metricOverrides:
+  - id: loan_segment_subsidiaries
+    label: Subsidiaries
+    type: bar
+    unit: '%'
+  - id: loan_segment_small
+    label: Small
+    type: bar
+    unit: '%'
+  - id: loan_segment_medium
+    label: Small
+    type: bar
+    unit: '%'
+  - id: loan_segment_composition
+    label: Loan Composition by Segment
+    type: bar
+    unit: '%'
+    stackWith:
+      - loan_segment_corporate
+      - loan_segment_small
+      - loan_segment_medium
+      - loan_segment_subsidiaries
+      - loan_segment_consumer
 ---
 
 ## Overview

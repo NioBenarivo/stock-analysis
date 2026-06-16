@@ -60,10 +60,23 @@ function attachBlockNotes(body: string, metrics: Metric[]): Metric[] {
   return result
 }
 
+function mergeMetrics(base: Metric[], overrides: Metric[]): Metric[] {
+  const result = [...base]
+  for (const override of overrides) {
+    const idx = result.findIndex((m) => m.id === override.id)
+    if (idx !== -1) result[idx] = { ...result[idx], ...override }
+    else result.push(override)
+  }
+  return result
+}
+
 export const analyses: StockAnalysis[] = Object.entries(modules)
   .map(([path, raw]) => {
     const { data, content } = parseMd(raw)
-    const base = data.metrics ?? SECTOR_TEMPLATES[data.sector] ?? undefined
+    const template = data.metrics ?? SECTOR_TEMPLATES[data.sector] ?? undefined
+    const base = template && data.metricOverrides?.length
+      ? mergeMetrics(template, data.metricOverrides)
+      : template
     const metrics = base ? attachBlockNotes(content, base) : undefined
     return { id: filenameToId(path), body: content, ...data, metrics }
   })

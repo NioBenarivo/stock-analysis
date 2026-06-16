@@ -24,6 +24,11 @@ export default function MetricsDetail() {
     return stock.metrics.map((m) => ({ ...m, data: m.data ?? [] }))
   }, [stock, sheetData])
 
+  const overrideIds = useMemo(
+    () => new Set((stock?.metricOverrides ?? []).map((m) => m.id)),
+    [stock],
+  )
+
   if (!stock || !metrics?.length) {
     return (
       <Layout>
@@ -71,10 +76,14 @@ export default function MetricsDetail() {
             const stackMemberIds = new Set(metrics.flatMap((m) => m.stackWith ?? []))
             const comboLineIds = new Set(metrics.map((m) => m.comboWith).filter(Boolean))
             return metrics
-              .filter(
-                (m) =>
-                  !secondaryIds.has(m.id) && !stackMemberIds.has(m.id) && !comboLineIds.has(m.id),
-              )
+              .filter((m) => {
+                if (secondaryIds.has(m.id) || stackMemberIds.has(m.id) || comboLineIds.has(m.id)) return false
+                // Stack containers have data:[] by design — show if any child has data
+                if (m.stackWith?.length) {
+                  return m.stackWith.some((id) => (metrics.find((c) => c.id === id)?.data.length ?? 0) > 0)
+                }
+                return m.data.length > 0
+              })
               .map((metric, i) => (
                 <ChartSlot key={metric.id} mountDelay={i * 100}>
                   <ChartRenderer
@@ -92,7 +101,7 @@ export default function MetricsDetail() {
         <SummaryTable metrics={metrics} showFreqToggle={showFreqToggle} />
 
         {/* Peer comparison */}
-        <PeerComparison metrics={metrics} sheetData={sheetData} />
+        <PeerComparison metrics={metrics} sheetData={sheetData} overrideIds={overrideIds} />
       </div>
     </Layout>
   )
@@ -135,13 +144,16 @@ function ChartSlot({ children, mountDelay = 0 }: { children: React.ReactNode; mo
 function PeerComparison({
   metrics,
   sheetData,
+  overrideIds,
 }: {
   metrics: Metric[]
   sheetData: SheetData | null
+  overrideIds: Set<string>
 }) {
   if (!sheetData) return null
 
   const comparisons = metrics
+    .filter((m) => !overrideIds.has(m.id))
     .map((m) => {
       const tickers = sheetData[m.id]
       if (!tickers) return null

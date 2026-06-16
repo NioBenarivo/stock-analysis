@@ -7,6 +7,32 @@ dateAnalyzed: 2026-06-06
 visibility: public
 title: Indonesia's Premier Franchise Bank
 subtitle: CASA dominance and best-in-class asset quality make BBCA a compounding machine
+metricOverrides:
+  - id: loan_segment_corporate
+    label: Corporate
+    type: bar
+    unit: '%'
+  - id: loan_segment_commercial
+    label: Commercial
+    type: bar
+    unit: '%'
+  - id: loan_segment_sme
+    label: SME
+    type: bar
+    unit: '%'
+  - id: loan_segment_consumer
+    label: Consumer
+    type: bar
+    unit: '%'
+  - id: loan_segment_composition
+    label: Loan Composition by Segment
+    type: bar
+    unit: '%'
+    stackWith:
+      - loan_segment_corporate
+      - loan_segment_commercial
+      - loan_segment_sme
+      - loan_segment_consumer
 ---
 
 ## Thesis

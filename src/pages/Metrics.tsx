@@ -81,7 +81,7 @@ export default function Metrics() {
 
   return (
     <Layout>
-      <div className="max-w-5xl mx-auto px-10 py-10">
+      <div className="max-w-5xl mx-auto px-4 sm:px-10 py-8 sm:py-10">
         <div className="mb-8">
           <h1 className="text-2xl font-semibold text-slate-900 dark:text-white">Key Metrics</h1>
           <p className="text-slate-500 dark:text-slate-400 text-sm mt-1">
@@ -105,7 +105,7 @@ export default function Metrics() {
             No stocks match your search.
           </div>
         ) : (
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {filtered.map((stock) => (
               <StockCard key={stock.id} stock={stock} />
             ))}

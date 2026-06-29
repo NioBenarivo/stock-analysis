@@ -134,7 +134,7 @@ export default function Company() {
 
   return (
     <Layout>
-      <div className="max-w-3xl mx-auto px-10 py-10">
+      <div className="max-w-3xl mx-auto px-4 sm:px-10 py-8 sm:py-10">
         {/* Back */}
         <button
           onClick={() => navigate(-1)}

@@ -45,7 +45,7 @@ export default function MetricsDetail() {
 
   return (
     <Layout>
-      <div className="max-w-5xl mx-auto px-10 py-10">
+      <div className="max-w-5xl mx-auto px-4 sm:px-10 py-8 sm:py-10">
         {/* Back */}
         <button
           onClick={() => navigate(-1)}
@@ -70,7 +70,7 @@ export default function MetricsDetail() {
             <span className="text-sm">Loading metrics...</span>
           </div>
         ) : (
-        <div className="grid grid-cols-2 gap-4 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
           {(() => {
             const secondaryIds = new Set(metrics.map((m) => m.dualWith).filter(Boolean))
             const stackMemberIds = new Set(metrics.flatMap((m) => m.stackWith ?? []))
@@ -184,7 +184,7 @@ function PeerComparison({
       <h2 className="text-base font-semibold text-slate-700 dark:text-slate-200 mb-4">
         Peer Comparison
       </h2>
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {comparisons.map(({ metric, series }) => (
           <ComparisonChart
             key={metric.id}
@@ -227,7 +227,7 @@ function SummaryTable({ metrics, showFreqToggle }: { metrics: Metric[]; showFreq
 
   return (
     <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden">
-      <div className="flex items-center justify-between px-6 py-4 border-b border-slate-100 dark:border-slate-800">
+      <div className="flex items-center justify-between px-4 sm:px-6 py-4 border-b border-slate-100 dark:border-slate-800">
         <p className="text-sm font-semibold text-slate-700 dark:text-slate-200">All Metrics</p>
         {showFreqToggle && (
           <div className="flex items-center gap-0.5 bg-slate-100 dark:bg-slate-800 rounded-lg p-0.5 text-xs">
@@ -250,7 +250,7 @@ function SummaryTable({ metrics, showFreqToggle }: { metrics: Metric[]; showFreq
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50">
-              <th className="text-left text-slate-400 font-medium px-6 py-3 w-28">Period</th>
+              <th className="text-left text-slate-400 font-medium px-4 sm:px-6 py-3 w-20 sm:w-28">Period</th>
               {metrics.map((m) => (
                 <th
                   key={m.id}
@@ -268,7 +268,7 @@ function SummaryTable({ metrics, showFreqToggle }: { metrics: Metric[]; showFreq
                 className={`border-b border-slate-50 dark:border-slate-800 last:border-0 ${i === 0 ? 'bg-blue-50/40 dark:bg-blue-900/20' : 'hover:bg-slate-50 dark:hover:bg-slate-800/50'}`}
               >
                 <td
-                  className={`px-6 py-3 font-medium ${i === 0 ? 'text-blue-600 dark:text-blue-400' : 'text-slate-500 dark:text-slate-400'}`}
+                  className={`px-4 sm:px-6 py-3 font-medium ${i === 0 ? 'text-blue-600 dark:text-blue-400' : 'text-slate-500 dark:text-slate-400'}`}
                 >
                   {row}
                 </td>

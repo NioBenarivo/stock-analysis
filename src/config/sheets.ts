@@ -11,7 +11,7 @@
 export const SECTOR_SHEETS: Record<string, string> = {
   Banking:
     'https://docs.google.com/spreadsheets/d/1OjcVARV3IWMkxHY9Ih9Yl7ARf5eezq8bIkKIix9m-EU/export?format=csv&sheet=Bank',
-  Coal: '',
+  Coal: 'https://docs.google.com/spreadsheets/d/1OjcVARV3IWMkxHY9Ih9Yl7ARf5eezq8bIkKIix9m-EU/export?format=csv&gid=118175068',
   Telco: '',
   Consumer: '',
 }

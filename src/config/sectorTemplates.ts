@@ -1,6 +1,56 @@
 import type { Metric } from '../types/stock'
 
 export const SECTOR_TEMPLATES: Record<string, Metric[]> = {
+  Coal: [
+    {
+      id: 'production',
+      label: 'Production Volume',
+      type: 'line',
+      compareType: 'bar',
+      unit: 'Million Metric Tonnes',
+      data: [],
+    },
+    {
+      id: 'sales_volume',
+      label: 'Sales Volume',
+      type: 'line',
+      compareType: 'bar',
+      unit: 'Million Metric Tonnes',
+      data: [],
+    },
+    {
+      id: 'overburden_removal',
+      label: 'Overburden Removal',
+      type: 'bar',
+      compareType: 'bar',
+      unit: 'BCM',
+      data: [],
+    },
+    {
+      id: 'coal_reserve',
+      label: 'Coal Reserve',
+      type: 'line',
+      compareType: 'bar',
+      unit: 'Million Metric Tonnes',
+      data: [],
+    },
+    {
+      id: 'coal_resource',
+      label: 'Coal Resource',
+      type: 'line',
+      compareType: 'bar',
+      unit: 'Million Metric Tonnes',
+      data: [],
+    },
+    {
+      id: 'life_of_mine',
+      label: 'Life of Mine (LOM)',
+      type: 'line',
+      compareType: 'bar',
+      unit: 'years',
+      data: [],
+    },
+  ],
   Banking: [
     {
       id: 'third_party_fund',

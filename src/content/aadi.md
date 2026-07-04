@@ -2,45 +2,11 @@
 ticker: AADI
 companyName: Adaro Andalan Indonesia Tbk
 logoDomain: adaro.com
-sector: Coal Mining
+sector: Coal
 dateAnalyzed: 2026-06-06
 visibility: private
 title: Low-Cost Thermal Coal with a Fortress Balance Sheet
 subtitle: High-calorific Kalimantan coal, disciplined capex, and a growing cash pile
-metrics:
-  - id: coal_production_volume
-    label: Production Volume (Mt)
-    type: bar
-    unit: ' Mt'
-    data:
-      - { year: 2019, value: 54.5 }
-      - { year: 2020, value: 52.1 }
-      - { year: 2021, value: 55.8 }
-      - { year: 2022, value: 57.3 }
-      - { year: 2023, value: 58.9 }
-      - { year: 2024, value: 61.2 }
-  - id: coal_asp
-    label: Average Selling Price (USD/t)
-    type: line
-    unit: ' USD/t'
-    data:
-      - { year: 2019, value: 61.4 }
-      - { year: 2020, value: 52.8 }
-      - { year: 2021, value: 75.3 }
-      - { year: 2022, value: 136.7 }
-      - { year: 2023, value: 98.4 }
-      - { year: 2024, value: 88.1 }
-  - id: coal_capacity
-    label: Operational Capacity (Mt)
-    type: area
-    unit: ' Mt'
-    data:
-      - { year: 2019, value: 60.0 }
-      - { year: 2020, value: 60.0 }
-      - { year: 2021, value: 62.0 }
-      - { year: 2022, value: 65.0 }
-      - { year: 2023, value: 65.0 }
-      - { year: 2024, value: 68.0 }
 ---
 
 ## Thesis

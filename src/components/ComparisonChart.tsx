@@ -43,9 +43,16 @@ export default function ComparisonChart({ label, unit, type = 'line', series }: 
 
   const years = [...new Set(series.flatMap((s) => s.data.map((d) => d.year)))].sort((a, b) => a - b)
 
+  const latestYear = years.length ? years[years.length - 1] : 0
+  const sortedSeries = [...series].sort((a, b) => {
+    const aVal = a.data.find((d) => d.year === latestYear)?.value ?? -Infinity
+    const bVal = b.data.find((d) => d.year === latestYear)?.value ?? -Infinity
+    return aVal - bVal
+  })
+
   const data = years.map((year) => {
     const point: Record<string, number> = { year }
-    series.forEach((s) => {
+    sortedSeries.forEach((s) => {
       const match = s.data.find((d) => d.year === year)
       if (match) point[s.ticker] = match.value
     })
@@ -88,7 +95,7 @@ export default function ComparisonChart({ label, unit, type = 'line', series }: 
             <thead>
               <tr className="border-b border-slate-100 dark:border-slate-800">
                 <th className="text-left text-slate-400 font-medium pb-2">Year</th>
-                {series.map((s) => (
+                {sortedSeries.map((s) => (
                   <th key={s.ticker} className="text-right text-slate-400 font-medium pb-2">
                     {s.ticker}
                   </th>
@@ -102,7 +109,7 @@ export default function ComparisonChart({ label, unit, type = 'line', series }: 
                   className="border-b border-slate-50 dark:border-slate-800 last:border-0"
                 >
                   <td className="py-1.5 text-slate-600 dark:text-slate-400">{year}</td>
-                  {series.map((s) => {
+                  {sortedSeries.map((s) => {
                     const val = data.find((d) => d.year === year)?.[s.ticker]
                     return (
                       <td
@@ -168,7 +175,7 @@ export default function ComparisonChart({ label, unit, type = 'line', series }: 
         <ResponsiveContainer width="100%" height={h}>
           <BarChart data={data} margin={margin}>
             {axes}
-            {series.map((s, i) => (
+            {sortedSeries.map((s, i) => (
               <Bar key={s.ticker} dataKey={s.ticker} fill={COLORS[i % COLORS.length]} radius={[3, 3, 0, 0]} isAnimationActive={false}>
                 <LabelList
                   dataKey={s.ticker}
@@ -189,7 +196,7 @@ export default function ComparisonChart({ label, unit, type = 'line', series }: 
         <ResponsiveContainer width="100%" height={h}>
           <AreaChart data={data} margin={margin}>
             <defs>
-              {series.map((s, i) => (
+              {sortedSeries.map((s, i) => (
                 <linearGradient key={s.ticker} id={`cmp-grad-${s.ticker}`} x1="0" y1="0" x2="0" y2="1">
                   <stop offset="5%" stopColor={COLORS[i % COLORS.length]} stopOpacity={0.15} />
                   <stop offset="95%" stopColor={COLORS[i % COLORS.length]} stopOpacity={0} />
@@ -197,7 +204,7 @@ export default function ComparisonChart({ label, unit, type = 'line', series }: 
               ))}
             </defs>
             {axes}
-            {series.map((s, i) => (
+            {sortedSeries.map((s, i) => (
               <Area
                 key={s.ticker}
                 type="monotone"
@@ -227,7 +234,7 @@ export default function ComparisonChart({ label, unit, type = 'line', series }: 
       <ResponsiveContainer width="100%" height={h}>
         <LineChart data={data} margin={margin}>
           {axes}
-          {series.map((s, i) => (
+          {sortedSeries.map((s, i) => (
             <Line
               key={s.ticker}
               type="monotone"

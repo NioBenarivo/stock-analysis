@@ -80,7 +80,7 @@ export function parseCsvToSheetData(raw: string): SheetData {
     if (state === 'idle') {
       const first = row[0].trim()
       if (first && isNaN(parseInt(first, 10))) {
-        currentMetric = first.toLowerCase().replace(/\s+/g, '_')
+        currentMetric = first.toLowerCase().replace(/[\s-]+/g, '_')
         // All-caps cells (length > 1) in the same row signal wide format + provide tickers
         wideTickers = row.slice(1).map((c) => c.trim()).filter((c) => c.length > 1 && /^[A-Z]+$/.test(c))
         state = 'hasName'

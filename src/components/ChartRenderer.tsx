@@ -27,6 +27,13 @@ export default function ChartRenderer({ metric, metrics, color }: Props) {
     if (stackMetrics.length) return <><StackedBarChart metrics={stackMetrics} />{noteEl}</>
   }
 
+  if (metric.groupWith?.length) {
+    const grouped = metric.groupWith
+      .map((id) => metrics.find((m) => m.id === id))
+      .filter((m): m is Metric => m !== undefined)
+    if (grouped.length) return <><ComboChart leftMetrics={[metric, ...grouped]} rightMetrics={[]} title="Coal Benchmark Prices" />{noteEl}</>
+  }
+
   if (metric.comboWith) {
     const lineMetric = metrics.find((m) => m.id === metric.comboWith)
     if (lineMetric) return <><ComboChart leftMetrics={[metric]} rightMetrics={[lineMetric]} />{noteEl}</>

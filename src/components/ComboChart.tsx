@@ -54,9 +54,10 @@ function CustomTooltip({
 interface Props {
   leftMetrics: Metric[]
   rightMetrics: Metric[]
+  title?: string
 }
 
-export default function ComboChart({ leftMetrics, rightMetrics }: Props) {
+export default function ComboChart({ leftMetrics, rightMetrics, title }: Props) {
   const [view, setView] = useState<'chart' | 'table'>('chart')
   const [freq, setFreq] = useState<'annual' | 'periodic'>('annual')
   const [fullscreen, setFullscreen] = useState(false)
@@ -111,9 +112,14 @@ export default function ComboChart({ leftMetrics, rightMetrics }: Props) {
   return (
     <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800 p-3 shadow-md shadow-slate-200/60 dark:shadow-none">
       <div className="flex items-center justify-between mb-4">
-        <div className="flex items-center gap-3 text-xs text-slate-400 dark:text-slate-500">
-          {leftMetrics.length > 0 && <span>Left: {leftUnit}</span>}
-          {rightMetrics.length > 0 && <span>Right: {rightUnit}</span>}
+        <div className="flex items-center gap-3 text-xs text-slate-500 dark:text-slate-400">
+          {title
+            ? <span className="font-semibold text-sm text-slate-700 dark:text-slate-200">{title}</span>
+            : <>
+                {leftMetrics.length > 0 && <span>Left: {leftUnit}</span>}
+                {rightMetrics.length > 0 && <span>Right: {rightUnit}</span>}
+              </>
+          }
         </div>
         <div className="flex items-center gap-1.5">
           {showFreqToggle && (
@@ -209,14 +215,17 @@ export default function ComboChart({ leftMetrics, rightMetrics }: Props) {
   function renderChart(h: number) {
     return (
       <ResponsiveContainer width="100%" height={h}>
-        <ComposedChart data={data} margin={{ top: 24, right: 48, bottom: 0, left: 0 }}>
+        <ComposedChart data={data} margin={{ top: 24, right: 48, bottom: 48, left: 0 }}>
           <CartesianGrid strokeDasharray="3 3" stroke={grid} vertical={false} />
           <XAxis
             dataKey="label"
-            tick={{ fontSize: 11, fill: tick }}
+            tick={{ fontSize: 10, fill: tick, fontStyle: 'italic' }}
             tickLine={false}
             axisLine={false}
             interval={0}
+            angle={-45}
+            textAnchor="end"
+            height={60}
           />
           <YAxis
             yAxisId="left"
@@ -252,25 +261,52 @@ export default function ComboChart({ leftMetrics, rightMetrics }: Props) {
             iconSize={8}
             wrapperStyle={{ fontSize: 12, paddingTop: 12, color: isDark ? '#94a3b8' : '#64748b' }}
           />
-          {leftMetrics.map((m, i) => (
-            <Bar
-              key={m.id}
-              yAxisId="left"
-              dataKey={m.id}
-              name={m.label}
-              fill={resolveColor(m.color, METRIC_COLOR_LIST[i % METRIC_COLOR_LIST.length])}
-              radius={[3, 3, 0, 0]}
-              animationDuration={450} animationEasing="ease-out"
-            >
-              <LabelList
+          {leftMetrics.map((m, i) => {
+            const color = resolveColor(m.color, METRIC_COLOR_LIST[i % METRIC_COLOR_LIST.length])
+            if (m.type === 'line' || m.type === 'area') {
+              return (
+                <Line
+                  key={m.id}
+                  yAxisId="left"
+                  type="monotone"
+                  dataKey={m.id}
+                  name={m.label}
+                  stroke={color}
+                  strokeWidth={2}
+                  dot={{ r: 3, fill: color, strokeWidth: 0 }}
+                  activeDot={{ r: 4, strokeWidth: 0 }}
+                  animationDuration={450} animationEasing="ease-out"
+                >
+                  <LabelList
+                    dataKey={m.id}
+                    position="top"
+                    offset={8}
+                    formatter={(v) => fmtTick(Number(v), leftUnit === '%' ? '%' : '')}
+                    style={{ fontSize: 10, fill: color, fontWeight: 500 }}
+                  />
+                </Line>
+              )
+            }
+            return (
+              <Bar
+                key={m.id}
+                yAxisId="left"
                 dataKey={m.id}
-                position="top"
-                offset={6}
-                formatter={(v) => fmtTick(Number(v), leftUnit === '%' ? '%' : '')}
-                style={{ fontSize: 10, fill: tick, fontWeight: 500 }}
-              />
-            </Bar>
-          ))}
+                name={m.label}
+                fill={color}
+                radius={[3, 3, 0, 0]}
+                animationDuration={450} animationEasing="ease-out"
+              >
+                <LabelList
+                  dataKey={m.id}
+                  position="top"
+                  offset={6}
+                  formatter={(v) => fmtTick(Number(v), leftUnit === '%' ? '%' : '')}
+                  style={{ fontSize: 10, fill: tick, fontWeight: 500 }}
+                />
+              </Bar>
+            )
+          })}
           {rightMetrics.map((m, i) => {
             const color = resolveColor(
               m.color,

@@ -75,9 +75,10 @@ export default function MetricsDetail() {
             const secondaryIds = new Set(metrics.map((m) => m.dualWith).filter(Boolean))
             const stackMemberIds = new Set(metrics.flatMap((m) => m.stackWith ?? []))
             const comboLineIds = new Set(metrics.map((m) => m.comboWith).filter(Boolean))
+            const groupMemberIds = new Set(metrics.flatMap((m) => m.groupWith ?? []))
             return metrics
               .filter((m) => {
-                if (secondaryIds.has(m.id) || stackMemberIds.has(m.id) || comboLineIds.has(m.id)) return false
+                if (secondaryIds.has(m.id) || stackMemberIds.has(m.id) || comboLineIds.has(m.id) || groupMemberIds.has(m.id)) return false
                 // Stack containers have data:[] by design — show if any child has data
                 if (m.stackWith?.length) {
                   return m.stackWith.some((id) => (metrics.find((c) => c.id === id)?.data.length ?? 0) > 0)
@@ -85,7 +86,7 @@ export default function MetricsDetail() {
                 return m.data.length > 0
               })
               .map((metric, i) => (
-                <ChartSlot key={metric.id} mountDelay={i * 100}>
+                <ChartSlot key={metric.id} mountDelay={i * 100} fullWidth={metric.fullWidth}>
                   <ChartRenderer
                     metric={metric}
                     metrics={metrics}
@@ -107,7 +108,7 @@ export default function MetricsDetail() {
   )
 }
 
-function ChartSlot({ children, mountDelay = 0 }: { children: React.ReactNode; mountDelay?: number }) {
+function ChartSlot({ children, mountDelay = 0, fullWidth }: { children: React.ReactNode; mountDelay?: number; fullWidth?: boolean }) {
   const [mounted, setMounted] = useState(false)
   const [visible, setVisible] = useState(false)
 
@@ -122,14 +123,17 @@ function ChartSlot({ children, mountDelay = 0 }: { children: React.ReactNode; mo
     return () => cancelAnimationFrame(raf)
   }, [mounted])
 
+  const spanClass = fullWidth ? 'md:col-span-2' : ''
+
   if (!mounted) {
     return (
-      <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800 min-h-72 shadow-md shadow-slate-200/60 dark:shadow-none" />
+      <div className={`bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800 min-h-72 shadow-md shadow-slate-200/60 dark:shadow-none ${spanClass}`} />
     )
   }
 
   return (
     <div
+      className={spanClass}
       style={{
         opacity: visible ? 1 : 0,
         transform: visible ? 'none' : 'translateY(10px)',

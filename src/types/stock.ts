@@ -18,6 +18,8 @@ export interface Metric {
   dualWith?: string
   stackWith?: string[]
   comboWith?: string
+  groupWith?: string[]
+  fullWidth?: boolean
   note?: string
   data: MetricDataPoint[]
 }

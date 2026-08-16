@@ -1,0 +1,87 @@
+---
+title: Markdown Reference
+description: A kitchen-sink document for checking that plain markdown still renders correctly.
+date: '2026-08-14'
+tags: [reference]
+---
+
+This document uses no components. It exists so you can see how ordinary markdown
+is styled, and to catch regressions when the typography setup changes.
+
+## Text
+
+Regular paragraph text with **bold**, _italic_, ~~strikethrough~~, `inline code`,
+and an [internal link](/getting-started) alongside an
+[external one](https://mdxjs.com).
+
+> A blockquote. It should sit apart from body text without shouting.
+>
+> Second paragraph inside the same quote.
+
+## Lists
+
+Unordered:
+
+- First item
+- Second item with a longer line so you can see how wrapped list text aligns
+  against the bullet
+  - Nested item
+  - Another nested item
+- Third item
+
+Ordered:
+
+1. Install the dependencies
+2. Add an `.mdx` file to `src/content`
+3. Open the library
+
+Task list:
+
+- [x] Wire up MDX
+- [x] Register components
+- [ ] Add syntax highlighting
+
+## Code
+
+Inline `const x = 1` sits in the flow of a sentence. Fenced blocks get their own
+treatment with a copy button on hover:
+
+```ts
+interface Doc {
+  slug: string
+  title: string
+  Component: ComponentType
+}
+
+export function getDoc(slug: string): Doc | undefined {
+  return docs.find((doc) => doc.slug === slug)
+}
+```
+
+```bash
+npm run dev
+```
+
+## Tables
+
+| Plugin | Role |
+| --- | --- |
+| `@mdx-js/rollup` | Compiles `.mdx` to JSX at build time |
+| `remark-gfm` | Tables, task lists, strikethrough, autolinks |
+| `remark-frontmatter` | Recognizes the YAML block |
+| `remark-mdx-frontmatter` | Exports it as `frontmatter` |
+| `rehype-slug` | Adds `id` attributes to headings |
+
+## Headings
+
+### Third level
+
+Content under a third-level heading.
+
+### Another third level
+
+More content, so the vertical rhythm between sections is visible.
+
+---
+
+Content after a horizontal rule.

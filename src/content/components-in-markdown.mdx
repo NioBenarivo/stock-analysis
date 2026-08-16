@@ -1,0 +1,86 @@
+---
+title: Components in Markdown
+description: Live React components, props, state, and imports — all inside a markdown document.
+date: '2026-08-15'
+tags: [guide, demo]
+---
+
+import Stat from '../components/Stat'
+
+Everything below this line is a real React component mounted into the document
+tree. Not pre-rendered HTML, not a screenshot — components with props, state, and
+event handlers.
+
+## Components with props
+
+`<Callout>` takes a `type` and an optional `title`. Its children are parsed as
+markdown, so **bold**, `code`, and [links](/getting-started) all work inside it.
+
+<Callout type="note" title="Note">
+  The default variant. Use it for context a reader can skip.
+</Callout>
+
+<Callout type="warn" title="Careful">
+  Braces in MDX are JavaScript expressions. To write a literal brace in prose,
+  wrap it in backticks or escape it.
+</Callout>
+
+<Callout type="danger">
+  A callout with no title. The `type` prop is the only thing set here.
+</Callout>
+
+## Components with state
+
+Props flow in from markdown, and the component keeps its own state. Press the
+buttons — these are two independent instances of the same component:
+
+<Counter label="Default counter" />
+
+<Counter label="Starts at 100, steps by 25" start={100} step={25} />
+
+## Importing directly
+
+Registered components need no import. For anything one-off, import it in the
+document itself — this file starts with:
+
+```tsx
+import Stat from '../components/Stat'
+```
+
+Which makes `<Stat />` available here and nowhere else:
+
+<div className="not-prose my-6 flex flex-col gap-3 sm:flex-row">
+  <Stat label="Documents" value="3" />
+  <Stat label="Bundle" value="~180 KB" delta="gzipped" />
+  <Stat label="Build" value="Static" />
+</div>
+
+## Expressions and layout
+
+Because the file compiles to JSX, you can compute values inline and lay things
+out with real markup. This list is generated, not typed by hand:
+
+<ul>
+  {['Frontmatter', 'GFM tables', 'Syntax-highlightable code', 'Hover anchors'].map((item) => (
+    <li key={item}>{item}</li>
+  ))}
+</ul>
+
+{/* This is an MDX comment — HTML comments are not valid syntax here. */}
+
+## Mixing freely
+
+You can drop back into markdown at any point:
+
+| Approach | JSX | Runtime content |
+| --- | --- | --- |
+| MDX (this app) | Yes | No |
+| Registry + plain markdown | No | Yes |
+
+> The build-time choice is what makes the component props above type-checked.
+
+And then straight back into a component:
+
+<Callout type="tip">
+  Every heading on this page has a hover anchor. Point at one and a `#` appears.
+</Callout>

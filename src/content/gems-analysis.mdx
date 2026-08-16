@@ -1,0 +1,2060 @@
+---
+title: GEMS — PT Golden Energy Mines Tbk
+description: Business-model teardown, v2 — ownership, product, cost drivers, unit economics.
+date: '2026-08-16'
+tags: [analysis, coal, idx]
+---
+
+Ownership → Product → Cost drivers → Unit economics
+
+**Version 2, 16 August 2026** — rebuilt on the **full FY2019–FY2025 annual report set**.
+Version 1 was written from the FY2025 annual report alone plus six public-expose decks; the
+longer run of filings changed several conclusions materially, and every change is marked
+`REVISED v2:` in place rather than silently corrected.
+
+Currency: **United States Dollars (US$)** — GEMS reports in USD, not Rupiah. Unless stated
+otherwise all figures are FY2025 as reported in the audited consolidated financial statements
+(auditor: **Mirawati Sensi Idris**, an independent member of Moore Global Network — *not* a Big
+Four firm — unqualified opinion; single Key Audit Matter: impairment testing of mine properties,
+PPE and goodwill).
+
+**Sources used**
+
+| Source | Pages | What it gives |
+|---|---:|---|
+| **Annual Report FY2019** (incl. audited FS) | 298 | FY2017–2019 highlights, reserves, COGS, dividends, pre-boom baseline |
+| **Annual Report FY2020** | 345 | FY2018–2020 highlights, COVID-year cost base, reserves |
+| **Annual Report FY2021** | 385 | FY2019–2021 highlights, GEAR 62.4998%, reserve peak |
+| **Annual Report FY2022** | 319 | GMR→RJR handover, first CK related-party year, GEAR-under-DSSA chart |
+| **Annual Report FY2023** | 257 | The August 2023 restructuring, Salva's last JORC statement |
+| **Annual Report FY2024** | 281 | Supplier-concentration denial, CK at 19.03% of COGS |
+| **Annual Report FY2025** | 284 | Base year for Sections 01–03 |
+| Annual Public Expose decks 2021–2026 (6) | 33–45 | Overburden, stripping ratio, ICI4/NEWC monthly prices, capex, market mix |
+| IPO Prospectus, 9 November 2011 | 389 | Founding chain, GMR agreements, IPO use of proceeds |
+| Web (ESDM/APBI/Kontan/Bisnis/Coaltradeindo, Aug 2026) | — | HBA/ICI regime, PP 18–19/2025 royalties, 2026 RKAB quota, FY2025 final dividend, Q1-2026 |
+
+> **Provenance note.** All seven annual reports have complete text layers; nothing here relies on
+> OCR, and no S&P or stockanalysis.com substitution is used anywhere. Financial series run
+> **FY2017–FY2025** (FY2017–18 from the FY2019 report's highlights table). Volume series run
+> FY2018–FY2025 from the reports themselves, extended to 2014 by the decks. Overburden and
+> stripping ratios exist **only** in the public-expose decks. Anything I calculated rather than
+> read is labelled **[calc]**.
+
+---
+
+## THE ONE THING TO UNDERSTAND FIRST
+
+**GEMS is one coal mine wearing a group's clothes — and GEMS does not mine it.**
+
+Two facts, both from the FY2025 filings, control everything else in this report:
+
+**1. Concentration.** The company presents itself as five concessions across four provinces,
+66,204 hectares, 21 subsidiaries. In reality:
+
+| | Production FY2025 | % of group |
+|---|---:|---:|
+| **BIB** (PT Borneo Indobara, South Kalimantan) | **51.41 Mt** | **93.56%** |
+| KIM Block (Jambi) | 1.82 Mt | 3.31% |
+| BSL (South Sumatra) | 1.72 Mt | 3.13% |
+| TKS, EMS Group (WRL/BSA) | **0** | 0% |
+| **Total** | **54.95 Mt** | **100%** |
+
+Of the 21 subsidiaries, **11 are "not yet operating"** — including every entity in the EMS
+Group and TKS, which between them hold 87.8 Mt of booked reserves that have never produced a
+tonne. Two of those non-producing units (BSA and WRL) were **impaired again in FY2025**
+(US$3.60m, after US$15.02m across BSA/WRL/TKS in FY2024). BIB alone holds **527.0 Mt of the
+group's 844.4 Mt reserves (62.4%)** and generates roughly 93% of the cash. Any GEMS model that
+is not a BIB model is decoration.
+
+**2. GEMS does not operate the mine.** The consolidated group employed **674 people** at
+31 December 2025 (596 by the FS count; 25 at the listed parent itself) to produce 54.95 million
+tonnes. Group headcount has gone 415 (2022) → 557 (2023) → 572 (2024) → 596 (2025) while
+production rose 43%. That is **81,500 tonnes of coal per employee.** It works because virtually the entire
+physical operation is outsourced:
+
+- **Mining services US$986,977,240 = 60.08% of cost of revenues** [calc], paid to third-party
+  contractors.
+- Two contractors alone — **PT Putra Perkasa Abadi (US$538.25m) and PT Cipta Kridatama
+  (US$302.78m)** — took **US$841.03m, equal to 51.2% of total COGS and 85.2% of the entire
+  mining-services line** [calc].
+- **PT Cipta Kridatama is a related party.** It sits in the same group as **PT Radhika Jananta
+  Raya, which owns 30% of GEMS.** So does the road-maintenance counterparty (PT Tunas Inti
+  Abadi) and the port operator (PT Pelabuhan Buana Reja). At BIB, the mine contractor, the haul
+  road and the jetty are all supplied by the same 30% shareholder's group — under contracts
+  running to **16 February 2036**, i.e. the exact expiry date of BIB's Coal Contract of Work.
+
+GEMS's own capital base is trivially small relative to what it moves: **net property and
+equipment of US$112.72m (9.42% of assets)** against **US$2.41bn of revenue** — a fixed-asset
+turnover of 21.7×. This is not a mining company in the capital-intensive sense. It is a
+**concession-holder and coal marketer** that rents its mining capacity from contractors, one of
+whom is its own shareholder.
+
+**3. `NEW IN v2` — the reserve base has not been replaced since 2021, and the depletion is exact.**
+With seven years of reserve tables side by side, the pattern is unambiguous:
+
+| Year-end | Group reserves (Mt) | Change | Production (Mt) | BORNEO reserves (Mt) | Change | BIB production (Mt) |
+|---|---:|---:|---:|---:|---:|---:|
+| 2019 | 1,025.0 | — | 30.83 | 663.0 | — | 28.73 |
+| 2020 | 1,032.9 | **+7.9** | 33.46 | 693.9 | **+30.9** | n/d |
+| 2021 | **1,037.7** | **+4.8** | 29.11 | **702.8** | **+8.9** | 25.45 |
+| 2022 | 993.2 | −44.5 | 38.40 | 664.5 | −38.3 | 34.86 |
+| 2023 | 949.9 | −43.3 | 46.12 | 625.1 | −39.4 | 42.14 |
+| 2024 | 899.2 | −50.7 | 50.69 | 578.3 | −46.8 | **46.80** |
+| 2025 | **844.4** | **−54.8** | **54.95** | **527.0** | **−51.3** | **51.41** |
+
+Through 2019–2021 Salva Mining was *upgrading* the resource faster than GEMS mined it — BORNEO
+grew 663.0 → 702.8 Mt while producing roughly 90 Mt. From 2022 the additions stop dead. Over
+2022–2025 the group produced **190.16 Mt** and reserves fell **193.3 Mt**; BORNEO produced
+**175.21 Mt** and its reserves fell **175.8 Mt** [calc]. From FY2023 onward the reserve table is
+**literally the prior year minus that year's production** — in 2024 and 2025 the BORNEO change
+(−46.8, −51.3) matches BIB output (46.80, 51.41) to the first decimal.
+
+The reason is in the footnotes. Salva Mining Pty Ltd issued a fresh JORC statement in
+**January 2020, January 2021, January 2022 and January 2023** — and then stopped. The FY2023,
+FY2024 **and** FY2025 reports all cite the **same January 2023 statement**, "after considering
+coal production up to December 20XX." **There has been no independent reserve work for three and
+a half years.** Exploration spend over the same period: US$0.49m (2024), US$1.82m (2025).
+
+Read the rest of this report through that lens: GEMS's margin is the spread between a
+government-set coal price and a contractor's invoice, on a single deposit in South Kalimantan
+that is being depleted without replacement, with roughly ten years of reserve life left against
+an eleven-year licence.
+
+---
+
+# 01 — MANAGEMENT
+
+## 1.1 History and milestones
+
+GEMS is a 1997 shell that became a Sinar Mas asset in 2009 and has been a passed parcel between
+strategic partners ever since. The mines predate the listed entity: BIB and KIM were both in
+commercial operation from **2005**, before GEMS owned either.
+
+| Year | Event |
+|---|---|
+| 13 Mar 1997 | Incorporated as **PT Bumi Kencana Eka Sakti** |
+| 2006 | Acquires **PT Borneo Indobara** — holder of the South Kalimantan **PKP2B / Coal Contract of Work (CCoW)** — through PT Roundhill Capital Indonesia. *This is the acquisition that matters; everything since is secondary* |
+| 10 Dec 2009 | **PT Dian Swastatika Sentosa Tbk (DSSA) acquires 99.998%** from PT Gerbangmas Tunggal Sejahtera. The company enters **Sinar Mas Group**. Expansion into Jambi and Central Kalimantan |
+| 16 Nov 2010 | Renamed **PT Golden Energy Mines Tbk** for the IPO |
+| 11 Aug 2011 | Signs a **25-year Coal Sales Agreement with GMR Infrastructure Investments (Singapore)**, plus a Coal Sales Support Agreement binding eight subsidiaries. Governed by Singapore law, SIAC arbitration |
+| **17 Nov 2011** | **IPO on IDX.** 882,353,000 new shares at **Rp2,500** (15% of enlarged capital); total shares 5,882,353,000. In parallel DSSA sells 1,058,823,500 shares to GMR at Rp2,500 → **GMR reaches 30%** |
+| 13 Jul 2012 | Incorporates GEMS Coal Resources Pte. Ltd. (Singapore) |
+| 12 Oct 2012 | Head office moves to Sinar Mas Land Plaza Tower II, Thamrin |
+| 27 Jan 2014 | GEMS Coal Resources → **GEMS Trading Resources Pte. Ltd.** |
+| 20 Apr 2015 | **DSSA transfers 66.9998% to Golden Energy and Resources Limited (GEAR)**, Singapore (formerly United Fiber System). `REVISED v2:` the FY2023 report states plainly that GEAR was **"a Subsidiary of PT Dian Swastatika Sentosa Tbk"** — this was a reorganisation into a DSSA-controlled Singapore listco, not a sale to a third party |
+| 20 Sep 2016 | Acquires **PT Era Mitra Selaras (EMS)** + WRL and BSA — South Sumatra / West Sumatra |
+| 30 Nov 2017 | Incorporates PT Kuansing Inti Sejahtera and PT Bungo Bara Makmur (Jambi) |
+| 31 Aug 2018 | Acquires **DSU, DSI, UNSOCO and PT Barasentosa Lestari (BSL)** — the South Sumatra CCoW |
+| **15 Sep 2022** | **GMR exits.** GMR Coal Resources sells its 30% (1,764,705,900 shares) to **PT Radhika Jananta Raya (RJR)**, a subsidiary of **PT ABM Investama Tbk** (Trakindo/Hamami group) |
+| Nov 2022 | **Feriwan Sinatra appointed Vice President Director** at the EGMS of 22 November 2022 — nine weeks after RJR bought in. He was concurrently **President Director of PT Cipta Kridatama** (see §1.3) |
+| **Aug 2023** | Series of corporate actions by DSSA and GEAR: register becomes **DSSA 51% direct, GEAR 7.00%, public 12.00%**. The Singapore holding layer is collapsed out of the chain |
+| 2024 | GEAR is renamed in the filings from *"Golden Energy and Resources **Limited**"* to *"Golden Energy and Resources **Pte. Ltd.**"* — a public-to-private conversion. **PT Sinar Mas Cakrawala appears with 1.62%**; float falls 12.00% → 10.39% |
+| 2025 | **PT Karya Mining Solutions (KMS)** — a *mining services* subsidiary — reaches commercial operation. First step toward in-housing? |
+
+Read as a strategy: **buy one very good CCoW (2006) → get a rich parent (2009) → list to
+monetise (2011) → rotate strategic partners (GMR in 2011, out in 2022) → simplify the holding
+chain (2023) → harvest.** GEMS has not acquired a new producing concession since 2018, and the
+last two acquisitions (EMS 2016, BSL 2018) are, respectively, still not producing and producing
+1.72 Mt at a loss-making adjacent unit. **The 2006 purchase is the entire company.**
+
+## 1.2 Ultimate beneficial ownership
+
+Share capital: authorised Rp2,000,000,000,000; issued and fully paid **Rp588,235,300,000 =
+5,882,353,000 shares** at Rp100 par. **Unchanged since the 2011 IPO** — no rights issue, no
+buyback, no bonds, no sukuk, no convertibles, no ESOP shares outstanding.
+
+### `NEW IN v2` — how the register actually evolved, 2019 → 2025
+
+| Shareholder | 2019 | 2020 | 2021 | 2022 | **2023** | 2024 | 2025 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Golden Energy and Resources (GEAR) | **66.9998** | 66.9998 | **62.4998** | 62.4998 | **7.0000** | 6.990 | 6.990 |
+| GMR Coal Resources Pte. Ltd. | 30.0000 | 30.0000 | 30.0000 | — | — | — | — |
+| PT Radhika Jananta Raya (RJR) | — | — | — | **30.0000** | 30.0000 | 30.000 | 30.000 |
+| PT Dian Swastatika Sentosa Tbk (DSSA) | — | — | — | — | **51.0000** | 51.000 | 51.000 |
+| PT Sinar Mas Cakrawala (SMC) | — | — | — | — | — | **1.620** | 1.620 |
+| Public float | 3.0002 | 3.0002 | **7.5002** | 7.5002 | **12.0000** | **10.390** | 10.390 |
+
+Three discrete events, each visible in the filings:
+
+1. **2020→2021: GEAR sells 4.5%** (264,705,885 shares) into the market. Float goes 3.0002% →
+   7.5002%. This is the only time in fifteen years that the float was enlarged.
+2. **15 Sep 2022: GMR exits**, selling its entire 30% (1,764,705,900 shares) to RJR. GMR had held
+   that stake since the 2011 IPO under a 25-year offtake agreement.
+3. **Aug 2023: the Singapore layer is removed.** GEAR goes 62.4998% → 7.00%; DSSA appears
+   directly at 51%; the float rises 7.5002% → 12.00%.
+
+> **`REVISED v2` — I was wrong about the GEAR transfer.**
+> Version 1 called the August 2023 change *"the single largest unexplained item in the file"* and
+> framed it as a ~60-point transfer between two brothers' separate vehicles. The earlier annual
+> reports show that reading was wrong on the key fact.
+>
+> The **FY2022 report's ownership chart** shows **DSSA owned 77.5% of GEAR**, and GEAR owned
+> 62.4998% of GEMS. DSSA's *effective* economic interest was therefore
+> **77.5% × 62.4998% = 48.44%** [calc]. After August 2023 DSSA held **51.00% directly**. So the
+> restructuring **moved DSSA from ~48.4% indirect to 51.0% direct** — it collapsed a Singapore
+> intermediate holding company out of the chain and slightly increased the parent's stake. That
+> is an ordinary group simplification, not an unexplained transfer of value, and it is consistent
+> with GEAR converting from *Limited* to *Pte. Ltd.* (i.e. delisting) in the following year.
+>
+> What *is* genuinely notable, and survives: at the top of the FY2022 and FY2023 charts sits
+> **PT Sinar Mas, controlled jointly by Franky Oesman Widjaja, Indra Widjaja and Muktar
+> Widjaja**. By the FY2024 chart PT Sinar Mas has disappeared, PT Sinar Mas Tunggal sits directly
+> above DSSA, and the controllers are named separately — **Franky controlling DSSA, Indra
+> controlling GEAR and SMC**. The family's joint holding structure was formally separated between
+> 2023 and 2024. The GEMS filings document the outcome and never explain it, but it is a
+> reorganisation of the *owners*, not an extraction from the *company*. I have removed this from
+> the risk list.
+
+### Register at 31 December 2025
+
+| Shareholder | Shares | % | 1 Jan 2025 % | Type |
+|---|---:|---:|---:|---|
+| **PT Dian Swastatika Sentosa Tbk (DSSA)** | 3,000,000,100 | **51.000** | 51.000 | Local institution |
+| **PT Radhika Jananta Raya (RJR)** | 1,764,705,900 | **30.000** | 30.000 | Local institution |
+| Golden Energy and Resources Pte. Ltd. (GEAR) | 411,192,353 | **6.990** | 6.990 | Foreign institution |
+| PT Sinar Mas Cakrawala (SMC) | 95,505,000 | **1.620** | 1.620 | Local institution |
+| Public (each \<5%) | 610,949,647 | **10.390** | 10.390 | Mixed |
+| **Total** | **5,882,353,000** | **100.000** | | |
+
+**The register did not move by a single share during 2025.** Only the number of holders changed
+(7,079 → 8,869), meaning ~1,790 new retail holders traded the same 10.39% float among
+themselves. Quarterly transaction volume ran 7.7m–17.1m shares against 5.88bn outstanding —
+**turnover of 0.13%–0.29% per quarter.** This stock barely trades.
+
+### The control chain
+
+```
+    Franky Oesman Widjaja                    Indra Widjaja          Hamami family
+    (controller of DSSA)                (controller of GEAR & SMC)  (R.M. Hamami, R.S. Hamami,
+            │                                    │                   Mivida H., Ana Solana H.)
+            │                                    │                          │
+  PT Sinar Mas Tunggal 59.900%                   │                 PT Tiara Marga Trakindo 53.559%
+            │      (public/treasury 40.100%)     │                 Valle Verde Pte Ltd     25.511%
+            ▼                                    │                 Public                  20.930%
+  PT Dian Swastatika Sentosa Tbk (DSSA)          │                          │
+            │                                    │                          ▼
+            │                                    │                 PT ABM Investama Tbk
+            │                                    │                          │ 99.900%
+            │                                    │                          ▼
+            │                                    │                 PT Reswara Minergi Hartama
+            │                                    │                          │ 99.900%
+            │                                    │                          ▼
+            │                                    │                 PT Radhika Jananta Raya (RJR)
+            │                                    │                          │
+            │ 51.000%          GEAR 6.990% ──────┤  SMC 1.620%              │ 30.000%
+            └──────────────────────┬─────────────┴──────────────────────────┘
+                                   ▼
+                    PT GOLDEN ENERGY MINES Tbk        Public 10.390%
+```
+
+The annual report names the controllers explicitly: *"The Controllers of the Company are
+**Mr. Franky Oesman Widjaja and Mr. Indra Widjaja**"* — the two Widjaja brothers, with Franky
+controlling DSSA and Indra controlling GEAR and SMC.
+
+**Sinar Mas bloc: 51.000 + 6.990 + 1.620 = 59.610%.**
+**Trakindo/ABM bloc (RJR): 30.000%.**
+**Free float: 10.390%.**
+
+Two structural consequences:
+
+1. **The float cannot dilute or discipline anyone.** 10.39% free float means no meaningful
+   minority vote, no takeover risk, no index-driven forced buying of size. Price discovery on
+   0.2% quarterly turnover is nearly notional.
+2. **The 30% holder is also the biggest supplier.** RJR is not a passive financial investor —
+   ABM Investama is a mining-services and logistics group. Its subsidiaries **PT Cipta
+   Kridatama, PT Tunas Inti Abadi, PT Pelabuhan Buana Reja and PT Trakindo Utama** all invoice
+   GEMS. This is a *vertical* shareholding, not a portfolio position. See §1.4.
+
+> **`REVISED v2`** — the GEAR question is answered above and is no longer flagged as a risk. The
+> residual disclosure weakness is narrower but real: in the year that ~60% of the company changed
+> hands between affiliates, the FY2023 report's *"Disclosure of Material Transactions"* section
+> states that **"the Company did not make material transactions with a value equal to 20% or more
+> of the Company's Equity."** That is technically correct — the transaction was between
+> shareholders, not by the listed entity — but it means GEMS's own filings never carried a
+> consideration, a valuation or a fairness opinion for the largest ownership change in its
+> history. The disclosure obligation sat with DSSA, not GEMS.
+
+## 1.3 Group structure and subsidiaries
+
+21 subsidiaries, direct and indirect. **No associates and no joint ventures** — unlike TAPG,
+everything GEMS owns is fully consolidated, so the reported P&L is the whole business. Ownership
+percentages are 94.74%–100%, so the non-controlling interest is a rounding error
+(**US$6.05m = 0.51% of equity**; NCI profit US$1.55m = 0.6% of net profit).
+
+### Direct subsidiaries
+
+| Entity | Business | Own % | Total assets (US$) | Commercial from |
+|---|---|---:|---:|---|
+| **PT Roundhill Capital Indonesia (RCI)** | Equity participation + wholesale trading | 99.0158 | **767,376,457** | 2014 |
+| PT Kuansing Inti Makmur (KIM) | Coal mining | 99.9998 | 87,641,263 | 2005 |
+| PT Trisula Kencana Sakti (TKS) | Coal mining | 99.9999 | 2,467,605 | 2008 |
+| GEMS Trading Resources Pte. Ltd. (Singapore) | Wholesale trading | 100.0000 | 5,257,911 | 2012 |
+| **PT Karya Mining Solutions (KMS)** | **Mining services** | 99.9994 | 20,124,604 | **2025** |
+| PT GEMS Energy Indonesia | Trade/construction/transport | 99.0000 | 121,237 | Not yet |
+| PT Era Mitra Selaras (EMS) | Equity participation | 99.8800 | 944,769 | Not yet |
+| PT Dwikarya Sejati Utama (DSU) | Venture capital / consultancy | 99.9999 | 124,419,999 | Not yet |
+| PT UNSOCO | Management consultancy | 99.0000 | 70,816 | Not yet |
+
+### Indirect subsidiaries
+
+| Entity | Through | Business | Own % | Total assets (US$) | Commercial from |
+|---|---|---|---:|---:|---|
+| **PT Borneo Indobara (BIB)** | RCI | Coal mining | 99.0701 | **777,837,293** | 2005 |
+| PT Barasentosa Lestari (BSL) | DSI + UNSOCO | Coal mining + mine-mouth power | 94.7400 | 124,541,971 | 2015 |
+| PT Duta Sarana Internusa (DSI) | DSU | Consultancy | 99.9000 | 124,662,032 | Not yet |
+| PT Bungo Bara Utama (BBU) | KIM | Coal mining | 99.9991 | 39,093,032 | 2017 |
+| PT Tanjung Belit Bara Utama (TBBU) | KIM | Coal mining | 99.9412 | 23,189,864 | Not yet |
+| PT Berkat Nusantara Permai (BNP) | KIM | Coal mining | 99.9999 | 20,334,161 | Not yet |
+| PT Bungo Bara Makmur (BBM) | KIM + BBU | Coal mining | 99.9000 | 13,687,997 | 2019 |
+| PT Karya Cemerlang Persada (KCP) | KIM | Coal mining | 99.9917 | 6,949,748 | 2011 |
+| PT Bara Harmonis Batang Asam (BHBA) | KIM | Coal mining | 99.9948 | 1,438,668 | 2010 |
+| PT Wahana Rimba Lestari (WRL) | EMS + KIM | Coal mining | 99.9999 | 779,598 | Not yet |
+| PT Kuansing Inti Sejahtera (KIS) | KIM | Coal mining | 99.9000 | 336,627 | Not yet |
+| PT Berkat Satria Abadi (BSA) | EMS + KIM | Coal mining | 99.9999 | 164,484 | Not yet |
+
+Three things fall out of this table:
+
+- **RCI (US$767.4m) and BIB (US$777.8m) are the group.** BIB's assets are 65.0% of the
+  consolidated balance sheet on their own [calc]; RCI is the holding company that owns BIB, so
+  the two overlap. Add BSL (US$124.5m) and the DSU/DSI stack (US$249.1m of essentially
+  intra-group holding assets) and you have accounted for nearly all of it.
+- **The DSU → DSI stack holds US$249.08m of assets and has never operated.** Two "management
+  consultancy / venture capital" shells carrying a quarter of a billion dollars, whose only
+  function is to hold BSL. The AR does not decompose those assets.
+- **11 of 21 subsidiaries are "not yet operating"** — 8 of them coal-mining licences that have
+  been dormant for up to a decade (WRL and BSA since the 2016 EMS acquisition; TKS has held a
+  Central Kalimantan IUP since 2009 and produced nothing).
+
+### Boards (31 December 2025)
+
+**Board of Commissioners**
+
+| Name | Role |
+|---|---|
+| Lokita Prasetya | President Commissioner *(also Vice President Director of DSSA since 2018)* |
+| Achmad Ananda Djajanegara | Vice President Commissioner |
+| Alex Sutanto | Commissioner |
+| Feriwan Sinatra | Commissioner |
+| Dr. Ir. Bambang Setiawan | Independent Commissioner |
+| Ketut Sanjaya | Independent Commissioner |
+
+**Board of Directors**
+
+| Name | Role |
+|---|---|
+| Bonifasius | President Director |
+| Iwan Hermawan | Vice President Director *(also Director of PT Reswara Minergi Hartama, RJR's parent)* |
+| Raden Utoro | Director (Chief Operating Officer) |
+| Yoghi Nuswantoro | Director (Chief Financial Officer) |
+| Suhendra | Director (Deputy CFO) |
+| Paulus Yuniardi | Director (Deputy CFO) |
+
+> ### `NEW IN v2` — the contractor's CEO sat on GEMS's board while his contractor's billings quadrupled
+>
+> **Feriwan Sinatra** — Commissioner of GEMS in FY2025 — has the following career, per the
+> FY2022 and FY2024 annual reports' own director profiles:
+>
+> | Period | Role |
+> |---|---|
+> | 2012–2015 | Director, **PT Tunas Inti Abadi** (RJR-group; GEMS's haul-road counterparty) |
+> | 2015–2017 | President Director, **PT Reswara Minergi Hartama** (RJR's direct parent) |
+> | **2017–2024** | **President Director, PT Cipta Kridatama** (GEMS's largest related-party contractor) |
+> | **2022–2024** | **Vice President Director of GEMS**, appointed at the EGMS of **22 November 2022** |
+> | 2022– | Commissioner of **PT Borneo Indobara, PT Kuansing Inti Makmur, PT Roundhill Capital Indonesia, PT Trisula Kencana Sakti and the PT Barasentosa Lestari group** |
+> | 2024– | **Commissioner of GEMS**; Director and Investment Committee member of PT ABM Investama Tbk |
+>
+> For roughly two years — **November 2022 to mid-2024** — the same individual was
+> **President Director of Cipta Kridatama and Vice President Director of the company buying
+> Cipta Kridatama's services**, while also sitting on the boards of the subsidiaries awarding
+> the contracts. Over exactly that window, CK's related-party billings to GEMS went
+> **US$82.3m (2022) → US$180.3m (2023) → US$304.6m (2024)**, from 5.21% to 19.03% of cost of
+> revenues [calc].
+>
+> The FY2022 profile describes him as having *"an affiliate relationship with the Majority **and
+> Controlling** Shareholder."* The FY2024 profile, after DSSA became controller, softens this to
+> *"the Majority Shareholder, but no affiliation with the Controlling Shareholder."* Every one of
+> those years, the annual report states that **the Company made no affiliated transactions
+> containing conflicts of interest under POJK 42/2020.**
+>
+> This is not an allegation of mispricing — I have no evidence on rates, and CK's per-bcm cost is
+> not separable from PPA's in any filing. It is an observation that the standard structural
+> safeguard against mispricing was absent for the period in which the relationship scaled fastest.
+
+Notes worth keeping:
+
+- **2 of 6 commissioners are independent (33%)** — the IDX minimum is 30%. No Risk Management
+  Committee exists; risk sits in a department reporting to the Board of Directors (head:
+  Harlyn Sianturi, ex-Kaltim Prima Coal).
+- **The 30% shareholder has a seat at the executive table**: the Vice President Director
+  (Iwan Hermawan) is simultaneously a director of RJR's parent, and the Commissioner
+  (Feriwan Sinatra) ran the contractor. Combined with the contracting relationships in
+  §1.4, ABM/Trakindo is inside both the boardroom and the cost line — and has been since 2022.
+- **Zero board share ownership.** Not one commissioner or director holds a single GEMS share.
+  Six mid-level executives hold **500 shares each** (worth about Rp4m ≈ US$245). There is no
+  equity alignment anywhere in management.
+- **Remuneration is disclosed twice, differently.** The governance chapter says Commissioners +
+  Directors received **US$4,578,835** in 2025. Financial statement Note 35(c) says key
+  management short-term benefits were **US$6,751,748** (2025) and **US$3,138,085** (2024). Take
+  the audited number: **key management pay rose 115.2% in a year when net profit fell 46.2%**
+  [calc]. Neither figure is reconciled to the other and the AR offers no explanation for the
+  increase. `EDITED: I originally read the US$4.58m governance figure as the answer — the FS
+  note is the audited one and is 47% higher. Both are printed in the same document.`
+
+## 1.4 Related party transactions
+
+This is the most important section in the report, and it is best read as **two separate
+related-party systems** that happen to sit on the same balance sheet.
+
+### System A — Sinar Mas (the owner's ecosystem): small, boring, clean
+
+The Sinar Mas side of the register generates the sort of RPT you expect from an Indonesian
+conglomerate: banking with the group bank, insuring with the group insurer, renting from the
+group landlord, selling coal to group power plants and mills.
+
+| Counterparty | Nature | 2025 (US$) | 2024 (US$) | % of relevant total 2025 |
+|---|---|---:|---:|---:|
+| PT DSSP Power Kendari | Coal sales | 26,689,960 | 29,051,028 | 1.11% of revenue |
+| PT Sinarmas Bio Energi | Coal sales | 2,647,389 | 2,903,327 | 0.11% |
+| PT SOCI Mas | Coal sales | 1,976,275 | 2,664,853 | 0.08% |
+| PT Sinar Mas Agro Resources & Technology (SMART) | Coal sales | 1,333,761 | 11,853,345 | 0.06% |
+| PT Ivo Mas Tunggal | Coal sales | 1,271,123 | 4,143,541 | 0.05% |
+| PT Indah Kiat Pulp & Paper | Coal sales | **—** | 144,686,740 | — |
+| PT Lontar Papyrus | Coal sales | **—** | 37,817,352 | — |
+| PT Bank Sinarmas / Bank Nano Syariah | Cash deposits | 9,340,241 | 38,331,882 | 0.78% of assets |
+| PT Rolimex Kimia Nusamas | Mining overhead (chemicals) | 1,726,312 | 1,479,017 | 0.11% of COGS |
+| PT Hutan Rindang Banua (HRB) | Road maintenance/revegetation, advances | 1,659,180 (advance) | 1,763,711 | 0.14% of assets |
+| PT Royal Oriental | Office/vehicle/equipment lease | 88,805 (dep.) | 245,304 (deposit) | 0.06% of G&A |
+| PT Asuransi Sinarmas | Insurance | — | 359,544 | — |
+
+**Related-party sales collapsed from US$233.12m (8.62% of revenue) to US$33.92m (1.41%)** — a
+85.5% fall [calc]. This is *not* commercial: from January 2025 **PT Indah Kiat, Lontar Papyrus,
+Tjiwi Kimia, Purinusa Ekapersada and Wirakarya Sakti ceased to be related parties** because
+their *ultimate shareholders changed*. GEMS still sells to them; the sales simply reclassified
+into "third parties". The apparent improvement in RPT hygiene is an accounting reclassification,
+not a change in commercial behaviour.
+
+> **TL;DR:** Sinar Mas RPT is genuinely small. There is **no management fee, no royalty, no
+> licence fee, no trademark charge, no intercompany loan to the parent and no guarantee given
+> to affiliates** anywhere in Note 35. Compare CPIN's Nugen royalty. On this axis GEMS is clean.
+
+### System B — ABM / Trakindo (the 30% shareholder's ecosystem): this is the whole cost base
+
+> **`NEW IN v2` — the penetration curve.** The seven-year run of filings turns this from a
+> snapshot into a trend, and the trend is the finding:
+>
+> | | 2021 | 2022 | 2023 | 2024 | 2025 |
+> |---|---:|---:|---:|---:|---:|
+> | **Related-party COGS as % of total COGS** | **0.17%** | **5.21%** | **10.32%** | **19.13%** | 6.94% |
+> | Cipta Kridatama, related-party mining services (US$m) | **0.0** | **82.3** | **180.3** | **304.6** | 112.2 |
+> | CK trade payable at year-end (US$m) | — | 23.3 | 47.6 | 53.6 | 77.2 |
+> | Related-party sales as % of revenue | — | 6.97% | 8.27% | 8.62% | 1.41% |
+> | RJR shareholding | 0% | **30%** (from Sept) | 30% | 30% | 30% |
+>
+> In FY2021 — the last full year before RJR bought in — the FY2021 report states flatly:
+> ***"There were no purchases transaction with related parties for the year ended December 31,
+> 2021 and 2020."*** Related-party cost of sales was **0.17% of COGS**.
+>
+> Within 24 months of RJR acquiring 30%, the related-party share of cost of sales went to
+> **19.13%**, and Cipta Kridatama's billings rose **3.7× in three years**. There is no
+> competitive-tender disclosure, no rate benchmark, and no conflict-of-interest classification
+> anywhere in any of the seven reports.
+
+| Counterparty | Nature | 2025 (US$) | 2024 (US$) | % of relevant total |
+|---|---|---:|---:|---:|
+| **PT Cipta Kridatama (CK)** | **Mining services** | **112,215,922** | **304,605,655** | **6.83% of COGS** (2024: 19.03%) |
+| PT Cipta Kridatama | Equipment rental | — | 154,805 | — |
+| PT Tunas Inti Abadi (TIA) | Stockpile services / road | 383,137 | 6,533,315 | 0.15% of selling exp. |
+| PT Pelabuhan Buana Reja (PBR) | Stockpile / port services | 839,971 | — | 0.33% of selling exp. |
+| PT Trakindo Utama | Repairs & maintenance | — | 36,287 | — |
+| **Trade payables to CK** | | **77,179,961** | 53,646,974 | **15.84% of total liabilities** |
+| Trade payables to TIA | | 1,995,522 | 245,887 | 0.41% |
+| Total RP trade payables | | **80,802,217** | 55,633,959 | **16.58% of liabilities** |
+
+Now the contracts behind those numbers, from Note 37:
+
+| Counterparty | Subsidiary | Scope | Expiry |
+|---|---|---|---|
+| **CK** | **BORNEO (BIB)** | Coal mining services | **16 February 2036** |
+| CK | BORNEO | Heavy equipment rental | 31 December 2028 |
+| CK | KIM | Mining services | 2 Oct 2027 or 226m BCM cumulative |
+| CK | KCP | Mining services | 24 Oct 2028 or 226m BCM cumulative |
+| CK | BBU | Mining services | 9 Jul 2029 or 226m BCM cumulative |
+| CK | BBM | Mining services | 2 Oct 2027 or 226m BCM cumulative |
+| **PBR** | **BORNEO** | **Port facility use (coal loading)** | **16 February 2036** |
+| **TIA** | **BORNEO** | **Haul road maintenance** | **16 February 2036** |
+
+Three observations that matter more than the dollar amounts:
+
+1. **The end dates are the licence date.** BIB's CCoW runs 2006–2036. CK's mining contract, TIA's
+   road contract and PBR's port contract *all* terminate **16 February 2036**. ABM/Trakindo has
+   life-of-mine positions on the mining, the road and the jetty of the asset that is 93.6% of
+   GEMS's production. These are not renewable service agreements — they are, functionally, a
+   carve-out of the economics of the concession.
+
+2. **The sequencing.** The CK–BORNEO life-of-mine contract is dated **22 October 2021**. RJR
+   bought GMR's 30% stake on **15 September 2022** — eleven months *later*. So ABM won the
+   contract first and bought the equity second. Whether that reads as a supplier converting a
+   commercial position into an ownership position, or as a pre-agreed package, the AR does not
+   say. It is not disclosed as a conflict-of-interest transaction: Note 35 states flatly that
+   *"there are no transactions with related parties that directly or indirectly relate to the
+   main business of the Group and are identified as conflict of interest based on POJK
+   42/POJK.04/2020."* **A life-of-mine mining contract with a 30% shareholder's subsidiary is
+   arguably the definition of a transaction directly related to the main business.**
+
+3. **`REVISED v2` — the CK "gap" is a reclassification, not a US$190m disappearance.**
+
+   Version 1 flagged an unexplained US$190.6m gap between Note 26 (CK total services
+   US$302,780,920) and Note 35 (CK related-party mining services US$112,215,922), and could not
+   resolve it. The FY2024 report resolves it:
+
+   | | 2022 | 2023 | 2024 | 2025 |
+   |---|---:|---:|---:|---:|
+   | CK per **Note 35** (related-party mining services) | 82,291,629 | 180,260,239 | **304,605,655** | **112,215,922** |
+   | CK per **Note 26** (total services from contractor) | n/d | n/d | n/d | **302,780,920** |
+
+   **CK's total billings were essentially flat year on year: US$304.6m (2024) → US$302.8m
+   (2025), −0.6%.** What changed is that in 2025 only US$112.2m of it was classified into the
+   Note 35 line "mining services", with the remaining ~US$190.6m presumably sitting in coal
+   hauling or mining overhead but not itemised by counterparty. The business did not shrink 63%;
+   the disclosure line did. That is a presentation inconsistency worth raising with the company,
+   not a missing US$190m. **Model CK at ~US$303m.**
+
+   The genuinely troubling item is different, and it is a **direct contradiction between two
+   consecutive audited annual reports about the same year**:
+
+   | Document | Statement about FY2024 |
+   |---|---|
+   | **FY2024 AR**, Note 26 | *"There were **no purchases from any supplier which exceeded 10%** of total sales for years ended December 31, 2024 and 2023."* |
+   | **FY2025 AR**, Note 26 | *"For the year ended December 31, 2024 … Total services from **PPA amounted to US$478,153,095, representing 18% of total revenues in 2024**."* |
+
+   Both are signed by the same auditor. The FY2024 report denies supplier concentration; the
+   FY2025 report discloses an 18%-of-revenue supplier for that same year — and there is no
+   restatement note, no prior-period adjustment and no explanation. On the FY2025 report's own
+   numbers, PPA (US$478.2m) plus CK (US$304.6m) was **US$782.8m = 93.2% of FY2024 mining
+   services** [calc]. `EDITED: this replaces my v1 claim that "the two notes cannot be
+   reconciled." They can — and the reconciliation makes the FY2024 disclosure look worse, not
+   better.`
+
+**Key management compensation:** US$6,751,748 (2025) vs US$3,138,085 (2024), unaudited, per
+Note 35(c). See §1.3.
+
+**Insurance is the other unexplained line.** G&A insurance jumped from US$9,793,175 to
+**US$22,465,050 (+129.4%)** [calc] — a US$12.67m increase, larger than the entire fall in
+professional fees and licensing combined — in a year when the insured sums in Note 9 barely
+changed and the property-all-risk cover actually *fell* from Rp797.0bn to Rp526.6bn. The RPT
+note flags PT Asuransi Sinarmas as newly appearing on several 2025 policies. This is the second
+largest unexplained cost movement in the accounts after CK.
+
+## 1.5 Dividends and reinvestment history
+
+**Stated policy:** at least **30% of consolidated net profit after tax**, subject to seven
+conditions (results, cash flow, capital adequacy, reserves, prospects, legal compliance, and —
+notably — **compliance with the credit facility agreement**). If the company records a full-year
+loss, shareholders must **return dividends already paid**.
+
+The stated 30% floor is irrelevant. The actual practice is near-full distribution.
+
+`REVISED v2:` extended back to FY2018 from the FY2020 and FY2021 reports' dividend tables.
+
+| Fiscal year | Total declared (US$m) | Net profit (US$m) | Payout | Notes |
+|---|---:|---:|---:|---|
+| **2018** | **58.0** | 100.55 | **57.7%** | 2 interims + final; AR states ratio 58.72% |
+| **2019** | **53.0** | 66.77 | **79.4%** | Single final dividend; AR states 81.03% |
+| **2020** | **125.0** | 95.86 | **130.4%** | 2 interims + final. AR footnote: *"sourced from profit after tax … **and retained earnings**"* — i.e. it distributed more than it earned in a COVID year |
+| 2021 | **330.0** | 354.02 | **93.2%** | 4 interims + final; AR states ratio 94.83% |
+| 2022 | **420.0** | 695.91 | **60.4%** | 3 interims; AR states 61.73% |
+| 2023 | **500.0** | 528.75 | **94.6%** | 2 interims + final; AR states 96.45% |
+| 2024 | **500.0** | 483.13 | **103.5%** | 3 interims + final; AR states **105.53%** — *paid out more than it earned* |
+| 2025 | **180.0** | 259.79 | **69.3%** | US$100m interim (Jun 2025) + **US$80m final approved 19 May 2026** |
+| **2019–2025** | **2,108.0** | **2,484.23** | **84.9%** | [calc] |
+
+**Seven years, 84.9% of cumulative net profit and 83.2% of cumulative operating cash flow
+(US$2,533.0m) distributed** [calc]. The policy floor of 30% has never once been the binding
+constraint. Twice — FY2020 and FY2024 — the payout exceeded 100% of earnings, and in FY2020 the
+report says so explicitly.
+
+FY2025 final dividend: **US$0.0136/share = Rp237.95** at the BI mid-rate of Rp17,496 on
+18 May 2026; record date 3 June 2026, paid **11 June 2026**. Total FY2025 distribution
+US$180m ≈ **Rp3.14 trillion, Rp514.95/share**.
+
+**Cash flow reality check [calc]:**
+
+| | 2025 | 2024 |
+|---|---:|---:|
+| Operating cash flow | US$246.88m | US$571.78m |
+| Dividends paid (cash) | US$210.00m | US$475.00m |
+| Dividends paid to NCI | US$4.08m | US$9.26m |
+| **Total distributions / OCF** | **86.7%** | **84.7%** |
+| Capex (PPE + mine properties) | US$19.21m | US$105.41m |
+| Depreciation & amortisation | US$37.12m | ~US$39.29m |
+| **Capex / D&A** | **0.52×** | 2.68× |
+
+**FY2025 capex was half of depreciation.** The company is not replacing what it consumes. The
+FY2024 figure is inflated by an US$86.85m addition to mine properties (mine development, mostly
+transferred into producing mines) that did not repeat — 2025 mine-property additions were
+**US$257,699**, essentially zero.
+
+**Reinvestment history since IPO:** the 2011 IPO raised roughly Rp2.21tn gross
+(882,353,000 × Rp2,500), earmarked 80% to BIB capacity and a new port, 15% to KIM, 5% elsewhere.
+It was **fully spent by 31 December 2014** and GEMS has never returned to the equity market —
+no rights issue in fifteen years. Against that single equity raise, the company has distributed
+**US$2.11bn in the last seven years.**
+
+**`NEW IN v2` — capex has been chronically under-budget for seven years.** Every annual report
+discloses a budget and a realisation:
+
+| Year | Capex budget (US$m) | Capex realised (US$m) | Realisation | Mine-property additions (US$m) |
+|---|---:|---:|---:|---:|
+| 2019 | 33.18 | **23.0** | 69% | n/d |
+| 2021 | 25.99 | **9.0** | **35%** | n/d |
+| 2022 | 25.99 | **10.64** | **41%** | n/d |
+| 2023 | 37.02 | 36.17 | 98% | **53.77** |
+| 2024 | n/d | 18.56 | — | **86.85** |
+| 2025 | 26.87 | **18.95** | **71%** | **0.26** |
+
+The only two years of serious mine development were 2023–2024 (US$140.6m combined), and they
+stop dead in 2025 at **US$257,699**. Across 2019–2022 — the four years spanning the biggest coal
+price boom in a generation — GEMS spent under US$70m of capex in total.
+
+> **TL;DR:** GEMS is a distribution vehicle, and has been for at least seven years. Over
+> **2019–2025 it returned 84.9% of cumulative net profit (US$2,108m) and 83.2% of cumulative
+> operating cash flow (US$2,533m)** [calc], while running capex below budget in five of seven
+> years and at half of depreciation in FY2025. The payout exceeded 100% of earnings twice
+> (FY2020, FY2024). The FY2025 cut to 69% is the lowest ratio since 2022, and it coincided with
+> a US$60m purchase of Danantara debt securities (§3.1) and a US$204m net repayment of bank debt.
+
+---
+
+# 02 — MODEL
+
+## 2.1 Product
+
+GEMS sells **thermal coal, and nothing else.** No coking coal, no washed product, no briquettes,
+no DME, no downstream conversion, no by-products. The only differentiation across the group is
+**calorific value**, and it is the reason the group is worth less per tonne than its volume
+would suggest.
+
+### Coal specification by mine (as reported, "as received" unless noted)
+
+| Parameter | **BIB** | **KIM** | **TKS** | **EMS Group** | **BSL** |
+|---|---|---|---|---|---|
+| **Calorific value (kcal/kg, ar)** | **4,000–4,200** | **4,600** | **6,600** | **3,000** | **4,500–4,800** |
+| Calorific value (kcal/kg, adb) | 5,300–5,500 | 5,500 | 7,000 | 4,900 | 5,800–5,900 |
+| Total moisture (%, ar) | 36–38 | 24–28 | 11–13 | **53–55** | 28–32 |
+| Moisture (%, adb) | 15–35 | 8–15 | 8–10 | 16–20 | 12–14 |
+| Ash (%, adb) | **5–7** | 7–19 | 8–10 | 5–8 | 6–8 |
+| Volatile matter (%, adb) | 40 | 36 | 41 | 42 | 41 |
+| Fixed carbon (%, adb) | 36–40 | 28–42 | 46 | 35 | 42 |
+| **Total sulphur (%, adb)** | **0.2–0.6** | 1.0–1.3 | 1.5–1.7 | 0.2–0.6 | 0.4–0.6 |
+| HGI | 55–60 | 60 | 50 | 65 | 50 |
+| Size (mm) | 0–50 | 0–50 | 0–50 | 0–50 | 0–50 |
+
+Product taxonomy, in the order that actually determines revenue:
+
+```
+                     GEMS PRODUCT MIX FY2025 (54.16 Mt sold)
+                                    │
+        ┌───────────────────────────┼──────────────────────────┐
+        │                           │                          │
+   BIB 50.30 Mt (92.9%)      KIM 1.90 Mt (3.5%)        BSL 1.87 Mt (3.4%)
+   4,000–4,200 kcal ar        4,600 kcal ar             4,500–4,800 kcal ar
+   0.2–0.6% S, 5–7% ash       1.0–1.3% S, 7–19% ash     0.4–0.6% S
+   South Kalimantan CCoW      Jambi IUP                 South Sumatra CCoW
+        │                           │                          │
+        │                           │                          │
+   ┌────┴───────┐            Domestic Sumatra          Domestic + export
+   │            │            (paper mills, cement)      via SBL port
+ EXPORT      DOMESTIC
+ 35.21 Mt    18.95 Mt                          Trading (RCI, GEMSTR) 0.09 Mt
+ (65%)       (35%, DMO)                        — collapsed from 0.49 Mt
+
+ → China 52%   → PLN & PLN Batubara Niaga
+ → India 6%    → Nickel/aluminium smelters
+ → Others 7%   → Cement, paper
+```
+
+**Why the low CV matters.** BIB's 4,000–4,200 kcal/kg product is at the bottom of the seaborne
+thermal spectrum. It is priced off **ICI-4 (Indonesian Coal Index, 4,200 kcal GAR)**, not off
+Newcastle 6,000 kcal. In FY2025 ICI-4 averaged **US$46.08/t** while NEWC averaged
+**US$105.63/t** [calc]. GEMS therefore captures roughly **44 cents of every Newcastle dollar**.
+The compensations are: very low sulphur (0.2–0.6%), low ash (5–7%), shallow strip ratio, and
+proximity to a coastline.
+
+**The one high-CV asset is idle.** TKS holds **6,600 kcal/kg ar** coal in Central Kalimantan —
+by far the most valuable specification in the group — and has produced **nothing** since its IUP
+was issued in 2009. Its IUP **expires in 2028**. It holds 0.6 Mt of booked reserves. It was
+impaired in FY2024. GEMS has never explained why the best coal in the portfolio has never been
+mined; the most likely answer is that 11,455 ha in North/East Barito is too far inland to be
+economic without river infrastructure it does not have.
+
+### Revenue by product/segment, FY2025
+
+| Segment | Revenue (US$) | % of revenue | COGS (US$) | Gross profit (US$) | GPM |
+|---|---:|---:|---:|---:|---:|
+| **Coal mining** | 2,406,824,961 | **99.70%** | 1,635,766,325 | 771,058,636 | 32.03% |
+| Coal trading | 7,228,547 | 0.30% | 6,989,638 | 238,909 | 3.30% |
+| Others | — | — | 52,784 | (52,784) | — |
+| **Total** | **2,414,053,508** | **100.00%** | **1,642,808,747** | **771,244,761** | **31.95%** |
+
+**The trading business has effectively been shut.** Revenue fell 79.3% from US$34.99m to
+US$7.23m; volume fell from 0.49 Mt to 0.09 Mt; export trading went to **zero**. At a 3.3% gross
+margin it was never material, but its disappearance removes GEMS's only non-owned-tonne income
+and leaves 99.7% of revenue dependent on its own pits. RCI and GEMS Trading Resources Pte. Ltd.
+are now, in substance, holding companies.
+
+## 2.2 Supply chain — the physical asset map
+
+### Concessions
+
+| # | Entity | Licence type | Term | Area (ha) | Location | Status FY2025 |
+|---|---|---|---|---:|---|---|
+| 1 | **BIB** (PT Borneo Indobara) | **PKP2B / CCoW** | **2006–2036** | **24,100** | Tanah Bumbu, South Kalimantan | **Producing 51.41 Mt** |
+| 2 | **KIM Block** (PT Kuansing Inti Makmur + subs) | IUP | **2009–2034** | 2,610 | Bungo, Jambi | Producing 1.82 Mt |
+| 3 | **BSL** (PT Barasentosa Lestari) | **PKP2B / CCoW** | **2011–2041** | 23,300 | Musi Rawas Utara & Musi Banyuasin, South Sumatra | Producing 1.72 Mt |
+| 4 | **TKS** (PT Trisula Kencana Sakti) | IUP | **2009–2028** | 11,455 | Barito Utara & Barito Timur, Central Kalimantan | **Idle** |
+| 5 | **EMS Group** (WRL + BSA) | IUP | **2008–2027** | 4,739 | Musi Banyuasin (S. Sumatra) + Dhamasraya (W. Sumatra) | **Idle, impaired** |
+| | **Total** | | | **66,204** | | |
+
+Read the area column against the production column: **BIB produces 93.6% of the coal from 36.4%
+of the hectares.** The 16,194 ha of idle licences (TKS + EMS, 24.5% of the estate) contribute
+nothing but impairment charges and, in EMS's case, **expire in 2027** — next year.
+
+> **The licence clock is the single most underrated risk in this file.**
+> - EMS Group IUP expires **2027** (idle)
+> - TKS IUP expires **2028** (idle)
+> - **BIB CCoW expires 16 February 2036** (93.6% of production)
+> - KIM IUP expires 2034
+> - BSL CCoW expires 2041
+>
+> Under Law 3/2020 mining licences may be extended twice for up to 10 years each. But **Law
+> 2/2025 (19 March 2025) changed the terms**: in granting a CCoW extension the government *"will
+> consider efforts to increase state revenue as well as the results of independent environmental
+> audits,"* and any permit found to overlap another mining area **may be revoked**. BIB already
+> mines an area overlapping a third party's industrial forest concession (HPHTI) and pays
+> **US$0.25/tonne** to PT Gerak Bangun Utama for the privilege. The 2036 extension is not free
+> and it is not automatic.
+
+### Reserves at 31 December 2025 (unaudited; JORC statement by Salva Mining Pty Ltd, Jan 2023, plus KCMI reports)
+
+| Block | Proven (Mt) | Probable (Mt) | **Total (Mt)** | % of group | FY2025 production (Mt) | **Reserve life at FY2025 rate** |
+|---|---:|---:|---:|---:|---:|---:|
+| **BORNEO (BIB)** | 546.7 | (19.7) | **527.0** | **62.4%** | 51.41 | **10.3 yrs** |
+| BSL | 137.7 | 46.1 | 183.8 | 21.8% | 1.72 | 107 yrs |
+| WRL (EMS) | 33.8 | 53.4 | 87.2 | 10.3% | 0 | ∞ (idle) |
+| KIM Block | 39.9 | 5.9 | 45.8 | 5.4% | 1.82 | 25 yrs |
+| TKS | 0.2 | 0.4 | 0.6 | 0.1% | 0 | ∞ (idle) |
+| **Total** | **758.3** | **86.1** | **844.4** | **100%** | **54.95** | **15.4 yrs** [calc] |
+
+BIB sub-blocks: Kusan & Girimulya 506.7 Mt (the core), Sebamban 10.2 Mt, Batulaki 8.2 Mt,
+Pasopati 1.9 Mt.
+
+Cumulative group production since inception: **363.45 Mt** (2024: 308.50 Mt).
+
+### `NEW IN v2` — reserve history by block, 2019–2025 (Mt)
+
+| Block | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| **BORNEO (BIB)** | 663.0 | 693.9 | **702.8** | 664.5 | 625.1 | 578.3 | **527.0** |
+| KIM | 59.6 | 57.4 | 54.6 | 52.3 | 49.9 | 47.6 | 45.8 |
+| Musi Rawas → **BSL** | 210.1 | 189.9 | 188.6 | **275.8** | **187.1** | 185.5 | 183.8 |
+| Musi Banyuasin → **WRL** | 87.2 | 87.2 | 87.2 | — | 87.2 | 87.2 | 87.2 |
+| Muara Teweh / Ampah → **TKS** | 5.1 | 4.5 | 4.5 | 0.6 | 0.6 | 0.6 | 0.6 |
+| **Total** | **1,025.0** | **1,032.9** | **1,037.7** | **993.2** | **949.9** | **899.2** | **844.4** |
+
+Two block-level movements deserve attention beyond the group depletion story in the opening
+section:
+
+- **BSL was written up then written down.** Musi Rawas ran 210.1 → 189.9 → 188.6 through
+  2019–2021, was restated as "Block BSL" at **275.8 Mt in 2022** (+87.2 Mt), then cut to
+  **187.1 Mt in 2023** (−88.7 Mt) while producing ~1.5 Mt. A 32% swing in a booked reserve
+  across two consecutive years, with no explanation in either report. `EDITED: I first assumed
+  the 2022 jump was WRL being folded into BSL — but WRL reappears separately at 87.2 Mt in 2023
+  while BSL falls by 88.7 Mt, so the 2022 table appears simply to have double-counted it.`
+- **WRL has been booked at exactly 87.2 Mt every single year since 2019** — unchanged to the
+  decimal for seven years, never produced, and impaired in both 2024 and 2025.
+
+> **The number that should worry you: 10.3 years.**
+> The headline "0.84 billion tonnes / 15.4 years" is an average across five blocks, four of
+> which barely produce. **BIB — 93.6% of output and effectively 100% of the cash — has 527.0 Mt
+> against a 51.41 Mt run-rate, i.e. 10.3 years.** Its licence has 11 years left. The reserve life
+> and the licence life expire at almost exactly the same moment, in **2036**, and so do the CK
+> mining contract, the TIA road contract and the PBR port contract.
+>
+> The remaining 317.4 Mt of group reserves sit in blocks that produce 3.5 Mt/yr between them, or
+> nothing at all. Converting them is not a matter of drilling — it is a matter of building haul
+> roads and river/port infrastructure in Sumatra and Central Kalimantan that GEMS has declined to
+> build for a decade, at capex levels (US$19m/yr) that could not fund it.
+>
+> Also note the negative probable reserve at BORNEO: **(19.7) Mt**. Proven 546.7 minus 19.7 gives
+> total 527.0. `REVISED v2:` the seven-year table explains it. BORNEO's *proven* has barely moved
+> (591.2 → 546.6 → 546.7 across 2023–2025) while *probable* went 33.9 → 31.7 → **(19.7)**. GEMS
+> is subtracting annual production from the probable line rather than from proven, and in 2025
+> production exceeded the probable balance and pushed it negative. It is a bookkeeping artefact
+> of depleting a stale January-2023 statement, which is itself the point. Treat BIB's total as
+> 527.0 and don't decompose it.
+
+### The physical process flow
+
+```
+ LAND CLEARING ──► TOPSOIL REMOVAL ──► OVERBURDEN REMOVAL ──► COAL MINING (coal getting)
+   (contractor)      (contractor)          297.4 m bcm            54.95 Mt
+        │                  │              FY2025, SR 5.41×      (contractor)
+        │                  │                    │                     │
+        │                  ▼                    ▼                     ▼
+        │           BANKSOIL/SPREADING     WASTE DUMP AREA      COAL HAULING (pit → ROM)
+        │                  │                    │               US$183.3m, 11.2% of COGS
+        │                  ▼                    ▼                     │
+        └──────────► REVEGETATION ◄─────────────┘                     ▼
+                  (US$6.9m provision only)                    CRUSH COAL / ROM stockpile
+                                                                      │
+                                                                      ▼
+                                                          HAUL ROAD (ROM → port)
+                                                          TIA / HRB / Alam Unda — 21 km
+                                                          BIB pays US$0.25/t on the
+                                                          HPHTI overlap area
+                                                                      │
+                                                                      ▼
+                                                          PORT STOCKPILE — Port Bunati,
+                                                          Satui, South Kalimantan
+                                                          (PBR terminal, contract to 2036)
+                                                          US$80.3m insured civil/M&E
+                                                                      │
+                                                                      ▼
+                                                          BARGE LOADING ──► TRANSSHIPMENT
+                                                          Freight US$196.0m = 76.8% of
+                                                          selling expenses = US$3.62/t
+                                                                      │
+                                                        ┌─────────────┴──────────────┐
+                                                        ▼                            ▼
+                                                DOMESTIC 18.95 Mt            EXPORT 35.21 Mt
+                                                PLN, smelters,               China, India,
+                                                cement, paper                Philippines, Korea…
+```
+
+Sumatra runs a different, longer, more expensive chain: **BSL** hauls by road to
+**PT Sriwijaya Bara Logistic (SBL)'s port** via five separate trucking contractors, and **KIM**
+trucks to stockpiles at **Perawang, Tebing Tinggi, Padang and Integra**. That is why Sumatra
+volumes are small and margins thin: no mine-mouth barge loading.
+
+**A structural change happened at KIM at the end of 2025.** *Every* KIM/BBU hauling contract —
+TMS, MPA, SPE, WSP, KPM — **expired on 31 December 2025 and was "not renewed thereafter."** The
+AR gives no replacement. Combine that with KIM production falling 22.6% in 2025 (2.35 → 1.82 Mt)
+and the arrival of **PT Karya Mining Solutions (KMS)** as a commercially operating mining-service
+subsidiary in 2025, and the most plausible reading is that **GEMS is in-sourcing Jambi logistics**.
+Watch KMS's asset base (US$20.1m at end-2025) in the FY2026 accounts.
+
+## 2.3 Purchase — what the business buys and owns
+
+### Fixed assets: US$112.72m net = **9.42% of total assets**
+
+| Asset class | Cost 31 Dec 2025 (US$) | % of gross PPE | Net book value |
+|---|---:|---:|---|
+| Machinery and heavy equipment | 68,750,615 | 31.3% | 33,723,736 |
+| Infrastructure | 61,280,653 | 27.9% | 29,678,945 |
+| Office furniture and fixtures | 29,524,594 | 13.4% | 4,437,214 |
+| Buildings | 20,502,480 | 9.3% | 9,921,260 |
+| **Land** | 18,157,274 | **8.3%** | 18,157,274 |
+| **Construction in progress** | 16,357,676 | **7.4%** | 16,357,676 |
+| Transportation and other | 4,665,192 | 2.1% | 444,578 |
+| Leasehold improvements | 423,320 | 0.2% | 0 |
+| **Gross / Net** | **219,661,804** | **100%** | **112,720,683** |
+
+Construction in progress is **20%–95% complete** and expected to finish in 2026.
+
+**Mine properties: US$289.79m net = 24.22% of assets**
+
+| Category | Cost (US$) | Accum. amort. | Net 2025 | Net 2024 |
+|---|---:|---:|---:|---:|
+| Producing mines | 227,259,840 | (84,660,143) | **142,599,697** | 157,367,266 |
+| Stripping activity asset | 138,216,537 | (115,957,395) | 22,259,142 | 22,913,307 |
+| From business combination | 104,469,940 | (12,797,639) | 91,672,301 | 95,668,608 |
+| Mines under construction | 33,262,058 | — | 33,262,058 | 33,004,359 |
+| **Total** | **503,208,375** | **(213,415,177)** | **289,793,198** | **308,953,540** |
+
+Note the shape: **US$91.67m of the "mine properties" is purchase accounting** from the EMS/BSL
+acquisitions, not development spend, and it is being amortised straight into "Others – net"
+(US$0.46m/yr) plus impaired (US$3.60m in 2025, US$3.66m in 2024). Plus **US$17.21m of goodwill**
+(after US$7.19m impairment in 2024). **US$108.9m — 9.1% of total assets — is acquisition
+premium on assets that mostly do not produce.**
+
+### Capex
+
+| | FY2023 | FY2024 | FY2025 |
+|---|---:|---:|---:|
+| Capex per public expose (US$m) | 35.9 | 18.6 | **18.9** |
+| PPE acquisitions (cash flow, US$m) | — | 18.56 | **18.95** |
+| Mine property additions (US$m) | — | **86.85** | **0.26** |
+| Segment "capital expenditures" (US$m) | — | 18.55 | 19.22 |
+| Budgeted capex commitment (US$m) | — | — | **26.87** |
+| **Total investing outflow (US$m)** | — | **110.46** | **87.44** |
+| Depreciation & amortisation (US$m) | — | ~39.29 | **37.12** |
+| **Capex / D&A** | — | **2.68×** | **0.52×** |
+
+Four different capex numbers appear in the FY2025 documents (18.9 / 18.95 / 19.22 / 26.87)
+depending on whether you read the deck, the cash flow, the segment note or the commitment note.
+**Use US$19.21m** (cash PPE + cash mine properties) as the true reinvestment figure.
+
+The FY2025 investing outflow of US$87.44m is dominated not by mining capex but by two financial
+items: **US$60.31m "changes in other non-current assets"** and **US$7.92m into restricted funds**.
+See the next box.
+
+> **The Danantara transaction — the most consequential single decision in FY2025.**
+> On **21 October 2025, BORNEO purchased long-term debt securities (SUJP) issued by
+> PT Danantara Investment Management (Persero)** — Indonesia's new sovereign wealth vehicle:
+> - Phase I **Series A: Rp500,000,000,000**, maturing 22 October 2030
+> - Phase I **Series B: Rp500,000,000,000**, maturing 22 October 2032
+> - **Coupon: 2.00% per annum on both**
+>
+> That is **Rp1 trillion ≈ US$59.59m** locked up for 5–7 years at 2%, at a time when Indonesian
+> government bonds yield high single digits and GEMS's own USD bank debt costs **5.80%–6.80%**
+> and its Rupiah debt **7.90%–8.25%**.
+>
+> **GEMS is borrowing at ~6–8% and lending to the state at 2%.** On US$59.6m the negative carry
+> is roughly **US$2.4–3.6m per year** [calc]; discounted over the tenor the economic loss versus
+> a market-rate instrument is on the order of **US$15–20m**. The AR gives no rationale, no
+> board resolution reference, and does not disclose it as a related-party or material
+> transaction. It is disclosed in Note 13 as an ordinary "investment in long-term debt
+> securities."
+>
+> This single transaction explains most of the balance sheet's strange shape in 2025: other
+> non-current assets **+84.9% to US$212.05m**, cash **−65.7% to US$112.13m**, and an investing
+> line that has nothing to do with mining. Anyone valuing GEMS on "net cash" should mark this
+> asset down.
+
+### There are no joint ventures
+
+Unlike TAPG, GEMS reports **no associates and no jointly controlled entities** at 31 December
+2025. The mining-services relationship with PT Cipta Kridatama does all the work a JV would do
+— capital, equipment, workforce, risk — without appearing on the balance sheet, and without
+GEMS consolidating any of it. **The off-balance-sheet mining fleet is the real JV.**
+
+## 2.4 Process — how the coal is produced and what it costs
+
+### Physical throughput
+
+| | FY2023 | FY2024 | FY2025 | Δ 25/24 |
+|---|---:|---:|---:|---:|
+| **Overburden removed (m bcm)** | 275.8 | 265.2 | **297.4** | **+12.1%** |
+| **Coal getting (Mt)** | 46.1 | 50.7 | **54.95** | **+8.4%** |
+| **Stripping ratio (× bcm/t)** | **5.98** | **5.23** | **5.41** | **+3.4%** |
+| Sales volume (Mt) | 46.9 | 51.9 | **54.16** | +4.4% |
+
+Per-pit stripping ratios (from earlier public exposes, showing the structural gap):
+
+| Period | BIB | KIM | BSL | Group |
+|---|---:|---:|---:|---:|
+| 9M 2021 | 4.11 | **10.82** | 4.74 | 4.68 |
+| 9M 2022 | 4.98 | **12.07** | 6.88 | 5.42 |
+| 1H 2023 | 5.41 | **13.16** | 6.96 | 5.86 |
+
+**KIM's strip ratio is 2.5× BIB's.** That, not price, is why KIM's volume is being allowed to
+shrink (2.35 → 1.82 Mt, −22.6%) and why its hauling contracts were left to expire. In a
+US$46/t ICI-4 world, 13 bcm of waste per tonne of coal in Jambi does not clear.
+
+### Cost of revenues: US$1,642,808,747 = **68.05% of revenue**
+
+Anchor figure, restated on every cost table below:
+**COGS FY2025 (68.05% of revenue) = US$1,642,808,747 = US$30.33 per tonne sold.**
+
+| Cost line | FY2025 (US$) | **% of COGS** | US$/t sold | FY2024 (US$) | % of COGS | US$/t | Δ$/t |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| **Mining services** | **986,977,240** | **60.08%** | **18.22** | 840,126,992 | 52.48% | 16.20 | **+2.02** |
+| **Royalty (DHPB)** | 312,449,072 | 19.02% | 5.77 | 339,786,891 | 21.22% | 6.55 | −0.78 |
+| **Coal hauling** | 183,325,043 | 11.16% | 3.38 | 168,652,457 | 10.53% | 3.25 | +0.13 |
+| Mining overhead | 137,016,880 | 8.34% | 2.53 | 154,431,638 | 9.65% | 2.98 | −0.45 |
+| Amort. mine properties (producing) | 14,767,569 | 0.90% | 0.27 | 24,813,152 | 1.55% | 0.48 | −0.21 |
+| Land exploitation | 12,598,436 | 0.77% | 0.23 | 13,385,496 | 0.84% | 0.26 | −0.03 |
+| Equipment rental | 2,832,619 | 0.17% | 0.05 | 5,261,244 | 0.33% | 0.10 | −0.05 |
+| Depreciation of PPE | 1,992,439 | 0.12% | 0.04 | 2,142,287 | 0.13% | 0.04 | 0.00 |
+| Amort. stripping activity asset | 654,165 | 0.04% | 0.01 | 1,357,940 | 0.08% | 0.03 | −0.02 |
+| Amort. software | 27,864 | 0.00% | 0.00 | 44,334 | 0.00% | 0.00 | 0.00 |
+| **Total production cost** | **1,652,641,327** | **100.60%** | **30.08/t produced** | 1,550,002,431 | 96.82% | 30.58 | |
+| Coal inventory movement | (9,832,580) | (0.60%) | | +50,940,085 | 3.18% | | |
+| **COST OF REVENUES** | **1,642,808,747** | **100.00%** | **30.33** | **1,600,942,516** | **100.00%** | **30.87** | **−0.54** |
+
+**The headline story of FY2025 is that unit cost barely moved (−1.7%) while unit price fell
+14.6%.** Every dollar of the margin collapse came from price, not cost. But the *composition*
+shifted badly.
+
+### `NEW IN v2` — the cost stack over seven years (US$m)
+
+| Cost line | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| **Mining services** | 347.83 | 324.47 | 386.91 | **668.28** | 856.01 | 840.13 | **986.98** |
+| **Royalty (DHPB)** | 145.90 | 131.08 | 199.61 | **549.44** | 452.21 | 339.79 | 312.45 |
+| Coal hauling | 93.11 | 89.62 | 87.14 | 132.61 | 162.04 | 168.65 | 183.33 |
+| Mining overhead | 91.88 | 81.40 | 97.23 | 150.99 | 159.48 | 154.43 | 137.02 |
+| Land exploitation | 9.21 | 13.62 | 16.24 | 28.84 | 17.58 | 13.39 | 12.60 |
+| Equipment rental | 5.66 | 5.34 | 7.11 | 11.94 | 8.00 | 5.26 | 2.83 |
+| Amort. stripping asset | 4.21 | 3.91 | 3.43 | 2.21 | **41.99** | 1.36 | 0.65 |
+| Amort. producing mines | 0.31 | 0.33 | 1.70 | 2.38 | 3.03 | 24.81 | 14.77 |
+| Depreciation | 3.35 | 3.13 | 2.35 | 2.29 | 2.20 | 2.14 | 1.99 |
+| **Total production cost** | **701.46** | **652.89** | **801.72** | **1,549.00** | **1,702.57** | **1,550.00** | **1,652.64** |
+| Inventory movement | 44.55 | 29.42 | 27.48 | 56.49 | 53.22 | 50.94 | (9.83) |
+| **COST OF REVENUES** | **746.01** | **682.31** | **829.19** | **1,605.49** | **1,755.79** | **1,600.94** | **1,642.81** |
+
+Three structural facts only visible across seven years:
+
+1. **Mining services have risen every year except 2020 and 2024, and are up 2.8× since 2019** —
+   from 46.6% to 60.1% of COGS. Tonnes rose 78% over the same span. **Mining services per tonne
+   produced went US$11.28 (2019) → US$17.96 (2025), +59%** [calc], while ASP rose only 25%.
+   This is the cost curve of a deepening pit, and it is monotone.
+2. **Royalty is violently pro-cyclical**, peaking at **US$549.44m in 2022** (18.8% of revenue,
+   34.2% of COGS) and falling 43% to US$312.45m by 2025. It is the only cost line that protects
+   the P&L in a downturn.
+3. **The stripping-asset amortisation of US$41.99m in 2023** — 24× the 2022 figure and 31× the
+   2024 figure — is a one-off that flattered nothing and has never been explained. It sits
+   alongside 2024's producing-mine amortisation of US$24.81m (8× 2023). These two lines swing
+   by tens of millions between years with no narrative in any report.
+
+### Process zoom-in #1 — Mining services (60.08% of COGS)
+
+*Anchor: COGS FY2025 (68.05% of revenue) = US$1,642,808,747.*
+
+| | FY2025 | FY2024 | Δ |
+|---|---:|---:|---:|
+| Mining services (US$) | **986,977,240** | 840,126,992 | **+17.5%** |
+| As % of COGS | **60.08%** | 52.48% | +7.60pp |
+| As % of revenue | **40.89%** | 31.05% | +9.84pp |
+| Per tonne produced | **US$17.96** | US$16.57 | +8.4% |
+| **Per bcm of overburden moved** | **US$3.32/bcm** | US$3.17/bcm | **+4.8%** |
+| — of which **PT Putra Perkasa Abadi (PPA)** | 538,253,983 | 478,153,095 | +12.6% |
+| — of which **PT Cipta Kridatama (CK)** | 302,780,920 | (n/d as >10%) | — |
+| **PPA + CK as % of mining services** | **85.2%** | — | |
+| **PPA + CK as % of COGS** | **51.2%** | — | |
+| **PPA + CK as % of revenue** | **34.8%** | — | |
+
+This is the number that defines GEMS. **US$1 in every US$3 of revenue goes to two contractors.**
+Both contracts are long: PPA at Girimulya to **31 December 2030** (plus heavy-equipment rental
+to 2030), **CK at BORNEO to 16 February 2036**. A third, **PT Anugerah Energi Kalimantan (AEK)**,
+was added at BIB from **1 September 2025 to 31 December 2030** — a new entrant, presumably to
+introduce competitive tension.
+
+At BSL, **PT Petrosea Tbk** took the land-clearing and overburden contract from
+**1 January 2025 to 31 December 2029, or 94,251,000 BCM cumulative, whichever first** —
+replacing PT Lobunta Kencana Raya, whose contract expired 28 February 2025 and was not renewed.
+
+**Why the +17.5%:** overburden rose 12.1% and the strip ratio rose from 5.23 to 5.41 (+3.4%);
+12.1% × unit-rate escalation ≈ 17.5%. **The cost increase is volumetric and geological, not
+inflationary.** As BIB deepens, the strip ratio rises, and mining services rise faster than
+tonnes. That is the structural cost curve of this asset.
+
+### Process zoom-in #2 — Royalty / DHPB (19.02% of COGS)
+
+*Anchor: COGS FY2025 (68.05% of revenue) = US$1,642,808,747.*
+
+Under BIB's **PKP2B/CCoW, BORNEO must share 13.5% of coal produced with the Government of the
+Republic of Indonesia** (Dana Hasil Produksi Batubara, DHPB), settled in cash. Plus **deadrent**
+on 24,100 ha (US$136,149 in 2025, up from US$98,930).
+
+| | FY2025 | FY2024 |
+|---|---:|---:|
+| DHPB expense (US$) | **312,449,072** | 339,786,891 |
+| % of COGS | 19.02% | 21.22% |
+| **% of revenue** | **12.94%** | **12.56%** |
+| Per tonne sold | US$5.77 | US$6.55 |
+| Advance royalty paid (asset) | 292,773 | 4,342,548 |
+| Accrued royalty (liability) | 751,538 | 1,243,408 |
+| Cash paid (royalty + deadrent) | 311,311,248 | 338,516,623 |
+
+Royalty is **the second-largest cost in the business and is a pure function of price.** It fell
+8.0% while volume rose 4.4% — exactly tracking the 14.6% ASP decline. **Royalty is
+GEMS's automatic stabiliser: in a price crash it falls with revenue; in a price spike the
+government takes a bigger cut.**
+
+The regime changed twice in 2025. **PP 18/2025 and PP 19/2025 (effective 26 April 2025)**
+replaced flat coal royalties with **HBA-linked sliding scales**. For IUPK open-pit:
+
+| Calorific value | HBA US$70–90 | HBA >US$90 |
+|---|---:|---:|
+| **\<4,200 kcal/kg** *(BIB's band)* | **6.0%** | **9.0%** |
+| 4,200–5,200 kcal/kg | 8.5% | 11.5% |
+| >5,200 kcal/kg | 11.5% | 13.5% |
+
+BIB, as a CCoW holder, pays the contractual 13.5% of production rather than the IUP scale — a
+*higher* headline rate but on a different base. The exposure that matters is that **any CCoW
+extension in 2036 will almost certainly move BIB onto the IUPK regime**, and Law 2/2025 states
+the government will weigh *"efforts to increase state revenue"* when granting it.
+
+### Process zoom-in #3 — Coal hauling and mining overhead (19.50% of COGS combined)
+
+*Anchor: COGS FY2025 (68.05% of revenue) = US$1,642,808,747.*
+
+| | FY2025 | % of COGS | US$/t | FY2024 | % of COGS | US$/t |
+|---|---:|---:|---:|---:|---:|---:|
+| Coal hauling | 183,325,043 | 11.16% | 3.38 | 168,652,457 | 10.53% | 3.25 |
+| Mining overhead | 137,016,880 | 8.34% | 2.53 | 154,431,638 | 9.65% | 2.98 |
+| Land exploitation | 12,598,436 | 0.77% | 0.23 | 13,385,496 | 0.84% | 0.26 |
+| Equipment rental | 2,832,619 | 0.17% | 0.05 | 5,261,244 | 0.33% | 0.10 |
+
+Hauling rose 8.7% on 4.4% more tonnes — pit-to-ROM distances are lengthening. Mining overhead
+(fuel, chemicals via PT Rolimex Kimia Nusamas, site admin, camp) **fell 11.3%**, the largest
+genuine cost saving in the year and one the AR does not explain. Equipment rental nearly halved.
+
+**Notably absent from GEMS's cost stack: fuel as a line item.** Diesel is inside the
+contractors' rates and inside "mining overhead". Unlike a self-operating miner, GEMS has **no
+direct oil-price line to hedge or disclose** — the exposure is real but is transmitted through
+contractor rate escalation clauses that are never described in the filings. That is a genuine
+disclosure gap.
+
+### Selling expenses: US$255,154,742 = **10.57% of revenue**, US$4.71/t
+
+*Anchor: Revenue FY2025 = US$2,414,053,508.*
+
+| Line | FY2025 (US$) | % of selling | % of revenue | US$/t | FY2024 (US$) | US$/t |
+|---|---:|---:|---:|---:|---:|---:|
+| **Freight** | **196,021,557** | **76.82%** | **8.12%** | **3.62** | 226,134,483 | 4.36 |
+| Stockpile services | 34,940,773 | 13.69% | 1.45% | 0.65 | 41,163,304 | 0.79 |
+| Freight insurance | 15,749,362 | 6.17% | 0.65% | 0.29 | 17,782,882 | 0.34 |
+| Survey and analysis | 3,686,652 | 1.44% | 0.15% | 0.07 | 5,125,389 | 0.10 |
+| Depreciation | 3,504,682 | 1.37% | 0.15% | 0.06 | 3,361,021 | 0.06 |
+| Repairs & maintenance (RP: Wirakarya Sakti) | 936,000 | 0.37% | 0.04% | 0.02 | 936,000 | 0.02 |
+| Others | 315,716 | 0.12% | 0.01% | 0.01 | 201,502 | 0.00 |
+| **Total** | **255,154,742** | **100%** | **10.57%** | **4.71** | **294,704,581** | **5.68** |
+
+**Freight per tonne fell 17.0%** (US$4.36 → US$3.62), the largest single unit-cost improvement
+in the accounts. Dry-bulk rates and a shorter average voyage (more China, less India) both help.
+This US$0.74/t saving offset almost a third of the US$2.02/t increase in mining services.
+
+### General and administrative: US$147,590,983 = **6.11% of revenue**
+
+| Line | FY2025 (US$) | % of G&A | FY2024 (US$) | Δ |
+|---|---:|---:|---:|---:|
+| Salaries and benefits | 48,302,438 | 32.73% | 47,194,477 | +2.3% |
+| **Insurance (RP: Asuransi Sinarmas)** | **22,465,050** | **15.22%** | 9,793,175 | **+129.4%** |
+| **Taxes** | **15,098,589** | 10.23% | 44,503,232 | **−66.1%** |
+| Repairs and maintenance | 11,075,003 | 7.50% | 10,589,081 | +4.6% |
+| Depreciation of PPE | 11,036,078 | 7.48% | 7,181,918 | +53.7% |
+| Licences and permits | 10,984,881 | 7.44% | 14,632,172 | −24.9% |
+| Professional fees | 10,168,558 | 6.89% | 14,941,967 | −31.9% |
+| Corporate social responsibility | 5,733,294 | 3.88% | 6,066,509 | −5.5% |
+| Office expenses | 2,336,128 | 1.58% | 2,589,474 | −9.8% |
+| Employee benefit expense | 1,101,794 | 0.75% | 953,568 | +15.5% |
+| Travel | 766,686 | 0.52% | 955,506 | −19.8% |
+| Education and training | 605,398 | 0.41% | 1,033,789 | −41.4% |
+| Transportation | 519,109 | 0.35% | 831,406 | −37.6% |
+| Depreciation of right-of-use assets | 213,976 | 0.14% | 897,340 | −76.2% |
+| Others (each \<US$100,000) | 7,184,001 | 4.87% | 6,730,364 | +6.7% |
+| **Total** | **147,590,983** | **100%** | **168,893,978** | **−12.6%** |
+
+**Salaries of US$48.30m across 674 employees = US$71,665 per head** [calc] — extraordinary for
+an Indonesian mining company, and a direct consequence of the model: these are not diggers, they
+are managers, marketers, geologists and finance staff supervising contractors. The −66.1% fall
+in "Taxes" (US$29.4m) is the single largest favourable movement in the P&L and is not explained
+anywhere in the AR; it partially offsets the US$12.7m insurance increase.
+
+## 2.5 Distribution — how the coal is sold
+
+### Revenue by geography
+
+| Destination | FY2025 (US$) | % | FY2024 (US$) | % | Δ |
+|---|---:|---:|---:|---:|---:|
+| **China** | 1,214,234,199 | **50.30%** | 1,250,069,553 | 46.20% | −2.9% |
+| **Indonesia** | 855,201,696 | **35.43%** | 931,138,313 | 34.42% | −8.2% |
+| **India** | 153,499,936 | **6.36%** | 327,645,848 | 12.11% | **−53.2%** |
+| Philippines | 70,567,846 | 2.92% | 66,689,235 | 2.47% | +5.8% |
+| South Korea | 52,689,537 | 2.18% | 89,112,982 | 3.29% | −40.9% |
+| Cambodia | 28,362,055 | 1.17% | 4,034,293 | 0.15% | **+603.0%** |
+| Vietnam | 23,743,642 | 0.98% | 15,336,873 | 0.57% | +54.8% |
+| Malaysia | 5,369,611 | 0.22% | 16,773,690 | 0.62% | −68.0% |
+| Thailand | 5,264,340 | 0.22% | — | — | new |
+| Hong Kong | 4,318,856 | 0.18% | 8,745 | 0.00% | — |
+| New Zealand | 801,790 | 0.03% | — | — | new |
+| Bangladesh | — | — | 4,711,352 | 0.17% | −100% |
+| **Total** | **2,414,053,508** | **100%** | **2,705,520,884** | **100%** | −10.8% |
+
+By volume the mix is **domestic 35% (18.95 Mt) / export 65% (35.21 Mt)**, with China ~52% of
+total tonnes. Domestic share rose from 33% (2023) → 37% (2024) → 35% (2025).
+
+**India collapsed.** From US$327.65m to US$153.50m, −53.2%. GMR Infrastructure — GEMS's original
+25-year offtake partner — still owes US$2.23m, down from US$7.16m. **The 2011 GMR Coal Sales
+Agreement, the strategic rationale for the IPO, has quietly become immaterial.** Nothing in the
+FY2025 AR mentions it.
+
+### The realised-price bridge
+
+| | FY2025 | FY2024 | Δ |
+|---|---:|---:|---:|
+| **Domestic ASP** [calc] | **US$45.13/t** | US$48.75/t | −7.4% |
+| **Export ASP** [calc] | **US$44.27/t** | US$54.10/t | **−18.2%** |
+| Blended ASP | US$44.57/t | US$52.13/t | −14.5% |
+| Mining-segment ASP (company stated) | — | — | **−14.36%** |
+
+**In FY2025 domestic ASP overtook export ASP for the first time.** In 2024, exporting earned a
+US$5.35/t premium; in 2025 it earned a US$0.86/t *discount*. Two forces: Chinese import
+compression pushing seaborne low-CV prices down 14.5% (ICI-4), and Indonesian domestic demand
+from **nickel and aluminium smelters** — which pay market, not the US$70/t PLN cap — holding up.
+This is why GEMS's domestic share is strategically valuable, and why the DMO is not purely a tax.
+
+### Customer concentration
+
+**None, in the conventional sense.** No single customer reaches 10% of revenue. Largest trade
+receivables at 31 December 2025:
+
+| Customer | Receivable (US$) | % of trade receivables |
+|---|---:|---:|
+| PT Exploitasi Energi Indonesia Tbk | 24,201,511 | 10.08% |
+| Sharpmax International (Hong Kong) | 22,503,908 | 9.38% |
+| PT Dwi Guna Laksana Tbk | 18,482,297 | 7.70% |
+| **PT PLN Batubara Niaga** | 13,126,585 | 5.47% |
+| PT Xiangyu Trading Indonesia | 8,747,966 | 3.64% |
+| PT Sinergi Laksana Bara Mas | 8,532,505 | 3.55% |
+| Fuzhou Xindian Fuel (China) | 7,213,071 | 3.01% |
+| **PT Weda Bay Energi** *(nickel)* | 6,973,838 | 2.91% |
+| Multi Supply Service Pte Ltd (China) | 6,648,127 | 2.77% |
+| PT Yashi Indonesia Investment | 5,562,130 | 2.32% |
+| PT Lipe Metal Industry | 5,034,804 | 2.10% |
+| **PT Indonesia Ruipu Nickel and Chrome Alloy** | 5,024,727 | 2.09% |
+| China Bai Gui International Trade (HK) | 3,244,450 | 1.35% |
+| **GMR Infrastructure Limited (India)** | 2,229,486 | 0.93% |
+| PT DSSP Power Kendari *(related party)* | 5,064,763 | 2.11% |
+| Others (each \<US$5m) | 96,736,344 | 40.31% |
+| **Total** | **240,001,741** | **100%** |
+
+The counterparty list reads as a map of Indonesia's industrial policy: **PLN Batubara Niaga**
+(the state utility's coal arm), **Weda Bay Energi**, **Indonesia Ruipu Nickel and Chrome Alloy**,
+**Hua Chin Aluminum**, **Lipe Metal** — captive power for the nickel/aluminium smelter build-out.
+GEMS is increasingly a **feedstock supplier to Indonesian metals downstreaming**, not just an
+exporter.
+
+**Receivables quality is good**: 94.1% not yet due; only US$1.51m (0.63%) more than 3 months
+overdue; **no allowance for credit losses recognised at all**; collection period **33 days**
+(unchanged from 2024). But receivables grew 18.4% while revenue fell 10.8% — **days sales
+outstanding stretched from 27.3 to 36.3 days** [calc], which is a mild but real deterioration
+the AR's flat "33 days" claim obscures. Certain receivables and inventories are **pledged to
+Bank Danamon and Bank Mandiri**.
+
+## 2.6 Key variables — what actually moves the model
+
+### 1. ICI-4 (the Indonesian Coal Index, 4,200 kcal GAR) — the master variable
+
+| Month 2025 | ICI-4 (US$/t) | Month 2024 | ICI-4 (US$/t) |
+|---|---:|---|---:|
+| Jan | 49.21 | Jan | 57.54 |
+| Feb | 48.93 | Feb | 56.95 |
+| Mar | 49.78 | Mar | 57.20 |
+| Apr | 49.59 | Apr | 54.51 |
+| May | 47.79 | May | 55.93 |
+| **Jun** | **41.88** ← low | Jun | 54.43 |
+| Jul | 40.68 ← **year low** | Jul | 52.72 |
+| Aug | 42.53 | Aug | 51.18 |
+| Sep | 43.00 | Sep | 51.13 |
+| Oct | 44.67 | Oct | 52.24 |
+| Nov | 48.39 | Nov | 52.24 |
+| Dec | 46.47 | Dec | 50.94 |
+| **Average** | **46.08** | **Average** | **53.92** |
+
+**The single most useful relationship in this model [calc]:**
+
+| | FY2025 | FY2024 |
+|---|---:|---:|
+| ICI-4 average | US$46.08 | US$53.92 |
+| GEMS blended ASP | US$44.57 | US$52.13 |
+| **GEMS ASP as % of ICI-4** | **96.7%** | **96.7%** |
+
+**GEMS realises 96.7% of ICI-4, to the decimal, in both years.** ICI-4 fell 14.5%; GEMS ASP fell
+14.6%. There is no meaningful pricing skill, no hedging, no term-contract cushion. **To model
+GEMS revenue: take your ICI-4 forecast, multiply by 0.967, multiply by tonnes.** Everything else
+is second-order.
+
+For reference, NEWC 6,000 kcal averaged US$105.63 in 2025 (2024: US$135.16, −21.8%). GEMS
+captured **42.2% of NEWC** in 2025 vs 38.6% in 2024 — the low-CV discount narrowed slightly.
+
+### 2. The HBA regime — a policy variable that became a price variable
+
+From **1 March 2025** the Ministry of Energy and Mineral Resources made the **Harga Batubara
+Acuan (HBA)** mandatory for all coal *export* sales, replacing ICI as the transaction reference,
+and made it the royalty base. HBA is set **twice monthly** (1st and 15th). At 1 August 2026:
+
+| HBA grade | CV (kcal/kg) | US$/t |
+|---|---:|---:|
+| HBA 1 | 6,322 | 124.44 |
+| HBA 2 | 5,300 | 93.27 |
+| **HBA 3** | **4,100** | **65.48** |
+| HBA 4 | 3,400 | 45.27 |
+
+**Note the gap: HBA-3 at 4,100 kcal is US$65.48 while ICI-4 at 4,200 kcal was running in the
+mid-40s.** The government benchmark sits materially *above* the market index for GEMS's grade.
+If HBA is genuinely enforced as the export transaction price, either GEMS's realised prices rise
+sharply, or its royalty base is inflated relative to what it actually collects, or buyers walk.
+**This is the biggest single unresolved uncertainty in the FY2026 model** and the AR does not
+discuss it.
+
+### 3. Stripping ratio — the cost variable GEMS cannot control
+
+| | FY2023 | FY2024 | FY2025 |
+|---|---:|---:|---:|
+| Group SR (bcm/t) | 5.98 | 5.23 | **5.41** |
+| Mining services (US$/t) | — | 16.57 | **17.96** |
+
+The arithmetic [calc]: at FY2024's contractor rate of **US$3.17 per bcm**, each 0.1× of strip
+ratio adds 0.1 bcm per tonne, i.e. **US$0.317/t** — **US$17.2m of pre-tax profit on 54.16 Mt.**
+Separately, the *rate itself* rose 4.8% to US$3.32/bcm, costing another ~US$0.50/t. BIB's own SR
+has run 4.11 (9M2021) → 4.98 (9M2022) → 5.41 (1H2023). **The direction is one-way**: strip ratios
+on a maturing open pit do not go back down.
+
+### 4. Contractor rates — 60% of COGS, negotiated behind closed doors
+
+PPA, CK, AEK, Petrosea, KMMB, EST. Rate structures, escalation clauses, fuel pass-through
+mechanisms and take-or-pay volumes are **not disclosed anywhere**. Given CK's shareholder
+relationship, this is the largest governance-adjacent disclosure gap in the file.
+
+### 5. Government production quota (RKAB) — new in 2026, and binding
+
+- Indonesia produced **~790 Mt in 2025** (vs a 739.67 Mt target, and 836 Mt in 2024 by the AR's
+  own inconsistent figures — the AR quotes both "declining to 790" and "790, a 6.8% increase
+  from target" in the same document).
+- For **2026 the government cut the national quota to ~600 Mt**, explicitly to support prices.
+  Approved RKAB volumes reached only ~580 Mt by mid-2026.
+- Industry (APBI, IMEF, Aspebindo) is lobbying for **700–720 Mt**; a revision process opened in
+  July 2026.
+- **GEMS's own FY2026 guidance is 54–58 Mt production and 54–58 Mt sales** — i.e. flat to +5.6%
+  — which is only achievable if the quota is relaxed or GEMS is favoured in allocation.
+
+A 600 Mt national cap against 790 Mt of 2025 output is a **24% supply cut**. If enforced, ICI-4
+rises; if GEMS's own RKAB is cut proportionally, volume falls. The two effects partially offset
+in revenue but **not in cost**: fixed and semi-fixed costs per tonne rise when volume falls.
+
+### 6. DMO — 25% minimum, and the US$70 cap
+
+GEMS supplied **18.95 Mt = 35% of sales** domestically, comfortably above the 25% floor, through
+BIB, KIM Block and BSL. Coal sold to PLN for public electricity is **capped at US$70/t** — but
+since BIB's product realises ~US$45/t, **the cap does not currently bind on GEMS**. It becomes a
+constraint only if ICI-4 recovers above ~US$72. Export eligibility is now conditioned on DMO
+compliance, so the 35% overshoot is deliberate insurance.
+
+### 7. Export levy and windfall tax
+
+Export levies of up to **5% (≈US$5–7/t)** apply, and a **windfall tax has been proposed** though
+implementation is delayed pending technical review. **PP 8/2025** additionally requires **100% of
+natural-resource export proceeds to be held in a special Indonesian bank account for a minimum
+12 months** unless used for specified obligations — a direct constraint on GEMS's ability to
+repatriate and distribute export dollars, and a plausible partial explanation for the
+US$59.59m Danantara purchase and the US$7.92m increase in restricted funds.
+
+### 8. Freight
+
+US$196.02m, 8.12% of revenue, US$3.62/t — down 17.0% per tonne. GEMS charters; it owns no
+vessels. Exposure is to dry-bulk Supramax/Panamax rates and to route mix (China short-haul vs
+India long-haul). The India collapse mechanically reduced freight per tonne.
+
+### 9. Currency
+
+Reporting currency USD; **35.0% of revenue is Rupiah-denominated** (US$843.93m) and 63.6% of
+trade receivables are in Rupiah (US$152.71m). Royalty, salaries, most overheads and part of the
+debt are Rupiah. FX gain was only US$0.19m in 2025 (2024: US$6.20m). A weaker Rupiah is **net
+positive** for GEMS (costs fall faster than domestic revenue) but the exposure is modest and
+partially self-hedged.
+
+### 10. Interest rates
+
+Modest. Bank debt US$133.84m at 5.80%–6.80% (USD) and 7.90%–8.25% (Rupiah); interest expense
+US$6.17m plus other financial charges US$6.40m. Both rate bands *fell* ~1pp during 2025.
+
+## 2.7 Demand
+
+**Global.** The IEA's assessment, as reported in the AR, is that **2025 is the peak year for
+world coal demand at ~8.85 billion tonnes**, entering a plateau and then decline as the energy
+transition accelerates. That framing — from the company's own annual report — is the single most
+important statement about GEMS's terminal value.
+
+**China (50.3% of GEMS revenue, ~52% of volume).**
+- Chinese coal **imports fell from 542.70 Mt (2024) to 490.27 Mt (2025), −9.7%**.
+- Chinese domestic production **rose 1.24% to ~4,830 Mt**.
+- The mechanism is straightforward: China is substituting domestic output and renewables for
+  imports, and low-CV Indonesian coal is the marginal, most easily displaced supply.
+- GEMS's China revenue nonetheless fell only 2.9% — it **gained share in a shrinking market**,
+  which is the strongest operational fact in the FY2025 accounts.
+
+**India (6.4% of revenue, down from 12.1%).**
+- Imports flat at ~247.64 Mt; domestic production **+4.98% to 1,042 Mt**.
+- GEMS's India revenue **halved**. India is executing the same import-substitution playbook as
+  China, faster.
+
+**Southeast Asia (the stated strategic focus).**
+- **Vietnam: 65.44 Mt imported in 2025, +2.6% yoy (+1.6 Mt)** — expanding coal fleet.
+- **Philippines: first import decline since the pandemic** in 1H2025.
+- Thailand: mature, importing to maintain grid stability, transitioning faster than ASEAN peers.
+- GEMS's ASEAN revenue: Philippines US$70.57m (+5.8%), Vietnam US$23.74m (+54.8%),
+  **Cambodia US$28.36m (+603%)**, Thailand US$5.26m (new), Malaysia US$5.37m (−68.0%).
+  In aggregate ASEAN is ~5.5% of revenue — real growth, from a base too small to replace India.
+
+**Indonesia domestic (35.4% of revenue) — the actual growth market.**
+- PLN and IPP demand, plus the **cement, paper and smelter** complex.
+- The nickel/aluminium downstreaming build-out (Weda Bay, Ruipu, Hua Chin, Yashi, Lipe) is
+  captive-power demand that did not exist five years ago and pays market prices.
+- Domestic ASP now exceeds export ASP. **Domestic is no longer the dumping ground; it is the
+  premium channel.**
+
+## 2.8 Supply
+
+**Indonesia**
+- 2024 production: ~836 Mt (AR); 2025: **~790 Mt**; **2026 quota: ~600 Mt**, with only ~580 Mt of
+  RKAB approved by mid-2026 and a revision process under way.
+- 2025 allocation: exports 514 Mt (65.1%), domestic consumption 254 Mt (32.0%), stocks 22 Mt
+  (2.8%).
+- Exports Jan–Oct 2025 **fell ~20.25% by value**, with volume down and unit prices corrected.
+- Indonesia is the world's largest thermal coal exporter and the **swing supplier of low-CV
+  seaborne coal**. The 2026 quota policy is an explicit attempt to use that position as pricing
+  leverage — an OPEC-style experiment in coal.
+
+**GEMS's position within it [calc]:** 54.95 Mt of ~790 Mt = **7.0% of Indonesian production**;
+35.21 Mt of 514 Mt = **6.9% of Indonesian exports**. GEMS describes itself as a "Top 5 Indonesian
+coal company by production volume" (2021 deck). It is a **price taker with a policy-maker's ear**,
+not a price setter.
+
+**The competitive picture that matters:** GEMS's cost position. Total cash cost excluding royalty
+was **US$29.27/t in 2025** (2024: US$30.00/t) against an ASP of US$44.57. That is a **34.3% cash
+margin before royalty**, on 4,000 kcal coal, which places BIB in the low-cost quartile of
+Indonesian thermal producers. **The asset is genuinely good.** The strip ratio of 5.41 and
+20 km haul distances at Satui are the reason.
+
+**Downstreaming (DME) — the policy that isn't happening.** APBI's own assessment, quoted in the
+AR, is that coal downstreaming through **Dimethyl Ether** is *"still gradual and does not fully
+offset market pressures."* GEMS has **no DME project, no gasification project, no mine-mouth
+power project in operation** (BSL is licensed for mine-mouth power but does not operate one).
+Unlike Adaro or Bukit Asam, GEMS has made **no move whatsoever toward energy transition or
+downstreaming.** Its entire forward plan is: mine the same coal, sell it to the same people.
+
+---
+
+# 03 — UNIT ECONOMICS
+
+## 3.1 Capital structure at 31 December 2025
+
+Total balance sheet **US$1,196,603,953**. Every line below is expressed as a % of that anchor.
+
+```
+ ASSETS  US$1,196.60m (100.0%)          │   LIABILITIES & EQUITY  US$1,196.60m (100.0%)
+─────────────────────────────────────────┼──────────────────────────────────────────────────
+ CURRENT ASSETS        582.04   48.64%   │   CURRENT LIABILITIES      387.85   32.41%
+   Trade receivables   240.00   20.06%   │     Trade payables         305.08   25.50%
+   Prepaid taxes (VAT) 158.61   13.26%   │       — of which to CK      77.18    6.45%
+   Cash & equivalents  112.13    9.37%   │     Short-term bank loans   50.21    4.20%
+   Inventories          40.05    3.35%   │     Accrued expenses        16.38    1.37%
+   Advances/prepaid     31.12    2.60%   │     Current LT bank loans   11.92    1.00%
+   Other receivables     0.13    0.01%   │     Taxes payable            3.89    0.33%
+                                         │     Other                    0.37    0.03%
+ NON-CURRENT ASSETS    614.56   51.36%   │   NON-CURRENT LIABILITIES  100.17    8.37%
+   Mine properties     289.79   24.22%   │     LT bank loans           71.71    5.99%
+   Other non-current   212.05   17.72%   │     Deferred tax            15.66    1.31%
+     · Danantara SUJP   59.59    4.98%   │     Reclamation provision    6.92    0.58%
+     · Tax refund claim 54.00    4.51%   │     Employee benefits        5.36    0.45%
+     · Prepaid land     24.86    2.08%   │     Lease + other            0.53    0.05%
+     · Deposits/other   17.55    1.47%   │   ────────────────────────────────────────
+     · Restricted funds  ~7.92   0.66%   │   TOTAL LIABILITIES        488.02   40.78%
+     · Goodwill          17.21   1.44%   │
+   PPE net             112.72    9.42%   │   EQUITY                   708.59   59.22%
+                                         │     Retained (unapprop.)   474.64   39.67%
+                                         │     Additional paid-in     229.02   19.14%
+                                         │     Capital stock           65.07    5.44%
+                                         │     Other equity comp.     (75.94)  (6.35%)
+                                         │     Appropriated reserve     8.52    0.71%
+                                         │     NCI                      6.05    0.51%
+                                         │     NCI-transaction diff.    1.23    0.10%
+```
+
+Four things stand out:
+
+**1. Tax authorities are the second-largest "customer".** VAT receivable **US$156.16m** plus
+income-tax credits **US$2.45m** plus **estimated claims for tax refund US$54.00m** =
+**US$212.61m, 17.77% of total assets** [calc], sitting with the Indonesian government earning
+nothing. That is nearly twice the net book value of all property and equipment. The claims
+balance more than doubled (US$24.91m → US$54.00m, +116.8%) in one year, driven entirely by
+subsidiaries (US$23.71m → US$53.13m). **This is the single largest working-capital sink in the
+business** and it is growing.
+
+**2. Trade payables (US$305.08m) exceed cash (US$112.13m) by 2.7×, and 25.3% of them are owed to
+one related party.** CK's payable rose from US$53.65m to US$77.18m (+43.9%), reaching **15.84%
+of total liabilities**. GEMS is financing itself substantially on its contractors' balance
+sheets — payables are 62.5% of current liabilities and grew 23.0% while COGS grew 2.6%.
+Payable days on cost of revenues stretched from **56.5 to 67.8 days** [calc]. Benign, but it is
+a real — and free — source of funding that would reverse violently in a dispute, and 67.8 days is
+long for a business whose suppliers are also its shareholder.
+
+**3. Net debt is nominally trivial but the "net cash" story is dead.**
+
+| | 2025 | 2024 |
+|---|---:|---:|
+| Short-term bank loans | 50.21 | 242.06 |
+| Current portion of LT loans | 11.92 | 10.00 |
+| Long-term bank loans | 71.71 | 30.00 |
+| **Gross debt** | **133.84** | **282.06** |
+| Cash and equivalents | (112.13) | (326.93) |
+| **Net debt / (net cash)** | **+21.71** | **(44.87)** |
+| Net debt / equity | 0.03× | net cash |
+
+GEMS **repaid US$204.35m of net bank debt in 2025** (drawings US$717.11m against repayments
+US$876.48m) and simultaneously **converted US$59.59m of cash into a 7-year 2% state bond**. On
+a strict reading it moved from net cash of US$44.87m to net debt of US$21.71m. Add the Danantara
+paper back and it is net cash of US$37.88m — but that instrument is illiquid, sub-market, and
+should not be treated as cash. **Practical conclusion: GEMS ended 2025 approximately debt-neutral
+with much less liquidity than a year earlier.**
+
+**Debt structure.** A syndicated facility with **Bank Mandiri** (Deed 208, 31 July 2023;
+Addenda I–III to 31 January 2025) with the Company, BORNEO, RCI, KIM, BSL and KMS as co-debtors:
+Tranche A term loan **US$50m**, Tranche B revolving **US$110m**, accordion **US$20m**. Plus
+Rupiah lines from Mandiri, BRI and BNI (both BRI and BNI were fully repaid in 2025). Rates fell
+about 1pp during the year: Rupiah 8.25–9.00% → **7.90–8.25%**; USD 6.80–7.50% → **5.80–6.80%**.
+Certain trade receivables and inventories are **pledged to Bank Danamon and Bank Mandiri**.
+**No bonds, no sukuk, no convertibles — ever.**
+
+**4. Reclamation is provided at US$6.92m.** For 66,204 ha of concessions, 297.4 million bcm of
+overburden moved in one year, and 363.45 Mt of cumulative extraction, the balance-sheet provision
+for reclamation and mine closure is **US$6,915,074 — 0.58% of liabilities**. That is
+**US$0.019 per tonne of coal the group has ever produced** (363.45 Mt cumulative), **US$0.126 per
+tonne of FY2025 production alone**, or **US$104 per hectare of concession held** [calc].
+Reclamation guarantee deposits add only **US$1.16m**. The AR
+states management "believes the current accumulated provision is sufficient to cover all
+liabilities … up to the end of a mine's life."
+
+> **This is not credible on its face and it is the largest off-balance-sheet exposure in the
+> file.** Indonesian reclamation costs for open-pit thermal coal run in the order of
+> US$3,000–8,000 per hectare disturbed. Even 5,000 disturbed hectares at the low end implies
+> US$15m+; the industry norm of provisioning per tonne produced would put a 54.95 Mt/yr operation
+> at multiples of the current balance. GEMS provisions **US$396,239 per year** — less than 0.11%
+> of net profit — while the whole liability lands in 2036 when BIB's CCoW expires and the cash
+> flow stops. `EDITED: I checked whether reclamation might be inside "mining overhead" or the
+> contractors' scope. Nothing in Notes 19, 26 or 37 says so; the only related item is a
+> Rp11.0bn (US$0.66m) deposit with PT Kirana Chatulistiwa and a watershed rehabilitation service
+> agreement with HRB covering 1,248 ha. Neither is remotely sized to the problem.`
+
+## 3.2 Financial performance FY2017 – FY2025
+
+`REVISED v2:` extended from five years to **nine**, all from the company's own highlights tables
+(FY2017–18 from the FY2019 report; FY2019–20 from the FY2021 report).
+
+### Income statement (US$ million, as reported)
+
+| | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | **2025** |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| **Revenue** | 759.45 | 1,045.06 | 1,107.46 | 1,061.41 | 1,585.95 | **2,919.96** | 2,901.84 | 2,705.52 | **2,414.05** |
+| Cost of revenues | 444.97 | 685.08 | 746.01 | 682.31 | 829.19 | 1,605.49 | 1,755.79 | 1,600.94 | 1,642.81 |
+| **Gross profit** | 314.48 | 359.98 | 361.46 | 379.10 | 756.76 | **1,314.47** | 1,146.05 | 1,104.58 | **771.24** |
+| **Operating profit** | ~169.4 | ~142.5 | 111.28 | 129.66 | 471.22 | **916.81** | 694.06 | 640.49 | **366.68** |
+| **Profit before tax** | 167.86 | 136.14 | 100.34 | 127.13 | 460.84 | 898.69 | 682.98 | 635.76 | **354.18** |
+| Tax expense | (47.20) | (34.98) | (33.57) | (31.28) | (106.82) | (202.78) | (154.23) | (152.63) | (94.39) |
+| **Profit for the year** | 120.11 | 100.55 | **66.77** | 95.86 | 354.02 | **695.91** | 528.75 | 483.13 | **259.79** |
+| — owners of parent | 117.72 | 98.77 | 65.41 | 93.93 | 348.00 | 680.37 | 518.38 | 473.81 | 258.23 |
+| **EPS (US$)** | 0.02 | 0.02 | 0.01 | 0.02 | 0.06 | 0.12 | 0.09 | 0.08 | **0.044** |
+
+*2017–18 operating profit derived from the reported operating margin (22.31%, 13.64%); those two
+years' reports give margins but not the absolute line.*
+
+### Balance sheet (US$ million)
+
+| | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | **2025** |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Total assets | 590.47 | 701.05 | 780.64 | 813.72 | 829.03 | 1,129.09 | **1,312.04** | 1,239.58 | 1,196.60 |
+| Total liabilities | 298.25 | 385.23 | 422.38 | 464.28 | 512.70 | 570.84 | 648.93 | 578.45 | **488.02** |
+| **Total equity** | 292.22 | 315.81 | 358.27 | 349.43 | **316.33** | 558.25 | 663.11 | 661.13 | **708.58** |
+| Net working capital | 168.23 | 62.78 | 89.77 | 77.24 | **8.94** | 251.06 | 226.59 | 184.47 | 194.19 |
+
+### Key ratios
+
+| | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | **2025** |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| **Gross margin** | 41.41% | 34.45% | **32.64%** | 35.72% | 47.72% | 45.02% | 39.49% | 40.83% | **31.95%** |
+| **Operating margin** | 22.31% | 13.64% | 10.05% | 12.22% | 29.71% | 31.40% | 23.92% | 23.67% | **15.19%** |
+| **Net margin** | 15.82% | 9.62% | **6.03%** | 9.03% | 22.32% | 23.83% | 18.22% | 17.86% | **10.76%** |
+| **ROE** | 41.10% | 31.84% | **18.64%** | 27.43% | 111.91% | **124.66%** | 79.74% | 73.08% | **36.66%** |
+| **ROA** | 20.34% | 14.34% | 8.55% | 11.78% | 42.70% | **61.63%** | 40.30% | 38.98% | **21.71%** |
+| Liabilities / equity | 1.02× | 1.22× | 1.18× | 1.33× | **1.62×** | 1.02× | 0.98× | 0.87× | **0.69×** |
+| Current ratio | 1.68× | 1.25× | 1.32× | 1.23× | **1.02×** | 1.53× | 1.37× | 1.35× | **1.50×** |
+| **Effective tax rate** [calc] | 28.12% | 25.69% | 33.46% | 24.60% | 23.18% | 22.56% | 22.58% | 24.01% | **26.65%** |
+
+### Operating metrics
+
+| | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | **2025** |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Production (Mt) | 22.64 | 30.83 | 33.46 | **29.11** | 38.40 | 46.12 | 50.69 | **54.95** |
+| — BIB | n/d | 28.73 | n/d | 25.45 | 34.86 | 42.14 | 46.80 | **51.41** |
+| — KIM | n/d | n/d | n/d | 2.39 | 1.90 | 2.45 | 2.35 | 1.82 |
+| — BSL | 0.17 | 0.83 | n/d | 1.27 | 1.64 | 1.53 | 1.54 | 1.72 |
+| **BIB share of production** | n/d | **93.2%** | n/d | 87.4% | 90.8% | 91.4% | 92.3% | **93.6%** |
+| Sales (Mt) | 24.40 | 31.00 | 33.96 | 29.49 | 38.90 | 46.90 | 51.86 | **54.16** |
+| Overburden (m bcm) | — | — | — | — | — | 275.8 | 265.2 | **297.4** |
+| Stripping ratio | — | — | — | — | — | 5.98 | 5.23 | **5.41** |
+| **ASP (US$/t)** [calc] | 42.83 | **35.72** | **31.25** | 53.78 | **75.06** | 61.87 | 52.17 | **44.57** |
+| **COGS (US$/t)** [calc] | 28.08 | 24.06 | **20.09** | 28.12 | 41.27 | 37.44 | 30.87 | **30.33** |
+| **Gross profit (US$/t)** [calc] | 14.75 | 11.66 | 11.16 | 25.66 | **33.79** | 24.44 | 21.30 | **14.24** |
+| **Net profit (US$/t)** [calc] | 4.12 | **2.15** | 2.82 | 12.00 | **17.89** | 11.27 | 9.32 | **4.80** |
+| Operating cash flow (US$m) | 79.69 | 105.41 | 144.99 | 373.43 | **699.79** | 390.73 | 571.78 | **246.88** |
+
+**CAGR 2019–2025 [calc]: volume +9.7%, revenue +13.9%, net profit +25.4%.**
+**CAGR 2021–2025 [calc]: volume +16.4%, revenue +11.1%, net profit −7.4%.**
+
+> ### `REVISED v2` — the most important correction in this version: **2025 is not the trough**
+>
+> Version 1 read the cycle as "2022 peak → 2025 collapse" and concluded that GEMS was close to
+> the edge. The nine-year series shows something different and more useful.
+>
+> | | 2019 | 2020 | **2025** |
+> |---|---:|---:|---:|
+> | ASP (US$/t) | 35.72 | **31.25** | 44.57 |
+> | Net profit per tonne (US$/t) | **2.15** | 2.82 | **4.80** |
+> | Net margin | **6.03%** | 9.03% | 10.76% |
+> | ROE | 18.64% | 27.43% | 36.66% |
+> | All-in cost per tonne [calc] | 32.13 | **27.43** | 37.80 |
+> | Operating margin per tonne | 3.59 | 3.82 | **6.77** |
+>
+> **GEMS earned US$2.15/tonne in 2019 and US$2.82/tonne in 2020 — less than half of FY2025's
+> US$4.80.** On every unit measure, FY2025 is roughly twice as profitable as the 2019–2020 base.
+> The company operated for two consecutive years at an ASP of **US$31–36/t**, below my v1
+> break-even estimate of US$37.23/t, and still paid dividends of US$53m and US$125m.
+>
+> The reason is that **the cost base is not fixed — it tracks the price cycle.** All-in cost per
+> tonne ran **US$27.43 in 2020 and US$37.80 in 2025, +37.8%**, over a period when ASP rose 42.6%.
+> Contractor rates, royalty (a straight percentage) and freight all deflate in a downturn. My v1
+> break-even arithmetic held cost constant and therefore **overstated the fragility**. See the
+> revised §3.7.
+>
+> What the long series *does* confirm is the structural claim: **unit economics peaked in 2022
+> and the 2021–22 boom was an anomaly, not a base.** Gross profit per tonne of US$33.79 (2022)
+> has never been approached before or since; the 2017–2020 range was US$11–15/t. FY2025's
+> US$14.24/t is a **return to the pre-boom normal**, not a collapse below it.
+
+### The 2025 profit bridge [calc]
+
+
+| Driver | US$m | Note |
+|---|---:|---|
+| FY2024 net profit | **483.13** | |
+| Volume +2.30 Mt at 2024 unit gross margin (US$21.28/t) | +48.9 | |
+| **Price: ASP −US$7.56/t on 54.16 Mt** | **−409.4** | *the whole story* |
+| Unit COGS −US$0.54/t on 54.16 Mt | +29.2 | |
+| Selling expenses lower | +39.6 | freight per tonne −17% |
+| G&A lower | +21.3 | taxes −US$29.4m, offset by insurance +US$12.7m |
+| Other income/expense, interest | −7.8 | |
+| Tax | +58.2 | lower pre-tax base |
+| Other/rounding | −3.3 | |
+| **FY2025 net profit** | **259.79** | |
+
+**Price alone removed US$409m of gross profit. Everything management controlled — unit cost,
+freight, overheads — contributed +US$90m.** Management executed well; the market executed them.
+
+### The trend into FY2026
+
+- **Q1 2026 revenue US$582.60m vs US$648.34m in Q1 2025, −10.14%; net profit −29.45%.** The
+  margin compression continued into the current year.
+- FY2026 guidance: **production 54–58 Mt, sales 54–58 Mt** — flat to +5.6%, set against a
+  national quota cut to ~600 Mt.
+- FY2025 final dividend US$80m paid 11 June 2026; total FY2025 payout **US$180m (69.3%)** — the
+  lowest ratio since 2022.
+- ICI-4 bottomed at **US$40.68 in July 2025** and recovered to US$46.47 by December; HBA-3
+  (4,100 kcal) was set at **US$65.48 on 1 August 2026**.
+
+## 3.3 Revenue structure
+
+*Anchor: Revenue FY2025 = US$2,414,053,508 (100.0%).*
+
+| Cut | Split |
+|---|---|
+| **By segment** | Coal mining **99.70%** / coal trading 0.30% |
+| **By channel** | Export **64.57%** (US$1,558.85m) / domestic **35.43%** (US$855.20m) |
+| **By volume** | Export 35.21 Mt (65%) / domestic 18.95 Mt (35%) |
+| **By currency** | USD **65.04%** (US$1,570.12m) / IDR **34.96%** (US$843.93m) |
+| **By counterparty** | Third parties **98.59%** / related parties **1.41%** (US$33.92m) |
+| **By destination** | China 50.30% / Indonesia 35.43% / India 6.36% / ASEAN ~5.5% / other 2.4% |
+| **By mine** (volume) | BIB **92.90%** / KIM 3.50% / BSL 3.40% / trading 0.20% |
+
+> **The Note 25(a) labelling error.** In the audited financial statements, Note 25(a) "Revenue by
+> sales area" shows *"Penjualan luar negeri / Export sales 855,201,696"* and *"Penjualan dalam
+> negeri / Domestic sales 1,558,851,812"* for 2025. **These labels are swapped.** The MD&A
+> geographic table, the segment note (Note 38) and the currency split (Note 25c) all confirm
+> local = US$855.20m and export = US$1,558.85m. The 2024 column is correctly labelled. Use
+> Note 38, not Note 25(a). `EDITED: I built the first version of this table off Note 25(a) and
+> got the export/domestic mix exactly backwards. Cross-check every revenue split against the
+> segment note.`
+
+## 3.4 Cost structure summary
+
+*Anchor: Revenue FY2025 = US$2,414,053,508.*
+
+| Cost block | US$ | **% of revenue** | US$/t sold |
+|---|---:|---:|---:|
+| **Mining services** | 986,977,240 | **40.89%** | 18.22 |
+| **Royalty (DHPB)** | 312,449,072 | **12.94%** | 5.77 |
+| **Freight (selling)** | 196,021,557 | **8.12%** | 3.62 |
+| Coal hauling | 183,325,043 | 7.59% | 3.38 |
+| Mining overhead | 137,016,880 | 5.68% | 2.53 |
+| Salaries & benefits (G&A) | 48,302,438 | 2.00% | 0.89 |
+| Stockpile services | 34,940,773 | 1.45% | 0.65 |
+| Depreciation & amortisation (all operating) | 32,197,982 | 1.33% | 0.59 |
+| Insurance (G&A) | 22,465,050 | 0.93% | 0.41 |
+| Freight insurance | 15,749,362 | 0.65% | 0.29 |
+| Taxes (G&A) | 15,098,589 | 0.63% | 0.28 |
+| Land exploitation | 12,598,436 | 0.52% | 0.23 |
+| Repairs & maintenance | 12,011,003 | 0.50% | 0.22 |
+| Licences and permits | 10,984,881 | 0.46% | 0.20 |
+| Professional fees | 10,168,558 | 0.42% | 0.19 |
+| CSR | 5,733,294 | 0.24% | 0.11 |
+| Survey and analysis | 3,686,652 | 0.15% | 0.07 |
+| Equipment rental | 2,832,619 | 0.12% | 0.05 |
+| Office expenses | 2,336,128 | 0.10% | 0.04 |
+| Exploration | 1,816,700 | 0.08% | 0.03 |
+| Employee benefits expense | 1,101,794 | 0.05% | 0.02 |
+| All other (each \<US$1m) | 9,389,701 | 0.39% | 0.17 |
+| *less* coal inventory build | (9,832,580) | (0.41%) | (0.18) |
+| **Total operating cost** | **2,047,371,172** | **84.81%** | **37.80** |
+| **Operating profit** | **366,682,336** | **15.19%** | **6.77** |
+
+**Three lines — mining services, royalty and freight — are 61.95% of revenue.** None of the three
+is under management's short-term control: the first is contracted to 2030/2036, the second is set
+by statute as a percentage, the third is a shipping market. Everything management can genuinely
+influence — overheads, salaries, insurance, professional fees, maintenance — is the remaining
+**22.9% of revenue, about 27% of total operating cost** [calc].
+
+## 3.5 Unit economics — the whole business on one tonne of coal
+
+*FY2025, per tonne sold (54.16 Mt). Every figure ÷ 54.16m.*
+
+```
+  REVENUE                                            US$ 44.57   100.0%
+  ├─ Export (65% of volume)                          US$ 44.27
+  └─ Domestic (35% of volume)                        US$ 45.13
+                                                     ─────────
+  MINING SERVICES (contractors)               −18.22          −40.9%   ██████████████████
+  ROYALTY / DHPB (13.5% of production)         −5.77          −12.9%   ██████
+  COAL HAULING (pit → ROM → port)              −3.38           −7.6%   ███
+  MINING OVERHEAD                              −2.53           −5.7%   ██
+  Amortisation of mine properties              −0.28           −0.6%
+  Land exploitation                            −0.23           −0.5%
+  Equipment rental, depreciation, software     −0.10           −0.2%
+  Inventory movement                           +0.18           +0.4%
+                                             ────────
+  = COST OF REVENUES                          −30.33          −68.1%
+                                             ────────
+  = GROSS PROFIT                              US$ 14.24        31.9%
+                                             ────────
+  FREIGHT                                      −3.62           −8.1%   ███
+  Stockpile services                           −0.65           −1.5%
+  Freight insurance                            −0.29           −0.7%
+  Survey, depreciation, other selling          −0.15           −0.3%
+  G&A (salaries 0.89, insurance 0.41, tax 0.28,
+       depreciation 0.21, other 0.94)          −2.73           −6.1%   ██
+  Exploration                                  −0.03           −0.1%
+                                             ────────
+  = OPERATING PROFIT                          US$  6.77        15.2%
+                                             ────────
+  Net interest and other                       −0.23           −0.5%
+                                             ────────
+  = PROFIT BEFORE TAX                         US$  6.54        14.7%
+  Tax (26.65% effective)                       −1.74           −3.9%
+                                             ────────
+  = NET PROFIT                                US$  4.80        10.8%
+                                             ────────
+  Dividend declared (FY2025, US$180m)         US$  3.32         7.5%
+  Capex (US$19.21m)                           US$  0.35         0.8%
+```
+
+**Cash cost per tonne, GEMS's own definition** (mining + selling, excluding royalty), which is
+how the public-expose decks presented it historically:
+
+| | 9M2020 | 9M2021 | 2024 | **2025** |
+|---|---:|---:|---:|---:|
+| Cash COGS/t (ex-royalty) | 21.59 | 25.04 | 30.00 | **29.27** |
+| ASP/t | 31.86 | 46.24 | 52.13 | **44.57** |
+| **Cash margin/t** | 10.27 | 21.20 | 22.13 | **15.30** |
+| EBT/t | 3.59 | 11.54 | 12.26 | **6.54** |
+
+**Cash cost per tonne has risen 35.6% since 2020 while ASP has risen 39.9%.** The two have moved
+almost in lockstep; there is no structural cost improvement to bank on.
+
+### EBITDA — a reconciliation the company does not provide
+
+The AR states FY2025 EBITDA of **US$387.35m** (2024: US$682.22m) and a margin that it describes
+confusingly as *"decreased by 16.05% compared to the previous year's 25.22%"* — 16.05% is in fact
+the FY2025 **margin**, not the decrease. Neither figure reconciles cleanly:
+
+| Build | US$m |
+|---|---:|
+| Operating profit | 366.68 |
+| + D&A per segment note (incl. eliminations) | 37.12 |
+| **= EBITDA (my build)** | **403.80** |
+| Company-stated EBITDA | 387.35 |
+| **Unexplained gap** | **16.45** |
+
+`EDITED: I tried four builds (operating profit + P&L D&A = 387.63; PBT + interest + D&A = 397.47;
+net profit + tax + interest + D&A = 397.47). The closest match is operating profit plus only the
+D&A charged to COGS and selling expenses, excluding G&A depreciation — US$387.63m, off by
+US$0.28m. That is probably the company's method, and it understates EBITDA by excluding
+US$11.04m of G&A depreciation. Use US$403.80m for any EV/EBITDA comparison against peers who
+add back all D&A.`
+
+## 3.6 Market valuation
+
+At 31 December 2025: closing price **Rp8,125**, shares 5,882,353,000, market capitalisation
+**Rp47,794,118,125,000 ≈ US$2,879m** at ~Rp16,600/US$.
+
+| Metric | Value |
+|---|---:|
+| Market capitalisation | **US$2,879m** |
+| Net debt | +21.71m |
+| **Enterprise value** | **~US$2,901m** |
+| **P/E** (net profit to parent US$258.23m) | **11.15×** |
+| **P/B** (parent equity US$702.54m) | **4.10×** |
+| **EV/EBITDA** (my build, US$403.80m) | **7.18×** |
+| EV/EBITDA (company definition, US$387.35m) | 7.49× |
+| **Dividend yield** (FY2025 US$180m declared) | **6.25%** |
+| EV per tonne of reserve (844.4 Mt) | **US$3.44/t** |
+| EV per tonne of **BIB** reserve (527.0 Mt) | **US$5.50/t** |
+| EV per annual tonne of production | US$52.79 |
+| Price range 2025 | Rp7,050 – Rp11,250 |
+| **Quarterly turnover of shares outstanding** | **0.13% – 0.29%** |
+
+Share-price history through 2025: Q1 high Rp11,250 → Q4 close Rp8,125, a **27.8% decline** from
+the peak, against a 46.2% fall in earnings. **The multiple expanded as earnings fell** — from
+roughly 8× to 11× — which is what happens when a stock with a 10.4% float and 0.2% quarterly
+turnover cannot be repriced by anyone.
+
+**A P/B of 4.1× on an asset with a 10-year reserve life is the crux of the valuation question.**
+GEMS earns a 36.7% ROE on a very small equity base because it owns almost nothing — the
+contractors own the equipment. High ROE on rented capacity does not deserve a high book multiple;
+it deserves a **discounted-cash-flow-to-2036** treatment. At US$5.50 per tonne of BIB reserve
+against a FY2025 net margin of US$4.80/tonne, **the market is roughly paying one year of
+current-price net profit per tonne in the ground** — reasonable if ICI-4 recovers, expensive if
+it does not.
+
+## 3.7 Scenario analysis
+
+**Model.** Split FY2025 costs into variable (US$26.52/t: mining services, hauling, freight,
+stockpile, insurance, survey, land exploitation, equipment rental), royalty (12.94% of revenue,
+a pure percentage), and semi-fixed (US$306.49m: mining overhead, G&A, all D&A, selling
+depreciation, R&M). Effective tax 26.65%. Other net expense −US$12.51m held constant.
+Cross-check: this reproduces FY2025 total cost within 0.5% and net profit within 2.3%.
+
+| Scenario | ASP US$/t | Volume Mt | Revenue US$m | Operating profit US$m | Net profit US$m | vs FY2025 |
+|---|---:|---:|---:|---:|---:|---:|
+| **FY2025 actual (model check)** | 44.57 | 54.16 | 2,413.9 | 358.7 | 254.0 | 98% |
+| **ICI-4 falls 13% to US$40** | 38.68 | 54.16 | 2,094.9 | 81.0 | **50.2** | **19%** |
+| National quota cut, no price relief | 44.57 | **41.20** | 1,836.3 | 199.6 | **137.2** | **53%** |
+| Quota cut + ICI-4 +20% | 53.48 | 41.20 | 2,203.4 | 519.1 | 371.6 | 143% |
+| Quota cut + ICI-4 +40% | 62.40 | 41.20 | 2,570.9 | 839.1 | 606.3 | 233% |
+| Guidance high end, flat price | 44.57 | **58.00** | 2,585.1 | 405.9 | 288.6 | 111% |
+| Return to 2024 price, 2025 volume | 52.13 | 54.16 | 2,823.4 | 715.2 | 515.4 | 198% |
+| **HBA-3 (US$65.48) fully realised** | 63.32 | 54.16 | 3,429.4 | 1,242.8 | **902.4** | **347%** |
+
+**Operating leverage, measured [calc]:**
+
+- **−10% volume at flat price → net profit −19.2%** (leverage 1.9×)
+- **−10% price at flat volume → net profit −60.7%** (leverage **6.1×**)
+
+**Price sensitivity is 3.2× volume sensitivity.** This is why GEMS's own guidance talks about
+tonnes and its earnings talk about ICI-4.
+
+### Break-even arithmetic, line by line
+
+At 54.16 Mt of sales:
+
+```
+  Semi-fixed costs                                     US$ 306.49m
+  Variable cost per tonne                              US$  26.52
+  Royalty                                              12.94% of revenue
+  Other net expense                                    US$  12.51m
+
+  Let P = break-even ASP.
+    Revenue          = 54.16 P
+    Royalty          = 0.1294 × 54.16 P   = 7.008 P
+    Variable         = 26.52 × 54.16      = 1,436.3
+    Semi-fixed                            =   306.5
+    Other                                 =    12.5
+
+    54.16 P − 7.008 P − 1,436.3 − 306.5 − 12.5 = 0
+    47.152 P = 1,755.3
+    P = US$37.23 per tonne
+    → implied ICI-4 = 37.23 / 0.967 = US$38.50 per tonne
+```
+
+At the quota-constrained 41.20 Mt, the same arithmetic gives **P = US$39.36/t, implied ICI-4 =
+US$40.70/t.**
+
+> **`REVISED v2` — this break-even is real but it is not the doomsday number I implied.**
+>
+> ICI-4 printed US$40.68 in July 2025 and US$41.88 in June 2025, so on a *frozen FY2025 cost
+> base* GEMS had only ~US$2.20/t of headroom at the year's low. Version 1 stopped there.
+>
+> The nine-year history says the cost base does not freeze. GEMS actually operated through
+> **2019 at an ASP of US$35.72/t and 2020 at US$31.25/t** — both *below* this US$37.23 break-even
+> — and earned US$66.77m and US$95.86m of net profit respectively, because all-in cost per tonne
+> at the time was **US$32.13 and US$27.43**, not US$37.80. Royalty is a straight percentage of
+> revenue; contractor rates, freight and stockpile fees all reset downward in a slump; and
+> management demonstrably cut capex to 35–41% of budget in 2021–2022.
+>
+> So read the arithmetic as a **short-run** break-even — valid for one or two years before rates
+> reprice, and therefore the right number for a 2026–2027 view. Over a full cycle the floor is
+> lower and the company has already proven it can sit below this line for two consecutive years
+> while still paying dividends (US$53m in FY2019, US$125m in FY2020 — the latter at a 130.4%
+> payout funded partly from retained earnings).
+>
+> The genuine asymmetry is the **quota** scenario, because a volume cut does *not* deflate the
+> semi-fixed US$306m block. That is why the FY2026 RKAB revision matters more to GEMS
+> shareholders than anything management will do — not because US$40 coal is fatal, but because
+> US$44 coal on 41 Mt is worse than US$40 coal on 54 Mt.
+
+## 3.8 Roadmap and what to watch
+
+GEMS has **no published roadmap** — no decarbonisation target, no downstreaming project, no
+production-growth plan beyond next year's tonnage guidance, no reserve-replacement programme, no
+diversification. The FY2025 AR's "Business Prospects" section is a two-paragraph description of
+government policy. Compare INCO's carbon-neutral roadmap or TAPG's biocoke JV: **GEMS's forward
+plan is to keep mining BIB.**
+
+What that leaves an investor watching:
+
+**Existential, 2026–2036**
+1. **BIB CCoW extension**, due before 16 February 2036 — under Law 2/2025's new
+   "increase state revenue + independent environmental audit" test, with an unresolved HPHTI
+   overlap that Law 2/2025 says can trigger revocation. Everything else is noise next to this.
+2. **BIB reserve life of 10.3 years** with **zero net reserve additions since 2021** and no
+   independent reserve work since **Salva Mining's January 2023 JORC statement** — which the
+   FY2023, FY2024 and FY2025 reports all re-use, simply subtracting production. Salva had
+   refreshed it every January from 2020 to 2023. Exploration spend: US$0.49m (2024),
+   US$1.82m (2025). **The single most likely place for an unpleasant surprise is the next
+   independent reserve statement, whenever it comes.**
+3. **Reclamation provision of US$6.92m** versus an obligation that crystallises in 2036.
+
+**Policy, 2026**
+4. **The 600 Mt national quota** and the pending revision to 700–720 Mt. GEMS's 54–58 Mt guidance
+   presumes relief.
+5. **HBA-3 at US$65.48 vs ICI-4 in the mid-40s** — whether mandatory HBA export pricing is
+   genuinely enforced, and on what base royalty is assessed.
+6. **PP 8/2025's 12-month export-proceeds retention** and whether more cash gets parked in
+   instruments like the Danantara SUJP.
+7. **Windfall tax**, proposed, delayed, not dead.
+
+**Governance / accounting**
+8. **The FY2024 supplier-concentration contradiction** — FY2024 AR: no supplier >10% of sales;
+   FY2025 AR: PPA was 18% of FY2024 revenue. Ask the company which is right and why no
+   restatement note was filed.
+9. **CK's Note 26 vs Note 35 presentation** — US$302.78m vs US$112.22m for the same year and
+   counterparty. Resolved as a classification difference (§1.4), but the company should say so.
+10. **Key management compensation +115.2%** in a −46.2% profit year, disclosed at two different
+   values in the same document.
+11. **Insurance +129.4% (US$12.67m)** with no explanation and falling insured sums.
+12. **Danantara SUJP at 2%** — whether more follows, and whether it is impaired.
+13. **The FY2023 stripping-asset amortisation of US$41.99m** — 24× 2022 and 31× 2024, never
+   explained; and the BSL reserve round-trip of +87.2 Mt (2022) then −88.7 Mt (2023).
+
+**Operational**
+14. **Stripping ratio** — 5.23 → 5.41 and rising as BIB deepens. Each 0.1× ≈ US$17.2m pre-tax at
+    FY2024 contractor rates. Mining services per tonne produced has gone US$11.28 (2019) →
+    US$17.96 (2025), +59%, against a 25% rise in ASP over the same period.
+15. **KMS (Karya Mining Solutions)** — first year of commercial operation, US$20.1m of assets.
+    If GEMS is in-sourcing mining services, this is the beginning of the most important strategic
+    change in a decade. If it is a vehicle to reduce dependence on CK, watch CK's share of the
+    mining-services line in FY2026.
+16. **Every KIM/BBU hauling contract expired 31 December 2025 and was not renewed.**
+17. **TKS (6,600 kcal) IUP expires 2028; EMS Group IUP expires 2027** — both idle, both impaired.
+    WRL has been booked at exactly 87.2 Mt every year since 2019 without producing a tonne.
+    Either they get developed in the next 12–24 months or 16,194 ha and 87.8 Mt simply lapse.
+18. **Working capital**: VAT + tax claims of US$212.61m (17.8% of assets) and rising.
+
+---
+
+# SUMMARY VERDICT
+
+**What GEMS actually is:** a single, genuinely low-cost, low-CV coal deposit in South Kalimantan
+(BIB — 93.6% of production, 62.4% of reserves, ~65% of assets), operated entirely by third-party
+contractors, marketed by a 674-person organisation, wrapped in 20 other subsidiaries of which
+half have never produced anything, and owned 89.6% by two family blocs.
+
+**What it does well.**
+- BIB is a good asset: strip ratio 5.41, 0.2–0.6% sulphur, 5–7% ash, short haul to a private
+  jetty at Bunati, cash cost ex-royalty of **US$29.27/t** — low-quartile Indonesian.
+- Volume execution has been excellent: **22.6 → 54.95 Mt since 2018**, with FY2025 hitting
+  guidance exactly.
+- It gained share in China in a year Chinese imports fell 9.7%.
+- Balance sheet is conservative — no bonds ever, D/E 0.69× (the lowest in nine years),
+  current ratio 1.50×, receivables 94% current with zero credit-loss allowance.
+- Sinar Mas related-party dealing is small and clean: **no management fee, no royalty, no licence
+  fee, no intercompany loan, no guarantee** anywhere in Note 35.
+- It is a serious dividend payer: **US$2.11bn distributed over seven years, 84.9% of cumulative
+  net profit and 83.2% of cumulative operating cash flow**, at a **6.25% yield** — and it kept
+  paying through the 2019–2020 trough.
+- **`ADDED v2` — it has survived worse than this.** In 2019–2020 GEMS ran at US$31–36/t ASP and
+  US$2.15–2.82/t of net profit, and still distributed US$178m. FY2025's US$4.80/t is roughly
+  double that base.
+
+**What should give you pause.**
+- **The 2021–22 boom was the anomaly, not the base.** Gross profit per tonne: US$11–15 through
+  2017–2020, US$33.79 in 2022, US$14.24 in 2025. Anyone anchoring on 2022 is anchoring on a
+  once-in-a-generation price event.
+- **Price sensitivity is 6.1×.** A 10% ICI-4 move is a 61% earnings move. Short-run break-even
+  ICI-4 is **US$38.50** at full volume, **US$40.70** at quota-constrained volume — and ICI-4
+  printed **US$40.68 in July 2025**. Over a full cycle the floor is lower, because cost deflates
+  with price.
+- **`STRENGTHENED v2` — reserves have not been replaced since 2021 and the auditor's reserve
+  source is three and a half years stale.** Salva Mining refreshed the JORC statement every
+  January from 2020 to 2023, then stopped; FY2023, FY2024 and FY2025 all depreciate the same
+  January-2023 numbers by production. BORNEO: 702.8 Mt (2021) → 527.0 Mt (2025), a fall of
+  175.8 Mt against 175.2 Mt produced — **zero net additions in four years.** Reserve life on the
+  only asset that matters is **10.3 years** against a licence expiring 2036.
+- **Reinvestment has stopped, and the seven-year record shows it is a habit not a blip.** Capex
+  realisation of 35% (2021), 41% (2022), 71% (2025) against budget; FY2025 capex/D&A **0.52×**;
+  mine-property additions of **US$257,699**; exploration US$1.82m; no new concession since 2018;
+  no downstreaming; no roadmap.
+- **`STRENGTHENED v2` — the shareholder-as-contractor problem has a documented ramp and a
+  documented governance gap.** Related-party cost of sales went **0.17% (2021) → 5.21% → 10.32%
+  → 19.13% (2024)** immediately after RJR bought 30%; Cipta Kridatama's billings rose 3.7× in
+  three years; and for two of those years CK's own President Director was **Vice President
+  Director of GEMS**. Contracts for mining, haul road and port all run to **16 February 2036**,
+  the exact CCoW expiry. Every report states there are no conflict-of-interest transactions.
+- **`NEW v2` — two consecutive audited reports contradict each other about FY2024.** The FY2024
+  AR says no supplier exceeded 10% of sales; the FY2025 AR says PPA was 18% of FY2024 revenue.
+  No restatement note.
+- **Unexplained items in the FY2025 accounts**: key management pay +115% in a −46% year
+  (disclosed at two different values in the same document), insurance +129%, and the FY2023
+  stripping-asset amortisation of US$41.99m that is 24–31× adjacent years.
+- **US$59.59m lent to the state at 2% for 5–7 years** while borrowing at 5.8–8.25%.
+- **Reclamation provisioned at US$0.019 per tonne ever mined** — US$6.9m against 66,204 ha.
+- **10.39% free float with 0.2% quarterly turnover.** There is no market discipline here and no
+  practical exit at size. The float has been enlarged exactly once in fifteen years (2021).
+
+**The way to hold this in your head.** GEMS is not a mining company and not a growth company. It
+is an **eleven-year cash-extraction structure on one licence**, with the extraction rate set by
+ICI-4 and the Indonesian energy ministry, the cost set by two contractors (one of whom is a
+shareholder), and the proceeds paid out at ~85% of operating cash flow — a payout ratio it has
+now sustained across nine years, two price troughs and one boom.
+
+`REVISED v2:` version 1 closed by saying the market was wrongly pricing GEMS as "a normal
+cyclical coal miner." The nine-year record makes that too strong. GEMS **is** a cyclical coal
+miner, and a durable one — it earned money at US$31/t coal, it has never issued equity, it has
+no bonds, and its balance sheet is the cleanest it has been in nine years. What it is *also* is a
+**wasting asset**: the reserve clock (10.3 years), the licence clock (Feb 2036), and the
+contractor clocks (Feb 2036) all strike together, and nothing in seven years of filings suggests
+a plan for what happens after.
+
+So the valuation question is not "is 11.15× earnings too high for a coal miner." It is **"how
+much of a 4.10× book multiple survives the moment the market starts discounting a terminal date
+rather than a cycle."** Today the market is still pricing the cycle. The reserve tables say the
+terminal date is the real variable, and it is eleven years out — inside the horizon of anyone
+holding this for the 6.25% yield.
+
+---
+
+## Sources
+
+**Primary — company filings (uploaded):**
+- PT Golden Energy Mines Tbk, **Annual Reports FY2019 (298 pp), FY2020 (345 pp), FY2021 (385 pp),
+  FY2022 (319 pp), FY2023 (257 pp), FY2024 (281 pp) and FY2025 (284 pp)** — all bilingual, each
+  including audited consolidated financial statements; FY2025 auditor Mirawati Sensi Idris,
+  member of Moore Global Network, unqualified opinion
+- PT Golden Energy Mines Tbk, **Annual Public Expose, 3 March 2026** (FY2025, 41 pp)
+- PT Golden Energy Mines Tbk, **Annual Public Expose, 3 March 2025** (FY2024, 45 pp)
+- PT Golden Energy Mines Tbk, Public Expose decks **2021** (33 pp), **2022** (34 pp),
+  **2023** (37 pp), **2024** (35 pp)
+- PT Golden Energy Mines Tbk, **IPO Prospectus, 9 November 2011** (389 pp)
+
+**Secondary — web (accessed 16 August 2026):**
+- [Indonesia sets August 2026 coal price at US$124.44 per ton — IDNFinancials](https://www.idnfinancials.com/news/67144/indonesia-sets-august-2026-coal-price-at-us124-44-per-ton)
+- [HBA Coal Index Price, updated 1 August 2026 — Coaltradeindo](https://coaltradeindo.com/hba-coal-index-price/)
+- [Indonesia Confirms Mandatory Use of Its Coal Price Benchmark for Export Sales Starting March 1 — Jakarta Globe](https://jakartaglobe.id/business/indonesia-confirms-mandatory-use-of-its-coal-price-benchmark-for-export-sales-starting-march-1)
+- [Tarif Perhitungan Royalti Batubara 2025 (PP 18/2025 rate tables) — Enforce A](https://enforcea.com/Blog/tarif-perhitungan-royalti-batubara-2025)
+- [PP Resmi Terbit, Ini Daftar Tarif Baru Royalti Mineral-Batu Bara — Bloomberg Technoz](https://www.bloombergtechnoz.com/detail-news/68490/pp-resmi-terbit-ini-daftar-tarif-baru-royalti-mineral-batu-bara)
+- [Indonesia Coal 2026: How Export Controls and Policy Shape Investment Returns — ASEAN Briefing](https://www.aseanbriefing.com/news/indonesia-coal-2026-how-export-controls-and-policy-shape-investment-returns/)
+- [Revisi RKAB Dimulai, Pakar Usul Kuota Batu Bara Jadi 720 Juta Ton — Bloomberg Technoz](https://www.bloombergtechnoz.com/detail-news/114276/revisi-rkab-dimulai-pakar-usul-kuota-batu-bara-jadi-720-juta-ton)
+- [Indonesia to Cut 2026 Coal Output to 600 Million Tons — Tempo](https://en.tempo.co/read/2079285/indonesia-to-cut-2026-coal-output-to-600-million-tons)
+- [Dividen Final Golden Energy Mines Rp237,95 per Saham Dibagikan 11 Juni 2026 — StockWatch](https://stockwatch.id/dividen-final-golden-energy-mines-rp23795-per-saham-dibagikan-11-juni-2026/)
+- [Emiten Grup Sinarmas GEMS Tebar Dividen Rp1,93 Triliun — Bisnis.com](https://market.bisnis.com/read/20260520/192/1975238/emiten-grup-sinarmas-gems-tebar-dividen-rp193-triliun-cek-jadwalnya)
+- [Penjualan Kuartal Pertama Tertekan, Laba GEMS Melorot — Kontan](https://insight.kontan.co.id/news/penjualan-kuartal-pertama-tertekan-laba-gems-melorot)

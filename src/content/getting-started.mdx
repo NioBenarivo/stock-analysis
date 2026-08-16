@@ -1,0 +1,71 @@
+---
+title: Getting Started
+description: How this reader turns .mdx files into pages, and what you need to know to add one.
+date: '2026-08-16'
+tags: [guide]
+---
+
+Every file in `src/content` ending in `.mdx` becomes a page. The filename is the
+URL: this document lives at `src/content/getting-started.mdx` and is served at
+`/getting-started`. There is no route to register and no index to update.
+
+## Frontmatter
+
+The YAML block at the top of the file drives both the library listing and the
+page header:
+
+```yaml
+---
+title: Getting Started
+description: A one-line summary shown on the library card.
+date: '2026-08-16'
+tags: [guide]
+draft: false
+---
+```
+
+Only `title` really matters. `description`, `date`, and `tags` are optional
+decoration. Setting `draft: true` hides the document from the library without
+deleting it.
+
+<Callout type="tip" title="Quote your dates">
+  Write `date: '2026-08-16'` with quotes. Unquoted YAML dates can parse into a
+  `Date` object instead of a string depending on the parser's schema, and sorting
+  then behaves inconsistently.
+</Callout>
+
+## What you can write
+
+Everything GitHub-Flavored Markdown supports — tables, task lists, strikethrough,
+autolinks — plus real React components and JavaScript expressions. That last part
+is what separates this from a plain markdown renderer.
+
+This sentence was rendered in {new Date().getFullYear()}, computed while the page
+was building.
+
+## Adding a component to the vocabulary
+
+Components become available to every document by registering them once in
+`src/mdx/components.tsx`:
+
+```tsx
+import MyThing from '../components/MyThing'
+
+export const mdxComponents: MDXComponents = {
+  Callout,
+  Counter,
+  MyThing,
+}
+```
+
+After that, `<MyThing />` works in any `.mdx` file with no import. See
+[Components in Markdown](/components-in-markdown) for what that looks like in
+practice.
+
+## The tradeoff you accepted
+
+Content is compiled at build time by `@mdx-js/rollup`. That buys full JSX,
+imports, expressions, and TypeScript checking on component props. The cost is
+that markdown has to be in the repo — you cannot paste a file in at runtime and
+have it render. Switching that would mean compiling MDX in the browser, which
+ships a compiler to the client and evaluates content as code.

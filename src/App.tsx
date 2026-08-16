@@ -1,18 +1,20 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './pages/Home'
-import Company from './pages/Company'
-import Metrics from './pages/Metrics'
-import MetricsDetail from './pages/MetricsDetail'
+import { MDXProvider } from '@mdx-js/react'
+import { mdxComponents } from './mdx/components'
+import Library from './pages/Library'
+import Doc from './pages/Doc'
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/company/:id" element={<Company />} />
-        <Route path="/metrics" element={<Metrics />} />
-        <Route path="/metrics/:id" element={<MetricsDetail />} />
-      </Routes>
-    </BrowserRouter>
+    // Every .mdx file rendered below can use anything in mdxComponents
+    // without importing it.
+    <MDXProvider components={mdxComponents}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Library />} />
+          <Route path="/:slug" element={<Doc />} />
+        </Routes>
+      </BrowserRouter>
+    </MDXProvider>
   )
 }

@@ -1,12 +1,7 @@
-import { NavLink } from 'react-router-dom'
-import { LayoutGrid, Table2, Sun, Moon, Monitor } from 'lucide-react'
+import { Link, NavLink } from 'react-router-dom'
+import { BookText, Sun, Moon, Monitor } from 'lucide-react'
 import { useTheme } from '../hooks/useTheme'
 import type { Theme } from '../hooks/useTheme'
-
-const navLinks = [
-  { to: '/', label: 'Analyses', icon: LayoutGrid },
-  { to: '/metrics', label: 'Key Metrics', icon: Table2 },
-]
 
 const themeOptions: { value: Theme; icon: typeof Sun }[] = [
   { value: 'light', icon: Sun },
@@ -18,47 +13,46 @@ export default function Navbar() {
   const { theme, setTheme } = useTheme()
 
   return (
-    <header className="sticky top-0 z-10 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
-      <div className="max-w-5xl mx-auto px-4 sm:px-10 h-14 flex items-center justify-between">
-        <span className="text-sm font-semibold text-slate-900 dark:text-white tracking-tight">
-          Stock Research
-        </span>
+    <header className="sticky top-0 z-10 border-b border-slate-200 bg-white/80 backdrop-blur dark:border-slate-800 dark:bg-slate-900/80">
+      <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4 sm:px-10">
+        <Link
+          to="/"
+          className="flex items-center gap-2 text-sm font-semibold tracking-tight text-slate-900 dark:text-white"
+        >
+          <BookText className="h-4 w-4" />
+          Markdown Reader
+        </Link>
 
         <div className="flex items-center gap-4">
           <nav className="flex items-center gap-1">
-            {navLinks.map(({ to, label, icon: Icon }) => (
-              <NavLink
-                key={to}
-                to={to}
-                end
-                className={({ isActive }) =>
-                  `flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg text-sm transition-colors ${
-                    isActive
-                      ? 'bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white font-medium'
-                      : 'text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800'
-                  }`
-                }
-              >
-                <Icon className="w-3.5 h-3.5" />
-                <span className="hidden sm:inline">{label}</span>
-              </NavLink>
-            ))}
+            <NavLink
+              to="/"
+              end
+              className={({ isActive }) =>
+                `rounded-lg px-3 py-1.5 text-sm transition-colors ${
+                  isActive
+                    ? 'bg-slate-100 font-medium text-slate-900 dark:bg-slate-800 dark:text-white'
+                    : 'text-slate-500 hover:bg-slate-50 hover:text-slate-800 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200'
+                }`
+              }
+            >
+              Library
+            </NavLink>
           </nav>
 
-          {/* Theme toggle */}
-          <div className="flex items-center gap-0.5 bg-slate-100 dark:bg-slate-800 rounded-lg p-0.5">
+          <div className="flex items-center gap-0.5 rounded-lg bg-slate-100 p-0.5 dark:bg-slate-800">
             {themeOptions.map(({ value, icon: Icon }) => (
               <button
                 key={value}
                 onClick={() => setTheme(value)}
                 title={value.charAt(0).toUpperCase() + value.slice(1)}
-                className={`p-1.5 rounded-md transition-colors ${
+                className={`rounded-md p-1.5 transition-colors ${
                   theme === value
-                    ? 'bg-white dark:bg-slate-700 text-slate-700 dark:text-white shadow-sm'
+                    ? 'bg-white text-slate-700 shadow-sm dark:bg-slate-700 dark:text-white'
                     : 'text-slate-400 hover:text-slate-600 dark:hover:text-slate-300'
                 }`}
               >
-                <Icon className="w-3.5 h-3.5" />
+                <Icon className="h-3.5 w-3.5" />
               </button>
             ))}
           </div>

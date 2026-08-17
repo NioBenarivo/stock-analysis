@@ -6,7 +6,7 @@ import { docs, formatDate } from '../lib/docs'
 export default function Library() {
   return (
     <Layout>
-      <div className="mx-auto max-w-3xl px-4 py-12 sm:px-10">
+      <div className="mx-auto max-w-5xl px-4 py-12 sm:px-10">
         <div className="mb-10">
           <h1 className="text-2xl font-semibold text-slate-900 dark:text-white">Library</h1>
           <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
@@ -22,33 +22,46 @@ export default function Library() {
             No documents yet. Drop an <code>.mdx</code> file into <code>src/content</code>.
           </div>
         ) : (
-          <ul className="space-y-2">
+          // Grid items stretch by default, so h-full + flex-col lets every card
+          // match its row's height and pin its tags to the bottom edge.
+          <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {docs.map((doc) => (
               <li key={doc.slug}>
                 <Link
                   to={`/${doc.slug}`}
-                  className="group flex gap-4 rounded-xl border border-slate-200 bg-white p-4 transition-colors hover:border-slate-300 dark:border-slate-800 dark:bg-slate-900 dark:hover:border-slate-700"
+                  className="group flex h-full flex-col rounded-xl border border-slate-200 bg-white p-5 transition-colors hover:border-slate-300 hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:hover:border-slate-700 dark:hover:bg-slate-800/50"
                 >
-                  <FileText className="mt-0.5 h-4 w-4 shrink-0 text-slate-400" />
-                  <div className="min-w-0 flex-1">
-                    <h2 className="font-medium text-slate-900 dark:text-white">{doc.title}</h2>
-                    {doc.description && (
-                      <p className="mt-1 text-sm leading-relaxed text-slate-500 dark:text-slate-400">
-                        {doc.description}
-                      </p>
+                  <div className="mb-3 flex items-center justify-between gap-2">
+                    <FileText className="h-4 w-4 shrink-0 text-slate-400" />
+                    {doc.date && (
+                      <span className="text-xs text-slate-400 dark:text-slate-500">
+                        {formatDate(doc.date)}
+                      </span>
                     )}
-                    <div className="mt-2 flex flex-wrap items-center gap-2 text-xs text-slate-400 dark:text-slate-500">
-                      {doc.date && <span>{formatDate(doc.date)}</span>}
-                      {doc.tags?.map((tag) => (
+                  </div>
+
+                  <h2 className="line-clamp-2 font-medium text-slate-900 dark:text-white">
+                    {doc.title}
+                  </h2>
+
+                  {doc.description && (
+                    <p className="mt-1.5 line-clamp-3 text-sm leading-relaxed text-slate-500 dark:text-slate-400">
+                      {doc.description}
+                    </p>
+                  )}
+
+                  {doc.tags?.length ? (
+                    <div className="mt-auto flex flex-wrap gap-1.5 pt-4">
+                      {doc.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="rounded-md bg-slate-100 px-1.5 py-0.5 dark:bg-slate-800"
+                          className="rounded-md bg-slate-100 px-1.5 py-0.5 text-xs text-slate-500 dark:bg-slate-800 dark:text-slate-400"
                         >
                           {tag}
                         </span>
                       ))}
                     </div>
-                  </div>
+                  ) : null}
                 </Link>
               </li>
             ))}

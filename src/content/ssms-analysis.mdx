@@ -1,0 +1,1944 @@
+---
+title: "PT Sawit Sumbermas Sarana Tbk — IDX: SSMS"
+description: "A teardown of the Citra Borneo group's listed plantation vehicle, from the 2013 prospectus to the FY2025 annual report."
+date: '2026-08-18'
+tags: [analysis, palm-oil, idx]
+---
+
+**Prepared 18 August 2026.** Built on the same three-part skeleton as the AALI, TAPG, NSSS and GEMS
+teardowns — **01 Management → 02 Model → 03 Unit Economics** — so the names sit side by side.
+Every figure is tagged with the document it came from. Anything I worked out myself is marked
+`[calculated]`. Where the company's own documents disagree with each other, both numbers are shown
+and the conflict is named rather than quietly resolved; there are **21 of those**, and they are
+collected in Appendix A because the sheer count of them is itself a finding.
+
+---
+
+## Sources used
+
+| Document | Pages | Period covered | Text layer | Notes |
+|---|---|---|---|---|
+| IPO Prospectus, 29 Nov 2013 | 551 | FY2008–H1 2013 | clean | Pre-IPO restructuring, the Rp100 par-value placement, the founder's absence from the cap table |
+| Annual Report FY2019 | 385 | FY2017–2019 | clean | First full year under CBI control; the USD300m bond years |
+| Annual Report FY2020 | 297 | FY2018–2020 | clean | COVID year; CBI loan fair-value discount; 13% CBUT purchase |
+| Annual Report FY2021 | 203 | FY2019–2021 | clean | Peak reported profit; Moody's Caa1; auditor's report page missing from the text layer |
+| Annual Report FY2022 | 424 | FY2020–2022 | clean | Bond buyback; CBI loan as sole Key Audit Matter |
+| Annual Report FY2023 | 462 | FY2021–2023 | clean | The CBUT pooling and the first full restatement |
+| Annual Report FY2024 | 495 | FY2022–2024 | clean | First full year consolidating the refinery |
+| Annual Report FY2025 | 494 | FY2023–2025 | clean | SML pooling, second restatement, new auditor entity |
+| Public Expose, 25 Apr 2024 | 12 | FY2023 + history | clean | The only deck that ever published per-product ASPs |
+| Paparan Publik, 8 May 2025 | 9 | FY2024 / 3M25 | clean | |
+| Public Expose, 30 Apr 2026 | 17 | FY2025 | clean | New customer-and-destination disclosure |
+| Management Reports 1Q24, 2Q24, 9M24, 3M25, FY25 | 9–10 each | 1Q24 → FY25 | clean | |
+| Web pass, 17–18 Aug 2026 | — | to 15 Aug 2026 | — | Prices, policy, Satgas PKH, peers, news |
+
+**Total: ~3,300 pages of company filings.** Every PDF had a usable text layer, so the whole corpus
+was read as text — no OCR, no page images. Extraction ran through subagents writing notes to disk;
+the consolidated data pack behind this report is `TIMESERIES.md`.
+
+**Three files you attached did not arrive on my side:** the **2025 Q2, 2025 Q3 and 2026 Q1**
+management reports. So the newest *audited* data point here is **FY2025 (31 Dec 2025)**, the newest
+*company* data point is the **30 April 2026 public expose**, and everything after that — the Q1 2026
+result, the BARI cut-off, the May 2026 transfer-pricing probe — comes from press reporting, which I
+have labelled as such. If you re-send those three, the 1H26 picture can be filled in properly.
+
+---
+
+## How to read this report: SSMS has five different sets of books
+
+This is the single most important thing to understand before looking at any SSMS number, and it is
+the reason so much published commentary on this company is wrong.
+
+Between 2023 and 2025 SSMS absorbed two entities **from its own controlling shareholder**, both
+accounted for as **common-control transactions under PSAK 38** (pooling of interests). Under PSAK 38
+you do not record an acquisition. You restate history *as if the acquired business had always been
+part of the group*, and you push the difference between what you paid and the book value you
+received straight into equity, bypassing the income statement entirely.
+
+That has been done twice:
+
+- **December 2023 — PT Citra Borneo Utama (CBUT)**, the refinery. FY2021 and FY2022 were restated.
+  FY2022 revenue was restated **from Rp7,261bn to Rp11,240bn (+54.8%)**. Additional paid-in capital
+  went from **+Rp540.9bn to −Rp2,852.1bn**.
+- **November 2025 — PT Sawit Mandiri Lestari (SML)**, a plantation. FY2024 was restated. FY2024
+  revenue went **from Rp10,521.7bn to Rp10,366.8bn**. Additional paid-in capital went from
+  **−Rp2,852.1bn to −Rp3,936.7bn**.
+
+The practical consequence:
+
+| Period | Consolidation perimeter | Comparable with |
+|---|---|---|
+| FY2017–FY2020 | SSMS upstream only; CBUT is a 13–19% cost-method holding | each other |
+| FY2021–FY2022 as originally reported | upstream only; CBUT an associate | each other |
+| FY2022 restated, FY2023, FY2024 as originally reported | upstream + refinery | each other |
+| FY2024 restated, FY2025 | upstream + refinery + SML | each other |
+
+**Do not compute a growth rate across those boundaries.** Revenue "grew" from Rp7.3tn (FY2022) to
+Rp10.7tn (FY2023) mostly because a refinery was bolted into the comparative, and then "fell" from
+Rp10.5tn (FY2024 as reported) to Rp10.4tn (FY2024 restated) because a plantation was bolted in and
+its intercompany sales were eliminated. Neither movement is an operating fact.
+
+Throughout this report I state which basis each figure is on. Where I show a series that crosses a
+boundary, I say so on the table.
+
+---
+
+## Executive summary — the fifteen things that matter
+
+1. **SSMS is not really a plantation company you can value on plantation metrics. It is the listed
+   segment of a family supply chain.** In FY2019 **91.06%** of revenue went to related parties. The
+   number has ranged 27%–91% across seven years, but the underlying fact never changed: the buyer of
+   SSMS's output is chosen by the same people who control SSMS. Only the name on the invoice rotates
+   — PT Citra Borneo Utama until 2022, then Borneo Agri-Resources International Pte Ltd (Singapore)
+   from 2022 to 2025, at **61.4% of FY2024 revenue**. [AR2019–AR2025]
+
+2. **Then, in Q1 2026, sales to that Singapore counterparty went to exactly zero** — from 46% of Q1
+   2025 revenue to nil — with no explanation given. Five weeks later the Ministry of Finance
+   announced it had found transfer-pricing evidence at ten CPO exporters and **SSMS was named**; the
+   shares fell 8.57% in a day. Those two facts are not formally connected by any source, and I am not
+   asserting they are. But an analyst should hold them in the same hand. [press, May 2026]
+
+3. **The two related-party poolings moved roughly Rp5.05tn of value to the controlling shareholder
+   without ever touching the income statement.** Rp3.45tn of a receivable owed by the parent was
+   settled in CBUT shares (Dec 2023); Rp1.6tn of cash went to the parent for 63.4% of SML (Nov 2025).
+   The combined Rp3.94tn accounting difference sits in negative additional paid-in capital.
+
+4. **Equity has been hollowed out by that accounting, and every return ratio is therefore fake.**
+   Total equity is **Rp2,941bn against Rp13,584bn of assets** (FY2025). Reported ROE of **40.88%** is
+   not a sign of a superb business; it is a small denominator. Debt-to-equity is **362%**. On a
+   pre-pooling equity base ROE would be roughly a third of that. [AR2025, `[calculated]`]
+
+5. **The estate is aging and yields are falling, and nobody at the company has said so.** Nucleus
+   FFB yield: **27.0 t/ha (FY2022) → 25.0 → 22.7 → 21.2 t/ha (FY2025)**, a **−21.5%** slide in three
+   years. Nucleus average age went 14.7 yrs (FY2023) → **16.7 yrs (1Q25)**. The *combined* average
+   age then "improved" to 14.8 yrs — but only because the company bought younger trees from its own
+   parent. **Replanting hectares are never disclosed in any of the seven annual reports.** [PRES_2024
+   through PRES_2026]
+
+6. **The refinery, which is now more than half the group, earns almost nothing.** FY2024 segment
+   note: Plantations made **Rp1,675.2bn of operating profit on Rp6,305.5bn of segment revenue
+   (26.6%)** — but **only Rp755.5bn of that was external**, so 88% of the upstream's "revenue" is an
+   internal transfer price the accounts never disclose. Edible Oil made **Rp122.0bn on Rp9,766.1bn
+   (1.2%)**. Consolidating CBUT roughly doubled reported revenue and added
+   about 7% of the operating profit. Refinery utilisation halved in FY2024 (91.8% → 47.5%) with no
+   root-cause explanation. [AR2024 Note 36]
+
+7. **FY2025 was a genuinely good year, and about half of it was price.** Revenue +42.9% to
+   **Rp14,813bn**; net profit to owners **Rp1,160.7bn (+41.6%)**. Decomposed: **volume +23.7%
+   contributed Rp2,461bn (55.3%)**, blended price/mix +15.5% contributed **Rp1,986bn (44.7%)**
+   `[calculated]`. The volume half is the SML acquisition, i.e. an asset bought from the parent, not
+   organic growth.
+
+8. **Palm kernel had the same lauric-oil melt-up seen at AALI, TAPG and NSSS.** SSMS's PK price went
+   from **Rp4,974/kg (FY2023) to Rp12,406/kg (FY2025)** `[calculated from AR2025 volume and value
+   tables]` — from **37.5% to 71.0% of the CPO price**. Reverting the ratio to FY2023 levels costs
+   **~Rp151bn of revenue** at FY2025 volumes, roughly **13% of net profit**.
+
+9. **The MD&A and the audited notes contradict each other on the single most important fact in the
+   company.** FY2024's governance chapter: *"the Company did not carry out any transactions with
+   affiliated parties related to business activities."* Note 33 of the same document: related-party
+   revenue **Rp6,460.8bn, 61.41% of total**. Not a nuance — a flat contradiction inside one
+   PDF. [AR2024]
+
+10. **Capex is reported three different ways in a single annual report.** FY2024: **Rp19bn** in the
+    MD&A capex table, **Rp230.0bn** in the audited cash-flow statement, **Rp386.2bn** in the segment
+    note. FY2023's MD&A says the company *"did not invest in new capital goods"* while the cash-flow
+    statement shows **Rp303.5bn**. [AR2023, AR2024]
+
+11. **Free float has fallen from 35.84% (2022) to 24.04% (2025)** while CBI's stake rose from 54.30%
+    to **65.83%** — with **no new shares issued** at any point since the 2013 IPO and **no disclosed
+    transaction** explaining any of the transfers. Roughly 1.1 billion shares changed hands out of the
+    public float over three years, unnarrated. [AR2022–AR2025]
+
+12. **The ultimate beneficial owner changed in 2024 from the founder Abdul Rasyid to Jery Borneo
+    Putra**, disclosed only as a changed line in Note 1a, with no narrative anywhere. In the same
+    period the founder faced a public document-forgery allegation over his provincial legislature
+    seat (June 2025, unresolved). [AR2024, AR2025, press]
+
+13. **The forest-area (kawasan hutan) exposure is real and unaddressed.** A February 2025 Ministry of
+    Forestry list of Central Kalimantan plantations inside forest areas names **PT Citra Borneo Indah
+    (1,823 ha, 1,230 ha rejected)** and an **SSMS-named entity (3,650 ha and 18,595 ha, 6,753 ha
+    rejected)**. **PP 45/2025** sets fines at **Rp25m/ha/year** and paying does not legalise the land.
+    Neither Satgas PKH, nor PP 45/2025, nor kawasan hutan appears anywhere in the FY2025 annual
+    report. AALI booked Rp572bn for this; NSSS booked Rp108bn and got a qualified opinion. SSMS has
+    booked nothing and said nothing.
+
+14. **At Rp920 the stock is 7.6× trailing earnings and roughly 5.2–5.5× EV/EBITDA** — cheap against
+    its own history and mid-pack against IDX peers — but it is **3.85× book on the owners' equity**,
+    which is the highest multiple in the peer set, precisely because the book was destroyed by the
+    poolings. You are not buying a cheap balance sheet. You are buying a cheap earnings stream whose
+    counterparty just disappeared. `[calculated]`
+
+15. **The FY2026 budget in the annual report is arithmetically impossible as published.** Management
+    projects **revenue of Rp24,114bn, +62.8%**, with total assets *falling* 1.3% — implying asset
+    turnover jumps from 1.09× to 1.80×. It requires RBDPO output to rise **95.4% to 1,112,190 MT on
+    unchanged 2,500 t/day refining capacity**, which is **139% of nameplate** `[calculated]`. This is
+    from a company that delivered **83.9% of its FY2025 CPO target and 49.6% of its CPKO target**.
+    Either the second refinery — silently dropped from disclosure in 2025 — is being built and
+    nobody has said so, or the budget is not a forecast. §3.11 has the full table.
+
+---
+
+# 01 — MANAGEMENT
+
+---
+
+## 1.1 What the company actually is
+
+PT Sawit Sumbermas Sarana Tbk is an oil palm plantation and, since December 2023, palm oil refining
+group operating almost entirely in **Central Kalimantan** — the Pangkalan Bun / Kotawaringin Barat /
+Lamandau / Seruyan corridor. As at 31 December 2025 it reports **136,447 ha of managed area**, of
+which **93,726 ha are mature** and **76,850 ha are mature nucleus**, across **27 estates**, feeding
+**10 mills (670 t FFB/hr)**, one **2,500 t/day refinery-and-fractionation complex** and **two kernel
+crushing plants (780 t/day combined)**. It employs **20,040 people** on the group HR tables and
+**13,304** on the audited "permanent employees" note. [AR2025]
+
+It is controlled by **PT Citra Borneo Indah (CBI)**, which holds **65.83%**, with a second family
+vehicle **PT Putra Borneo Agro Lestari (PBAL)** holding **10.13%** and the public **24.04%**. CBI is
+in turn owned by PT Prima Sawit Borneo (48.77%) and PT Mandiri Indah Lestari (46.76%), with four
+individuals holding the rest. The founder of the group is **Haji Abdul Rasyid AS**, a former
+national parliamentarian and, as of 2025, a member of the Central Kalimantan provincial legislature
+for PKB. [AR2025, WEB]
+
+The thing to hold onto: **SSMS is one leg of a larger private group.** The refinery it now
+consolidates was the group's; the plantation it bought in November 2025 was the group's; the
+Singapore trading company that bought most of its output is the group's; the small rural bank that
+lends to it is chaired by one of its own commissioners; the shipping companies that move its cargo
+are the group's; and until 2023 nearly a third of its balance sheet was a loan to its own parent.
+Everything below follows from that.
+
+---
+
+## 1.2 Timeline, 1995 → 2026
+
+Provenance note: dates 1995–2013 come from the IPO prospectus and the "milestones" pages of the
+annual reports; 2013 onward from the annual reports and, for 2025–26, from press. Related-party
+events are marked **[RPT]**.
+
+| Date | Event |
+|---|---|
+| 22 Nov 1995 | PT Sawit Sumbermas Sarana incorporated |
+| 1999 | Abdul Rasyid Akhmad Saleh acquires 97.6% of the company |
+| 6 May 1999 | PT Mitra Mendawai Sejati (MMS) established |
+| Sep 2001 | Abdul Rasyid **sells his entire stake** to Andri Effendi |
+| 25 Mar 2004 | PT Kalimantan Sawit Abadi (KSA) established |
+| 2005 | Commercial operations begin — first plantation and mill |
+| Nov–Dec 2012 | Stakes in KSA / MMS / ASP / **SML** raised to ~60% via new-share subscription **[RPT]** |
+| 30 Nov 2012 | Par split to Rp100; issued capital Rp412.5bn |
+| **18 Jun 2013** | **3.9bn new shares issued to CBI, Jery Borneo Putra and Jemmy Adriyanor at Rp100 (par) — 85% below the Rp670 IPO price 5.5 months later** **[RPT]** |
+| 29 Jun 2013 | ~Rp125bn+ of related-party receivables transferred to PT Surya Borneo Industri, days before the reporting cut-off **[RPT]** |
+| 12 Dec 2013 | **IPO** — 1.5bn shares at Rp670, Rp1,005bn gross, IDX listing |
+| 2015 | Acquires MKM, MPP, TSA, SMU from CBI-group sellers **[RPT]** |
+| Sep 2015 | Chain Reaction Research publishes a full risk analysis alleging ~14,000 ha cleared 2003–2015; **GAR, Apical and Wilmar suspended trade with SSMS in June 2015** |
+| 16 Oct 2017 | Deed No. 18 — MIL and PSB transfer **2.6bn shares to CBI** for a stated **Rp1,937,000,000 total (~Rp1.49/share)** **[RPT]** |
+| 23 Jan 2018 | **USD 300m 7.75% senior notes** issued via SSMS Plantation Holdings Pte Ltd, listed SGX |
+| 30 Sep 2018 | The CBI transfer becomes effective — CBI is the controlling shareholder |
+| 15 Apr 2019 | Subsidiary receivables from CBI and SBI consolidated into a single parent-level **convertible loan** **[RPT]** |
+| 14 Aug 2019 | Rp738.3bn SBI loan converted into a 49% equity stake in SBI **[RPT]** |
+| 23 Aug 2019 | **Moody's downgrades B1 → B2** on weak downstream refinery earnings |
+| 29 Dec 2020 | SSMS acquires 13% of CBUT for a stated "Rp600,000,000" via CBI loan conversion **[RPT]** |
+| 11 Jan 2022 | **Moody's downgrades B3 → Caa1** — disclosed inside the bonds note, not subsequent events |
+| 7 Jan 2022 | EGM dismisses President Director Vallauthan Subraminam; Nasarudin bin Nasir promoted |
+| 27 Jun 2022 | Rp4.3tn syndicated facility signed (BRI/BSI-led) to refinance the bond |
+| Jul + Dec 2022 | Partial tender / buyback of the USD notes; **Rp387.4bn gain booked in "other income"** |
+| Sep 2022 | **CBUT lists on IDX** at Rp690/share |
+| **19 Jan 2023** | **USD 300m notes fully repaid** |
+| 5 Dec 2023 | Independent GMS approves the CBUT swap as an affiliate + material transaction **[RPT]** |
+| **19–20 Dec 2023** | **CBI settles Rp3,451.3bn of debt to SSMS with 52.6% of CBUT** (1.64bn shares per press; share count not in any AR) — SSMS holds 78.22% of CBUT; PSAK 38 pooling; FY2021–22 restated; APIC → −Rp2,852.1bn **[RPT]** |
+| 25 Apr 2024 | Jap Hartono (ex-CFO) promoted President Director; board shrinks 3 → 2; **FY2023 profit not distributed** |
+| Jan 2024 → Jan 2025 | Ministry of Forestry PSDH/DR billing disputed, then **Rp146.0bn paid** — buried in the G&A "insurance and permits" line |
+| 16 Jan 2025 | Tax Court rejects CBUT's appeal on a 2019 assessment; CBUT files for Supreme Court review |
+| 21 Apr 2025 | AGMS approves **Rp450bn dividend (Rp47.24/share)** for FY2024 |
+| **26 Jun 2025** | **CBI sells its own plantation and mill into SML at Rp216.5bn vs Rp119.5bn book — an 81% premium** **[RPT]** |
+| 30 Jun 2025 | CBI acquires 99.9% of SML from a third party — SML is now "under common control" |
+| 1 Jul 2025 | **B50 biodiesel mandate** takes effect nationwide (later briefly delayed, then confirmed for 1 Jul 2026) |
+| 19 Sep 2025 | **PP 45/2025** issued — Rp25m/ha/year fines for plantations inside forest areas |
+| **24 Nov 2025** | **SSMS buys 63.4% of SML from CBI for Rp1.6tn**; PSAK 38 pooling; APIC → −Rp3,936.7bn; FY2024 restated **[RPT]** |
+| Nov 2025 | New **Rp5.1–5.2tn** syndicated facility (BRI-led) |
+| Dec 2025 | Satgas PKH bills 20 palm companies **Rp2.34tn**, and 71 companies up to **Rp38.6tn** — names not published |
+| Q1 2026 | **Sales to Borneo Agri-Resources go to zero** (46% of Q1 2025); Q1 net profit −6.85% to Rp318.1bn |
+| Mar–Apr 2026 | Export levy raised **10% → 12.5%** |
+| 30 Apr 2026 | FY2025 public expose |
+| **25 May 2026** | Ministry of Finance names ten CPO exporters incl. SSMS in a **US$84m transfer-pricing** finding; shares −8.57% to Rp800 |
+| 7 Aug 2026 | Rp920, market cap Rp8.76tn |
+
+### What the 2013 prospectus tells you about how this group operates
+
+The prospectus is 551 pages and worth reading precisely because the pattern it establishes never
+changes:
+
+- **Insiders bought in at Rp100 five and a half months before the public paid Rp670.** On 18 June
+  2013, CBI, Jery Borneo Putra and Jemmy Adriyanor subscribed 3.9bn new shares at par — 48.6% of the
+  pre-IPO share count, an **85% discount** to the offer price, worth roughly **Rp2.2tn of paper gain
+  at the offer** `[calculated]`. The same window's proceeds were used to buy minority co-investors
+  out of KSA, MMS, ASP and SML up to 93–99.99%. No independent valuation for those buy-outs is in
+  the document.
+- **Related-party receivables were parked off the balance sheet before the cut-off.** On 29 June
+  2013 — one day before the 30 June reporting date — over Rp125bn of intercompany balances from SMU,
+  TSA and CBI were transferred into PT Surya Borneo Industri, an unconsolidated affiliate, repayable
+  in mid-2014, i.e. after listing.
+- **A Rp176bn dividend was pulled out of subsidiary KSA in FY2012**, shortly before the float, while
+  KSA's own equity fell 67.7%.
+- **The founder is not in the cap table** — yet he personally guarantees subsidiary bank debt, has
+  "payment on behalf of" balances with the group, and the prospectus itself concedes he had been the
+  subject of NGO illegal-logging allegations. The four named "ultimate shareholders" are asserted to
+  be related to one another but no family tree is drawn.
+- **SSMS was not participating in the mandatory 20% plasma smallholder programme at IPO**, despite
+  already setting aside 14,434 ha for it — disclosed as a risk factor with the note that no sanction
+  had yet been issued.
+- The underwriting was **86.02% concentrated in one lead** (RHB OSK Securities Indonesia).
+
+Every one of those behaviours — issuing value to insiders at book, moving balances between
+affiliates around reporting dates, disclosing a regulatory shortfall as "no sanction yet issued" —
+recurs in the annual reports a decade later.
+
+---
+
+## 1.3 Ownership
+
+```
+                    Haji Abdul Rasyid AS  (founder; UBO of record 2022–2023)
+                              |
+                    Jery Borneo Putra  (UBO of record from FY2024 — change never explained)
+                              |
+     +------------------------+------------------------+
+     |                        |                        |
+PT Prima Sawit Borneo    PT Mandiri Indah Lestari   others (ACM 1.23%, PBAL 1.22%,
+     48.77%                   46.76%                  Jemmy Adriyanor 0.01%, JBP 0.01%)
+     |                        |
+     +-----------+------------+
+                 |
+        PT CITRA BORNEO INDAH (CBI)
+                 |
+     +-----------+------------------+---------------------------+
+     |                              |                           |
+ SSMS 65.83%              PBAL 10.13% (separate family vehicle)   Public 24.04%
+     |
+     +-- 23 → 27 plantation subsidiaries (KSA, MMS, TSA, SMU, MKM, MPP, ASP, SML …)
+     +-- PT Citra Borneo Utama Tbk (CBUT, IDX-listed) 78.22%
+     +-- PT Sawit Mandiri Lestari (SML) 63.4%  [acquired from CBI, Nov 2025]
+     +-- PT Surya Borneo Industri (SBI) 49%  [associate; tank farm / industrial estate]
+     +-- SSMS Plantation Holdings Pte Ltd, Sawit Sumbermas International Pte Ltd (Singapore)
+```
+
+### The float has been drained, and no one says how
+
+| Date | CBI | PBAL | Public float | Shares outstanding |
+|---|---|---|---|---|
+| Post-IPO 2013 | 26.4% | 13.7% | 15.7%* | 9,525,000,000 |
+| 31 Dec 2019 | 53.75% | 12.05% | 34.20% | 9,525,000,000 |
+| 31 Dec 2020 | 55.27% (or 52.27%) | 12.90% | 31.83% | 9,525,000,000 |
+| 31 Dec 2021 | 55.49% | 12.08% / 12.90% | 32.42% | 9,525,000,000 |
+| 31 Dec 2022 | 54.30% | 9.86% | **35.84%** | 9,525,000,000 |
+| 31 Dec 2023 | 61.24% | 9.61% | 29.15% | 9,525,000,000 |
+| 31 Dec 2024 | 62.30% | 8.06% | 29.65% | 9,525,000,000 |
+| 31 Dec 2025 | **65.83%** | 10.13% | **24.04%** | 9,525,000,000 |
+
+\* the balance at IPO sat with the pre-existing holders MIL and PSB.
+
+**Share count has not moved since 2013.** No rights issue, no placement, no split, no buyback, no
+treasury shares — all explicitly confirmed in AR2020, AR2021, AR2023, AR2024 and AR2025. So every
+percentage-point change above is a secondary transfer of existing shares. Between 31 Dec 2022 and
+31 Dec 2025 CBI's holding rose **11.53 points ≈ 1.098 billion shares** `[calculated]`, and the public
+float fell 11.80 points. **None of those transfers is described as a transaction in any annual
+report.** AR2023's own oddity list flags an unexplained ~662m-share movement in 2023 alone; AR2025
+flags ~536m in 2025.
+
+That matters for two reasons. Free float of 24% is thin enough to make the price fragile — as the
+May 2026 8.6% single-day fall demonstrated. And a controlling shareholder accumulating steadily
+through the open market, with no announced programme, is the sort of thing that usually gets a
+narrative. Here it gets none.
+
+### The ultimate beneficial owner changed and nobody wrote a sentence about it
+
+| Year | UBO named in Note 1a |
+|---|---|
+| 2013 (prospectus) | not named; "family relationship" among four individuals asserted, not diagrammed |
+| 2019–2021 | not named — "an individual" |
+| 2022–2023 | **Haji Abdul Rasyid AS** |
+| 2024 | **Jery Borneo Putra** — comparative columns for 2022/2023 still show Abdul Rasyid |
+| 2025 | Jery Borneo Putra, also President Director of CBI |
+
+A generational transfer of ultimate control at a company where the controlling shareholder owns
+two-thirds of the stock is a material governance event. It appears as a changed proper noun in a
+financial-statement note. In the same window, press reported (June 2025) an activist complaint that
+the founder's identity documents were inconsistent across his political career, with a call for his
+removal from the provincial legislature and a reference to KUHP Article 263; police were said to be
+looking at it and no resolution has been reported. Neither event appears in any company document.
+
+---
+
+## 1.4 The boards
+
+### Board of Commissioners
+
+| | 2019–2021 | 2022 | 2023–2024 | 2025 |
+|---|---|---|---|---|
+| President Commissioner | Bungaran Saragih | Bungaran Saragih (reappointed) | Bungaran Saragih (3rd term, 5 Dec 2023) | Bungaran Saragih |
+| Commissioner | Rimbun Situmorang | Rimbun Situmorang | Rimbun Situmorang | Rimbun Situmorang |
+| Independent | Marzuki Usman, Ito Warsito | **Hoesen** (from 30 Sep 2022) | Hoesen | Hoesen + one further seat |
+
+### Board of Directors
+
+| Year | President Director | Others | Event |
+|---|---|---|---|
+| 2019 | Vallauthan Subraminam | Ramzi Sastra, Nicholas J. Whittle, Nasarudin bin Nasir | |
+| 2020 | Vallauthan Subraminam | Ramzi Sastra, Nasarudin bin Nasir | Whittle departs, undated, unnarrated |
+| 2021 | Vallauthan Subraminam | Nasarudin bin Nasir, Jap Hartono | |
+| **7 Jan 2022** | **Nasarudin bin Nasir** | Jap Hartono, M. Syafril Harahap | EGM **dismisses** Subraminam |
+| 2022–2023 | Nasarudin bin Nasir | M. Syafril Harahap, Jap Hartono | |
+| **25 Apr 2024** | **Jap Hartono** (ex-CFO) | Akhmad Faisyal | Two resign, one appointed — **board shrinks 3 → 2** |
+| 2025 | Jap Hartono | Akhmad Faisyal, Jahja Tanudjaja Adelai, Roshan Chakravarthy Valautham, Henky Satrio Wibowo | Board expands to 5 |
+
+Two observations. First, **the president director's chair has turned over three times in four
+years**, once by EGM dismissal, and no report explains why in any of the three cases. Second, in
+2024 the board ran with **two directors** for a company with 11.8tn of assets, and **BOD cash
+remuneration rose 15% to Rp25.5bn** while the headcount fell — while BOC remuneration, on an
+unchanged headcount, fell 34%.
+
+### The Rimbun Situmorang problem
+
+This is the most consistent governance defect in the whole corpus. Commissioner Rimbun Situmorang's
+own CV, printed in every annual report from 2019 to 2025, lists him as:
+
+- **President Director of PT Citra Borneo Indah** — the controlling shareholder — 2011–2022
+- **President Commissioner of PT Citra Borneo Utama** — now a 78.2%-owned subsidiary — 2013–2022
+- **President Director of SSMS itself**, 2013–2016, and a Director 2005–2007
+- President Commissioner of KSA (2011–present), President Director of Surya Borneo Industri
+  (2013–2021), President Director of Citra Borneo Energi (2016–present), Director of Pelayaran
+  Lingga Marintama (2005–present), Director of **PT Sawit Mandiri Lestari** in 2005–2007 — twenty
+  years before SSMS bought it from the parent
+- **President Commissioner of PT BPR Lingga Sejahtera** (2011–present) — **a related-party lender to
+  the group**, charging 12–15%
+
+And in every one of those seven annual reports, the affiliation box next to that CV reads: *"no
+affiliation with the Board of Commissioners, Board of Directors, or Major/Controlling
+Shareholders."* AR2019 makes the identical claim for then-President Director Vallauthan Subraminam,
+who had been CBI's Regional Head 2007–2012. AR2020's compliance table shows "No" relationships for
+commissioners while the same document states that President Commissioner **Bungaran Saragih is a
+Commissioner of CBI**.
+
+The point isn't that these men are unqualified — Bungaran Saragih is a former Minister of
+Agriculture and Hoesen a former OJK capital-markets chief. The point is that the company's formal
+independence disclosures are not describing reality, and they have not been describing reality for
+seven consecutive years across two audit partners.
+
+### Remuneration
+
+Anchor: **net profit attributable to owners.**
+
+| FY | BOC (Rp bn) | BOD (Rp bn) | Combined | Net profit to owners | Combined as % of profit `[calculated]` |
+|---|---|---|---|---|---|
+| 2019 | 5.63 | 8.44 | 14.07 | 11.7 | **120.3%** |
+| 2020 | 5.63 | 8.44 | 14.07 | 576.6 | 2.4% |
+| 2021 | 8.56 | 50.81 | 59.37 | 1,515.5 | 3.9% |
+| 2022 | 16.49 | 23.46 | 39.95 | 1,837.4 | 2.2% |
+| 2023 | 27.08 | 22.23 | 49.31 | 512.3 | 9.6% |
+| 2024 | 17.82 | 25.49 | 43.31 | 819.5 | 5.3% |
+| 2025 | withheld individually | withheld | 60.91 (key-management total) | 1,160.7 | 5.2% |
+
+Three things stand out. **BOD remuneration jumped 6× in 2021** (Rp8.44bn → Rp50.81bn) and was never
+explained. **BOC remuneration rose 64% in 2023** — the year profit fell 72% — while BOD pay fell 5%.
+And from **FY2025 the company stopped disclosing BOC and BOD remuneration separately at all**,
+citing confidentiality, leaving only a combined key-management figure that rose **40.7%** in a year
+when one director was added in late November.
+
+There is also a persistent, unreconciled gap between the two places remuneration is disclosed. The
+GCG chapter and financial-statement Note 1c give different totals for the same population in most
+years — in FY2021 the note says Rp26.86bn while the GCG chapter's BOD figure alone is Rp50.81bn.
+
+---
+
+## 1.5 Related-party transactions — this is the company
+
+### 1.5.1 The revenue relationship
+
+Anchor: **consolidated revenue.**
+
+| FY | Related-party revenue (Rp bn) | Total revenue (Rp bn) | **RPT share** | Dominant counterparty |
+|---|---|---|---|---|
+| 2018 | 1,898.0 | 3,710.8 | 51.2% | CBU + BARI |
+| 2019 | 2,946.6 | 3,277.8 | **91.1%** | PT Citra Borneo Utama — Rp2,869.8bn alone (87.6%) |
+| 2020 | 3,517.6 | 4,011.1 | 87.7% | CBU |
+| 2021 | 4,691.5 | 5,203.1 | 90.2% | CBU (Rp4,549.9bn) |
+| 2022 (as reported) | 5,893.6 | 7,261.2 | 81.2% | CBU (Rp5,614.2bn) |
+| 2022 (restated) | 3,545.9 | 11,240.2 | 31.6% | **BARI** (Rp3,317.8bn) — CBU is now internal |
+| 2023 | 4,511.7 | 10,703.4 | 42.2% | BARI |
+| 2024 (as reported) | 6,460.8 | 10,521.7 | **61.4%** | BARI (Rp6,306.0bn) |
+| 2024 (restated) | 6,356.3 | 10,366.8 | 61.3% | BARI |
+| 2025 | 4,015.8 | 14,813.2 | 27.1% | BARI (Rp3,815.2bn) |
+| Q1 2026 | **0 from BARI** | 3,510 | **0%** | — [press] |
+
+Read that column carefully, because the apparent improvement is an artifact. Through 2022, the
+buyer was **PT Citra Borneo Utama**, the family's refinery. When SSMS consolidated CBUT in December
+2023, those sales became intercompany and vanished from the RPT note — not because the relationship
+ended, but because the counterparty moved inside the tent. What replaced it was **Borneo
+Agri-Resources International Pte Ltd**, a Singapore trading company in the same group, which took
+**61.4% of FY2024 revenue**.
+
+So the honest statement is: **for eight consecutive years, somewhere between 27% and 91% of this
+company's sales were to entities its controlling shareholder also controlled.** No annual report
+publishes a transfer-pricing policy, a benchmarking study, or a statement of how affiliate prices
+are set. AR2019 does disclose that BARI provided *CPO price-hedging services* to SSMS in 2018–19,
+and that SSMS lent BARI **US$5m at 5.5%** in 2018 — so the trading affiliate was also a
+counterparty on derivatives and a borrower.
+
+Then, in **Q1 2026, sales to BARI went to zero**, and third-party sales rose 1.8× to Rp3.5tn to
+replace them. Neither the reason nor the commercial consequence is disclosed anywhere I can find.
+Five weeks later the Ministry of Finance announced a transfer-pricing finding at ten CPO exporters,
+naming SSMS among the affected stocks, with an aggregate under/over-invoicing gap of about
+**US$84m (Rp1.48tn)**. **No source connects the two events**, and I want to be precise about that.
+But the sequence — a decade of affiliate-routed exports, an abrupt severing of the affiliate channel,
+then a state transfer-pricing finding — is the single most important open question about this
+company right now, and it is unaddressed in every company document I have.
+
+### 1.5.2 The loan to the parent — up to 30% of the balance sheet
+
+For five years SSMS's largest asset after its trees was **money owed to it by its own controlling
+shareholder.**
+
+| FY-end | Balance (Rp bn) | As % of total assets `[calculated]` | Rate | Notable |
+|---|---|---|---|---|
+| 2019 | 2,507.7 | 21.2% | 11% | Reclassified as a non-current "convertible loan" though conversion conditions were unmet |
+| 2020 | 2,468.5 | 19.3% | 11%, **deferred Apr-20 → Mar-21** | Rp309.6bn fair-value discount taken **to equity**, on the stated grounds of CBI's "financial difficulty" |
+| 2021 | 3,344.8 | **24.1%** | 11% | Rp505.0bn of interest income recognised |
+| 2022 | 3,611.6 | **25.9%** | market/FVTPL | **The sole Key Audit Matter**; valued off CBUT's quoted share price |
+| 19 Dec 2023 | 3,451.3 settled | — | — | Swapped for CBUT shares, not cash |
+| 2023 residual | 219.5 | 1.9% | — | |
+| 2024 | 0 | — | — | Extinguished |
+
+**No impairment was ever taken.** In the same note where AR2020 documents a one-year interest
+deferral granted because the borrower was in financial difficulty, the company concludes there is
+no impairment. And **Rp246.75bn of the fair-value discount was amortised back into finance income —
+about 76% of FY2020's total finance income** `[calculated]`. In other words, the largest single
+component of that year's finance income was a non-cash reversal on a related-party receivable, not
+interest from a bank.
+
+The loan was ultimately settled not in cash but by handing SSMS shares in another family company at
+a valuation SSMS itself had been marking off that company's share price.
+
+### 1.5.3 The two poolings — Rp5.05tn to the parent, Rp0 through the P&L
+
+**December 2023 — CBUT.** CBI owed SSMS Rp3,451.3bn. It settled by transferring **52.6% of CBUT** — reported in the
+press as 1.64bn shares via negotiated market trade, though **neither the share count nor CBI's
+residual stake appears in any annual report**; the company text says only "52.6%." SSMS's stake went
+26% → **78.22%**. Because both sides were controlled by the same family, PSAK 38
+applied: **the Rp3,392.97bn difference between transfer price and book value was booked against
+additional paid-in capital**, which went from +Rp540.9bn to **−Rp2,852.1bn**. FY2021 and FY2022
+comparatives were rebuilt. Nothing went through profit or loss.
+
+**November 2025 — SML.** A three-step sequence over five months:
+
+1. **26 Jun 2025** — CBI sells its own plantation and mill *into* SML at **Rp216.5bn against a
+   Rp119.5bn book value — an 81% premium** `[AR2025]`.
+2. **30 Jun 2025** — CBI acquires 99.9% of SML from an unrelated third party. SML is now under
+   common control with SSMS.
+3. **24 Nov 2025** — SSMS buys **63.4% of SML from CBI for Rp1.6tn**, funded by the new syndicated
+   facility. PSAK 38 again: the **Rp1,084.6bn** difference goes to APIC, taking it to
+   **−Rp3,936.7bn**. FY2024 is restated.
+
+The governance chapter states the transaction "did not involve any conflict of interest."
+
+Two things to note about the mechanics. First, the intermediate step — CBI selling an asset into SML
+at 81% over book **before** SML was sold on to SSMS — means the price SSMS paid embeds a mark-up the
+parent booked on itself. Second, PSAK 38 is the correct treatment for a common-control transaction
+under Indonesian GAAP; I am not alleging a breach. The issue is what the treatment *conceals*: under
+purchase accounting, Rp1.08tn would have been tested as goodwill and could be impaired. Under
+pooling, it is a permanent hole in equity that no future write-down will ever visit, and no fairness
+opinion or independent valuation is reproduced in the annual report.
+
+**The combined effect:** roughly **Rp5.05tn of consideration** moved from SSMS (in receivable
+forgiveness and cash) to the controlling shareholder across two transactions, and **Rp3.94tn** of
+accounting difference now sits as negative paid-in capital. That is **134% of FY2025 total equity**
+`[calculated]`.
+
+### 1.5.4 Everything else in the related-party file
+
+- **Sulung Research Station service fee to CBI** — Rp124.6bn/year contracted through 31 Dec 2023.
+  The group asked for it to be suspended in January 2023 and states it received **zero services** in
+  2023 — yet a **Rp19.2bn related-party COGS charge to CBI is still booked for 2023**. Separately, a
+  "management fee" to CBI is disclosed at "Rp19,200 per year," which read literally is nineteen
+  thousand rupiah. The two disclosures cannot both be right and neither is explained. [AR2023]
+- **PT Surya Borneo Industri (SBI)**, 49%-owned, tank farm and industrial estate — charged SSMS
+  **Rp143.8bn of handling expense in FY2023, 16.24% of total selling expense**, up from 8.91% the
+  prior year. SBI also pays SSMS rent (Rp40.2bn in FY2025, Rp23.8bn in FY2024). SSMS's SBI shares
+  were pledged to BNI as collateral for **SBI's own** credit facility.
+- **PT BPR Lingga Sejahtera**, a rural bank chaired by Commissioner Rimbun Situmorang, lends to SML
+  and MMS at **12–15%** — versus 8.75–9.00% from the state banks. [AR2021, AR2025]
+- **PT Pelayaran Senggora and PT Pelayaran Lingga Marintama** — related-party shipping, 2–18% of
+  selling expense across the years.
+- **Land rented from Haji Abdul Rasyid personally**, every year FY2019–FY2023, never quantified.
+- **PT Mandiri Indah Lestari and PT Prima Sawit Borneo** — the two vehicles that sold control to CBI
+  in 2017 for a stated Rp1.937bn — remain **corporate guarantors on SSMS's bank facilities every
+  year from 2019 to 2025**.
+- **The USD300m bond was guaranteed by nine entities that were not SSMS subsidiaries at all**,
+  including PT Natai Sawit Perkasa, PT Mendawai Putra, PT Intrado Jaya Intiga, PT Borneo Industri
+  Terpadu, PT Surya Borneo Energi, PT Citra Borneo Chemical, PT Borneo Industri Nusantara and PT
+  Borneo Sawit Gemilang. Bondholders were lending against the family group, not the listed company.
+- **Office lease with PT Pesona Citra Propertindo** — Rp52.9bn advance paid in 2022 for a lease
+  running Feb 2023 to Feb 2026.
+- **Plasma cooperative guarantees** — roughly **Rp221.0bn** of bank facilities guaranteed for farmer
+  cooperatives, disclosed as a subsequent event in both early 2024 and early 2025.
+
+And against all of that, AR2024's governance chapter states the company "did not carry out any
+transactions with affiliated parties related to business activities."
+
+---
+
+## 1.6 Auditor, opinion and audit fee
+
+| FY | Firm | Partner | Opinion | Key Audit Matter | Fee |
+|---|---|---|---|---|---|
+| 2019 | Purwantono, Sungkoro & Surja (EY) | n/d | not in text layer | n/d | **Rp2.09bn (ID) / Rp2.30bn (EN)** — the two language columns disagree |
+| 2020 | PSS (EY) | Deden Riyadi | Unqualified | none found | Rp2.30bn — but the table is captioned FY2020 while the text says the fee was for FY2018 |
+| 2021 | PSS (EY) | n/d | Unqualified per MD&A only — **the opinion letter is not in the text layer** | n/d | not disclosed |
+| 2022 | PSS (EY) | n/d | Unqualified | **the CBI convertible loan** (26% of assets) | Rp3.80bn |
+| 2023 | PSS (EY) | Agung Purwanto | Unqualified | plasma receivables impairment | Rp3.85bn |
+| 2024 | PSS (EY) | Agung Purwanto | Unqualified | trade and plasma receivable estimation | not disclosed |
+| 2025 | **Purwanto Susanti dan Surja** (new legal entity, still EY) | **Daniel, CPA** (new partner) | Unqualified | revenue recognition | **Rp2.75bn (−31%)** |
+
+Two flags. **FY2021 has no auditor's report, no KAM and no fee anywhere in the document's text
+layer** — the opinion page appears to be an image. I can confirm the MD&A's claim of an unqualified
+opinion but not the letter itself. And in **FY2025 the audit fee fell 31%** in the year the group
+executed a Rp1.6tn related-party acquisition, a Rp5.2tn refinancing, and a PSAK 38 restatement of
+three years of comparatives — while both the audit firm's legal entity and the signing partner
+changed. Both entities are EY Indonesia member firms, so this is most likely a KAP restructuring
+rather than an auditor change; it is still an odd year for the fee to go down.
+
+The FY2025 Key Audit Matter is **revenue recognition** — the first time the auditor has put the
+revenue line itself in the spotlight, in the year the related-party share of revenue fell from 61%
+to 27%.
+
+---
+
+## 1.7 Dividends and reinvestment
+
+Anchor: **profit attributable to owners**, and separately **operating cash flow**.
+
+| For FY | DPS (Rp) | Total (Rp bn) | Payout vs profit | Payout vs operating CF `[calculated]` | Paid |
+|---|---|---|---|---|---|
+| 2018 | n/d | 25.9 | 30.0% | 8.0% | 26 Jul 2019 |
+| 2019 | **0** | 0 | 0% | 0% | — |
+| 2020 | 30.50 `[calc]` | 290.4 | **99.3%** | 26.1% | 26 Jun 2021 |
+| 2021 | **80.15** | 763.4 | 50% | 68.5% | 21 Jun 2022 |
+| 2022 | 149.28 | 1,422.0 | **76–77%** | 58.2% | Oct 2022 interim + Jun 2023 final |
+| 2023 | **0** | 0 | **0%** | 0% | — (GMS chose to retain) |
+| 2024 | 47.24 | 450.0 | 54.9% | **74.2%** | 21 May 2025 |
+| 2025 | not yet resolved at AR2025 publication | — | — | — | — |
+
+**The stated policy is "30% of consolidated profit for the year," in every single annual report from
+2019 to 2025. The actual payout has been 0%, 30%, 0%, 99%, 50%, 77%, 0% and 55%. It has landed on
+30% exactly once in eight years.**
+
+The pattern is not random. The two zero years are 2019 (when profit collapsed to Rp11.7bn) and 2023
+(when profit fell 72% and the group had just taken on the CBUT balance sheet). The two enormous
+payout years are 2020 and 2022 — 2022 in particular, when **Rp1,422bn went out of the door in the
+same twelve months the company was tendering for its own USD bond**. At a 65.8% holding, roughly
+**Rp936bn of that dividend went to CBI** `[calculated]` — the same counterparty that was at the time
+Rp3.6tn in debt to SSMS.
+
+AR2022 also prints, as "dividend per share," the numbers **Rp192.90 and Rp159.11** — which are that
+year's and the prior year's **EPS**, not dividends. The actual FY2021-profit dividend, stated
+verbatim elsewhere in AR2022 and again in AR2023, was **Rp763,435,437 thousand, or Rp80.15 per
+share** — less than half what the dividend table prints. Anyone building a yield series off that
+table overstates it by 2.4×.
+
+`EDITED:` an earlier draft of this report computed Rp155.13/share by dividing the **Rp1,477.4bn of
+dividends *paid in cash during 2022*** by the share count. That cash figure bundles the FY2021 final
+tranche with the FY2022 interim tranche and is not a single year's declaration — the same trap the
+paragraph above warns about. Corrected to the company's stated Rp80.15.
+
+---
+
+# 02 — MODEL
+
+---
+
+## 2.1 Product
+
+SSMS now runs the full palm chain from fruit to bottled olein. The taxonomy, with each product's
+share of **FY2025 revenue of Rp14,813.2bn** as the anchor:
+
+```
+                        FRESH FRUIT BUNCHES (FFB)
+                        own estates + plasma + third party
+                                     |
+                        ┌────────────┴────────────┐
+                        │      10 MILLS, 670 t/hr │
+                        └────────────┬────────────┘
+                     OER 22.1%                 KER 4.4%
+                        │                          │
+                CRUDE PALM OIL                PALM KERNEL
+                527,052 MT                    104,130 MT
+                        │                          │
+        ┌───────────────┴────────┐        ┌────────┴─────────┐
+   sold as CPO           to refinery   2 KERNEL CRUSHERS   sold as PK
+   Rp3,089bn (20.9%)     603,701 MT      780 t/day         Rp321bn (2.2%)
+                              │              │
+              ┌───────────────┤        ┌─────┴──────┐
+              │               │      CPKO 28,997 MT  PKE 37,506 MT
+        REFINERY 2,500 t/d    │      Rp1,207bn (8.1%) Rp80bn (0.5%)
+              │               │
+           RBDPO 569,213 MT   PFAD 21,913 MT
+           Rp164bn (1.1%)     Rp254bn (1.7%)
+              │
+        FRACTIONATION
+              │
+     ┌────────┴────────┐
+  RBD OLEIN         RBD STEARIN
+  467,934 MT        101,221 MT
+  Rp7,851bn         Rp1,667bn
+  (53.0%)           (11.3%)
+     |
+  cooking oil, India / Pakistan / China / Bangladesh
+```
+
+**Revenue by product, FY2025** — the anchor is Rp14,813.2bn, and this is the first time in three
+years the company has published a full product table (AR2025 restored it; the FY2024 report gave
+volumes without a matching complete value table):
+
+| Product | Rp bn | % of revenue | Volume sold (MT) | Implied ASP (Rp/kg) `[calculated]` |
+|---|---|---|---|---|
+| RBD Palm Olein | 7,851 | **53.0%** | 471,293 | 16,658 |
+| CPO (sold by the downstream segment) | 2,990 | 20.2% | 171,014 | 17,484 |
+| RBD Palm Stearin | 1,667 | 11.3% | 109,919 | 15,166 |
+| Palm kernel oil (both segments) | 1,207 | 8.1% | 44,893 | 26,886 |
+| Palm kernel | 321 | 2.2% | 25,875 | **12,406** |
+| PFAD | 254 | 1.7% | 17,688 | 14,360 |
+| RBDPO | 164 | 1.1% | 9,992 | 16,414 |
+| Other | 128 | 0.9% | 9,854 | — |
+| CPO (plantation segment) | 99 | 0.7% | 7,526 | 13,154 |
+| PKE | 80 | 0.5% | 45,763 | 1,748 |
+| FFB | 51 | 0.3% | 15,371 | 3,318 |
+| **Total** | **14,813** | 100% | **929,187** | **15,942 blended** |
+
+Three readings of that table.
+
+**First, this is a refining company by revenue and a plantation company by profit.** Olein plus
+stearin plus RBDPO plus PFAD is **67.1%** of revenue; the FY2024 segment note says the whole edible
+oil segment earned a **1.2% operating margin** — against the plantation segment's 26.6%. Treat that
+26.6% with care: 88% of the plantation segment's Rp6,305.5bn of segment revenue is intersegment,
+priced internally, so the split between upstream and downstream profit is management's choice of
+transfer price as much as it is an economic fact.
+
+**Second, palm kernel oil at Rp26,886/kg is 54% above the CPO price**, and palm kernel itself at
+Rp12,406/kg is at **71% of the CPO price**. In FY2023 the same ratio was **37.5%**. This is the
+lauric-oil squeeze that has shown up in every Indonesian planter's 2025 numbers. It is worth
+**~Rp151bn of FY2025 revenue** relative to a normalised ratio `[calculated, workings in §3.10]`, and
+it is not a durable feature of the business.
+
+**Third, the plantation segment barely sells anything externally any more.** Total plantation-segment
+sales were **63,032 MT / Rp842bn — 5.7% of group revenue**. Everything else the estates produce goes
+into the group's own refinery at a transfer price the accounts do not disclose. Which means the
+upstream's *true* margin is not observable from the outside: it depends entirely on an internal
+transfer price set by the same people on both sides of it.
+
+---
+
+## 2.2 Supply chain — the estate
+
+### Landbank
+
+| As of | Total managed (ha) | Nucleus mature | Nucleus immature | Plasma mature | Plasma immature | Source |
+|---|---|---|---|---|---|---|
+| 2013 (IPO) | 78,071 (izin lokasi) | 32,562 planted | 646 | — | — | Prospectus |
+| FY2019 | 93,660 | ~50,135 (sub-group roll-ups only) | 967 | n/d | n/d | AR2019 |
+| FY2020 | 116,029 | 69,236 | n/d | 12,249 | n/d | AR2020 |
+| FY2021 | 115,649 | 80,141 (all-in) | 1,088 | n/d | n/d | AR2021 |
+| FY2022 | 115,849 | 68,869 | 152 | 12,011 | 725 | AR2022 |
+| FY2023 | 115,881 | 68,901 | 194 | 12,663 | n/d | AR2023 / PRES_2024 |
+| FY2024 | 115,571 | 68,941 | 286 | 12,663 | 639 | AR2024 |
+| **FY2025** | **136,447** (MD&A) / **104,291** (audited Note 37) | **76,850** | 464 (FS) / 597 (MD&A) | **16,876** | n/d | AR2025 |
+
+Provenance and anomaly notes, in place:
+
+- **`EDITED:` the FY2025 landbank does not foot.** The MD&A says 136,447 ha = 77,314 nucleus +
+  17,500 plasma — which is 94,814, not 136,447. The same 136,447 does reconcile exactly against
+  immature 1,221 + mature 93,726 + other 41,500. Two internally-consistent splits of the same total
+  that are mutually inconsistent. The audited Note 37 gives a **different total again: 104,291 ha**.
+  Use 104,291 for anything that has to tie to the accounts.
+- **Landbank shrank between 2Q24 (115,881 ha) and 9M24 (115,571 ha)** with no explanation, and the
+  land-rights categories were quietly reclassified in the same window — "Kadastral 18,899 ha"
+  appeared as a new category while "Location Permit" fell from ~12,500 to 3,622 ha.
+- **AR2021's Note 38 plantation table is bit-for-bit identical for 2021 and 2020** — mature 69,108,
+  immature 128, other 24,424, total 93,660 in both columns. Either a carry-forward error or two full
+  years of literally zero movement at the parent level.
+- **310.14 ha at MPP had its HGU cancelled** for high-conservation-value reasons (FY2024/25).
+
+### Age profile — the number that matters most, disclosed least
+
+| Report date | Nucleus average age | Plasma | Combined |
+|---|---|---|---|
+| FY2023 (PRES_2024) | **14.7 yrs** | 10.9 | — |
+| 1Q25 (PRES_2025) | **16.7 yrs** | 10.9 | 15.7 |
+| FY2025 (PRES_2026) | — | — | **14.8 yrs** |
+
+**No annual report, in any of the seven years, publishes an age-cohort table.** Not one. There is no
+"0–3 / 4–8 / 9–13 / 14–18 / 19–25 years" breakdown anywhere in ~3,300 pages. The only age data that
+exists at all is a single blended figure on an investor slide.
+
+What we can infer is not comfortable. The nucleus estate aged **2.0 years in the 15 months** between
+FY2023 and 1Q25 — meaning essentially **nothing was replanted**. Oil palm yield peaks around years
+7–15 and declines materially past 20; a 16.7-year average nucleus means a large share of the estate
+is already past peak and a meaningful share is approaching the economic replant point. The FY2025
+"improvement" to a 14.8-year combined average is entirely the arithmetic effect of adding SML's
+~8.5-year-old trees.
+
+For comparison from the other teardowns: **AALI runs 16.7 years with 65.9% over 15**; **NSSS runs
+9.8 years with nothing over 20**. SSMS is squarely in AALI's position — an old estate — without
+AALI's disclosure.
+
+**Replanting and new planting hectares are `NOT DISCLOSED` for every year 2019–2025.** So is annual
+replanting capex. This is the single largest analytical hole in the company.
+
+### Yield — the trend management has never mentioned
+
+| | FY2019 | FY2020 | FY2021 | FY2022 | FY2023 | FY2024 | FY2025 |
+|---|---|---|---|---|---|---|---|
+| Nucleus mature ha | 68,298 | 69,108 | 68,862 | 68,880 | 68,901 | 68,940 | **76,850** |
+| **Nucleus FFB yield (t/ha)** | 23.3 | 22.9 | 22.3 | **27.0** | 25.0 | 22.7 | **21.2** |
+| Plasma mature ha | 9,380 | 10,309 | 11,278 | 12,000 | 12,505 | 12,663 | 16,876 |
+| Plasma yield (t/ha) | — | — | 6.4 | 6.9 | 7.5 | 6.9 | **10.6** |
+
+Source: PRES_2024 / PRES_2025 / PRES_2026 chart data. Note the mature nucleus hectarage was
+**flat within 0.9% for six straight years (68,298 → 68,940)** before the SML step-up — this is a
+company that stopped expanding its own estate a decade ago.
+
+**Nucleus yield has fallen 21.5% from the FY2022 peak.** Nothing in any deck or MD&A acknowledges
+the trend; the FY2025 deck simply prints the bar. Plasma's jump to 10.6 t/ha is again the acquired
+hectares, not the existing smallholders improving.
+
+**`[calculated]` CPO per mature nucleus hectare, FY2025: 527,052 ÷ 76,850 = 6.86 t/ha.** Against
+NSSS's 4.76 t/ha that looks excellent — but it is not comparable, because SSMS's mills also process
+754,400 t of bought-in and plasma fruit, whereas NSSS is 96% self-supplied. On own fruit only,
+1,628,452 t × 22.1% OER ÷ 76,850 ha = **4.68 t CPO/ha** `[calculated]`, essentially identical to NSSS
+on a 7-year-older estate.
+
+---
+
+## 2.3 Purchase — where the fruit comes from
+
+Anchor: **total FFB processed, FY2025 = 2,382,942 MT.**
+
+| FY | Own nucleus FFB | Plasma | Third party | Total processed | Bought-in + plasma as % `[calculated]` |
+|---|---|---|---|---|---|
+| 2019 | 1,456k | 29k | — | ~1,485k | ~2.0% |
+| 2020 | 1,611k | 59k | 72k | ~1,742k | ~7.5% |
+| 2021 | 1,527k | 72k | 83k | ~1,682k | ~9.2% |
+| 2022 | 1,862.6k | 83.0k | 439.3k | 2,278.8k (or 2,384.8k) | **19.3%** |
+| 2023 | 1,723.2k | 94.2k | 571.1k | 2,345.1k | **24.3%** |
+| 2024 | 1,562.4k | 134.4k | 488.6k | 2,118.2k | **23.1%** |
+| 2025 | 1,628.5k | — combined 754.5k — | 2,382.9k | **31.7%** |
+
+Sources: AR2022–AR2025 plus deck series; FY2025 splits plasma and third party into one undisclosed
+lump, so the 31.7% is the combined figure. `EDITED:` the deck series and the annual reports give
+different third-party FFB numbers for FY2024 (168k / 172k / 362k / 377k / 529k appear across three
+deck vintages as the chart layout was redrawn) — do not use the deck line; use the AR.
+
+**This is a structural shift and it is the opposite of what the market thinks SSMS is.** In 2019 the
+mills ran almost entirely on own fruit. By FY2025 **nearly a third of throughput is bought in.**
+Bought-in fruit carries no plantation margin — you pay a market-linked FFB price and keep only the
+milling spread. It is the same trajectory AALI went down (38.7% bought-in), and it is why AALI's
+gross margin is 16% while NSSS's, at 96% self-supplied, is 54%.
+
+SSMS's FY2025 gross margin of **34.93%** sits exactly between them, which is precisely where a
+company that self-supplies about two-thirds of its fruit should sit.
+
+**Never disclosed:** the price paid for third-party FFB, in any year; the plasma-versus-independent
+split of purchased fruit from FY2025 onward; and the number of independent suppliers.
+
+---
+
+## 2.4 Process — mills, extraction and the refinery
+
+### Milling
+
+| | FY2019 | FY2020 | FY2021 | FY2022 | FY2023 | FY2024 | FY2025 |
+|---|---|---|---|---|---|---|---|
+| Mills | 8 | 8 | 8 | 8 | 8 | 8 (or 7→8 mid-2024 per decks) | **10** |
+| Capacity (t FFB/hr) | 540 | 540 | 540 | 540 | 540 | 540 (AR2024 also says 510) | **670** |
+| **Mill utilisation** | 56% | 63% | 62% | 70–72% | 70–72% | **62–68%** | **73–74%** |
+| **OER** | 23.9% | 22.5% | 22.0% | 22.6% | 22.8% | 22.7% (or 21.8%, or 23.1%) | **22.1%** (chart says 23.7%) |
+| KER | 4.4% | 4.3% | 4.1–4.2% | 4.2–4.3% | 4.23–4.28% | 4.2–4.3% | 4.4% |
+| CPO produced (MT) | 435,940 | 448,185 | 444,700 | 508,100 | 518,819 | 461,414 | **527,052** |
+| PK produced (MT) | 82,680 | 85,776 | 83,438 | 97,019 | 99,082 | 89,833 | **104,130** |
+
+`EDITED:` **OER is a mess in this company's reporting and you should treat any single-year figure
+with suspicion.** FY2024 appears as 21.8%, 22.7% and 23.1% in three different documents. FY2025
+appears as 22.1% in the body text and 23.7% in the chart on the *same slide*. And twice — in AR2022
+and again in AR2024 — the MD&A describes a **decline** in OER as an "increase" (22.60% → 22.30%, and
+22.1% → 21.8%). That is the same error made two years apart by the same reporting function.
+
+Scale check: at FY2025 volumes, **one point of OER is worth roughly 107,000 t of FFB-equivalent
+throughput, or about Rp1.9tn of CPO at Rp17,484/kg** `[calculated]` — so a 1.6-point discrepancy
+between the text and the chart on the same slide is not a rounding matter.
+
+### Downstream
+
+| | FY2019 | FY2020 | FY2021 | FY2022 | FY2023 | FY2024 | FY2025 |
+|---|---|---|---|---|---|---|---|
+| Refinery capacity | — | 2,500 t/d | 2,500 | 2,500 | 2,500 | 2,500 | **2,500 (unchanged)** |
+| **Refinery utilisation** | — | 58% | 60% | 68–69% | **92%** | **47.5%** | **71.0%** |
+| RBDPO (MT) | 473,631 | 489,322 | 565,076 | 548,556 | **746,544** | 387,457 | 569,213 |
+| Fractionation utilisation | 55% | 46% | 47% | 58% | **85.0%** | **42.7%** | **67.0%** |
+| Olein (MT) | 383,239 | 317,426 | 322,447 | 400,986 | 584,864 | 296,405 | 467,934 |
+| KCP utilisation | 13% | 34% | 42% | ~27% | 35.8% | 25.5% | **50.7%** |
+| CPKO (MT) | 9,896 | 30,765 | 24,998 | ~4,848 | 7,130 | 21,099 | 28,997 |
+
+The refinery's **FY2024 collapse — throughput roughly halving, utilisation 92% → 47.5% — is the
+largest single operating event of the last three years and no document explains it.** AR2024 offers
+only "production decreased." It is worth noting the sequence: CBUT was consolidated in December
+2023, and in its first full year inside SSMS its throughput halved.
+
+**The promised second refinery has vanished from disclosure.** Every 2024 document — PRES_2024,
+NL_2024Q1, Q2 and Q3 — states that a **second refinery and fractionation plant, 1,500 t/day**, "will
+be completed and operational in **April 2025**." It is then never mentioned again: not in PRES_2025
+(published May 2025, one month after the promised date), not in the FY2025 management report, not in
+PRES_2026. And the refinery capacity shown in PRES_2026 is still **2,500 t/day** — the original
+single-plant figure. So either it was not built, or it was built and nobody updated the capacity
+line. This is the cleanest example in the file of a guidance item being dropped rather than reported
+as met or missed.
+
+---
+
+## 2.5 Distribution — who actually buys the oil
+
+**FY2025 customer concentration (PRES_2026, a genuinely new disclosure — this table did not exist in
+2024 or 2025):** anchor is **977,795 MT of realised sales**.
+
+| Customer | Share |
+|---|---|
+| **Olam Global Agri Pte Ltd** | **42%** |
+| **Borneo Agri-Resources International Pte Ltd** (related party) | **30%** |
+| Eco Comodity Pte Ltd | 15% |
+| China-Base Resource Singapore Pte Ltd | 3% |
+| ATK Pte Ltd | 2% |
+| Others | 8% |
+
+**By destination, FY2025:**
+
+| Product | Destination | MT | % |
+|---|---|---|---|
+| RBD Palm Olein | Pakistan, China, India, Bangladesh | 435,349 | 44.5% |
+| CPO | India | 171,014 | 17.5% |
+| Others (local) | Indonesia | 160,072 | 16.4% |
+| Stearin (local) | Indonesia | 98,972 | 10.1% |
+| PKO (local) | Indonesia | 44,893 | 4.6% |
+| PKE | China, Vietnam, Thailand | 38,862 | 4.0% |
+| PFAD | China, Malaysia, S. Korea | 12,286 | 1.3% |
+| RBD Stearin | Malaysia, S. Korea | 10,946 | 1.1% |
+| PFAD (local) | Indonesia | 5,401 | 0.6% |
+| **Total** | | **977,795** | 100% |
+
+**Export ≈ 68.4%, domestic ≈ 31.6% `[calculated]` from the "local"-labelled rows.**
+
+Two things follow. First, **the top two customers are 72% of volume and both are Singapore trading
+houses**, one of them the controlling shareholder's own. Second, a 68% export book means the
+**export levy and export duty land directly on this company's margin** — and both went up in 2026
+(levy 10% → 12.5% in March; duty US$148/MT in August). SSMS's own Q1 2026 filing blames a 25.4% jump
+in selling expenses on exactly that.
+
+`EDITED:` note the disclosure asymmetry. **The detailed per-product ASP table appears exactly once
+in the entire deck series — in PRES_2024, covering FY2022 and FY2023.** It is dropped from every
+subsequent deck. The FY2025 customer table is new and welcome, but it carries **no prices**, so
+FY2025 pricing can only be reconstructed by dividing the annual report's value table by its volume
+table — which is what I did in §2.1.
+
+Also note: AR2021 and AR2022 both state the company "sells CPO only domestically," while AR2022's
+own selling-expense note shows a new **Rp99.0bn export tax and levy line**. Both cannot be true.
+
+---
+
+## 2.6 Process — the cost base
+
+Anchor: **FY2025 cost of production Rp9,552.7bn**, which is **64.5% of revenue** and rolls into
+**COGS of Rp9,638.2bn (65.1% of revenue)** after inventory movement.
+
+| Component | FY2022 (upstream only) | FY2023 | FY2024 | **FY2025** | FY2025 as % of cost of production |
+|---|---|---|---|---|---|
+| Purchases of raw material (FFB + third-party CPO for refining) | 1,348.4 | 4,747.7 | 4,587.7 | **6,189.1** | **64.8%** |
+| Fertiliser and maintenance | 1,273.3 | 1,177.3 | 713.9 | 894.8 | 9.4% |
+| Labour | 657.7 | 690.2 | 630.4 | 767.1 | 8.0% |
+| Overhead | 362.5 | 404.6 | 315.5 | 597.3 | 6.3% |
+| Milling | 157.2 | 296.1 | 233.5 | 282.9 | 3.0% |
+| Transportation | n/d | 146.0 | 171.5 | 264.5 | 2.8% |
+| Depreciation of fixed assets | 139.4 | 192.2 | 211.0 | 257.3 | 2.7% |
+| Harvesting | 184.8 | 186.6 | 153.5 | 172.4 | 1.8% |
+| Amortisation of bearer plants | 152.8 | 152.9 | 153.1 | **118.2** | 1.2% |
+| Amortisation of right-of-use assets | — | 1.8 | 6.7 | 9.0 | 0.1% |
+| **Cost of production** | **4,276.2** | **7,995.4** | **7,176.9** | **9,552.7** | 100% |
+
+The structural fact: **once the refinery came in, two-thirds of "cost" became purchased raw
+material.** In FY2022, on the upstream-only basis, raw-material purchases were 31.5% of cost of
+production; by FY2025 they are 64.8%. That is a trading business's cost profile, not a planter's,
+and it is why group gross margin fell from 40.9% (FY2022 as reported) to 26.2% (FY2023) before
+recovering to 34.9% (FY2025).
+
+**Two cost lines behave strangely and deserve naming.**
+
+**Fertiliser and maintenance fell 44% between FY2022 and FY2024** (Rp1,273.3bn → Rp713.9bn), from
+29.7% to 9.9% of COGS `[calculated]`. Part of that is the denominator changing when the refinery
+consolidated. But in absolute rupiah it is a **Rp559bn cut in agronomy spend on a flat hectarage**,
+in exactly the window when nucleus yield fell from 27.0 to 22.7 t/ha. The reports never link the
+two. SSMS never discloses fertiliser separately from maintenance, never per hectare, and never per
+tonne of FFB — in any year.
+
+**"Insurance and permits" in G&A jumped 7.3× — Rp22.6bn (FY2023) to Rp165.1bn (FY2024)** — driven
+almost entirely by a single **Rp146.0bn PSDH/reforestation-fund payment to the Ministry of
+Forestry**. That is a forest-royalty settlement, and it is sitting inside an administrative expense
+line rather than being presented as what it is. AALI did the same thing with its Rp572bn forestry
+fine, which is how it went unnoticed for a year.
+
+And **fire insurance on immature plantations is genuinely erratic**: Rp540.1bn (2018) → Rp50.1bn
+(2019, −91%) → Rp2.0bn (2021) → Rp32.8bn (2022, +16×). AR2021's note prints it as **RpNil** for the
+group. In Central Kalimantan. No report explains any of it.
+
+---
+
+## 2.7 Key variables — what actually moves the model
+
+**1. The CPO price.** Everything else is second-order. As of 14–15 August 2026: Malaysian futures
+**RM4,711/t**, the Indonesian KPBN domestic tender **Rp15,700/kg**, and the Ministry of Trade's
+reference price **US$996.52/MT** for August 2026. The MPOC's August forecast range is RM4,400–4,650.
+Reference-price history through the year: US$915.64 (Jan) → 989.63 (Apr) → 1,049.58 (May) → 1,029.51
+(Jun) → 1,000.90 (Jul) → 996.52 (Aug). SSMS's own realised FY2025 CPO price was **Rp17,484/kg**
+`[calculated]`, up from Rp13,262/kg in FY2023.
+
+**2. The palm kernel / CPO ratio.** SSMS has **no kernel oil demand of its own beyond its two
+crushers**, so it sells kernel and CPKO straight into the lauric market. FY2023 PK at Rp4,974/kg was
+37.5% of CPO; FY2025 PK at Rp12,406/kg is **71.0%**. CPKO at Rp26,886/kg is **54% above** the CPO
+price. This is a genuine windfall and it is mean-reverting. §3.10 sizes it.
+
+**3. Export levy and export duty.** SSMS exports ~68% of volume. The levy went **7.5% (Jan 2025) →
+10% (Jan 2026) → 12.5% (Mar/Apr 2026)**; the duty has run US$74–178/MT through 2026, at **US$148/MT**
+in August. At the August reference price, levy + duty together are roughly **US$273/MT ≈ 27% of the
+reference price** — a direct deduction from the realised export price. This is the largest single
+2026 headwind and it is entirely outside management's control.
+
+**4. The biodiesel mandate.** **B50 took effect nationwide on 1 July 2026**, after being postponed in
+January and then reinstated. B50 lifts domestic biodiesel demand from roughly 15.6m to 20.1m
+kilolitres a year, absorbing CPO that would otherwise be exported. That is structurally supportive
+of the domestic price and of SSMS's realised CPO — and it is also what funds the levy increase.
+
+`EDITED:` an earlier draft of this report claimed SSMS never discusses the biodiesel mandate or the
+export levy at all. **That was wrong and is corrected here.** AR2024 carries a dedicated MD&A
+subsection on the **Domestic Market Obligation and Domestic Price Obligation**, and discusses the
+B40 rollout; AR2025 refers to **B35/B40 as a CPO-demand stabiliser in four separate places** and
+explicitly attributes a 39.11% movement in a cash-flow line to higher **pungutan ekspor** and **bea
+keluar**. What is genuinely absent is **B50** — but B50 was announced after both reports were
+written, so that absence is chronology, not silence. The fair criticism is narrower than I first
+put it: SSMS discusses these policies qualitatively and **never quantifies their rupiah impact on
+its own margin**, which several peers do.
+
+**5. Fertiliser.** Never disclosed separately. See §2.6 — the only visible datapoint is the combined
+fertiliser-and-maintenance line, and it was cut hard into a falling-yield period.
+
+**6. The forest-area regime.** See §3.10 — this is a tail variable, not a base-case one, but it is
+the largest single unquantified exposure in the company.
+
+---
+
+## 2.8 Demand and supply for the product
+
+From the web pass, dated:
+
+- **B50 is live from 1 July 2026** and will consume roughly 4.5m kl/yr more biodiesel than B40,
+  which tightens the exportable surplus. The government has already had to reassure the market that
+  cooking-oil DMO volumes remain adequate as CPO is diverted.
+- **Prices are being capped by demand, not supply.** MPOC's August 2026 note cites soft Chinese and
+  Indian buying and elevated global vegetable-oil stocks against support from B50 and a ~30% jump in
+  gasoil prices (which improves palm's competitiveness as a biodiesel feedstock).
+- **Malaysian stockpiles hit a five-month high in August 2026**, which is what pulled FCPO back to
+  RM4,711.
+- **EUDR** — the EU deforestation regulation — remains a live compliance question for exporters,
+  though SSMS's export book is Asia-facing (India, Pakistan, China, Bangladesh) rather than
+  Europe-facing, which materially reduces its direct exposure relative to peers.
+- **BPDP is targeting 50,000 ha of smallholder replanting (PSR) in 2026**, funded by the export levy
+  SSMS pays.
+
+**SSMS's own certification position is its best genuine differentiator:** it claims to be the only
+Indonesian plantation company **100% RSPO and ISPO certified** (since September 2023), with 35
+certificates across six systems. The caveat, unaddressed in PRES_2026: the claim is repeated verbatim
+after the November 2025 SML acquisition **without stating whether SML's newly-added ~21,000 ha are
+inside the certified scope.** Traceability-to-plantation for FY2025 is disclosed as own estate 72.1%,
+smallholders 2.2%, third party 25.7%.
+
+
+---
+
+# 03 — UNIT ECONOMICS
+
+---
+
+## 3.1 The income statement, seven years
+
+All figures **Rp billion**. Columns marked (o) are as originally reported; (r) are restated by a
+later pooling. **The vertical bars mark consolidation breaks — do not compute growth across them.**
+
+| Line | FY2019 | FY2020 | FY2021 (o) ‖ | FY2022 (o) | FY2022 (r) ‖ | FY2023 | FY2024 (o) | FY2024 (r) ‖ | FY2025 |
+|---|---|---|---|---|---|---|---|---|---|
+| **Revenue** | 3,277.8 | 4,011.1 | 5,203.1 | 7,261.2 | 11,240.2 | 10,703.4 | 10,521.7 | 10,366.8 | **14,813.2** |
+| COGS | (2,268.3) | (2,213.9) | (2,997.9) | (4,292.2) | (6,935.8) | (7,904.4) | (7,242.0) | (7,088.2) | (9,638.2) |
+| **Gross profit** | 1,009.5 | 1,797.2 | 2,205.2 | 2,969.0 | 4,304.4 | 2,799.1 | 3,279.6 | 3,278.6 | **5,174.9** |
+| Gross margin | 30.8% | 44.8% | 42.4% | 40.9% | 38.3% | 26.2% | 31.2% | 31.6% | **34.9%** |
+| Selling expense | (82.7) | (81.7) | (81.3) | (215.5) | (1,054.8) | (855.4) | (898.9) | (905.0) | (1,463.6) |
+| G&A | (522.9) | (606.2) | (572.4) | (680.7) | (768.0) | (836.1) | (946.3) | (946.3) | (1,111.2) |
+| FV gain/(loss) biological assets | 104.0 | 59.7 | 118.2 | (136.2) | (136.2) | 43.5 | 208.8 | 209.3 | **(111.1)** |
+| Other income/(expense), net | (61.5) | 37.4 | 98.6 | **321.9** | 280.5 | 45.2 | 127.0 | 129.7 | 58.5 |
+| **Operating profit** | 446.4 | 1,206.4 | 1,768.3 | 2,258.5 | 2,625.9 | 1,196.3 | 1,770.1 | 1,766.2 | **2,547.5** |
+| Operating margin | 13.6% | 30.1% | 34.0% | 31.1% | 23.4% | 11.2% | 16.8% | 17.0% | **17.2%** |
+| Finance income | 239.1 | **324.9** | **576.2** | 288.8 | 17.5 | 87.9 | 108.6 | 108.6 | 96.2 |
+| Finance costs | (513.8) | (566.8) | (540.8) | (551.5) | (641.4) | (678.7) | (611.2) | (620.2) | (691.8) |
+| Share of associates | (17.1) | (64.9) | 70.3 | 279.8 | (37.4) | (53.3) | (41.5) | (41.5) | (24.8) |
+| **Profit before tax** | 154.6 | 899.5 | 1,874.0 | 2,275.6 | 1,964.7 | 552.1 | 1,226.1 | 1,213.2 | **1,927.2** |
+| Tax | (142.5) | (318.7) | (347.1) | (427.4) | (489.8) | (208.1) | (381.4) | (381.4) | (534.5) |
+| Effective tax rate `[calc]` | **92.2%** | 35.4% | 18.5% | 18.8% | 24.9% | 37.7% | 31.1% | 31.4% | **27.7%** |
+| **Profit for the year** | 12.1 | 580.9 | 1,526.9 | 1,848.1 | 1,848.1 | 518.3 | 844.7 | 844.7 | **1,202.6** |
+| — to owners | 11.7 | 576.6 | 1,515.5 | 1,837.4 | 1,837.4 | 512.3 | 819.5 | 819.5 | **1,160.7** |
+| — to NCI | 0.4 | 4.2 | 11.4 | 10.7 | 10.7 | 6.1 | 25.2 | 25.2 | 41.9 |
+| Net margin | 0.4% | 14.5% | 29.3% | 25.5% | 16.4% | 4.8% | 8.0% | 8.2% | **8.1%** |
+| **EPS (Rp)** | 1.23 | 60.54 | 159.11 | 192.90 | 192.90 | 53.78 | 86.04 | 86.04 | **121.86** |
+
+Things worth pulling out of that table.
+
+**FY2019 was very nearly a loss.** Profit of Rp12.1bn on Rp3,278bn of revenue, an effective tax rate
+of **92.2%**, and board remuneration of Rp14.07bn — **120% of the profit attributable to owners**
+`[calculated]`. AR2019's front-of-book highlights table shows "Rp25.8bn," which reconciles to
+*comprehensive income*, not net profit — a reader skimming that page overstates the year by more
+than 2×.
+
+**FY2021's peak profit was substantially financial, not operational.** Finance income of Rp576.2bn —
+mostly interest recognised on the loan to the parent — against a Rp1,874bn pre-tax profit. The
+effective tax rate of 18.5% helped too.
+
+**FY2022's operating profit is flattered by a one-off.** "Other income, net" of Rp321.9bn contains a
+**Rp387.4bn gain on the bond repayment** — a financing gain, sitting above the operating line.
+Strip it and FY2022 operating profit is roughly **Rp1,871bn, not Rp2,258bn** `[calculated]`, and the
+operating margin is 25.8% rather than 31.1%.
+
+**FY2025's fair-value line reversed hard.** Biological assets swung from **+Rp209.3bn (FY2024) to
+−Rp111.1bn (FY2025)** — a Rp320bn swing that cost the year about 12.5% of pre-tax profit and is a
+pure accounting estimate.
+
+**Selling expense is now 9.9% of revenue** (FY2025) versus 2.5% in FY2019 — that is the export levy,
+duty and freight arriving with the downstream business, and it is why the gap between gross and
+operating margin has widened from 17 points to 18 points on a much larger base.
+
+---
+
+## 3.2 The FY2025 revenue bridge
+
+Anchor: the **Rp4,446.4bn increase** in revenue from FY2024 restated (Rp10,366.8bn) to FY2025
+(Rp14,813.2bn), **+42.9%**.
+
+| | FY2024 (restated) | FY2025 | Change |
+|---|---|---|---|
+| Sales volume, all products (MT) | 750,951 | 929,187 | **+23.7%** |
+| Blended realised price (Rp/kg) `[calc]` | 13,805 | 15,942 | **+15.5%** |
+
+**Decomposition** `[calculated]`:
+
+```
+Volume effect  = (929,187 − 750,951) × Rp13,805/kg  =  Rp2,461bn   55.3% of the increase
+Price effect   =  929,187 × (Rp15,942 − Rp13,805)   =  Rp1,986bn   44.7% of the increase
+                                                        ─────────
+                                                        Rp4,446bn   ✓ ties exactly
+```
+
+So **just over half of FY2025's revenue growth was volume — and essentially all of that volume was
+bought from the controlling shareholder** in November 2025 (SML, restated into the full year under
+pooling). Roughly **45% was price**, of which the palm kernel complex contributed disproportionately.
+
+That matters for how you extrapolate. There is no organic volume engine here: mature nucleus
+hectarage was flat for six years, yield is falling, and the acquired hectares are a one-time step.
+FY2026 revenue growth, absent another acquisition, has to come from price — into a year when the
+export levy went up 2.5 points and the biggest customer relationship was terminated.
+
+---
+
+## 3.3 Cash cost
+
+Anchor: **FY2025 cost of production Rp9,552.7bn**, less depreciation and amortisation of Rp384.5bn
+= **cash cost of production Rp9,168.2bn** `[calculated]`.
+
+| FY | Cash cost of production (Rp bn) | CPO produced ('000 MT) | Cash cost per kg CPO (Rp) `[calc]` |
+|---|---|---|---|
+| 2022 (upstream only) | 3,983.9 | 508.1 | **7,840** |
+| 2023 (group, incl. refinery) | 7,650.3 | 518.8 | 14,747 |
+| 2024 (group) | 6,812.8 | 461.4 | 14,767 |
+| 2025 (group) | 9,177.2 | 527.1 | 17,412 |
+
+**Read the FY2023–FY2025 numbers as "group cash cost of total production," not as a plantation cash
+cost.** From FY2023 the cost pool includes the refinery's purchases of third-party CPO and RBDPO for
+refining, which are not a plantation cost at all — that is why the number appears to double when
+CBUT consolidated. Comparing SSMS's 17,412 to NSSS's 3,641 or AALI's upstream number would be
+meaningless.
+
+**The honest statement is that SSMS's true upstream cash cost per tonne of CPO is not derivable from
+its public filings for any year after 2022**, because the company reports a single co-mingled cost
+of production and does not publish a segment cost breakdown. That is a genuine disclosure failure —
+peers including AALI and DSNG publish upstream cash cost — and it is why the FY2022 upstream figure
+of **Rp7,840/kg** is the last clean data point we have.
+
+For what it is worth, the FY2022 upstream figure against a FY2022 CPO ASP of ~Rp13,581/kg implies a
+**42% upstream cash margin**, which is consistent with the FY2024 segment note's 26.6% plantation
+*operating* margin after depreciation, G&A and the plasma cost allocation.
+
+---
+
+## 3.4 Per-hectare economics
+
+Anchor: **76,850 mature nucleus hectares** at 31 Dec 2025.
+
+| Metric | FY2025 | Method |
+|---|---|---|
+| FFB per mature nucleus ha | **21.2 t** | company chart |
+| CPO per mature nucleus ha, own fruit only | **4.68 t** | 1,628,452 t × 22.1% ÷ 76,850 `[calc]` |
+| CPO per mature nucleus ha, all fruit | 6.86 t | 527,052 ÷ 76,850 `[calc]` |
+| Group revenue per mature nucleus ha | **Rp193m** | 14,813.2bn ÷ 76,850 `[calc]` — inflated by refining |
+| Plantation-segment revenue per mature ha | **Rp11m** | 842bn ÷ 76,850 `[calc]` — deflated by transfer pricing |
+| Cost of production per mature nucleus ha | Rp124m | 9,552.7bn ÷ 76,850 `[calc]` |
+| Market cap per planted ha (94,947 ha) | **Rp92m** | at Rp920 `[calc]` |
+| EV per planted ha | **Rp169m** | `[calc]` |
+
+That last line is the one to hold against the sell-side. **Mirae Asset's February 2026 Buy note put
+SSMS at Rp392.8m of EV per hectare** to justify a Rp2,300 target. At today's Rp920 the market is
+paying **Rp169m per planted hectare — 57% below that mark.** Either the market is wrong, or the
+per-hectare framing is the wrong lens for a company where two-thirds of revenue is refining and a
+third of the fruit is bought in.
+
+The two middle rows show why per-hectare revenue is a trap at this company. Group revenue per
+hectare of Rp193m includes refining margin on purchased oil; plantation-segment external revenue per
+hectare of Rp11m excludes everything sold internally. The truth is somewhere in between and only
+management can see it.
+
+---
+
+## 3.5 Capital structure — the hole where the equity used to be
+
+**FY2025 balance sheet, as a share of Rp13,584.0bn of total assets:**
+
+```
+ASSETS  Rp13,584.0bn                    LIABILITIES & EQUITY  Rp13,584.0bn
+─────────────────────────────           ──────────────────────────────────
+Current assets      5,901.2  43.4%      Current liabilities    4,613.3  34.0%
+  Cash                874.1   6.4%        Short-term bank loans  1,698.1  12.5%
+  Trade recv — RP     782.3   5.8%        Current mat. of LT       991.1   7.3%
+  Trade recv — 3rd    113.4   0.8%        Trade payables 3rd       530.5   3.9%
+  Inventories         926.2   6.8%        Trade payables RP        219.5   1.6%
+  Other             3,205.2  23.6%        Other                  1,174.1   8.6%
+
+Non-current        7,682.7  56.6%       Non-current liab.      6,029.2  44.4%
+  Fixed assets &                          LT bank loans          5,449.5  40.1%
+    bearer plants   5,741.8  42.3%        Other                    579.7   4.3%
+  Investment in
+    associates        525.7   3.9%      ── Total liabilities   10,642.5  78.4%
+  Biological assets   413.9   3.0%
+  Plasma recv, net    400.1   2.9%      EQUITY                  2,941.5  21.6%
+  Other               601.2   4.4%        Share capital            952.5   7.0%
+                                          Additional paid-in    (3,936.7) (29.0%)
+                                          Retained — approp.     2,228.0  16.4%
+                                          Retained — unapprop.   2,620.2  19.3%
+                                          Other reserves           413.8   3.0%
+                                          NCI                      663.7   4.9%
+```
+
+**Additional paid-in capital is negative Rp3,936.7bn — minus 29.0% of total assets, and 134% of
+total equity** `[calculated]`. That single line is the accumulated cost of buying two businesses from
+the controlling shareholder above their book value under pooling accounting.
+
+The trajectory:
+
+| | FY2019–FY2022 | FY2023 | FY2025 |
+|---|---|---|---|
+| Additional paid-in capital | **+540.9** | **(2,852.1)** | **(3,936.7)** |
+| Equity attributable to owners | 4,049.6 → 6,405.7 | 1,750.6 | 2,277.7 |
+| Total equity | 4,068.6 → 6,444.0 | 1,990.0 | 2,941.5 |
+| Debt-to-equity | 191% → 127% | **494%** | **362%** |
+
+**Owners' equity fell 73% between FY2022 and FY2023 — from Rp6,405.7bn to Rp1,750.6bn — in a year
+the company reported a Rp512.3bn profit.** That is not an operating event. It is the CBUT pooling.
+
+This has three consequences an analyst must adjust for:
+
+1. **Every return-on-equity figure is inflated.** Reported FY2025 ROE is **40.88%**. Add back the
+   Rp4,477.6bn of pooling differences to get a notional pre-pooling equity of Rp7,419.1bn, and ROE
+   is **15.6%** `[calculated]`. That is a respectable but unremarkable number, and it is the one to
+   compare against peers.
+2. **Every leverage ratio is inflated.** DER of 362% partly reflects a denominator that accounting
+   destroyed, not debt the company raised. Net debt to EBITDA of **2.3–2.5×** is the more honest
+   leverage measure and is unremarkable.
+3. **Price-to-book is meaningless here.** At Rp920 the stock trades at **3.85× owners' equity** —
+   the highest in the IDX palm complex — which tells you nothing except that book value was
+   written off by fiat.
+
+Other balance-sheet points:
+
+- **Bearer plants and fixed assets, net, are Rp5,741.8bn — 42.3% of assets** and the real productive
+  base. AR2021 discloses that immature plantation fire insurance was **RpNil** that year; the risk
+  register never mentions it.
+- **Related-party trade receivables are Rp782.3bn — 87.3% of all trade receivables** `[calculated]`.
+  Even in the year the affiliate revenue share fell to 27%, almost all the receivable book is
+  affiliate paper.
+- **Plasma receivables, net, of Rp400.1bn** have been a Key Audit Matter twice (FY2023, FY2024).
+  They peaked at Rp588.5bn in FY2023 and have been coming down.
+- **Cash has fallen every year since 2019**: Rp2,202.5bn → Rp1,907.8 → Rp1,833.3 → Rp946.9 →
+  Rp1,237.3 → Rp1,180.3 → **Rp874.1bn**. Six consecutive years of net cash outflow.
+
+---
+
+## 3.6 Debt and covenants
+
+**Facilities as at FY2025:**
+
+| Lender | Facility | Rate | Maturity |
+|---|---|---|---|
+| Syndicate led by BRI (OMLAB) with BNI, BSI, LPEI/Eximbank, Woori Saudara, Maybank Indonesia, KB Bank, Allo Bank | **Rp5,136.7bn** (PRES_2026 says Rp5.2tn; the FY25 management report says Rp5.1tn) | n/d | n/d |
+| Earlier syndicate (BRI, BSI, Woori Saudara, Jtrust, Bank DKI, Maybank, BPD Sumsel Babel, BPD Papua, Bank Raya) | max Rp4,300bn, drawn from Jun 2022 | 9.00% | 32 quarterly instalments to **31 Dec 2030** |
+| BNI | investment credit across subsidiaries | 9.25–9.75% → **9.00%** | 2025–2029 |
+| BRI | various incl. office purchase | 9.75–13.50% → **8.75%** | 2027 |
+| **PT BPR Lingga Sejahtera (related party)** | SML / MMS working capital | **12–15%** | 2027–2028 |
+
+**Net debt (bank loans + bonds − cash), Rp bn** `[calculated]`:
+
+| FY2019 | FY2020 | FY2021 | FY2022 | FY2023 | FY2024 | FY2025 |
+|---|---|---|---|---|---|---|
+| 4,162.8 | 4,335.5 | 4,425.7 | 6,899.4 | 6,864.1 | 5,805.1 | **7,264.6** |
+
+| | FY2019 | FY2020 | FY2021 | FY2022 | FY2023 | FY2024 | FY2025 |
+|---|---|---|---|---|---|---|---|
+| **Interest cover** (EBIT / finance cost) `[calc]` | **0.87×** | 2.13× | 3.27× | 4.10× | 1.76× | 2.90× | **3.68×** |
+| **Net debt / EBITDA** `[calc]` | — | 3.02× | 1.62× | 2.21× | ~4.8× | ~7.0× | **2.3–2.5×** |
+| Current ratio | 251% | 237% | 239% | n/d | 106% | 111% | 128% |
+
+The **FY2024 net debt/EBITDA of ~7× is a restatement artifact** — it uses the restated revenue base
+against an 8% margin the deck printed for the restated year — but even discounted, FY2023 and FY2024
+were genuinely stretched years, and the recovery to 2.3–2.5× in FY2025 is real and driven by
+earnings, not deleveraging: **gross debt rose Rp1.1tn in FY2025** to fund SML.
+
+### The USD300m bond, 2018–2023
+
+Issued 23 January 2018 through **SSMS Plantation Holdings Pte Ltd** (Singapore), listed on SGX, 7.75%
+fixed, five-year bullet. Guaranteed by SSMS, by **CBI itself**, by five subsidiaries and by **nine
+CBI-group entities that were not SSMS subsidiaries** — bondholders were lending against the family
+group.
+
+Moody's assigned B1 at first, cut to **B2 on 23 August 2019** citing weak downstream refinery
+earnings and leverage of 6.5–7.5× against an expected 4.5×, then to **Caa1 on 11 January 2022**. That
+second downgrade is disclosed **inside the bonds note, not in the subsequent-events note** — a reader
+scanning subsequent events for material post-balance-sheet credit events would miss it entirely.
+
+Refinanced by the Rp4.3tn syndicated facility signed 27 June 2022; partially tendered in July 2022
+(~US$233.75m); **fully repaid 19 January 2023**. A **Rp387.4bn gain** on the repayment was booked in
+"other income, net."
+
+`EDITED:` AR2022 Note 23 states the two 2022 repayments as "Rp3,510,962,550 and Rp3,085,506" — the
+second figure, read on the document's stated thousands convention, is about Rp3.09bn against
+Rp3.51tn. That is almost certainly a missing-digits error, not a real Rp3bn tranche.
+
+### Covenants
+
+- **At 31 December 2023, the parent company itself breached DER, consolidated net debt / LTM adjusted
+  EBITDA, and DSCR covenants.** Subsidiary MKM separately breached current-ratio and DSCR covenants
+  with BNI and obtained a waiver in December 2023. **The outcome of the parent-level breach is not
+  visible in any document I have.** That is a significant gap: a parent-level financial covenant
+  breach at a company with Rp6.9tn of net debt is a material event, and the resolution should be
+  stated plainly.
+- The standard package across facilities: current ratio ≥1.0×, DER ≤2.6× (2021) or net debt/equity
+  ≤3.5× (2024 syndicate), DSCR ≥1.0–1.25×, net debt/LTM EBITDA ≤2.5×, **no repayment of
+  shareholder or affiliate loans without lender consent**, and cross-default on affiliate
+  obligations.
+
+That last pair is worth sitting with. The lenders explicitly restricted repayment of affiliate loans
+and cross-defaulted the group's obligations — which tells you the banks had priced in exactly the
+related-party risk this report keeps returning to.
+
+---
+
+## 3.7 Cash flow and capex
+
+| Rp bn | FY2019 | FY2020 | FY2021 | FY2022 | FY2023 | FY2024 | FY2025 |
+|---|---|---|---|---|---|---|---|
+| **Operating cash flow** | **10.7** | 586.0 | 1,114.6 | 1,456.2 | 594.2 | 606.6 | **1,097.1** |
+| Capex — fixed assets | (340.2) | (98.8) | (172.1) | (312.9) | (303.5) | (230.0) | (402.4) |
+| Plasma development | (98.3) | (107.7) | (80.0) | (85.8) | (115.3) | (18.7) | (11.2) |
+| Immature plantation additions | (23.9) | (8.0) | (6.8) | (11.6) | (4.5) | (15.1) | (13.4) |
+| SML acquisition, net of cash | — | — | — | — | — | — | **(1,491.4)** |
+| Investing, total | (652.3) | (778.7) | (794.6) | (512.6) | (1,450.9) | +464.7 | (1,902.0) |
+| Bank loans drawn | 683.7 | 19.4 | 17.9 | 3,472.3 | 6,333.0 | 5,101.2 | **9,536.2** |
+| Bank loans repaid | (71.0) | (143.7) | (153.7) | (265.6) | (4,696.2) | (6,310.8) | (8,412.3) |
+| Bond repaid | — | — | — | — | (633.1) | — | — |
+| Dividends paid | (25.9) | 0 | (290.4) | **(1,477.4)** | (710.9) | 0 | (450.0) |
+| **Net change in cash** | (171.5) | (300.6) | (76.2) | (888.4) | (568.7) | (166.5) | **(310.9)** |
+| **Free cash flow** (OCF − fixed-asset capex) `[calc]` | **(329.4)** | 487.2 | 942.4 | 1,143.3 | 290.7 | 376.6 | **694.7** |
+
+**FY2019's operating cash flow of Rp10.7bn is the number that should have set off alarms at the
+time.** It fell 96.7% from Rp321.7bn while sales fell 11.7% — because **cash paid to employees rose
+68.9%**, from Rp365.7bn to Rp617.9bn, in a year when reported permanent headcount *fell* from 6,835
+to 6,762. No report explains that.
+
+**Free cash flow has been positive but modest**, averaging **Rp655bn a year over FY2020–FY2025**
+`[calculated]`, against dividends of Rp2,928.7bn over the same period. The company has, on balance,
+distributed more than it generated, funded by the gross-borrowing churn visible in the two loan
+lines. Note the scale of that churn — **Rp9.5tn drawn and Rp8.4tn repaid in FY2025 alone** on a
+Rp8.1tn debt stack.
+
+### Capex is not reportable
+
+| FY | MD&A capex table | Audited cash-flow statement | Segment note | Verdict |
+|---|---|---|---|---|
+| 2019 | Rp788bn (a *budget*, not actual) | Rp340.2bn | — | budget shown as if actual |
+| 2022 | n/d | Rp312.9bn | — | |
+| 2023 | **"the Company did not invest in new capital goods"** | **Rp303.5bn** | — | flat contradiction |
+| 2024 | **Rp19bn** | **Rp230.0bn** | **Rp386.2bn** | three figures, 20× apart |
+| 2025 | Rp510bn ("allocated") / ~Rp557bn (table sum) | Rp402.4bn + Rp13.4bn immature | — | three figures again |
+
+**Use the cash-flow statement.** It is the only one that is audited and internally consistent. But
+notice what this does to any capital-intensity analysis: you cannot compute maintenance capex, you
+cannot separate it from growth capex, and the company's own narrative disclosure is unusable.
+
+**And note what capex is not being spent on.** At Rp402.4bn in FY2025 — of which Rp13.4bn went to
+immature plantations and Rp11.2bn to plasma development — the estate is receiving essentially no
+replanting investment. §3.10 sizes what it should be.
+
+---
+
+## 3.8 The ratio table
+
+| | FY2019 | FY2020 | FY2021 | FY2022 (o) | FY2023 | FY2024 | FY2025 |
+|---|---|---|---|---|---|---|---|
+| Revenue growth | −11.7% | +22.4% | +29.7% | +39.6% | ‖ basis break ‖ | −1.7% | **+42.9%** |
+| Gross margin | 30.8% | 44.8% | 42.4% | 40.9% | 26.2% | 31.2% | **34.9%** |
+| Operating margin | 13.6% | 30.1% | 34.0% | 31.1% | 11.2% | 16.8% | **17.2%** |
+| Net margin | 0.4% | 14.5% | 29.3% | 25.5% | 4.8% | 8.0% | **8.1%** |
+| Effective tax rate | 92.2% | 35.4% | 18.5% | 18.8% | 37.7% | 31.1% | 27.7% |
+| ROE (reported) | 0.3% | 11.9% | 25.0% | 90.4%* | 26.1% | 29.2% | **40.9%** |
+| ROE (pooling-adjusted) `[calc]` | — | — | — | — | ~7% | ~11% | **15.6%** |
+| ROA | 0.1% | 4.6% | 11.0% | 16.6% | 4.4% | 7.1% | 8.9% |
+| DER | 191% | 162% | 127% | n/d | 494% | 307% | **362%** |
+| Current ratio | 251% | 237% | 239% | n/d | 106% | 111% | 128% |
+| Interest cover | 0.87× | 2.13× | 3.27× | 4.10× | 1.76× | 2.90× | **3.68×** |
+| G&A as % revenue `[calc]` | 16.0% | 15.1% | 11.0% | 9.4% | 7.8% | 9.0% | **7.5%** |
+| Payout ratio | 0% | 99.3% | ~50% | 76–77% | 0% | 54.9% | tbd |
+
+\* the 90.4% FY2022 ROE in AR2022 is computed on the restated (post-pooling, collapsed) equity base
+against the originally-reported profit. It is not a real return.
+
+---
+
+## 3.9 Valuation
+
+**As at 7 August 2026 (the most recent verified print; I could not confirm an exact 17 August
+quote):** share price **Rp920**, market cap **Rp8.76tn**, 9.525bn shares, 52-week range
+**Rp650–1,920**.
+
+| Metric | Value | Method |
+|---|---|---|
+| Trailing P/E | **7.55×** | Rp920 ÷ Rp121.86 EPS `[calc]` |
+| EV | **Rp16,028bn** | Rp8,763bn + Rp7,264.6bn net debt `[calc]` |
+| EBITDA FY2025 | Rp2,932bn (EBIT + COGS D&A) to Rp3,111bn (deck's 21% margin) | `[calc]` |
+| **EV / EBITDA** | **5.15–5.47×** | `[calc]` |
+| **Net debt / EBITDA** | 2.34–2.48× | `[calc]` |
+| **P/B (owners' equity)** | **3.85×** | `[calc]` |
+| P/B (total equity) | 2.98× | `[calc]` |
+| Dividend yield | 5.13% | Rp47.24 DPS |
+| FCF yield | 7.9% | Rp694.7bn ÷ market cap `[calc]` |
+| EV per planted ha | Rp169m | `[calc]` |
+
+**The 2026 price path**: ~Rp1,705 (20 Feb) → Rp800 intraday on 25 May, the day of the transfer-pricing
+news (−8.57%) → Rp940 (17 Jul) → **Rp920 (7 Aug)**. That is **−42% from the December 2025 close of
+Rp1,580** and **−46% from the February high**. Year-end closes for reference: Rp1,300 (2024, market
+cap Rp11,466bn) and **Rp1,580 (2025, market cap Rp15,585bn)** per AR2025's own share table.
+
+**Analyst coverage is thin.** The only broker note I could retrieve is **Mirae Asset, Buy, target
+Rp2,300, dated 21 February 2026** — struck when the stock was Rp1,705, on 17.4× 2026 earnings and
+Rp392.8m of EV per hectare, with a thesis built on SML lifting yields to 24 t/ha and OER to 26–27%.
+Both of those assumptions look aggressive against the actual FY2025 prints of **21.2 t/ha and 22.1%
+OER**, and the note predates both the BARI cut-off and the transfer-pricing probe. I could not find
+a broad consensus.
+
+### Peers on IDX
+
+Snapshot dates differ by ticker (May–August 2026); treat as most-recent-available rather than
+synchronised. EV/EBITDA was not obtainable for the peer set from public screeners.
+
+| Ticker | Company | Price (Rp) | Market cap (Rp tn) | P/E |
+|---|---|---|---|---|
+| **SSMS** | **Sawit Sumbermas Sarana** | **920** | **8.76** | **7.55×** |
+| AALI | Astra Agro Lestari | 7,325 | 13.76 | 7.37× |
+| LSIP | London Sumatra | 1,115 | 7.84 | 4.15× |
+| TAPG | Triputra Agro Persada | 1,280 | 27.00 | 7.42× |
+| DSNG | Dharma Satya Nusantara | 1,085 | 11.92 | 6.27× |
+| SGRO | Sampoerna Agro | 2,240 | 4.44 | 16.73× |
+| SMAR | SMART / Sinar Mas Agro | 4,910 | 14.10 | 4.30× |
+| TBLA | Tunas Baru Lampung | 625 | 3.72 | 4.13× |
+| NSSS | Nusantara Sawit Sejahtera | 372 | 9.85 | 15.70× |
+| ANJT | Austindo Nusantara Jaya | 1,450 | 4.86 | loss-making |
+| **CBUT** | **Citra Borneo Utama** (78%-owned subsidiary) | **665** | **2.08** | 18.73× |
+| BWPT | Eagle High Plantations | — | — | 7.30× |
+| CSRA | Cisadane Sawit Raya | — | — | 5.60× |
+| GZCO | Gozco Plantations | — | — | 9.00× |
+| PALM | Provident Investasi | — | — | 0.90× |
+
+**SSMS at 7.55× sits mid-pack, alongside AALI (7.37×) and TAPG (7.42×) and well below NSSS (15.7×).**
+On earnings it is not obviously mispriced either way. The differentiators are qualitative: SSMS has
+worse disclosure than AALI, a more concentrated related-party structure than TAPG, an older estate
+than NSSS, and a downstream business that earns 1.2%.
+
+One curiosity worth noting: **CBUT, of which SSMS owns 78.22%, has a market capitalisation of
+Rp2.08tn.** SSMS's 78.22% of that is **Rp1.63tn — 18.6% of SSMS's entire market cap** `[calculated]`.
+So the market values SSMS's plantation business, net of debt, at roughly **Rp7.13tn**, or
+**Rp75m per planted hectare** `[calculated]` — a genuinely low number for prime Kalimantan estate,
+which is the strongest argument the bulls have.
+
+---
+
+## 3.10 Scenario arithmetic
+
+Every step shown, per the house convention.
+
+### Scenario A — the palm kernel windfall reverses
+
+```
+FY2023 PK price / CPO price      = Rp4,974  ÷ Rp13,262 = 37.5%
+FY2025 PK price / CPO price      = Rp12,406 ÷ Rp17,484 = 71.0%
+
+Normalised FY2025 PK price       = 37.5% × Rp17,484     = Rp6,557/kg
+FY2025 PK volume sold                                    = 25,875 MT
+Revenue at risk = 25,875,000 kg × (12,406 − 6,557)       = Rp151.3bn
+After tax at 22%                                          = Rp118.0bn
+As % of FY2025 net profit to owners (Rp1,160.7bn)         = 10.2%
+```
+
+**And that understates it**, because CPKO at Rp26,886/kg — 54% above CPO — is on the same lauric
+curve, and PKO plus PKE is another **Rp1,287bn (8.7%) of revenue**. A full lauric normalisation would
+be a multiple of the Rp151bn above. Treat 10% of net profit as the floor of this exposure.
+
+### Scenario B — the forest-area regime
+
+**PP 45/2025 (19 September 2025)** sets fines at **Rp25 million per hectare per year** for
+plantations operating inside forest areas, and — critically — **paying does not legalise the land**;
+the state reclaims it. The Satgas PKH task force billed **Rp2.34tn across 20 palm companies in
+December 2025**, with a broader sweep of 71 companies at up to Rp38.6tn. **The company-level lists
+have not been published.**
+
+What *is* published is a February 2025 Ministry of Forestry list, under Ministerial Decree 36/2025,
+of 184 Central Kalimantan plantation companies with area inside forest zones. It names:
+
+| Entity | Area applied for | In process | **Rejected** |
+|---|---|---|---|
+| PT Citra Borneo Indah (the parent) | 1,823 ha | 593 ha | **1,230 ha** |
+| SSMS-named entity, entry 138 | 3,650 ha | 1,306 ha | — |
+| SSMS-named entity, entry 139 | 18,595 ha | 11,842 ha | **6,753 ha** |
+
+**I have not been able to verify this against the primary decree, and the entity naming is not
+exact** — it appears as "PT Sawit Sumber Mas Sarana." Treat it as a lead requiring confirmation, not
+a fact. But the arithmetic of the exposure, if it holds:
+
+```
+Rejected hectares at the SSMS-named entity                  = 6,753 ha
+Annual fine at Rp25m/ha/yr                                  = Rp168.8bn per year
+Over a 5-year assessment period                             = Rp844bn
+
+If the full 22,245 ha named across both entries is assessed = Rp556.1bn per year
+Over 5 years                                                = Rp2,781bn
+```
+
+For scale: **Rp844bn is 73% of FY2025 net profit; Rp2,781bn is 95% of total equity.**
+
+**Neither Satgas PKH, nor PP 45/2025, nor the words "kawasan hutan" appear anywhere in the FY2025
+annual report.** A keyword sweep returns nothing. Compare: **AALI booked Rp572bn** for the same
+regime and buried it in G&A; **NSSS booked Rp108bn, disclosed the exposure, and received the first
+qualified audit opinion in its history** — with its auditor stating that on a full PP 45/2025 basis
+the provision would be Rp554bn, cutting net profit in half.
+
+SSMS has booked nothing, provisioned nothing, and said nothing. Its FY2025 audit opinion is clean.
+Either the exposure genuinely does not exist — in which case a single sentence saying so would be
+worth a great deal — or it has not been recognised.
+
+Note also that SSMS **has** already paid **Rp146.0bn of PSDH/reforestation-fund charges** to the
+Ministry of Forestry in Dec-2024/Jan-2025, disclosed only as a 7.3× jump in the "insurance and
+permits" G&A line. So the company is demonstrably inside the forestry-charge perimeter.
+
+### Scenario C — the affiliate customer does not come back
+
+```
+FY2025 revenue from Borneo Agri-Resources          = Rp3,815.2bn = 25.8% of revenue
+Q1 2026 revenue from Borneo Agri-Resources         = Rp0
+Q1 2025 BARI share of revenue                      = 46%
+Q1 2026 revenue                                    = Rp3,510bn, −2.23% YoY
+Q1 2026 net profit                                 = Rp318.1bn, −6.85% YoY
+```
+
+Read straightforwardly, SSMS replaced the entire affiliate channel with third-party sales inside one
+quarter and lost about 2% of revenue and 7% of profit doing it. **That is a remarkably small
+disruption for losing a customer that was nearly half of the prior-year quarter** — which cuts two
+ways. It suggests the product is genuinely fungible and the affiliate was not adding value, which is
+good. It also suggests the affiliate was not, on this evidence, paying a large premium — which
+raises the obvious question of what the arrangement was for.
+
+The Q1 2026 cost lines are the tell: **selling expenses +25.4%** (blamed on export taxes and duties)
+and **admin costs +52.6%**. Selling direct rather than through a Singapore affiliate means bearing
+export costs on your own books.
+
+### Scenario D — the replanting bill that has not been paid
+
+```
+Mature nucleus hectares                             = 76,850 ha
+Standard oil palm economic cycle                    = ~25 years
+Steady-state replanting requirement                 = 76,850 ÷ 25 = 3,074 ha/year
+Establishment cost at ~Rp70m/ha                     = Rp215bn/year
+Actual FY2025 immature-plantation capex             = Rp13.4bn
+                                                      → 6.2% of requirement
+
+Hectares that should be immature in steady state    = 3,074 × 4 years = 12,296 ha
+                                                      = 16.0% of the mature estate
+Actual immature nucleus at 31 Dec 2025              = 464 ha (audited Note 37)
+                                                      = 0.6% of the mature estate
+```
+
+**That is the whole argument in nine lines.** A properly replanting estate carries about 16% of its
+area in immature palms at any time. SSMS carries 0.6%. It has spent **Rp13.4bn where it needs
+roughly Rp215bn a year**, and the nucleus average age has drifted to 16.7 years while yield fell
+21.5% from the 2022 peak.
+
+There are only three ways this ends: a multi-year capex step-up of roughly Rp200bn+ per year with an
+associated production hole; continued yield decay; or more acquisitions of mature estate from
+related parties. **The company has so far chosen the third**, which is exactly what the SML deal was.
+
+### Scenario E — the export levy
+
+```
+Export volume, FY2025                        ≈ 68.4% × 977,795 MT = 668,791 MT
+Levy increase, 10% → 12.5% of reference price
+At the Aug-2026 reference price of US$996.52/MT, 2.5pp = US$24.91/MT
+Annualised cost at FY2025 export volumes     = US$16.66m ≈ Rp272bn at Rp16,300/US$
+As % of FY2025 net profit to owners                        = 23.4%
+```
+
+`[calculated]` — this is a first-order approximation; the levy applies at product-specific rates and
+the mix matters. But the order of magnitude is right, and it is the reason SSMS's Q1 2026 selling
+expenses rose 25.4%.
+
+---
+
+## 3.11 Guidance versus actual — and the FY2026 projection
+
+SSMS publishes an RKAT (annual budget) comparison in its MD&A. It is the only forward-looking
+disclosure the company makes, and it does not appear in any investor deck. It is worth reading
+closely because the pattern is consistent across seven years: **the company misses its operational
+targets badly and hits its financial targets anyway.**
+
+**FY2025 target versus realisation** [AR2025, Rp billion]:
+
+| | Target 2025 | Realised 2025 | **% of target** |
+|---|---|---|---|
+| Revenue | 15,623 | 14,813 | 94.8% |
+| Cost of revenue | (10,701) | (9,638) | 90.1% |
+| **Gross profit** | 4,756 | 5,175 | **105.1%** |
+| **Operating profit** | 2,424 | 2,548 | **105.1%** |
+| Profit after proforma adjustment | 1,444 | 1,393 | 97.8% |
+| **EBITDA** | 2,741 | **2,935** | **106.0%** |
+| Total assets | 12,073 | 13,584 | 112.5% |
+| Total liabilities | 7,721 | 10,643 | **137.8%** |
+| **Total equity** | 4,352 | 2,941 | **67.6%** |
+
+Note that **EBITDA of Rp2,935bn is the company's own figure**, and it lands within 0.1% of my
+independent estimate of Rp2,932bn from operating profit plus cost-of-production D&A. That is a
+useful cross-check on the EV/EBITDA multiple in §3.9.
+
+Note also the equity line: the company **missed its own equity target by 32.4%** — because the SML
+pooling it executed in November 2025 took another Rp1,084.6bn out of paid-in capital. The budget
+evidently did not anticipate the accounting consequence of the deal the company itself did.
+
+**Operationally, FY2025 was a broad miss:**
+
+| Product | Target 2025 (MT) | Realised (MT) | % of target |
+|---|---|---|---|
+| FFB, nucleus | 1,684,977 | 1,628,452 | 96.7% |
+| **CPO** | 628,938 | 527,052 | **83.9%** |
+| Palm kernel | 124,053 | 104,130 | 83.8% |
+| **Palm kernel oil** | 25,800 | 15,379 | **59.6%** |
+| RBDPO | 807,500 | 569,213 | 70.5% |
+| **PFAD** | 38,250 | 21,913 | **57.3%** |
+| Palm olein | 655,690 | 467,934 | 71.4% |
+| Palm stearin | 151,810 | 101,221 | 66.7% |
+| **CPKO** | 58,480 | 28,998 | **49.6%** |
+| **PKE** | 72,080 | 37,506 | **52.0%** |
+
+**Every downstream product came in between 50% and 71% of budget.** The refinery was budgeted to run
+at close to nameplate and ran at 71%. This is the third consecutive year of large downstream misses
+— FY2023 delivered 35% of the PKO target and 37% of the PKE target; FY2024's downstream products
+came in at 29–44% of target.
+
+**And now the FY2026 projection, which is the most striking number in the annual report:**
+
+| | FY2025 actual | **FY2026 projection** | Implied change |
+|---|---|---|---|
+| Revenue | 14,813 | **24,114** | **+62.8%** |
+| Cost of revenue | (9,638) | (17,269) | +79.2% |
+| Gross profit | 5,175 | 6,845 | +32.3% |
+| **Gross margin** `[calc]` | **34.9%** | **28.4%** | **−6.5 pts** |
+| Operating profit | 2,548 | 2,961 | +16.2% |
+| **Operating margin** `[calc]` | **17.2%** | **12.3%** | **−4.9 pts** |
+| EBITDA | 2,935 | 3,621 | +23.4% |
+| Profit after proforma adj. | 1,393 | 1,733 | +24.4% |
+| Total assets | 13,584 | 13,413 | −1.3% |
+| Total liabilities | 10,643 | 9,202 | −13.5% |
+| Total equity | 2,941 | 4,211 | +43.2% |
+| CPO production (MT) | 527,052 | 733,413 | +39.1% |
+| RBDPO (MT) | 569,213 | 1,112,190 | +95.4% |
+| Palm olein (MT) | 467,934 | 903,098 | +93.0% |
+
+Take that seriously for a moment and it falls apart on arithmetic.
+
+```
+Asset turnover implied:
+  FY2025 actual      = Rp14,813bn ÷ Rp13,584bn assets = 1.09×
+  FY2026 projected   = Rp24,114bn ÷ Rp13,413bn assets = 1.80×   [calculated]
+  → a 65% jump in asset turnover with assets shrinking 1.3%
+```
+
+To deliver it, the refinery has to nearly double its throughput (RBDPO +95.4%) on **unchanged
+2,500 t/day capacity** — which at 569,213 MT in FY2025 was already 71% utilisation. Producing
+1,112,190 MT would require running at roughly **139% of the stated nameplate** `[calculated:
+1,112,190 ÷ (2,500 × 320 operating days) = 139%`]. That is arithmetically impossible on the
+disclosed capacity — unless the **second refinery that vanished from disclosure in 2025 is in fact
+being built**, which nothing in the FY2025 annual report or the April 2026 public expose says.
+
+Upstream, CPO production has to rise 39.1% to 733,413 MT against nucleus FFB rising only 23.4%,
+which implies either a large step-up in bought-in fruit or an OER improvement of several points.
+
+`EDITED:` **the company's own percentage column in that table is wrong for CPO.** It prints 146.74%
+for the 2026 projection against 2025 realisation, but 733,413 ÷ 527,052 = **139.15%**. The "total"
+row for plantation-segment production prints "94.885" against a 146.14% ratio, which implies
+944,885 — a missing digit. Both errors are in the same table.
+
+The honest summary: **the FY2026 budget requires the best year in the company's history by a wide
+margin, on falling nucleus yields, unchanged refining capacity, a 2.5-point higher export levy, and
+without the customer that took 30% of FY2025 volume.** Against a seven-year record of missing
+operational targets by 15–50%, the base case should be well below it. The one line in the projection
+that looks achievable is EBITDA of Rp3,621bn — and even that is +23.4% on a year when price did most
+of the work.
+
+---
+
+## 3.12 SSMS against the other names in this series
+
+| | **SSMS** | AALI | TAPG | NSSS |
+|---|---|---|---|---|
+| Planted / managed ha | 136,447 managed (104,291 audited) | very large, mature | ~85,086 | 28,121 |
+| **Average palm age** | **16.7 yrs nucleus (1Q25)**; 14.8 blended after buying younger trees | 16.7 yrs, 65.9% over 15 | mid | **9.8 yrs**, nothing over 20 |
+| **Age cohort table published?** | **Never, in 7 annual reports** | Yes | Partial | Yes |
+| **Fruit bought in** | **31.7%** and rising | 38.7% | moderate | **3.6%** |
+| Gross margin | 34.9% | ~16% | — | **54.3%** |
+| **Related-party revenue** | **27%–91% across 7 years** | low | moderate | one office lease |
+| Downstream? | Yes — refinery at **1.2% operating margin** | Yes | Limited | No |
+| **Replanting disclosed?** | **No — never** | Yes | Yes | Yes (and behind target) |
+| Forestry / PP 45-2025 | **Not mentioned at all**; parent + an SSMS-named entity on the Kalteng list | **Rp572bn booked**, hidden in G&A | — | **Rp108bn booked; qualified opinion** |
+| Audit opinion FY2025 | Unqualified | Unqualified | Unqualified | **Qualified** |
+| Payout ratio | 0–99%, policy says 30% | 14.6% | **99.3%** | 11.0% |
+| Trailing P/E | **7.55×** | 7.37× | 7.42× | 15.70× |
+| EV/EBITDA | **5.15–5.47×** | 2.2× | 6.2× | ~9.0× |
+| **Governance headline** | **Two poolings from the parent; Rp3.94tn negative APIC; "no affiliation" claims contradicted by CVs for 7 years** | The hidden forestry fine | JV vs consolidated presentation | The qualified opinion |
+
+Reading across the four: **NSSS is the young estate with the honest disclosure and the expensive
+multiple. AALI is the old estate with good disclosure and the cheapest multiple. SSMS is the old
+estate with the worst disclosure at an average multiple.** That is the trade.
+
+---
+
+# 04 — The argument, and what would change it
+
+## The bear case, stated plainly
+
+SSMS is a controlled company whose economics are not fully observable from outside. Between 27% and
+91% of its revenue in any given year has gone to entities its controlling shareholder also controls,
+at prices it has never explained; roughly a quarter of its balance sheet was for five years a loan
+to that shareholder, on which no impairment was ever taken despite a documented payment deferral;
+and it has twice bought businesses from that shareholder using an accounting treatment that puts the
+premium permanently into negative equity without ever passing through profit. In the space of one
+quarter, its largest affiliate customer went to zero and the state announced a transfer-pricing
+finding naming the company.
+
+Underneath that, the operating business is an aging estate that has stopped reinvesting. Mature
+nucleus hectares were flat within 0.9% for six years, yield has fallen 21.5% from its 2022 peak,
+immature area is 0.6% of mature where it should be 16%, and the fertiliser-and-maintenance line was
+cut Rp559bn into the teeth of the yield decline. The growth that has been reported came from buying
+a plantation from the parent and consolidating a refinery that earns a 1.2% operating margin.
+
+And the reporting is not reliable enough to check any of this. Capex appears three ways in one
+document. OER is described as increasing when it fell, twice, two years apart. Landbank does not
+foot. The MD&A says there were no affiliate transactions in a year the notes show 61.4% of revenue
+came from one. A promised second refinery simply disappeared from disclosure rather than being
+reported as delayed.
+
+## The bull case, stated fairly
+
+At Rp920 you are paying **7.55× trailing earnings, 5.2–5.5× EV/EBITDA and a 5.1% dividend yield**
+for a company that just grew revenue 42.9% and net profit 41.6%, that generated Rp1.1tn of operating
+cash flow, that has cut leverage to 2.3–2.5× net debt to EBITDA, and that owns roughly 95,000
+planted hectares in Central Kalimantan. Strip out the listed value of its CBUT stake and the
+plantation business is on about **Rp75m per planted hectare** — very cheap by any transaction
+benchmark, and a fifth of what a broker was willing to underwrite six months ago.
+
+The Q1 2026 evidence is genuinely reassuring on one point: when the affiliate channel closed, third
+party sales replaced it inside a quarter at a cost of about 2% of revenue. That is what a fungible
+commodity should do, and it argues the affiliate relationship was a routing convenience rather than
+a value transfer on the revenue line.
+
+The policy backdrop is supportive: **B50 is live from 1 July 2026**, absorbing 4.5m kl/yr more
+domestic biodiesel demand and tightening the exportable surplus. SSMS's export book is Asia-facing,
+so EUDR is a minor problem for it. Its 100% RSPO and ISPO certification is a real asset in a sector
+where it is rare.
+
+And the price already reflects a lot of damage: **−42% from the December close, −52% from the
+February high.**
+
+## What would change my mind
+
+- **A published replanting programme with hectares and capex.** The single most useful disclosure
+  this company could make. Absent it, the yield decline compounds.
+- **A statement about kawasan hutan exposure.** One paragraph confirming or denying that the group
+  is inside the Satgas PKH / PP 45/2025 perimeter, with hectares. AALI and NSSS both eventually
+  quantified this. SSMS has not acknowledged the topic exists.
+- **An explanation of the BARI termination** and the transfer-pricing finding — from the company,
+  not the press.
+- **A transfer-pricing policy for affiliate sales**, or a benchmarking statement. Seven years of
+  27–91% affiliate revenue with no pricing disclosure is not defensible.
+- **Segment cost disclosure** so upstream cash cost per tonne is computable again. It has not been
+  since FY2022.
+- **The resolution of the FY2023 parent-level covenant breach.**
+- **Any narrative for the float transfers** that took CBI from 54.3% to 65.8%.
+
+## Open threads I could not close
+
+1. **Was SSMS or CBI in the December 2025 Satgas PKH batches?** The company lists are not public.
+   The February 2025 Kemenhut list naming both entities needs verification against the primary
+   decree.
+2. **What happened to the second refinery?** Promised operational April 2025, never mentioned again,
+   capacity unchanged at 2,500 t/day.
+3. **Why did BARI stop buying?** And is it connected to the May 2026 transfer-pricing finding?
+4. **Why did the refinery's utilisation halve in FY2024?** From 91.8% to 47.5% in its first full year
+   inside SSMS, unexplained.
+5. **What was the FY2021 audit opinion, exactly?** The letter is not in the PDF's text layer; only
+   the MD&A's characterisation is available.
+6. **Was the parent-level FY2023 covenant breach waived?** The disclosure cuts off.
+7. **Who paid what for the ~1.1bn shares** that moved from the public float to CBI between 2022 and
+   2025?
+8. **What is PT Hamparan-equivalent here** — i.e. what does the "other" 41,500 ha in the FY2025
+   landbank reconciliation actually consist of, and why does the audited note show 104,291 ha
+   against the MD&A's 136,447?
+9. **What is the CBUT Supreme Court tax case worth?** AR2024 discloses the appeal was rejected on a
+   2019 assessment; the amount (Rp3.79bn) looks small but the judicial review is pending and no
+   press coverage exists.
+10. **What is the SML purchase actually worth?** Rp1.6tn for 63.4% of an entity whose planted area is
+    reported as 11,046 ha by one source and 21,000 ha by another, containing an asset the parent had
+    marked up 81% over book five months earlier.
+
+---
+
+# Appendix A — the conflict register
+
+Twenty-one places where the company's own documents contradict each other or themselves. This is
+not a list of typos; the count and the pattern are the finding. Sources are the company's filings.
+
+| # | Conflict | Value A | Value B | Where |
+|---|---|---|---|---|
+| 1 | FY2023 revenue | Rp10,703.4bn | **Rp11,096bn** | AR2023/AR2024 vs FY25 deck — restated with no footnote, while the FY24 change *is* footnoted |
+| 2 | CBUT ownership in 2020 | 13% | 26% / **32%** | AR2020/AR2022 vs AR2022 narrative vs AR2023 schedule — three figures |
+| 3 | CBI stake at 31 Dec 2020 | 55.27% | **52.27%** | AR2020, shareholder table vs adjacent narrative |
+| 4 | SML syndicated facility | Rp5.1tn | **Rp5.2tn** | FY25 management report vs PRES_2026 |
+| 5 | FY2022 nucleus FFB vs target | printed "96%" | actual **102%** (1,862,561 ÷ 1,823,299) | AR2022 arithmetic error |
+| 6 | FY2024 capex | Rp19bn | **Rp230.0bn** / **Rp386.2bn** | AR2024 MD&A vs cash flow vs segment note |
+| 7 | FY2023 capex | "did not invest in new capital goods" | **Rp303.5bn** | AR2023 MD&A vs cash flow |
+| 8 | FY2021 FFB production | 2021 = 1,611,494 | 2021 = **1,582,858** | AR2021, two adjacent MD&A tables, figures transposed |
+| 9 | OER direction of travel | "an increase" | an arithmetic **decrease**, both times | AR2022 (22.60→22.30) and AR2024 (22.1→21.8) |
+| 10 | FY2025 OER | 22.12% (body text) | **23.7%** (chart, same slide) | FY25 deck |
+| 11 | FY2025 landbank | 136,447 ha total | nucleus + plasma = **94,814 ha**; audited note = **104,291 ha** | AR2025, three mutually inconsistent totals |
+| 12 | FY2025 PKO production | 15,379 MT (plantation table) | **28,997 MT** (edible-oil table) | AR2025, same year, no reconciliation |
+| 13 | SBI ownership | 49% | **42.7%** | AR2025, same paragraph, three sentences apart |
+| 14 | Biogas capacity | "1500 MW" (Indonesian) | **"1.5 MW"** (English) | AR2025, same sentence — a 1,000× unit error |
+| 15 | CBI's 2017 purchase of 2.6bn shares | **Rp1,937,000,000 total (~Rp1.49/share)** | vs Rp100 par and a much higher market price | AR2019–AR2025, repeated unchanged for seven years |
+| 16 | SSMS's 2020 purchase of 13% of CBUT | **"Rp600,000,000"** | plausible only as Rp600bn under the document-wide thousands convention | AR2020–AR2024, five reports, never clarified |
+| 17 | Audit fee year | table captioned FY2020 | text says the fee was for **FY2018** | AR2020 |
+| 18 | Affiliate transactions FY2024 | "the Company did not carry out any transactions with affiliated parties" | **61.41% of revenue** | AR2024, MD&A vs Note 33 |
+| 19 | FY2023 parent-level covenant breach | breach disclosed | **waiver outcome never stated** | AR2025 |
+| 20 | FY2022 employee headcount | stated total **20,190** | components sum to **11,722** | AR2022 — an 8,468-person gap |
+| 21 | "No affiliation" governance statements | asserted every year | contradicted by the same page's CV | AR2019–AR2025, all seven |
+
+Honourable mentions that did not make the numbered list: AR2019's "Sales Volume" table is
+denominated in Rp million rather than tonnes; AR2020's financial-highlights table puts the balance
+sheet under the income-statement header and vice versa, and mislabels four consecutive ratio rows;
+AR2022's monthly share-price table shows the "lowest" price above the "highest" for four consecutive
+months; AR2024 states 114 employees were recruited "consisting of 59 male and 12 female."
+
+---
+
+# Appendix B — what this company has never disclosed
+
+Compiled across all seven annual reports, the prospectus and eight investor documents. Items are
+listed because a competent analyst would expect them and they are simply absent.
+
+**Operational**
+
+- **Replanting and new-planting hectares, for every year 2019–2025.** Not once.
+- **A palm age-cohort table.** Only single blended averages, and only on slides.
+- Upstream cash cost per tonne of CPO or FFB, for any year after FY2022.
+- Fertiliser cost separately from maintenance; per hectare; or per tonne of FFB.
+- The price paid for third-party FFB, in any year.
+- The plasma-versus-independent split of purchased fruit from FY2025.
+- KER as a formally labelled, audited metric in any annual report.
+- A full HGU register with expiry dates across all estates.
+- Mill-by-mill throughput against capacity.
+- Export-versus-domestic split for FY2021 through FY2024.
+- Per-product ASPs for FY2024 and FY2025 (published once, for FY2022–23, then dropped).
+
+**Financial**
+
+- A five-year financial highlights table — every annual report gives only three years.
+- FY2013–FY2016 audited figures anywhere (the prospectus stops at H1 2013; AR2019 starts at FY2017).
+- A restated FY2021 or FY2023 income statement to match the restated balance sheets.
+- A reconciled capex figure.
+- Segment cost of goods sold, so upstream and downstream economics can be separated.
+- Absolute EBITDA from FY2023 onward — only margin percentages appear on the decks.
+- Any leverage, coverage or return ratio in any investor deck, ever.
+- Individual board remuneration; and from FY2025, board remuneration by body at all.
+- The FY2024 audit fee.
+- Multi-year forward guidance of any kind: no capex budget, no production target, no replanting
+  schedule. Nothing in eight investor documents.
+
+**Governance and risk**
+
+- A transfer-pricing policy or benchmarking statement for affiliate sales.
+- The counterparty behind the CBI "management fee" arithmetic and the Sulung Research Station charge.
+- The mechanism behind any of the share transfers that lifted CBI from 54.3% to 65.8%.
+- Any narrative for the 2024 change of ultimate beneficial owner.
+- A quantified risk register with likelihood and impact.
+- A **quantified** rupiah impact of the export levy, export duty or DMO on margin — the policies
+  are discussed qualitatively in AR2024 and AR2025 but never sized.
+- **Any mention of kawasan hutan, Satgas PKH or PP 45/2025.**
+
+---
+
+# Appendix C — provenance and method
+
+- All sixteen PDFs were converted with `pdftotext -layout`. Every file had a clean text layer,
+  including the audited financial-statement notes. No OCR and no page images were needed anywhere,
+  which puts SSMS's filings in the same good position as NSSS's and better than CPIN's.
+- Extraction ran through one subagent per annual report, one for the prospectus, one for all decks
+  and management reports together, and one web pass — each writing a notes file to disk against a
+  fixed eight-section brief ending in an explicit "anything odd" and "not disclosed" section. Those
+  notes were consolidated into a single `TIMESERIES.md` data pack, which is the source for every
+  table above.
+- Figures marked `[calculated]` are mine. Figures without a tag are as printed by the company, with
+  the document named.
+- Where the company prints two values, both are shown. I have not silently picked one.
+- **Rp/US$ conversions use Rp16,300 unless a document states otherwise.**
+- **Known limitation:** the 2025 Q2, 2025 Q3 and 2026 Q1 management reports did not reach me, so all
+  2026 information in this report is from press sources and the 30 April 2026 public expose. The
+  share price is the 7 August 2026 print of Rp920; I could not verify a 17 August quote.
+
+---
+
+*End of report.*

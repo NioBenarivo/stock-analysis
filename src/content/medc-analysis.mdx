@@ -1,0 +1,710 @@
+---
+title: "MEDC — PT Medco Energi Internasional Tbk"
+description: "A business-model teardown — a leveraged buyer of maturing gas PSCs, stapled to an Amman Mineral stake worth more than the whole company."
+date: '2026-08-24'
+tags: [analysis, oil-gas, idx]
+---
+
+Indonesia's largest listed independent oil and gas producer (156 mboepd FY2025, ~72% gas), with a gas-and-renewables power arm (4,371 GWh sold) and a 20.9% equity-accounted stake in Amman Mineral (AMMN, Batu Hijau copper-gold). Reports in USD. Market cap Rp29.7tn / ~US$1.8bn (Rp1,205, 29 May 2026; 24.68bn shares). Controlled by the Panigoro family (51.5% via PT Medco Daya Abadi Lestari) with the Salim group as 21.5% co-investor.
+
+**Period covered:** FY2019–FY2025 audited years, Q1 2026 results and 1H 2026 operational update (to 30 June 2026). **Sources in hand:** seven full-year results decks (FY2020–FY2025, Q1 2026), six Fact Books (FY2021–Q1 2026), three press releases (FY2025 ×2, 1H 2026), web research. **Not in hand:** any annual report or audited financial statements — see MISSING DATA. Report written 24 August 2026; v1.
+
+Conventions: `[calculated]` marks a figure derived here rather than disclosed. Anchors are restated where a section zooms in. Figures are US$ mn unless stated.
+
+---
+
+## THE ONE THING TO UNDERSTAND FIRST
+
+MEDC is two businesses stapled together, and the market prices them very differently.
+
+**Business one — a leveraged buyer of maturing gas PSCs.** Roughly 70–80% of today's production came through acquisitions, not the drill bit (Corridor, Natuna, Oman and Thailand alone are 68% [calculated, §08.2]): South Natuna Sea B (2016, US$238m), Ophir Energy (2019, US$541m), Corridor (2022, US$1,355m), Oman Block 60 (2023, US$713m), Corridor again (2025, +24% for US$425m). Each was bought at US$6–14 per 2P barrel and, on the company's own table, paid itself back in cash within 18–36 months (§08.3). The engine that makes this work is contracted gas: 54% of gas volume sells at fixed prices (US$5.8–6.8/mmbtu) under take-or-pay contracts to PGN, PLN, Pusri and Singapore buyers, so EBITDA held at US$1.26–1.27bn in FY2024–25 even as the realised oil price fell 15%. That stability is what lets the company carry US$3.6bn of gross debt (2.4x consolidated net debt/EBITDA) and keep buying.
+
+**Business two — a 20.92% stake in AMMN.** It contributes nothing to revenue or EBITDA (equity-accounted), but it drives the net income line: FY2025 net income fell 72% to US$101m almost entirely because AMMN's contribution fell from US$133m to US$52m during its smelter transition. At AMMN's Rp238tn market cap (June 2026) the stake is worth ~Rp50tn, more than MEDC's entire Rp29.7tn market capitalisation — i.e. the market attributes a negative equity value to the oil and gas business that generates all the cash [calculated, §08.1].
+
+Two consequences follow. Reported net income is a poor guide to the operating business — read EBITDA, cash flow from operations (US$906m FY2025) and the debt line instead. And the portfolio has a short fuse: Corridor (38% of production) runs to 2043 but South Natuna (13%) expires in 2028, Lematang/Madura/Sampang in 2027, and the acquired fields are mature — hence the 200%+ reserve replacement has to keep coming from deals. Evidence: production by block §08.2, contract expiries §2.1, acquisition economics §08.3, financials §07.
+
+---
+
+# 01 — OWNER
+
+## 1.1 Group structure
+
+```
+Panigoro family (heirs of Arifin Panigoro, d. Feb 2022; Hilmi Panigoro, Yani Panigoro,
+Yaser Raimi Panigoro on the boards)
+   │ 60.2% (direct + indirect)
+   ▼
+PT Medco Daya Abadi Lestari (MDAL) ──── 51.50% ──┐
+                                                 │
+Diamond Bridge Pte Ltd (Singapore)               │      Public / other ── 27.04%
+  controlled by Anthoni Salim ──── 21.46% ───────┤      (float)
+  entered 15 Jan 2018, bought 2.06bn shares      │
+  from the Panigoro holdco                       ▼
+                               PT Medco Energi Internasional Tbk (MEDC)
+                               24.68bn shares outstanding (May 2026)
+```
+
+Register above is the last public disclosure found (IDX letter, Aug 2021 / July 2022). MEDC bought back 461m shares in 2025 (~US$30m) so the public share is now marginally lower; a current register was not in the source set. Note what the 2021 exchange letter says: management denied any option or debt-to-equity arrangement that would take Salim above 21.46%.
+
+Operating tree (working interests as at Q1 2026, from the Fact Books):
+
+| Arm | Vehicle | What it holds |
+|---|---|---|
+| Oil & gas — Indonesia | Medco E&P subsidiaries (100%) | Corridor 70% (op.), Senoro-Toili 30% (JOB with Pertamina), South Natuna Sea B 40% (op.), South Sumatra 65%, Rimau 65%, Lematang 100%, Block A Aceh 85%, Madura Offshore 67.5/77.5%, Sampang 45%, Bangkanai 70%, Tarakan 100%, Simenggaris 62.5% (being sold), Sakakemang 45% (op., pre-production), Beluga 100%, Amanah 40%, Nawasena (signed Jun 2026) |
+| Oil & gas — international | Medco Energi Global / ex-Ophir entities | Oman Block 60 20% and Block 48 20% (OQ operates), Oman Karim Small Fields 58.5% service contract, Oman Block 56 5%, Thailand Bualuang 100% (op., to 2035), Tanzania Blocks 1&4 20% (Shell op., exploration), Malaysia Cendramas 50% (op., from 23 Sep 2026), Yemen Block 9 21.3% (idle) |
+| Midstream | PT Transportasi Gas Indonesia (TGI) 40% (2025) | Grissik–Duri and Grissik–Batam–Singapore pipelines (West Natuna Transportation System) |
+| Power | PT Medco Power Indonesia (MPI), 100% since 2017; gas-IPP alliance with Kansai Electric 60:40 (2021) | Riau 275 MW CCGT (51%, RATCH 49%), Batam ELB/DEB gas IPPs, Ijen geothermal 35 MW (51%, Ormat 49%), Sumbawa PV 26 MWp, East Bali PV 25 MWp (51%), Sarulla geothermal minority, O&M business |
+| Mining (associate) | via PT Amman Mineral Investama / AMNT chain | 20.92% of PT Amman Mineral Internasional Tbk (AMMN) since Jan 2024 (23.1% pre-IPO) |
+
+The Restricted Group ("RG") used in bond covenants is the oil & gas business excluding MPI; the decks report both RG and consolidated leverage. Keep the two apart — RG net debt/EBITDA 2.0x vs consolidated 2.4x at FY2025.
+
+## 1.2 History
+
+| Year | Event | Why it matters |
+|---|---|---|
+| 1980 | Founded as PT Meta Epsi Pribumi Drilling by Arifin Panigoro — a drilling contractor | Service-company DNA: buys and operates other people's fields |
+| 1992 | Buys Tesoro's East Kalimantan interests (Tarakan) — becomes a producer | First "buy a mature field" deal |
+| 1994 | IPO on the Jakarta exchange as PT Medco Energi Internasional | |
+| 1995–96 | Buys 100% of Stanvac Indonesia (Rimau, South Sumatra); discovers Kaji-Semoga in Rimau (~350 mmbbl, vs ~70 mmbbl bought) | The one exploration success that built the company |
+| 1998–2004 | Asian crisis; creditors take control via New Links (Credit Suisse); Panigoro family buys control back in 2004 through Encore Energy | Family lost and regained the company once already — see 1.4 |
+| 2004–2010 | International push: Novus Petroleum (Australia, 2004), Libya Area 47 (2005, discoveries 2008), Oman Karim (2006), Yemen, Tunisia, US | Most of it later impaired |
+| 2011–2015 | Senoro-Toili gas developed for Donggi-Senoro LNG (first cargo 2015); Block A Aceh developed | Senoro is still the highest-margin asset |
+| 2014–2016 | Impairments on Libya, Yemen, Tunisia, Kampar; oil at US$40–50; net losses | Down-cycle behaviour — cut, impair, then buy |
+| 2016 | Buys 40% of South Natuna Sea B from ConocoPhillips (US$238m); with partners buys 82% of Newmont Nusa Tenggara (AMNT) for US$2.6bn; Hilmi Panigoro President Director, Roberto Lorato (ex-Premier Oil) CEO | Start of the acquisition era and of the professional-manager era |
+| 2017 | Block A Aceh onstream; buys back the 49% of Medco Power it did not own (US$161m); rights issue | |
+| 2018 | Salim's Diamond Bridge buys 21.6% from the Panigoro holdco; AMNT stake diluted to 23.1% for US$464m of proceeds | Co-investor arrives; mining stake monetised in part |
+| 2019 | Buys Ophir Energy plc (£408m ≈ US$541m in the company's table; US$518m per press reports): Thailand Bualuang, Vietnam Chim Sao, Tanzania, Mexico; exits Ophir's deep-water licences for US$19m | Added 69 mmboe 2P, but see 10.2 |
+| 2020 | COVID: capex cut from US$340m to US$207m, US$94m opex cuts, offices closed; US$650m bond refinances 2022 notes; US$120m rights issue; net loss US$189m (US$93m impairments) | |
+| 2022 | Buys ConocoPhillips' Corridor PSC (54%, operator) for US$1,355m; production jumps 94→163 mboepd; US$456m of bonds retired | Transformational; 2022 APAC Deal of the Year |
+| 2023 | Corridor PSC extension effective 20 Dec 2023 to 2043 — Pertamina takes 30%, MEDC diluted to 46%; AMMN IPO (7 Jul 2023); buys 20% of Oman Block 60/48 (US$713m, Dec) | Corridor tenure secured at the price of 8 points of interest |
+| 2024 | Sells Vietnam and Libya; Bualuang extended to 2035; buys 15.2bn new AMMN shares to hold 20.92%; TGI stake; Moody's outlook positive | |
+| 2025 | Buys Repsol's 24% of Corridor (US$425m, closed Q3) → 70%; Sakakemang 45% + TGI 40% (US$90m); Cendramas PSC Malaysia; Ijen, East Bali, Batam power onstream; Moody's Ba3 (Aug); US$80m dividend + US$30m buyback | Biggest deal year since 2022 |
+| 2026 | Q1 production 169 mboepd; new CEO Ronald Gunawan (Lorato to Commissioner); Nawasena PSC signed (Jun); 1H production 170 mboepd | |
+
+## 1.3 History — recap
+
+Three cycles of the same move. Buy a producing asset from a departing major (Stanvac 1995, ConocoPhillips 2016 and 2022, Ophir 2019, OQ 2023, Repsol 2025), fund it with bonds, repay from the field's own cash within two to three years, repeat. Organic exploration produced one great success (Kaji-Semoga, 1996) and a long tail of impairments (Libya, Yemen, Tunisia, Kampar, Block A). The international ventures of 2004–2010 were the one period the pattern broke, and they were written off in 2014–16. Since 2016 the company has bought only producing or near-producing assets, and each has been cash-positive on its own table.
+
+## 1.4 Owner's character
+
+Read from the record, not asserted:
+
+- **They hire outsiders to run it.** Since 2016 the CEO, COO and CFO have been career oil-industry professionals (Lorato and Gunawan ex-Premier Oil), with the family holding the President Director and President Commissioner chairs. The 2026 succession (Gunawan CEO, Amri Siahaan COO, Benny Setiawan CFO, Sanjeev Bansal Chief Growth Officer) was internal and orderly.
+- **They sell down rather than lose.** Having lost control to creditors in 1998–2004, the family has since kept leverage inside a stated ceiling (RG net debt/EBITDA target 3.0x, cut to 2.5x in 2021), raised equity three times (2017, 2019, 2020) and sold 21.6% to Salim in 2018 instead of over-borrowing.
+- **They cut fast in downturns.** 2020: capex −39% vs budget, US$94m opex out, offices closed, cash cost held at US$9.0/boe, dividend still paid (US$35m in 2021).
+- **They keep paying.** Dividends every year 2021–2025 (US$35m → US$80m), buybacks in 2024–25, total 2025 shareholder return ~US$110m — about 12% of CFO.
+- **They over-claim on guidance.** FY2025 guidance included ROE >15%; actual was 5%. The FY2025 deck says "met or exceeded all operational guidance" — true only if ROE is excluded without saying so. Same in Q1 2026 (annualised ~7%).
+
+## 1.5 RPT
+
+Related-party disclosure lives in the annual-report notes, which were not in the source set. What was recoverable (FY2024 audited FS, balance-sheet lines only):
+
+| Balance (US$ mn) | FY2023 | FY2024 |
+|---|---|---|
+| Trade receivables from related parties | 69.4 | 8.4 |
+| Other receivables from related parties | 64.3 | 109.2 |
+| Trade payables to related parties | 40.0 | 37.8 |
+| Other payables to related parties | 15.4 | 15.2 |
+
+The channels, from the structure of the business:
+
+- **Joint-operation balances.** As operator of Corridor, Natuna, SSB and Rimau, MEDC cash-calls partners and books the float as other receivables/payables. Normal for an operator; the size moves with capex.
+- **Crude purchases.** Cost of sales includes crude bought from partners/affiliates to fill contract volumes: US$138m (2023) → US$343m (2024), +148%. The 2024 jump coincides with Corridor's post-extension lower entitlement (54%→46%) and the need to deliver contracted gas/oil volumes. Who the sellers are and on what pricing basis is not disclosed in the decks.
+- **Group services.** Energy Building (SCBD) via Api Metra Graha, Medco Power O&M contracts, and the family holdco — amounts not in hand.
+- **Key management compensation** — not in hand; earlier reader notes flag it as large.
+
+RPT as a share of revenue or COGS cannot be computed from what is in hand. Item 1 of MISSING DATA.
+
+---
+
+# 02 — MODEL
+
+## 2.1 Upstream oil & gas — 91% of revenue, ~95% of EBITDA
+
+### Product
+
+Revenue by product FY2025 = US$2,395m consolidated; oil & gas US$2,189.5m = 91.4%.
+
+| Stream | Volume FY2025 | Realised price | Share of O&G volume | Share of O&G revenue [calculated, WI basis] |
+|---|---|---|---|---|
+| Fixed-price gas (PGN, PLN, Pusri, Singapore Natuna contracts) | ~54% of 579 bbtupd gas sales ≈ 313 bbtupd | US$5.8–6.8/mmbtu | ~39% of boe | ~25% |
+| Indexed gas (Corridor→Singapore/PGN, Senoro→DSLNG/PAU, Block A, Madura) | ~46% ≈ 266 bbtupd | ~US$10/mmbtu (FY2024) | ~33% of boe | ~36% |
+| Crude oil & condensate (Natuna, Oman, Thailand, Rimau, SSB) | 44 mbopd lifted | US$66.6/bbl | 28% of boe | ~39% |
+
+Revenue shares use the FY2024 fixed/indexed price split (US$5.8 / US$10.0) because FY2025's is not disclosed; blended gas price FY2025 US$6.8/mmbtu. Company's own volume split for 2026 guidance: 72% gas / 28% liquids, gas 54% fixed / 46% indexed.
+
+The product is therefore mostly a **gas annuity**: three-quarters of volume is gas, half of that on flat prices with take-or-pay, the rest indexed to oil (Singapore contracts) or LNG (Senoro). Oil is the swing factor.
+
+### Supply chain — the asset map
+
+```
+SOUTH SUMATRA HUB (≈45% of production)          NATUNA (13%)              SULAWESI (13%)
+Corridor 70% ── Grissik gas plant ──┐            South Natuna Sea B 40%    Senoro-Toili 30%
+South Sumatra Block 65%             ├─ TGI (40%) ─ Grissik–Duri (PHR Rokan) ─ Singapore (SembGas)   Senoro gas ─ DSLNG (LNG to JERA,
+Rimau 65%, Lematang 100%            │           Grissik–Batam–Singapore (GSPL)   ─ PGN, Pusri, PLN     Kyushu, Kogas) + PAU ammonia
+Sakakemang 45% (2027+)              └─ PGN trunkline (West Java)
+
+OMAN (15%)                          THAILAND (3–4%)         EAST JAVA / KALIMANTAN / ACEH (≈10%)
+Block 60 20% (OQ op.) ─ oil/gas     Bualuang 100% ─ oil     Madura, Sampang (gas to PGN/Indonesia Power),
+Karim Small Fields 58.5% ─ oil                              Bangkanai (PLN), Tarakan, Block A Aceh (Pertagas)
+```
+
+Pipeline exposure matters: the TGI rupture of January 2026 stopped downstream deliveries (Riau IPP and Sumatra buyers) for ~3 months without touching production. Buying 40% of TGI in 2025 puts MEDC on both sides of that pipe.
+
+### Purchase — reserves
+
+Reserves at 31 Dec 2025 = **2P 564 mmboe** (1P 386; 2C contingent 1,154). Domestic 483 mmboe = 86%; international 81 = 14%. Gas ~77% of 2P. Reserve life 11.4 years on the company's basis; 564 / (156.1 × 365 = 57.0 mmboe/yr) = 9.9 years [calculated] — the company's figure appears to use a lower production denominator.
+
+| 31 Dec | 1P (mmboe) | 2P | 2C | 2P RLI (co.) | 5-yr RRR | 5-yr FD&A US$/boe |
+|---|---|---|---|---|---|---|
+| 2019 | n/d | 301 | 491 | n/d | n/d | n/d |
+| 2020 | n/d | 310 | 1,125 | 9.9 | 1.2x | 10.2 |
+| 2021 | 278 | 389 | 996 | 13.4 | 1.6x | 4.6 |
+| 2022 | 353 | 481 | 1,040 | 8.4 | 1.9x | 7.4 |
+| 2023 | 381 | 539 | 1,041 | 10.6 | 2.3x | 6.7 |
+| 2024 | 354 | 493 | 896 | 10.4 | 1.9x | 5.1 |
+| 2025 | 386 | 564 | 1,154 | 11.4 | 2.1x | 5.6 |
+| Q1 2026 | 372 | 551 | 1,154 | 10.3 | — | — |
+
+2019–2020 from the FY2023 annual-report highlights table (web); 2021 onward from the Fact Books. The 2024 dip is the Vietnam/Libya sales; the 2025 rise is Corridor +24% (58 mmboe) and Sakakemang (26). 93% of 2025 2P is independently certified.
+
+### Purchase — how reserves are added: acquisition first, drill bit second
+
+The company's own "value from acquisitions" table (Q1 2026 deck):
+
+| Deal | Year | Price | 2P bought (mmboe) | US$/boe | Net cash flow since acquisition (to 31 Mar 2026) | Debt-repayment horizon |
+|---|---|---|---|---|---|---|
+| South Natuna Sea B (40%) | 2016 | 238 | 35 | 6.4 | 704 | 18 months |
+| Ophir Energy plc | 2019 | 541 | 69 | 7.9 | 568 | 18 months |
+| Corridor (54%) | 2022 | 1,355 | 124 | 10.9 | 1,811 | 24 months |
+| Oman Block 60 & 48 (20%) | 2023 | 713 | 53 | 13.5 | 248 | 36 months |
+| Corridor (+24%) | 2025 | 425 | 58 | 7.3 | 137 | 36 months |
+| Sakakemang 45% + TGI 40% | 2025 | 90 | 26 | n/a | 20 | 36 months |
+| Cendramas 50% (award) | 2026 | — | 15 | — | — | — |
+
+NCF = revenue − cost of sales − capex + D&A − current tax. Total spent US$3.36bn for 380 mmboe; cumulative NCF US$3.49bn. Oman at US$13.5/boe is the expensive one and the slowest to pay back. Organic F&D runs ~US$4/boe, acquisitions ~US$9/boe (FY2024 deck); the blend is the 5-yr FD&A of US$5.6.
+
+### Purchase — the asset base and its expiries
+
+Fixed assets US$3,637m = 43% of total assets US$8,363m (FY2025); investments (AMMN, DSLNG, Sarulla, TGI, etc.) US$1,866m = 22%. Oil and gas properties are depleted over reserves, so DD&A (US$548m = 25% of revenue) runs well above the ~US$6/boe it cost to buy the reserves — the government's share of production is not in the denominator.
+
+| Block | WI | Production FY2025 (mboepd) | % of total 156.1 | Contract | Expiry |
+|---|---|---|---|---|---|
+| Corridor | 70% | 59.6 (65.9 in Q1 26) | 38% | Cost recovery, extended | 2043 |
+| Senoro-Toili | 30% | 20.6 | 13% | JOB, cost recovery | 2047 |
+| South Natuna Sea B | 40% | 19.6 (24.5 in Q1 26) | 13% | Cost recovery | **2028** (extension being finalised) |
+| Oman Block 60 | 20% | 13.6 | 9% | EPSA | 2048 |
+| Oman Karim Small Fields | 58.5% | 9.0 | 6% | Service contract | 2040 |
+| South Sumatra Block | 65% | 8.6 | 6% | Cost recovery | 2033 |
+| Block A Aceh | 85% | 5.2 (3.3 in Q1 26) | 3% | Cost recovery | 2031 (extension sought) |
+| Thailand Bualuang | 100% | 4.6 | 3% | Concession | 2035 |
+| Madura + Sampang | 67.5–77.5% / 45% | 4.4 | 3% | Cost recovery | **2027** |
+| Rimau | 65% | 3.1 | 2% | Gross split | 2043 |
+| Lematang | 100% | 2.6 | 2% | Cost recovery | **2027** |
+| Bangkanai | 70% | 2.6 | 2% | Cost recovery | 2033 (extension sought) |
+| Tarakan, Simenggaris, others | | 2.5 | 2% | | |
+
+About 18% of production sits in blocks expiring by 2028. Indonesian PSC extensions have been granted routinely (Corridor, Senoro, Rimau, Tarakan, Bualuang all extended) but always at a cost: Corridor's 2023 extension carried a US$250m signature bonus, US$250m of firm work and 30% to Pertamina.
+
+### Purchase — exploration and impairments
+
+Exploration capex is small: US$10–43m a year (2021–2025), 2–10% of E&P capex. Beluga (100%, awarded 2023) drilled a dry hole in 2025, expensed. Bangkanai holds ~300 bcf of uncommitted gas awaiting a pipeline or mini-LNG outlet. Tanzania Blocks 1&4 (20%, Shell) carry large contingent resources but no development decision since 2019. Impairments run through the cycle: US$93m (Q4 2020), Simenggaris and Sarulla (2022, unquantified), US$59.6m (2023: Block A gas plant US$59m, Libya US$50m write-down, US$44m VAT write-off), US$29.5m (2024), "larger non-cash impairments" and Beluga in 2025 (unquantified). Treat US$30–60m a year as normal.
+
+### Process — production and cost
+
+Steps: well → field separation → gas processing (Grissik, Senoro, Block A) → pipeline/LNG plant; oil → FPSO or terminal → lifting. Operatorship is in-house for ~80% of volume.
+
+Cost of sales, oil & gas, FY2024 (from the audited FS; FY2025 not in hand). Anchor: O&G revenue US$2,178m.
+
+| Line | US$ mn | % of O&G revenue | US$/boe [calculated, 55.5 mmboe] |
+|---|---|---|---|
+| Production / lifting cost | 417 | 19% | 7.5 |
+| DD&A | 548 | 25% | 9.9 |
+| Crude oil purchases (to fill contract volumes) | 343 | 16% | 6.2 |
+| Exploration expense | 7 | 0.3% | 0.1 |
+| **Cost of sales** | **1,315** | **60%** | **23.7** |
+
+Company-defined cash cost: US$9.0 (2020), 9.5 (2021), 6.9 (2022, Corridor mix), 8.3 (2023), 8.2 (2024), 8.6 (2025), 9.0 (Q1 2026) per boe; guidance \<US$10. The 2022 low is Corridor's scale; the drift up since is Oman and the mature Natuna/SSB fields. SG&A US$220m = 9% of revenue.
+
+### Distribute — government take and the PSC funds flow
+
+Indonesian cost-recovery PSC, on US$100 of gross revenue with costs at 50% (company's own worked example, Q1 2026 Fact Book):
+
+```
+Gross revenue 100
+ ├─ First Tranche Petroleum 20% ─ split govt/contractor
+ ├─ Cost recovery 50 ──────────────────────────► contractor (recovers its spend)
+ └─ Profit split (gas 35% contractor pre-tax-grossed to 56%) ─► taxable income 28
+                                                  tax 37.6% (22% CIT + 20% branch profit) = 11
+Government 33  (equity share 22 + tax 11)     Contractor 67 (50 cost recovery + 17 net profit)
+```
+
+Under gross split (Rimau, Tarakan): contractor 83% of gross before tax, 71 after costs and tax; government 29. The point: of the **profit pool** (revenue less cost), the government keeps ~66% under cost recovery and ~58% under gross split. Contractor profit-share entitlements by block: Corridor 22.3% oil / 39% gas; Senoro 35/40; Natuna 15/35; SSB 12.5/27.5; Block A 15/40; Oman Block 60 up to 35/40 with tax borne by the government. Because the government takes its share in kind, none of this appears as a cost line — it is simply absent from revenue. Volume disclosure is on a working-interest basis; revenue is on an entitlement basis, which is why revenue/boe (US$38) sits below the blended realised price (~US$44/boe [calculated]).
+
+### Distribute — ASP and volume
+
+| | FY2019 | FY2020 | FY2021 | FY2022 | FY2023 | FY2024 | FY2025 | Q1 2026 |
+|---|---|---|---|---|---|---|---|---|
+| Production, mboepd | 103 | 100 | 94 | 163 | 160 | 152 | 156 | 169 |
+| — oil, mbopd | 39.3 | 40.4 | 34.4 | 33.5 | 32.1 | 41.3 | 43.3 | n/d |
+| — gas, mmscfd | 342 | 322 | 320 | 704 | 697 | 603 | 615 | 661 |
+| Oil lifting, mbopd | 38.7 | 39.3 | 33.6 | 32.6 | 30.8 | 40.6 | 44 | n/d |
+| Gas sales, bbtupd | 324 | 302 | 300 | 667 | 659 | 562 | 579 | n/d |
+| Realised oil, US$/bbl | 62.5 | 40.3 | 68.0 | 96.2 | 77.9 | 78.0 | 66.6 | 75.1 (Mar: 94.0) |
+| Realised gas, US$/mmbtu | 6.7 | 5.2 | 6.5 | 8.2 | 7.0 | 7.0 | 6.8 | n/d |
+| — fixed | n/d | 6.0 | 6.4 | 6.8 | 5.9 | 5.8 | n/d | |
+| — indexed | n/d | 4.2 | 6.7 | 11.6 | 9.9 | 10.0 | n/d | |
+| Cash cost, US$/boe | ~9.3 | 9.0 | 9.5 | 6.9 | 8.3 | 8.2 | 8.6 | 9.0 |
+
+2022 step-up is Corridor (consolidated from 3 Mar 2022). 2024 gas down 13%: Corridor entitlement fell from 54% to 46% on 1 Jan 2024. 2025–26 up: Corridor back to 70% (Oct 2025), Forel/Terubuk at Natuna, Oman Bisat-C. Realised oil tracks Brent less US$2–3; indexed gas ≈ 12–13% of Brent per mmbtu.
+
+### Distribute — contracts and customers
+
+Fixed-price backbone (take-or-pay; buyers must pay for ~80–90% of contracted volume whether or not they lift):
+
+| Buyer | Field | Volume | Price basis | Expiry |
+|---|---|---|---|---|
+| SembGas (Singapore) | Natuna B | TCQ 2,888 tbtu + new 105 tbtu (2024–28) | fixed | Jul/Oct 2028 |
+| PGN (West Java) | Corridor | DCQ 410 bbtud | indexed | Dec 2028 |
+| Gas Supply Pte Ltd (Singapore) | Corridor | DCQ 121 bbtud | indexed (HSFO/Brent) | Dec 2028 |
+| Pertamina Hulu Rokan | Corridor | DCQ ~105 bbtud | indexed | Dec 2026 |
+| PT Pusri (fertiliser) | Corridor | DCQ 62 bbtud | indexed | Dec 2028 |
+| PLN South Sumatra | SSB/Lematang | TCQ 70 tbtu | fixed | Jan 2027 |
+| DSLNG (→ JERA, Kyushu, Kogas) | Senoro | DCQ 250 mmscfd | LNG-indexed | Dec 2027 |
+| PAU (ammonia) | Senoro | DCQ 62 mmscfd | indexed | Dec 2027 |
+| Pertagas Niaga | Block A | DCQ 54 bbtud | indexed | Aug 2031 |
+| PLN Bangkanai / Indonesia Power Sampang / PGN Madura | various | 20 bbtud / ~140 tbtu / 8–28 tbtu | mixed | 2027–2033 |
+
+Concentration: PGN, PLN and Pertamina entities together buy roughly 60% of gas; Singapore (SembGas + GSPL) ~20%; DSLNG/PAU ~15%. Most contracts date from the early 2000s and have been rolled over. The 2026–2028 wall — Corridor's PGN/GSPL/Pusri contracts, Natuna's SembGas contract and the Natuna PSC itself all end in 2028 — is the next re-pricing event. Policy overlay: HGBT caps price at US$6.50–7.00/mmbtu for seven industrial sectors (fertiliser included), so domestic upside is capped even where contracts are indexed.
+
+## 2.2 Power — 7% of revenue, 4–5% of EBITDA
+
+Revenue FY2025 US$177.6m; EBITDA US$57m (32% margin); capex US$35m. Sales 4,371 GWh (renewables 1,095 GWh = 25% of sales; the company's 26%-by-2025 target is on installed capacity, and was met). Realised IPP tariff ~3.8 US¢/kWh ex-fuel. Assets: Riau 275 MW CCGT (PLN 20-yr PPA, COD Feb 2022, US$290m, 51%), Batam gas IPPs (ELB expanded to 109 MW Nov 2025), Ijen geothermal 35 MW (commissioned 2025 per the decks — a call-transcript summary says Feb 2026, unresolved; US$140m, PPA for 110 MW), Sumbawa PV 26 MWp, East Bali PV 25 MWp (Jun 2025, US$22m), Sarulla geothermal minority (part sold 2020), O&M contracts ~2 GW. Pipeline: Ijen Phase 2 (55 MW, FID 2026), Bonjol and Samosir geothermal, and a >2 GWp solar + >2 GWh battery export project to Singapore (Pulau Bulan; 600 MW conditional import licence, FID 2026, COD 2029). Gas IPPs burn Medco gas — the segment is partly a captive customer.
+
+## 2.3 Copper & gold — AMMN, 20.92%, equity-accounted
+
+What MEDC owns: 20.92% of PT Amman Mineral Internasional (Batu Hijau mine, Sumbawa; Elang undeveloped deposit; smelter commissioned 2025). Reserves (31 Dec 2024, per the Q1 2026 deck): 22.1 bn lb copper, 6.3 Moz gold; reserves plus resources 35.1 bn lb / 13.0 Moz. The FY2024–25 fact books quote 23.4 bn lb / 32.7 Moz on a different (unlabelled) basis — the same vintage has been carried unchanged for 18 months.
+
+| AMMN | FY2019 | FY2020 | FY2021 | FY2022 | FY2023 | FY2024 | FY2025 | Q1 2026 |
+|---|---|---|---|---|---|---|---|---|
+| Copper production, mn lb | 130 | 294 | 234 | 464 | 312 | 395 | 209 | 101 |
+| Gold production, koz | 56 | 132 | 156 | 731 | 464 | 803 | 103 | 136 |
+| Realised copper, US$/lb | 2.50 | 2.87 | 4.2–4.5 | 3.56 | 3.8 | 4.15 | n/d | n/d |
+| Realised gold, US$/oz | 1,342 | 1,832 | ~1,780 | 1,737 | 1,948 | 2,397 | n/d | n/d |
+| AMMN revenue, US$ mn | | | | | | 2,663 | 1,850 | 808 |
+| AMMN net income, US$ mn | | | | | | ~630 | 249 | 163 |
+| Contribution to MEDC NI, US$ mn | 25 | n/d | 26 | ~253 | 55 | 133 | 52 | 34 |
+
+2025 was the transition year: Phase 7 ore exhausted, Phase 8 in waste-stripping (fresh ore mined rose from 1 Mt to 38 Mt only in Q1 2026), the smelter re-commissioned after 2025 leaks and reached full mine throughput in June 2026. 2026 guidance: 900 kt concentrate, 485 mn lb copper, 579 koz gold, 163 kt cathode. Policy: PP 19/2025 tiered royalties — copper 10% below US$7/lb rising to 17% above US$10/lb; gold 7% below US$1,800/oz rising to 16% above US$3,000/oz — replacing 4%/2% flat rates; concentrate export duty (PMK 38/2024) applies only while concentrate is still exported.
+
+---
+
+# 03 — DEMAND
+
+## 3.1 Gas
+
+Global gas is ~4,200 bcm/yr; ~30% is traded (55% pipeline, 45% LNG). Demand growth is in Asia; supply growth 2026–28 is a Qatar/US LNG wave that most forecasters expect to soften spot LNG (JKM) from 2026.
+
+Indonesia consumes ~5.8 tbtu/day (~2% of world). By sector: industry 31%, fertiliser 12%, power 12%, domestic LNG 10%, exports 30% (LNG 22%, pipeline 8%). Domestic demand is flat-to-rising; exports fall as contracts expire and gas is redirected home. Two of MEDC's largest outlets are policy-exposed: Singapore pipeline exports (Corridor and Natuna contracts to 2028, renewal subject to government approval) and HGBT-capped industrial gas. The HGBT scheme was renewed in Feb 2025 at US$6.50 (feedstock) / US$7.00 (fuel) per mmbtu for 253 users in seven sectors; the government reviewed it in 2025 after industry complaints about price rises.
+
+Power demand for gas is price-limited: PLN dispatches coal (US$3–4/mmbtu equivalent) before gas, so gas-to-power grows only where pipelines and PLN's RUPTL put it (Sumatra, Batam, Java peakers).
+
+## 3.2 Oil
+
+IEA (June 2026): 2026 demand 103.3 mb/d, down 1.1 mb/d on 2025 after the Hormuz disruption pushed prices up and Q2 demand fell ~5 mb/d YoY — the first quarterly decline since 2020; 2027 demand 105.3 vs supply 110.3 mb/d, an ~8 mb/d surplus if Gulf supply and OPEC+ targets recover. Indonesia consumes ~1.6 mb/d against ~0.6 mb/d production and imports the rest; ICP averaged ~US$86 for Jan–May 2026 (April US$117, May US$107) against a US$70 budget assumption.
+
+## 3.3 Copper and gold
+
+Copper demand ~31 Mt (22 Mt mined, 9 Mt recycled); consensus growth ~45% by 2035 on grid, renewables (2–5x copper intensity of thermal), EVs and data centres. Gold demand is investment-led; the price roughly doubled during 2025 (open US$2,625 → close US$4,318) — the single biggest driver of AMMN's 2026 earnings recovery.
+
+---
+
+# 04 — SUPPLY
+
+## 4.1 Oil and gas
+
+Global: OPEC+ has been unwinding cuts since April 2025; US shale is flat at high prices but short-lived; the 2026 Hormuz shutdown (130 → ~10 vessel transits/day) is a supply shock, not a structural tightening — the IEA's 2027 surplus assumes it reverses.
+
+Indonesia: oil 576 kbopd (2024), targets 600 (2025) and 610 (2026), ~70% of wells mature; gas roughly 6 bscfd (approximate; no series fetched) with new supply concentrated in Tangguh, Masela (2030s) and East Kalimantan. Cost recovery reimbursed to contractors ~US$8.5bn (2026) rising to US$10–11.5bn (2027) as the state pushes legacy fields harder. Fiscal regime:
+
+| Regime | Contractor base split (oil / gas) | Cost treatment | MEDC blocks |
+|---|---|---|---|
+| Cost-recovery PSC (1960s design) | 15–35% / 27.5–45% post-tax by block | Costs recovered before profit split; FTP 20%; DMO 25% of entitlement at market price | Corridor, Senoro, Natuna, SSB, Block A, Madura, Bangkanai |
+| Gross split 2017 (Permen 8/2017) | 57 / 52 pre-tax, ±variable/progressive | No cost recovery; contractor bears all cost | Rimau, Tarakan |
+| "New" gross split (Permen 13/2024) | 47 / 49 base + 3 variable factors, convertible to cost recovery | as above, simpler | applies to new/extended blocks |
+
+Peers: ENRG (Energi Mega Persada) is the only comparable listed Indonesian independent — market cap Rp31.6tn, EV/EBITDA 6.5x, net debt Rp5.7tn, roughly a third of MEDC's production. Regional independents such as PTTEP run all-in unit costs around US$28–30/boe and trade near 3–4x EV/EBITDA (approximate, from memory — not fetched this session); MEDC's cash cost of US$8.6 plus DD&A US$9.6 is US$18/boe before G&A and interest [calculated].
+
+## 4.2 Copper and gold
+
+Mined copper is concentrated (Chile, DRC, Peru ~50%); grades decline ~1% a year; discovery-to-production averages 16 years; Wood Mackenzie and others project a deficit widening into the 2030s. Indonesia (Grasberg, Batu Hijau) is ~4% of mine supply. Policy is the local swing: export ban on concentrate since 2023 with paid exemptions during smelter construction, export duty, and the 2025 royalty tiers above. AMMN's smelter (reached full throughput June 2026) removes the export-permit risk but adds a processing step that lost money in 2025.
+
+---
+
+# 05 — KEY VARIABLES
+
+Weights on FY2025 base (O&G revenue US$2,190m; EBITDA US$1,264m). Sensitivities are gross working-interest revenue; net EBITDA effect after government share is ~55–65% of the gross figure.
+
+| # | Variable | Where it bites | FY2025 level | Gross revenue sensitivity [calculated] |
+|---|---|---|---|---|
+| 1 | Brent / ICP | 44 mbopd oil (28% of boe, ~40% of O&G revenue) + indexed gas | US$66.6/bbl realised; Q1 26 US$75; Aug 26 Brent ~US$90 | US$1/bbl = 44,000 × 365 = US$16m/yr on oil; plus ~US$1.2m per US$1/bbl via indexed gas at 12–13% linkage |
+| 2 | Indexed gas price (HSFO/Brent, JKM) | 46% of gas ≈ 266 bbtupd ≈ 97 tbtu/yr | ~US$10/mmbtu | US$1/mmbtu = US$97m/yr |
+| 3 | Fixed gas contract price at renewal | 54% of gas ≈ 313 bbtupd ≈ 114 tbtu/yr | US$5.8–6.8/mmbtu; 2027–28 renewal wall | US$1/mmbtu = US$114m/yr, but only on renewal |
+| 4 | Entitlement / PSC terms | Government share of production | ~12% of WI-basis revenue not booked [calculated] | Corridor 54→46→70% moved gas sales by ±100 mmscfd |
+| 5 | Production volume and decline | All | 156 mboepd; guide 165–170 for 2026 | 1 mboepd ≈ US$14m revenue at US$38/boe booked |
+| 6 | Cash cost per boe | Lifting | US$8.6; guide \<US$10 | US$1/boe = US$57m EBITDA |
+| 7 | Interest rate / refinancing | US$3.6bn gross debt, 6.6% cost of funds | Finance cost US$324m = 26% of EBITDA | 100 bp = US$36m |
+| 8 | AMMN earnings | Net income only | US$52m (2025) vs US$133m (2024) | 20.92% of AMMN net income; copper US$1/lb ≈ US$485m AMMN revenue at 2026 guidance ≈ ~US$60m to MEDC NI after tax/royalty [calculated, rough] |
+| 9 | USD/IDR | IDR bonds, IDR opex | ~Rp16,300 | small; reporting currency is USD |
+
+Ranking by what moved the numbers 2022–2025: (1) entitlement changes at Corridor, (2) oil price, (3) AMMN, (4) interest. Fixed gas made revenue insensitive to gas price; it also caps the upside.
+
+---
+
+# 06 — VICISSITUDES
+
+| Episode | What happened to MEDC | Read-across |
+|---|---|---|
+| 1998–2004 Asian crisis | Family lost control to creditors (New Links / Credit Suisse), bought it back in 2004 | Leverage has been managed against a covenant ceiling ever since |
+| 2014–2016 oil collapse (Brent US$99 → 44) | Impairments on Libya, Yemen, Tunisia, Kampar; net losses; international expansion abandoned; management replaced 2016 | Down-cycles are used to reset the portfolio and the team |
+| 2020 COVID (Brent US$42; realised US$40.3) | Revenue US$1,100m, EBITDA US$494m (−20%), net loss US$189m; capex cut 39%; US$94m opex out; net debt/EBITDA 4.5x consolidated; rights issue US$120m; dividend maintained | Fixed gas held EBITDA at ~45% margin even at US$40 oil |
+| 2022 spike (realised US$96) + Corridor | EBITDA US$1,593m, net income US$531m, leverage 1.5x in one year | The business de-levers very fast at high prices |
+| 2023–24 Corridor extension | Entitlement 54→46%, gas sales −13%, crude purchases +148% to fill contracts | Extension cost was paid in barrels, not cash |
+| 2025 AMMN transition + 15% lower oil | EBITDA flat at US$1,264m; net income −72% | EBITDA is the operating signal, not NI |
+| Jan–Apr 2026 TGI rupture | Downstream deliveries stopped ~3 months; production unaffected; buyers' take-or-pay protects revenue | Infrastructure, not reservoir, is the operational risk in Sumatra |
+| Feb 2026– Iran war / Hormuz | Oman Block 60 (9% of production) "no disruption to personnel, operations or liftings"; political-violence insurance covers ~15% of EBITDA at US$65 Brent; oil spiked to US$94 in March | Oman is inside the Gulf but outside the strait — it benefited |
+
+A repeat of 2020 (US$40 oil for a year) on today's base [calculated]: oil 15.8 mmbbl × (66.6 − 40) = −US$420m; indexed gas 97 tbtu × (10 − 5, at 12.5% of Brent) = −US$485m; gross −US$905m, of which roughly 60% reaches MEDC after the government's share → EBITDA ~US$700m from US$1,264m. Consolidated net debt/EBITDA ~4.2x — the 2020 experience again, and outside Moody's 3.5x debt/EBITDA tolerance until prices recover. The exposure is larger than in 2020 because indexed gas is now 46% of gas, not 26%.
+
+---
+
+# 07 — FINANCIALS
+
+Seven years are in hand from company decks (FY2019–FY2025) plus Q1 2026; FY2018–19 headline items come from the FY2023 annual-report highlights table (web). No annual report or audited statement was read directly, so line-item detail below the deck level (tax, minorities, working-capital notes) is missing. US$ mn.
+
+## 7.1 Asset
+
+| 31 Dec | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 | Q1 26 |
+|---|---|---|---|---|---|---|---|
+| Cash & equivalents (incl. restricted) | 447 | 933 | 737 | 425 | 697 | 633 | 598 |
+| — of which Restricted Group | 358 | 795 | 572 | 290 | 586 | 475 | 474 |
+| Investments (AMMN, DSLNG, Sarulla, TGI…) | 865 | 1,106 | 1,422 | 1,664 | 1,831 | 1,866 | 1,908 |
+| Fixed assets (O&G properties, power plants) | 2,411 | 2,206 | 3,100 | 3,401 | 3,258 | 3,637 | 3,544 |
+| Other | 2,160 | 1,439 | 1,673 | 1,978 | 2,141 | 2,227 | 2,223 |
+| **Total assets** | **5,883** | **5,684** | **6,932** | **7,468** | **7,927** | **8,363** | **8,273** |
+| Fixed assets % of total | 41% | 39% | 45% | 46% | 41% | 43% | 43% |
+| Investments % of total | 15% | 19% | 21% | 22% | 23% | 22% | 23% |
+| Asset turnover (revenue/assets) [calc.] | 19% | 22% | 33% | 30% | 30% | 29% | — |
+
+### Working capital
+
+Cash swings with deals: 2021 built to US$933m ahead of Corridor (US$400m 2028 notes issued Q4 2021), 2022 spent, 2023 down to US$425m after Oman (70% debt-funded), rebuilt to US$697m in 2024, spent again on Corridor +24% and Sakakemang in 2025. The current ratio has sat at 1.1–1.3x since 2022. Other receivables from related parties rose from US$64m to US$109m in 2024 (operator cash-calls to partners). Trade receivables from related parties fell US$69m → US$8m in the same year, i.e. an affiliated buyer settled or was reclassified — not explained in the sources in hand.
+
+### Fixed asset
+
+Movements: 2021 down (Ophir-era impairments, low capex US$114m); 2022 +US$894m (Corridor); 2023 +US$301m (Oman Block 60 US$713m less Vietnam/Libya moved to held-for-sale); 2024 −US$143m (Vietnam and Libya sold, DD&A US$548m > capex US$436m); 2025 +US$379m (Corridor +24% US$425m, Sakakemang/TGI US$90m, capex US$437m, DD&A US$548m). The stock is being replaced by acquisition at roughly the rate it depletes.
+
+Investments grew faster than total assets every year (15% → 23% of assets): AMMN top-ups (Jan 2024), TGI (2025), DSLNG. This is the line that makes MEDC's book value look like a holding company.
+
+## 7.2 Liability
+
+| 31 Dec | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 | Q1 26 |
+|---|---|---|---|---|---|---|---|
+| Bank loans (incl. RBL facility) | 526 | 427 | 904 | 1,020 | 1,316 | 1,715 | 1,708 |
+| Bonds (USD notes + IDR bonds) | 2,201 | 2,562 | 2,247 | 2,275 | 1,984 | 1,932 | 1,812 |
+| **Gross debt, consolidated** | **2,728** | **2,989** | **3,151** | **3,295** | **3,300** | **3,646** | **3,520** |
+| — Restricted Group | 2,320 | 2,614 | 2,712 | 2,818 | 2,745 | 2,879 | 2,780 |
+| Other liabilities (payables, ARO, deferred tax, leases) | 1,960 | 1,465 | 2,033 | 2,145 | 2,276 | 2,356 | 2,346 |
+| **Total liabilities** | **4,687** | **4,455** | **5,184** | **5,441** | **5,576** | **6,003** | **5,867** |
+| Net debt, consolidated [calc.] | 2,281 | 2,056 | 2,414 | 2,870 | 2,603 | 3,013 | 2,922 |
+| Net debt / EBITDA, consolidated | 4.5x | 2.9x | 1.5x | 2.3x | 2.0x | 2.4x | 2.1x |
+| Net debt / EBITDA, RG | 4.2x | 2.7x | 1.4x | 2.1x | 1.8x | 2.0x | 1.7x |
+| EBITDA / interest | 1.9x | 3.3x | 7.2x | 5.5x | 5.7x | 4.4x | 4.5x |
+| Debt / equity | 2.6x | 2.6x | 1.9x | 1.8x | 1.5x | 1.7x | 1.6x |
+
+### Business payable
+
+Other payables mirror other receivables — as operator MEDC owes partners their share of lifted product and joint-account balances. Not separately quantified in the decks.
+
+### Business loan
+
+The debt mix has shifted from bonds to bank loans: bonds 81% of debt in 2020, 53% in 2025. Steps: Q1 2020 US$650m notes (refinancing 2022 notes); Q4 2021 US$400m 2028 notes + 2-yr amortising loan for Corridor (US$850m acquisition debt in total, US$415m repaid within the year); 2022 US$456m of USD notes tendered, RBL facility raised to US$420m; 2023 US$429m tender, ~US$500m of RG debt attributable to Oman; 2025 ~US$530m of bonds redeemed, ~US$400m new 144A bond issued, IDR bonds pre-funded 2026 maturities (~US$60m negative carry); Q1 2026 US$108m of the 2027 notes redeemed. Known instruments (web, cbonds): 7.375% due May 2026 (retired), 6.375% due Jan 2027, IDR 7.3% due Jul 2028, plus the 2028 USD notes and the 2025 144A issue. Cost of funds 6.6%; average life 4.7 years; undrawn committed facilities US$1.8bn (Q1 2026). Ratings: Fitch BB−, S&P BB−, Moody's Ba3 (upgraded from B1, 26 Aug 2025), Pefindo idAA−. No instrument-by-instrument maturity ladder is disclosed in the decks.
+
+Why gross debt keeps rising while leverage falls: acquisitions arrive with EBITDA. Debt went up US$918m from 2020 to 2025; EBITDA went up US$770m.
+
+## 7.3 Equity
+
+| | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 | Q1 26 |
+|---|---|---|---|---|---|---|---|
+| Total equity | 1,195 | 1,229 | 1,748 | 2,028 | 2,351 | 2,360 | 2,406 |
+| Net income attributable | (193) | 47 | 531 | 331 | 367 | 101 | 67 |
+| Dividends paid | — | 35 | 60 | 65 | 45–70* | 80 | — |
+| Buybacks | — | — | — | — | 35m shares | 461m shares (~30) | — |
+| ROE [calc., NI/closing equity] | −16% | 4% | 30% | 16% | 16% | 4% | ~11% ann. |
+
+*FY2024 dividend is stated as US$70m in the FY2024 deck and US$44.9m in the FY2025 press-release table — unresolved. Rights issues: 2017, 2019 and 2020 (US$120m). Equity has doubled since 2020 almost entirely from retained earnings (cumulative NI 2020–25 US$1,184m; cumulative dividends + buybacks ~US$300m). Payout on NI ran 11–20% in 2022–24 and 79% in 2025 — the dividend is set against cash flow, not against the AMMN-distorted net income line.
+
+## 7.4 Cashflow
+
+| | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 | Q1 25 | Q1 26 |
+|---|---|---|---|---|---|---|---|---|
+| Cash flow from operations | 440 | 457 | 723 | 1,116 | 1,220 | 906 | 211 | 273 |
+| Capex (O&G + power) | 207 | 114 | 302 | 333 | 436 | 437 | 89 | 90 |
+| Free cash flow before acquisitions [calc.] | 233 | 343 | 421 | 783 | 784 | 469 | 122 | 183 |
+| Acquisitions | — | — | 1,355 | 713 | ~AMMN top-up | 515 | — | — |
+| Dividends + buybacks | — | 35 | 60 | 65 | ~70 | ~110 | — | — |
+| Change in gross debt | — | +261 | +162 | +144 | +5 | +346 | | −126 |
+
+2020–21 CFO figures are chart reconstructions (single source); 2022 onward agree across three decks. Cumulative 2020–25: CFO US$4,862m plus new debt US$918m = US$5,780m of sources; capex US$1,829m, acquisitions ~US$2,600m and shareholder returns ~US$340m = US$4,770m of uses; cash rose only US$186m. About US$0.8bn of uses is therefore not visible in the decks — the Jan 2024 AMMN share purchase (amount undisclosed), deferred consideration on Oman, lease and interest payments if CFO is stated before them. Only the cash-flow statement closes this. CFO fell US$314m in 2025 on flat EBITDA: the decks give no working-capital or tax bridge; the candidates are higher PSC taxes paid, the TGI/Corridor entitlement timing, and the US$60m negative carry. Flagged.
+
+Cash conversion: cumulative NI 2020–25 US$1,184m vs CFO US$4,862m — the 4x gap is DD&A (US$2,700m) plus non-cash impairments and AMMN equity income that arrives as dividends, not operating cash.
+
+## 7.5 Income statement
+
+| | FY2018 | FY2019 | FY2020 | FY2021 | FY2022 | FY2023 | FY2024 | FY2025 | Q1 26 |
+|---|---|---|---|---|---|---|---|---|---|
+| Revenue | ~1,100 | ~1,400 | 1,100 | 1,252† | 2,312 | 2,249 | 2,399 | 2,395 | 668 |
+| — oil & gas | | | 960 | 1,187 | 2,190 | 1,961 | 2,178 | 2,190 | 617 |
+| — power | | | 136 | 122 | 114 | 281 | 205 | 178 | 43 |
+| Gross profit | | | 314 | 551 | 1,246 | 1,034 | 934 | 936 | 232 |
+| Gross margin | | | 29% | 44% | 54% | 46% | 39% | 39% | 35% |
+| EBITDA | 523 | 620 | 494 | 667† | 1,593 | 1,255 | 1,272 | 1,264 | 351 |
+| EBITDA margin | | | 45% | 53% | 69% | 56% | 53% | 53% | 53% |
+| DD&A | | | 333 | 273 | 562 | 453 | 548 | 548 | |
+| SG&A | | | 157 | 161 | 220 | 241 | 217 | 220 | |
+| Operating income | | | 157 | 389 | 1,026 | 792 | 717 | 708 | |
+| Finance cost | | | n/d | n/d | n/d | n/d | 307 | 324 | 81 |
+| Share of AMMN | | 25 | n/d | 26 | ~253 | 55 | 133 | 52 | 34 |
+| Impairments (where quantified) | | | 93 | n/d | n/d | 60 | 30 | n/d ("larger") | |
+| **Net income attributable** | | | **(193)** | **47** | **531** | **331** | **367** | **101** | **67** |
+| Net margin | | | −18% | 4% | 23% | 15% | 15% | 4% | 10% |
+
+†FY2021 revenue and EBITDA were restated from 1,323 / 714 to 1,252 / 667 between the FY2021 and FY2022 fact books with no explanation. FY2018–19 revenue are approximate (web, rounded); FY2019 EBITDA shows as 620 or 627 depending on deck.
+
+Year by year: **2020** — oil US$40, COVID, EBITDA −20%, US$93m impairments, loss. **2021** — recovery to US$68 oil but Corridor not yet in; thin profit. **2022** — Corridor (ten months) plus US$96 oil; EBITDA margin 69%, ROE 30%; but note gross margin 54% with DD&A stepping up to US$562m. **2023** — oil −19%, full-year Corridor, Oman for 19 days; AMMN contribution collapsed to US$55m (Batu Hijau flooding and export-permit delay); Block A impairment US$59m, Libya US$50m, VAT write-off US$44m. **2024** — Corridor entitlement down to 46% and gas sales −13%, offset by oil volume +29% (Oman full year, Natuna) at flat US$78; AMMN back to US$133m; finance cost US$307m. **2025** — oil −15% to US$66.6, EBITDA flat on volume and cost; AMMN US$52m; Beluga dry hole, impairments, disposal losses; net income −72%. **Q1 2026** — production +18%, oil US$75 (US$94 in March), AMMN US$34m; net income ×4 YoY.
+
+The wedge below operating income is large and undisclosed: FY2025 operating income US$708m less finance US$324m plus AMMN US$52m = US$436m pre-tax; net income US$101m implies US$335m of tax, impairments and minorities (77% of pre-tax) versus ~US$176m (32%) in FY2024. PSC taxes are levied per block on entitlement profit at 40–48% and do not fall when a dry hole or an impairment is booked at the parent — that is why net income is so much more volatile than EBITDA.
+
+---
+
+# 08 — SECTION
+
+## 8.1 Capital structure and what the market is paying for
+
+At Rp1,205 (29 May 2026) and 24.68bn shares, market cap Rp29.7tn ≈ US$1.82bn at Rp16,300 [calculated].
+
+| | US$ mn | Comment |
+|---|---|---|
+| Market capitalisation | ~1,820 | |
+| + consolidated net debt (Q1 2026) | 2,922 | |
+| = Enterprise value | ~4,740 | |
+| EV / FY2025 EBITDA | 3.7x | ENRG trades at 6.5x |
+| Value of 20.92% of AMMN at Rp238tn market cap | ~3,050 | Rp49.8tn [calculated] |
+| Implied EV of oil & gas + power | ~1,690 | EV less AMMN stake |
+| Implied multiple on O&G + power EBITDA (US$1,264m) | 1.3x | |
+| Implied equity value of O&G + power (after net debt) | ~ −1,230 | negative |
+
+Either the market applies a holding-company discount and a leverage discount to the AMMN stake, or it treats the oil and gas business as a depleting asset with a short PSC fuse and continuing acquisition risk. Both are defensible; the arithmetic is what it is. Trailing P/E is 11.6x on a net income that AMMN pulled down; forward P/E is quoted at 3.7x by the same source.
+
+## 8.2 Production by block, 2021–Q1 2026 (mboepd, working interest)
+
+| Block | FY21 | FY22 | FY23 | FY24 | FY25 | Q1 26 | Note |
+|---|---|---|---|---|---|---|---|
+| Corridor | — | 70.2 | 74.4 | 58.0 | 59.6 | 65.9 | 54% Mar-22; 46% Jan-24; 70% Oct-25 |
+| Senoro-Toili | 19.1 | 21.7 | 20.8 | 20.5 | 20.6 | 21.7 | Phase 2A onstream 2025 |
+| South Natuna Sea B | 18.3 | 17.3 | 14.7 | 13.2 | 19.6 | 24.5 | Forel and Terubuk onstream 2025 |
+| Oman Block 60 | — | — | 0.7 | 12.6 | 13.6 | 13.8 | Bisat-C/ABB 2025; gross 73–77 mboepd |
+| Oman Karim SF (service) | 7.2 | 7.4 | 7.6 | 8.9 | 9.0 | 8.9 | |
+| South Sumatra Block | 8.9 | 9.3 | 9.4 | 10.3 | 8.6 | 9.4 | |
+| Block A Aceh | 7.1 | 8.4 | 6.8 | 6.8 | 5.2 | 3.3 | declining; impaired 2023 |
+| Thailand Bualuang | 7.2 | 5.6 | 4.8 | 4.8 | 4.6 | 6.3 | Phase 1 renewal Q2 2026 |
+| Madura (Meliwis, Maleo, Peluang) | 5.6 | 4.3 | 3.4 | 3.2 | 3.5 | 3.2 | |
+| Rimau | 4.3 | 4.2 | 4.1 | 3.5 | 3.1 | 3.1 | Kaji-Semoga, 30 years old |
+| Lematang | 2.7 | 2.1 | 4.1 | 2.7 | 2.6 | 2.4 | |
+| Bangkanai | 2.9 | 2.8 | 2.4 | 2.3 | 2.6 | 3.1 | Phase II to 55 mmscfd by 2029 |
+| Sampang | 2.9 | 2.5 | 2.1 | 1.6 | 0.9 | 0.7 | |
+| Tarakan + Simenggaris | 1.4 | 1.3 | 1.3 | 2.3 | 2.5 | 2.4 | |
+| Vietnam Chim Sao | 3.6 | 2.6 | 2.9 | 1.1 | — | — | sold Apr-24 |
+| Thailand Sinphuhorm | 1.5 | 1.6 | 0.2 | — | — | — | sold Q1-23 |
+| **Total** | 94 | 163 | 160 | 151.9 | 156.1 | 168.8 | |
+
+The legacy Sumatra and Java fields (SSB, Rimau, Lematang, Madura, Sampang, Block A) fell from 31.5 to 23.9 mboepd in four years (−24%). Everything above the line was bought.
+
+## 8.3 Acquisition economics — the Corridor case
+
+Corridor is 38% of production and the clearest test of the model.
+
+```
+2022  Pay US$1,355m for 54% (124 mmboe 2P → US$10.9/boe); fund with US$400m notes + US$450m loan
+      Known at signing: PSC extension (signed Nov 2019 by ConocoPhillips) cuts WI to 46% from 1 Jan 2024
+      and hands Pertamina 30%; extension cost US$250m signature bonus + US$250m firm work (borne by contractors)
+2022–23  Produces 70–74 mboepd at MEDC's 54%; NCF US$1.8bn by Mar 2026 = 1.3x price in 4 years
+2024  WI 46%: production 58 mboepd; gas sales −13%; crude purchases +148% to keep filling contracts
+2025  Pay US$425m for Repsol's 24% (58 mmboe → US$7.3/boe) → 70%; +25 mboepd; NCF US$137m in 6 months
+Contract tail: PGN 410 bbtud, GSPL 121, Pusri 62, PLN 20 all expire Dec 2028; PHR Rokan 105 bbtud Dec 2026
+```
+
+All-in, MEDC has paid US$1,780m for 70% of a block with ~65 mboepd of net production and a PSC to 2043, and has already received ~US$1.95bn of NCF from it. The remaining risk is commercial, not geological: five gas contracts covering ~600 bbtud reprice or renew in 2026–28, into a market where the government has capped industrial gas at US$6.50–7.00 and must decide whether Singapore exports continue past 2028.
+
+## 8.4 Unit economics per boe (FY2025)
+
+Base: 156.1 mboepd × 365 = 57.0 mmboe working-interest production; O&G revenue US$2,190m.
+
+| US$/boe | | Comment |
+|---|---|---|
+| Blended realised price, WI basis [calc.] | ~44 | oil 43.3 mbopd × US$66.6 + gas 579 bbtupd × US$6.8 ÷ 57.0 mmboe |
+| Booked revenue per boe | 38.4 | entitlement basis — ~12% lower is the government's share plus lifting timing |
+| Cash cost (company) | 8.6 | |
+| Crude purchases [FY2024 basis] | ~6 | pass-through to fill contracts |
+| DD&A | 9.6 | 548 ÷ 57.0 |
+| SG&A [calc.] | 3.9 | |
+| Finance cost [calc.] | 5.7 | 324 ÷ 57.0 |
+| EBITDA per boe (O&G ≈ US$1,200m) [calc.] | ~21 | |
+| Pre-tax, post-interest per boe [calc.] | ~6 | before AMMN, impairments |
+
+At mid-cycle (management's US$65 Brent) the business earns ~US$20/boe of EBITDA, spends ~US$7/boe on capex (US$400m ÷ 57 mmboe) and ~US$6/boe on interest, leaving ~US$7/boe of pre-tax free cash — ~US$400m a year — before acquisitions and before PSC taxes at the block level. That is the number the dividends (US$80m) and the deal programme (~US$500m/yr in 2022–25) draw on.
+
+## 8.5 AMMN — what MEDC's 20.92% owns
+
+| AMMN (100%) | FY2024 | FY2025 | Q1 2026 | 2026 guidance |
+|---|---|---|---|---|
+| Revenue, US$ mn | 2,663 | 1,850 | 808 | |
+| EBITDA | n/d | n/d | 508 (63%) | |
+| Net income | ~630 | 249 | 163 | |
+| Copper produced, mn lb | 395 | 209 | 101 | 485 |
+| Gold produced, koz | 803 | 103 | 136 | 579 |
+| Cathode, t | — | 79,849 | 27,670 | 162,662 |
+| MEDC share of NI | 133 | 52 | 34 | — |
+
+Structure: MEDC's stake sits behind the Salim group, which controls AMMN (~55% direct and indirect per earlier reader notes; not re-verified here). MEDC gets equity-accounted profit and whatever dividend AMMN pays; it does not consolidate, control or receive the cash flow. Cost side (FY2024, from AMMN): mining ~US$10/t ore, processing ~US$10.5/t, royalty + export duty 17% of revenue, Macmahon (contractor) 26% of mining cost, fuel 32%. Phase 8 grades are lower than Phase 7, so 2026–27 output recovers on volume rather than grade. Original cost basis: US$650m net in 2016, US$464m already monetised 2018–20, plus the Jan 2024 top-up — against a stake now marked at ~US$3bn. It has been MEDC's best investment and it is the one it does not run.
+
+## 8.6 Power — unit economics
+
+Sales 4,371 GWh at ~3.8 US¢/kWh ex-fuel = ~US$166m; revenue US$178m; EBITDA US$57m = 1.3 US¢/kWh. Capital employed is not disclosed by segment; at the ~US$450m of disclosed project costs for Riau, Ijen, East Bali and Sumbawa alone, EBITDA return is ~12% pre-tax [calculated, partial]. The Kansai (60:40 gas IPP) and RATCH/Ormat/Solar Philippines 49% partners mean roughly half of that EBITDA belongs to minorities. This segment is strategically about consuming Medco gas and meeting the renewable-mix target; it is not where the money is.
+
+## 8.7 Guidance vs delivered
+
+| Year | Production guide → actual | Capex guide → actual | Cash cost | Power GWh | Leverage | ROE |
+|---|---|---|---|---|---|---|
+| 2022 | 160 → 163 | 325 → 302 | \<10 → 6.9 | 3,500 → 3,993 | | |
+| 2023 | ~160 → 160 | 330 → 333 | \<10 → 8.3 | 4,000 → 4,155 | | |
+| 2024 | 145 → 152 | 430 → 436 | \<10 → 8.2 | 4,100 → 4,108 | \<2.5x → 1.8x RG | |
+| 2025 | 145–150 → 156 | 430 → 437 | \<10 → 8.6 | 4,500 → 4,371 | \<2.5x → 2.0x RG | >15% → 5% |
+| 2026 | 165–170 → 170 (1H) | 400–430 → 90 (Q1) | \<10 → 9.0 | 4,550 → 1,053 (Q1) | \<2.5x → 1.7x | >15% → ~7% ann. |
+
+Operational guidance is conservative and beaten; the one financial-return target has been missed twice and re-issued unchanged.
+
+---
+
+# 09 — IMPORTANT TRANSACTIONS
+
+## 9.1 Management change, 2016 and 2026
+
+2016: after the 2014–16 losses, Hilmi Panigoro (Arifin's brother) became President Director and Roberto Lorato, ex-Premier Oil, CEO; Ronald Gunawan (also ex-Premier Oil) and Anthony Mathias joined as COO/CFO. From that point the strategy was explicit: buy producing assets from exiting majors, keep leverage under a stated cap, no frontier exploration. 2026: Lorato moved to the Board of Commissioners, Gunawan became CEO, Amri Siahaan COO, Benny Setiawan CFO, Sanjeev Bansal Chief Growth Officer (a new title — the deal programme now has its own director). Yani Panigoro is President Commissioner; Yaser Raimi Panigoro joined as Commissioner. Family holds the chair on both boards; professionals run the company.
+
+## 9.2 South Natuna Sea B (2016) and Senoro-Toili
+
+Natuna B: 40% bought from ConocoPhillips for US$238m, 35 mmboe 2P at US$6.4/boe; NCF US$704m since — the best deal on the table. Its value is the SembGas contract to Singapore (fixed price, to 2028) and proximity to the premium Singapore market; Forel and Terubuk (2025) lifted it to 24.5 mboepd. The PSC ends 2028 and extension is listed as a 2026 priority. Senoro-Toili (30%, JOB with Pertamina, since 2000) is the margin leader: gas to DSLNG (LNG to JERA, Kyushu, Kogas) and to PAU's ammonia plant at indexed prices; PSC extended to 2047, ~2 tcf of reserves added.
+
+## 9.3 Corridor (2022, 2023 extension, 2025) — see 8.3.
+
+## 9.4 Oman Block 60 and 48 (Dec 2023)
+
+20% of Block 60 (Bisat oil, Abu Butabul gas; OQ operates) and Block 48 for US$713m including deferred consideration, 70% debt-funded; 53 mmboe 2P at US$13.5/boe — the most expensive acquisition. Terms are the only ones disclosed in full: contractor share up to 35% oil / 40% gas, all tax borne by the Omani government, EPSA to 2048. Gross production rose to 73–77 mboepd in Q4 2025 (MEDC net 13.6). NCF US$248m in 27 months against a 36-month payback target — behind the earlier deals, at lower oil prices. 2026: no disruption from the Iran conflict; Oman's ports are outside the strait.
+
+## 9.5 AMMN (2016 → 2024)
+
+2016: MEDC and partners bought 82.2% of Newmont Nusa Tenggara for US$2.6bn (MEDC US$650m net) using a loan-heavy structure; 2018–20 MEDC monetised US$464m by converting loans and selling down to 23.1%; 2023 IPO (7 Jul) diluted to ~21%; Jan 2024 MEDC bought 15.2bn new shares to hold 20.92%. The stake has returned its cost several times over in mark-to-market terms and produced US$25–253m a year of equity income; cash dividends received are not disclosed in the decks.
+
+## 9.6 Ophir Energy (2019)
+
+£408m (~US$541m) for a listed UK E&P that had lost ~90% of its value after a failed Tanzania/Equatorial Guinea LNG strategy: got Bualuang (Thailand), Chim Sao (Vietnam), Sinphuhorm, Tanzania Blocks 1&4, Mexico. Sold Chim Sao (2024) and Sinphuhorm (2023) for ~US$100m combined, exited the deep-water licences for US$19m. NCF US$568m in seven years ≈ 1.05x the price — the weakest return on the table. See 10.1.
+
+## 9.7 Medco Power (2017) and the Kansai alliance (2021)
+
+MEDC bought back the 49% of MPI it did not own for US$161m (2017), then sold 40% of a gas-IPP vehicle to Kansai Electric (2021). MPI's EBITDA was US$44m (2024) and US$57m (2025) on a segment that has absorbed US$300m+ of capex since 2020.
+
+## 9.8 Divestments and impairments
+
+2017–19: Bawean, 35% of SSB and Rimau, US acreage, Tunisia, water, coal, property (~US$265m). 2023: Sinphuhorm. 2024: Chim Sao (19 Apr), Libya Area 47 (24 May). 2025–26: Simenggaris sale agreed (Feb 2026); North Sokang and West Bangkanai PSCs terminated (Nov 2025). Impairments: Libya/Yemen/Tunisia/Kampar (2014–16), US$93m (2020), Simenggaris/Sarulla (2022), Block A US$59m + Libya US$50m + VAT US$44m (2023), US$29.5m (2024), Beluga + others (2025). Block A Aceh is the one to watch: 85%-owned, high-cost sour gas, output down from 8.4 to 3.3 mboepd, impaired in 2023 without explanation, and now a candidate for the same treatment as the frontier assets before it.
+
+---
+
+# 10 — RED FLAG
+
+## 10.1 Ophir — a deal that looks good only in the company's own table
+
+The "value from acquisitions" table shows Ophir NCF of US$568m against a US$541m price. But NCF adds back D&A, deducts only current tax, and counts revenue from assets since sold. Seven years to return 1.05x on a depleting asset is a real return of roughly zero. Tanzania's contingent resources (larger than MEDC's entire 2P) remain undeveloped six years on. The table's headline "proven ability to extract value" rests on Natuna and Corridor.
+
+## 10.2 Guidance language
+
+"Met or exceeded all operational guidance" (FY2025 deck) while the >15% ROE target was missed by ten points, and re-issued for 2026 at the same level with Q1 annualising at ~7%. Small in itself; it shows how the decks are written.
+
+## 10.3 Two numbers for the same thing, repeatedly
+
+FY2024 dividends paid: US$70m (FY2024 deck) vs US$44.9m (FY2025 press release). FY2021 revenue/EBITDA restated down 5–7% between fact books, unexplained. FY2023 2P reserves 539 mmboe in one deck, a waterfall showing 481 for FY2024 in the next, and 493 in the reserves table. DD&A for 2022/2023 transposed between the FY2023 deck and every fact book. Corridor's interest dropping 54→46% with no narrative in the fact books. None of these is large; together they mean deck figures need the audited statements behind them, which were not in hand.
+
+## 10.4 Crude purchases and the related-party channel
+
+Cost of sales carries US$343m of crude purchases (16% of O&G revenue, +148% in 2024). The decks never say from whom or at what price. The obvious counterparties are JOB/PSC partners including Pertamina entities and the family-linked trading/service companies. Until the annual-report RPT note is read, this is the largest unexplained cost line.
+
+## 10.5 Leverage presented on the friendlier basis
+
+Headlines quote RG net debt/EBITDA (2.0x FY2025, 1.7x Q1 2026); consolidated is 2.4x / 2.1x, gross debt US$3.6bn, and finance cost eats 26% of EBITDA. The RG excludes Medco Power's project debt, which is non-recourse but real. Rating agencies' tolerance (Moody's: debt/EBITDA \<3.5x) is measured on the consolidated group.
+
+## 10.6 The "Patriot Bond" contribution
+
+The FY2025 deck lists a contribution to a "Patriot Bond" among debt-management items with no amount, counterparty or purpose. A loan to a state or group vehicle booked inside treasury activity should be explained; it is not.
+
+## 10.7 Checked and found nothing
+
+Auditor's opinion (unqualified per press-release references to audited FY2025 numbers, but the opinion itself not read); PSAK 38 poolings from the parent — none since the 2017 MPI buy-back on the evidence available; treasury-share and buyback mechanics — routine; ESG ratings — MSCI AAA, unusual for an upstream producer and consistent across years.
+
+---
+
+# MISSING DATA AND OPEN ITEMS
+
+Ranked by how much each would change the analysis.
+
+1. **Annual reports and audited financial statements (FY2020–FY2025).** Not in the source set; WebFetch reaches only the first ~40 pages of the PDF and the container cannot download them. They hold the RPT note (crude purchases counterparties, receivables/advances, key-management compensation), the tax line, the segment note, the impairment note by asset, the bond schedule, the shareholder register and board biographies. Sections 1.1, 1.5, 7.5 and 10.4 are built without them. Please drop `MEDC_AR2024_ENG.pdf`, the FY2025 annual report, and the standalone audited FS (`MEDC_FY24.pdf`, FY25 equivalent) into the folder for v2.
+2. **Current shareholder register.** The 51.5 / 21.46 / 27.04% split is from 2021–22; the 2025 buyback and any Salim or family movements since are unknown. Earlier reader notes mention Sudjiono Timan and Nathan Barki as co-owners — not verifiable here.
+3. **Tax expense and the below-operating-income bridge** for FY2024–25 (the US$335m wedge in 7.5).
+4. **FY2025 cost-of-sales breakdown** (lifting, DD&A, crude purchases) — only FY2024 in hand.
+5. **Bond-by-bond maturity ladder** with coupons and amounts; the 2028 notes and the 2025 144A issue terms; the "Patriot Bond".
+6. **Corridor 2023–2043 extension fiscal terms** (cost recovery vs gross split, split %) and the 2026–28 contract renewal status for PGN, GSPL, Pusri and SembGas; government policy on Singapore exports past 2028.
+7. **Fixed vs indexed gas realised prices for FY2025** and the entitlement (government take) as a % of production by year — needed to firm up the ~12% figure in 8.4.
+8. **AMMN dividends received by MEDC**; AMMN FY2025 EBITDA; AMMN reserves update past 31 Dec 2024.
+9. **Working-capital bridge for the US$314m CFO fall in 2025.**
+10. **Block A Aceh** carrying value, reserves and the 2023 impairment rationale.
+11. **Price series** — Brent and ICP annual averages 2020–2025, LME copper and gold annual averages: web fetches of EIA/LME pages returned page shells; the report uses the company's realised prices instead.
+12. **Board biographies, tenure and remuneration** — website pages are JS-rendered.
+13. Minor deck inconsistencies (10.3) to be resolved against the audited statements.
+
+---
+
+## Sources
+
+| Document | Pages | Period covered | Used for |
+|---|---|---|---|
+| RES_FY2020 — 2020 Results presentation (dated Jun 2021) | 22 | FY2020, Q1 2021 update, 2021 guidance | COVID measures, 2020 financials, ratings |
+| RES_FY2021 — 2021 Results presentation (cover Jul 2022) | 26 | FY2021, Q1 2022, Corridor close | Corridor terms, 2022 guidance |
+| RES_FY2022 — 2022 Results (Mar 2023) | 26 | FY2022 | first full Corridor year, fixed/indexed split |
+| RES_FY2023 — 2023 Results (Apr 2024) | 29 | FY2023 | Oman terms, impairments |
+| RES_FY2024 — 2024 Results (Mar 2025) | 30 | FY2024 | acquisition NCF table, CFO chart |
+| RES_FY2025 — 2025 Results (Apr 2026) | 30 | FY2025, Q1 2026 update | 2025 deals, guidance, ratings |
+| RES_1Q2026 — Q1 2026 Results (May 2026) | 23 | Q1 2026 | latest financials, TGI, geopolitics |
+| FB_FY2021_1Q22 — Fact Book FY2021 & Q1 2022 | 26 | FY2019–Q1 2022 | portfolio, contracts, reserves |
+| FB_FY2022, FB_FY2023 — Fact Books | 24, 24 | FY2022, FY2023 | PSC splits, contracts, debt |
+| FB_FY2024, FB_FY2025 — Fact Books | 28, 21 | FY2024, FY2025 | production by asset, capex detail |
+| FB_1Q2026 — Fact Book Q1 2026 | 23 | Q1 2026 | funds-flow worked example, Cendramas |
+| PR_FY2025 — FY2025 results press release (31 Mar 2026) | 9 | FY2025 audited | financial tables, cash & debt |
+| PR_FY2025_OpsUpdate — FY2025 operational update | 3 | FY2025 pre-audit | |
+| PR_1H2026 — 1H 2026 operational update | 3 | to 30 Jun 2026 | 1H production, Nawasena, Ijen |
+| Web — MEDC FY2023 AR highlights (WebFetch, partial) | — | FY2018–2023 | FY2018–19 headline figures, 2023 impairments |
+| Web — MEDC FY2024 audited FS (WebFetch, partial) | — | FY2023–24 | cost-of-sales lines, RPT balances |
+| Web — CNBC Indonesia (Aug 2021), VOI (Jul 2022), IDX letters | — | ownership | Diamond Bridge / MDAL / Salim |
+| Web — medcoenergi.com board pages; Moody's/Investing.com; cbonds; stockanalysis.com (MEDC, AMMN, ENRG); AMMN Q1 2026 release; Katadata; ESDM; SSEK; IEA via Argus; Al Jazeera; Mining Weekly; Fortune Indonesia (PP 19/2025) | — | 2021–Aug 2026 | boards, ratings, market data, AMMN, policy, macro |
+
+Not read: any annual report in full, any audited financial statement in full, AMMN's own filings, the earnings-call transcripts (surfaced, not opened). Series marked "web" are from comparative tables inside later documents, not from the original filings.
+
+*Analytical notes for Zunio. Not investment advice. v1, 24 August 2026.*

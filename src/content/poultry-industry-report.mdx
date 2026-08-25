@@ -1,0 +1,459 @@
+---
+title: "Indonesian Poultry — Comparative Sector Teardown"
+description: "Three IDX-listed integrators side by side — CPIN, JPFA and MAIN on one basis, FY2025 audited with 1H2026 layered on."
+date: '2026-08-25'
+tags: [analysis, poultry, idx, sector]
+---
+
+**Basis:** FY2025 audited filings as the common comparison year, with 1H2026 results layered on where published. Prepared 25 August 2026.
+
+**Where the numbers come from.** Every company figure traces to one of the three individual teardowns in `~/Documents/Claude/` — `CPIN_Analysis.md` (24 Aug 2026), `JPFA_Analysis.md` (25 Aug 2026), `MAIN_Analysis.md` (24 Aug 2026) — each built from that company's own annual reports, audited statements, public-expose and results decks. Macro and market figures come from a dated web pass on 25 August 2026 (§10). Nothing here was taken from a filing that was not read for the underlying teardown.
+
+**Three conventions.**
+
+1. `[calc]` marks a figure derived here or in the teardown, not one the company published. `n/d` means the company has never disclosed it — and in this sector, what is *not* disclosed is the finding (§9): none of the three has ever published a tonne of feed, a chick, or a kilogram of bird.
+2. Rp million unless stated; "tn" = trillion, "bn" = billion. FY2025 is the comparison year; 1H2026 where the company has reported it.
+3. Where the three teardowns compute the same thing on different bases — and they do, constantly, because the companies do — the basis is stated in the table and everything is put on one basis for ranking. Never silently substituted.
+
+**Two corrections carried in.** (i) The JPFA teardown's 1H2026 net profit of Rp2.68tn is *total* profit from the deck; press coverage of the interim statements gives Rp2.48tn *attributable* (+100%). Both are shown; attributable is used for peer comparison. (ii) The MAIN teardown's 1H2026 revenue (Rp7.30tn) is the sum of two quarterly deck figures; no interim-statement figure has been found. Marked `[calc]` throughout.
+
+**Verification.** After drafting, a separate pass checked every figure against the three metrics files and the web pass; it raised 31 items (7 wrong, 5 basis-unlabelled, 9 unverifiable, 10 notes). All are corrected in place — the largest were an NCI figure (Rp360bn → Rp277bn), a dividend-history claim, a unit error in the feed-tonnage table, and three "all three / every year" statements narrowed to the years actually disclosed. The list is in `worknotes/POULTRY/VERIFICATION.md`.
+
+---
+
+## Contents
+
+- [00. Executive summary](#00-executive-summary)
+- [01. The peer group at a glance](#01-the-peer-group-at-a-glance)
+- [02. Value chain — how integrated each one actually is](#02-value-chain--how-integrated-each-one-actually-is)
+- [03. Assets — footprint, capacity, capex](#03-assets--footprint-capacity-capex)
+- [04. Profitability](#04-profitability)
+- [05. Industry — share of national supply](#05-industry--share-of-national-supply)
+- [06. The managed cycle — who is exposed](#06-the-managed-cycle--who-is-exposed)
+- [07. MBG — who benefits, and how](#07-mbg--who-benefits-and-how)
+- [08. Synthesis — three kinds of company](#08-synthesis--three-kinds-of-company)
+- [09. Missing data and open items](#09-missing-data-and-open-items)
+- [10. Sources](#10-sources)
+
+---
+
+## 00. Executive summary
+
+**The three together are the industry.** Net sales Rp144.1tn in FY2025 (CPIN 70.7, JPFA 60.7, MAIN 12.7) against a national feed market of roughly 36m tonnes (GPMT outlook 35–40m t) and ~3.9m tonnes of chicken demand (BPS 2025, via the JPFA teardown); by the companies' own market maps they hold ~62% of feed capacity and ~69% of day-old-chick output. This is the opposite of palm oil, where the thirteen listed names were 12% of the crop: here two firms set the price of chicks and feed for every independent farmer in the country, and the state regulates them because of it.
+
+**It is one business model in three sizes, and the size decides everything.** All three run the same chain — imported grandparent stock → breeding farms → hatcheries → day-old chicks → broiler farms → live bird → slaughter and processing — around a feed mill. The economics are identical in shape: the feed mill never loses money (every year disclosed: CPIN FY2021–25, JPFA FY2022–25, MAIN FY2020–25), the bird segments swing with the government-managed live-bird price, and consolidated profit is the sum. What differs is scale and integration depth. CPIN and JPFA sell 60% of their feed and 61–64% of their chicks to their own farms; MAIN sells 27% and 22%. That single ratio explains why FY2025 net margins were 8.0% / 6.6% / 3.1% and why, in the 2023 trough, CPIN and JPFA earned Rp2.3tn and Rp0.9tn while MAIN earned Rp63bn.
+
+**Six findings worth carrying:**
+
+1. **Raw material is ~80–90% of manufacturing cost and it is locally priced by decree.** Corn imports have been banned for feed since 2017; the government sets a floor (HPP Rp5,500/kg) and a ceiling (HET Rp7,000/kg) and subsidises corn to independent farmers, not integrators. Raw materials are 68% of CPIN's revenue, 62.5% of JPFA's, 82% of MAIN's. Pass-through lag is the feed margin: 5.5–8.7% in FY2025, 0.9% for MAIN in Q2 2026 when corn hit Rp6,600/kg.
+2. **The bird segments are one price.** Broiler/commercial-farm segment results moved together in every year: FY2023 −Rp420bn / −611bn / −218bn; FY2025 +3,350bn / ~+1,797bn / +53bn. Government culling and hatching-egg-cutting circulars (2019, 2021, five in 2023, 2025) are the mechanism; nobody in the peer group controls its own selling price for a live bird.
+3. **Related-party cost is a bigger differentiator than operating cost.** CPIN pays a ~Rp715bn/yr "Nugen" royalty (1.0% of sales, basis undisclosed since 2009) plus Rp3.3tn of affiliate purchases; JPFA buys Rp7.0tn of raw material (14.8% of COGS; 15.0% for all affiliates) through the parent's private Singapore trading arm on an undefined "max 5%" margin; MAIN buys Rp1.77tn (15.5% of COGS) from two Leong Hup affiliates. In the FY2023 trough, CPIN's royalty alone was 21.5% of pre-tax profit.
+4. **Balance sheets diverged in FY2024–25 and are re-converging in 2026.** Net debt/equity at end-2025: CPIN 0.05x, MAIN 0.26x (0.44x with the off-balance-sheet syirkah), JPFA 0.41x. By June 2026 JPFA was at 0.64x with Rp4.4tn of new debt the filings do not explain and a US$350m bond that fell due in March without a word of disclosure; MAIN was back to 0.34x building a feed mill into an oversupplied market.
+5. **FY2025–1H2026 earnings are policy-inflated.** The free-meals programme (MBG: 63m beneficiaries, Rp101tn spent in 1H2026) is the demand event; 1H2026 net profit +95% / +100% / +267%. The budget was cut in August 2026, farm-gate prices crashed below cost in June, the 2026 GPS import quota was raised 38% (that is 2027's chick supply), and Permentan 10/2024 forces 50% of chicks to independent farmers from 2027. The two leaders are exposed to all four at once.
+6. **Nobody discloses a volume.** Not one of the three has ever printed feed tonnes, chicks hatched, or kilograms slaughtered in an annual report or deck. Every unit-economics comparison in this report is an inference, and the market-share maps all three reproduce cite a 2021 consultant study.
+
+---
+
+## 01. The peer group at a glance
+
+| | CPIN | JPFA | MAIN |
+|---|---|---|---|
+| Full name | PT Charoen Pokphand Indonesia Tbk | PT Japfa Comfeed Indonesia Tbk | PT Malindo Feedmill Tbk |
+| Controller, % | PT CP Indonesia Group 55.53% → Jiaravanon family (CP Group, Thailand) | Japfa Pte Ltd 55.43% → Santosa family (Singapore; parent privatised Jun 2025) | Dragon Amity Pte Ltd 57.27% → Leong Hup International (KLSE) → Lau family (Malaysia) |
+| Free float | 38.5% (+5.98% UBS omnibus nominee) | 43.7% | ~34.8% (+5.06% Corin Investa) |
+| Shares outstanding | 16,398.0m | 11,627.7m (net of treasury) | 2,230.5m (net of treasury) |
+| Share price, Aug 2026 (web) | ~Rp3,070 [calc from market cap] | Rp2,360 (18 Aug) | Rp670 (24 Aug) |
+| Market cap | Rp50.3tn (17 Aug) | Rp27.4tn [calc] | Rp1.49tn |
+| FY2025 net sales | 70,704,988 | 60,715,806 | 12,692,872 |
+| FY2025 net profit, attributable | 5,643,630 | 4,003,999 (total 4,281,329) | 393,590 |
+| Net margin | 8.0% | 6.6% (7.1% total) | 3.1% |
+| P/E on FY2025 [calc; CPIN on 17-Aug web market cap — its teardown gives 9.2x on Rp51.7tn] | 8.9x | 6.8x | 3.8x |
+| P/B on FY2025 [calc] | 1.47x | 1.47x | 0.52x |
+| Dividend on FY2025 (Rp/sh; payout) | 180 (~52%) | 140 (40.7%) | 52 (29.5%) |
+| Dividend yield at Aug price [calc] | 5.9% | 5.9% | 7.8% |
+| Net debt / equity, end-2025 | 0.05x | 0.41x | 0.26x (0.44x incl. syirkah) |
+| Auditor | EY (unmodified) | EY (unmodified; FY2025 FS scanned) | PwC network (unmodified) |
+| Teardown date | 24 Aug 2026 | 25 Aug 2026 | 24 Aug 2026 |
+
+Two things stand out before any operating comparison. The market prices CPIN and JPFA on the same book multiple (1.47x) with JPFA 2.1 P/E points cheaper — a discount that maps onto the leverage and disclosure gap in §4.6, not onto operating quality. And MAIN trades at half book and 3.8x earnings, which is what the market pays for a third-tier integrator with 78% of its chicks sold to the farmers who bear the cycle first.
+
+### Three consolidation traps you must know before comparing anything
+
+**1. Product-basis sales are not segment sales, and neither is "revenue".** All three report external net sales by product (broiler, feed, DOC, processed) *and* a segment note with inter-segment sales. The bird segments book the feed and DOC they sell to partner farmers as their own external sales, so "broiler revenue" overstates bird sales. Gross segment sales exceed net sales by 72% (CPIN, FY2025: 121.5 vs 70.7tn), 53% (JPFA: ~92.9 vs 60.7tn, from the MD&A segment totals; the FS segment note for FY2025 is OCR-illegible) and ~22% (MAIN: ~15.5 vs 12.7tn) [calc]. The deck pie charts switch between bases without footnotes (JPFA from FY2023; MAIN's segment mix is on the gross basis). This report uses segment-basis totals for margins and product-basis for the revenue mix, and says which.
+
+**2. "Operating profit" means three different things.** CPIN's is the FS line (Rp8,133bn). JPFA's decks print GP − selling − G&A (Rp6,150bn), which excludes Rp134bn of FY2024 write-offs and the bio-asset line; the FS figure is Rp6,184bn. MAIN's decks use "EBIT" including FX. All three teardowns rebuilt to the audited FS operating line; that is what appears here.
+
+**3. What sits outside the consolidated perimeter.** MAIN carries Rp518bn of sharia "syirkah" bank financing presented as neither liability nor equity and excluded from its published gearing (0.26x → 0.44x including it). JPFA consolidates a 50/50 Sumatra subsidiary (Indojaya Agrinusa) whose unnamed partner takes Rp360bn of FY2025 profit through minorities, and keeps a 49% poultry JV (Griya Mitra) financed by JPFA trade credit off the balance sheet. CPIN's FY2025 eliminations exceed the printed inter-segment rows by ~Rp6tn of unlabelled "others". Net-debt and margin comparisons below use the fullest basis available and flag where it is not the company's.
+
+---
+
+## 02. Value chain — how integrated each one actually is
+
+### The chain, and where each company's revenue sits on it
+
+```
+                 CPIN                      JPFA                       MAIN
+GPS import  ──►  quota (27 breeders) ──►  quota                  ──►  Majalengka GPS farm 3.1m/yr
+PS farms         140 farms                79 farms                    n/d sites
+Hatcheries       56                        30                          n/d (335m DOC/yr capacity)
+DOC              9.52tn seg. sales         8.37tn                      2.20tn
+   internal      63.7%                     ~61% (FY2024)               22%
+Feed mills       ~10 + 3 dryer sites       15 + 14 dryer sites         5 (+1 Lampung 2026), 1.3m t/yr
+   seg. sales    52.15tn                   35.83tn                     7.94tn
+   internal      59.8%                     ~58%                        27%
+Broiler farms    >12,500 plasma            ~130 own + ~8,700 partner   27 own + 436 plasma (2022)
+   seg. sales    40.50tn                   28.97tn                     4.97tn
+Slaughter        30 RPA                    15 RPA                      1 RPHU (2022)
+Processing       10.93tn (Fiesta, Champ,   10.33tn (So Good, Best      0.39tn (SunnyGold; 75 Sunny'Chick
+                 Golden Fiesta; 2,482      Meat/Japfa Best retail)     QSR stores)
+                 Prima Freshmart stores)
+Other            layers, beverages, trading aqua 5.11tn, beef, vaccines, duck
+                                            plastics, property
+```
+
+### What the internal ratios say
+
+| FY2025 (segment basis) | CPIN | JPFA | MAIN |
+|---|---|---|---|
+| Feed sold internally | 59.8% | ~58% (57.3% FY2024) | 27% |
+| DOC sold internally | 63.7% | ~61% (FY2024) | 22% |
+| Live bird sold to own slaughter/processing | n/d (30 RPA) | ~15% (FY2024) | n/d (1 RPHU) |
+| Processing as % of net sales | 15.5% | 17.5% | 3.1% |
+| Eliminations as % of gross segment sales [calc] | 41.8% | ~35% | ~18% |
+
+Two-thirds of CPIN's and JPFA's chick output and three-fifths of their feed never meet a market price: they are transferred at internal prices to farms the group owns or contracts. That does two things. It gives the feed and DOC segments a captive floor in a downturn — CPIN's feed result was Rp4.56tn in the FY2023 trough, its best feed year — and it means the group captures the whole chain's margin when live-bird prices are high (FY2025 broiler result Rp3.35tn). MAIN sells 73% of its feed and 78% of its chicks to independent farmers: it earns the integrator's input margin but not the bird margin, and its customers are the people the cycle bankrupts. Its FY2025 broiler result was Rp53bn on Rp5.0tn of segment sales.
+
+### The finding that should change how you read "growth"
+
+CPIN's external feed sales rose 27.6% in FY2025 (Rp16.4tn → 21.0tn) while its internal feed fell 8.9%, and its internal DOC share dropped from 73% to 64% in a year. JPFA's external feed grew 7.6%, internal ~9%. Read against Permentan 10/2024 (≥50% of chicks to independents from January 2027, §06), CPIN is already re-externalising; JPFA is not. The regulation converts integration margin into input-seller margin — higher-quality earnings (feed has not lost money in any disclosed year) at lower capture. CPIN's FY2025 pivot is the first evidence of an integrator pricing the rule in; JPFA's filings do not mention it.
+
+---
+
+## 03. Assets — footprint, capacity, capex
+
+### 3.1 Physical footprint
+
+| Latest disclosed | CPIN (FY2024/25) | JPFA (FY2025) | MAIN (FY2025) |
+|---|---|---|---|
+| Feed mills | ~10 + 3 dryer/storage sites | 15 poultry + 5 aqua; 14 standalone corn-dryer sites | 5 (Cakung, Cikande, Grobogan, Gresik, Makassar) + Lampung 300kt from Q3 2026 |
+| Feed capacity | n/d | n/d | 1.3m t/yr (restated from 1.65m t) |
+| Breeding farms / hatcheries | 140 / 56 | 79 / 30 | GPS farm Majalengka (3.1m GPS-DOC) / n/d |
+| DOC capacity | n/d | n/d | 335m/yr (unchanged since 2022) |
+| Own broiler farms | n/d | ~130 (>100 in 2021) | 27 at 7 sites; 161,000 t/yr (restated 50k→90k→120k→161k) |
+| Partner farmers | >12,500 (>15,000 earlier) | ~8,700 (~10,000 in 2020 decks) | 436 (2022, last count) |
+| Slaughterhouses | 30 | 15 | 1 |
+| Processing plants | n/d (Fiesta etc.) | 5 meat + 1 UHT (JFI) | 1 (MFD Cikarang, 9,000 t/yr) |
+| Retail | 2,482 Prima Freshmart (3,616 in early 2024) | Best Meat / Japfa Best (count n/d) | 75 Sunny'Chick (Q2 2026) |
+| Adjacent | layers, beverages, trading | aqua (5 mills, 10 hatcheries, 3 plants), beef feedlot, vaccines (Bogor ×2, Vietnam), plastics, property | duck |
+| Employees | 10,022 | 31,609 | n/d |
+
+Physical capacity is not disclosed by either leader; MAIN discloses it and then restates it. Partner-farmer counts have fallen at all three (CPIN >15,000 → >12,500; JPFA ~10,000 → ~8,700; MAIN's last count is four years old) — the open-house independent farmer is leaving the industry, which is what the 50%-external rule is meant to reverse. CPIN's store count fell 31% in a year with no acknowledgement.
+
+### 3.2 Fixed assets and capex
+
+| Rp million | CPIN | JPFA | MAIN |
+|---|---|---|---|
+| Fixed assets, net FY2025 | 17,362,597 | 14,995,076 | 2,387,242 |
+| % of total assets | 37.9% | 37.4% | 41.9% |
+| Inventories + biological assets, % of TA | 36.3% | 33.4% [calc] | 30.8% [calc] |
+| Revenue / net fixed assets [calc] | 4.07x | 4.05x | 5.32x |
+| Capex FY2022 / 23 / 24 / 25 (cash) | 2,530 / ~1,240 / 762 / 1,704 bn | 2,082 / 2,018 / 1,630 / 2,467 bn | 277 / 103 / 159 / 386 bn |
+| Capex FY2025 / revenue | 2.4% | 4.1% | 3.0% |
+| Capex 1H2026 | n/d | 2,162 bn (largest half on record) | 390 bn (> FY2025) |
+| Cumulative capex FY2022–25 vs depreciation | ~6.2tn vs n/d | 8.2tn vs 4.5tn (1.8x) | 0.93tn vs ~1.0tn (EBITDA − operating result basis; \<1x) |
+
+CPIN and MAIN cut capex hard into FY2023 (−51%, −63%); JPFA held it flat; CPIN then cut again in FY2024 to Rp762bn (1.1% of sales), the most profitable name spending the least. The 2026 turn is the story: JPFA spent Rp2.16tn in six months (into what, the MD&A does not say — asset-type split only), MAIN is completing a 300,000 t mill (+23% capacity) into a market it calls oversupplied, and CPIN's FY2025 DOC capex went ×4.4 to Rp611bn (parent-stock housing; CPIN teardown §8.4) — the one segment where the 2027 rule requires more output to keep internal supply whole. Working capital is the other asset: 31–36% of total assets is inventory and livestock at every name, ~90 days of cover, because corn is bought at harvest and dried.
+
+---
+
+## 04. Profitability
+
+### 4.1 Consolidated FY2020–FY2025 and 1H2026
+
+| Net sales, Rp bn | FY2020 | FY2021 | FY2022 | FY2023 | FY2024 | FY2025 | 1H2026 (YoY) |
+|---|---|---|---|---|---|---|---|
+| CPIN | 42,519 | 51,698 | 56,868 | 61,616 | 67,478 | 70,705 | 39,418 (+19.2%) |
+| JPFA | 36,965 | 44,878 | 48,972 | 51,176 | 55,801 | 60,716 | 35,355 (+28.7%) |
+| MAIN | 7,001 | 9,131 | 11,102 | 12,058 | 12,503 | 12,693 | 7,305 [calc] (+19.7%) |
+
+| Net profit, Rp bn (attributable; CPIN total, NCI immaterial) | FY2020 | FY2021 | FY2022 | FY2023 | FY2024 | FY2025 | 1H2026 (YoY) |
+|---|---|---|---|---|---|---|---|
+| CPIN | 3,845 | 3,619 | 2,930 | 2,318 | 3,712 | 5,644 | 3,708 (+95%) |
+| JPFA | 1,222 (total) | 2,023 | 1,420 | 930 | 3,019 | 4,004 | 2,480 (+100%); total 2,684 |
+| MAIN | (39) | 60 | 26 | 63 | 488 | 394 | 99 (+267% on a Rp27bn [calc] base; Q2 loss −24) |
+
+| Margins FY2025 | CPIN | JPFA | MAIN |
+|---|---|---|---|
+| Gross margin | 17.6% | 21.7% | 10.2% |
+| Opex (selling + G&A) / sales | 6.9% | 11.6% | 5.7% |
+| Operating margin (FS) | 11.5% | 10.2% | 4.5% |
+| Net margin | 8.0% | 6.6% | 3.1% |
+| Gross margin, FY2023 trough | 13.4% | 14.7% | 7.9% |
+| Net margin, FY2023 trough | 3.8% | 1.8% | 0.5% |
+| Effective tax rate | 26.8% | 21.9% | 21.5% |
+
+JPFA's higher gross margin is a classification artefact — it carries Rp4.3tn of G&A (including Rp133bn of bond-hedge premium and the ATS management fee) and Rp674bn of advertising below the line, so the operating margin, not the gross margin, is the comparable figure: CPIN 11.5%, JPFA 10.2%, MAIN 4.5%. The trough is where the structure shows: CPIN kept a 3.8% net margin in FY2023 because feed earned Rp4.6tn; MAIN kept 0.5% because feed earned Rp775bn and the farm and food segments lost Rp465bn.
+
+### 4.2 Segment results — the same cycle, three amplitudes
+
+Segment result = profit before unallocated costs, finance and tax; segment margin on total (external + internal) segment sales.
+
+| Feed segment | FY2022 | FY2023 | FY2024 | FY2025 | FY2025 margin |
+|---|---|---|---|---|---|
+| CPIN | 3,333,384 | 4,555,895 | 3,978,512 | 3,838,387 | 7.4% |
+| JPFA | 2,614,333 | 2,740,265 | 2,375,999 | ~3,128,000 | ~8.7% |
+| MAIN | 455,752 | 775,303 | 648,384 | 439,866 | 5.5% |
+
+| Bird segments (DOC + broiler/farm) | FY2022 | FY2023 | FY2024 | FY2025 |
+|---|---|---|---|---|
+| CPIN (DOC + broiler) | (135,833) | (721,860) | 2,493,025 | 3,998,400 |
+| JPFA (breeding + commercial farm) | 367,503 | (374,464) | 2,967,295 | ~3,064,590 |
+| MAIN (breeder + broiler) | (279,659) | (422,097) | 160,179 | 181,079 |
+
+| Processing / consumer | FY2022 | FY2023 | FY2024 | FY2025 | FY2025 margin |
+|---|---|---|---|---|---|
+| CPIN | 997,331 | 580,270 | (81,829) | 862,071 | 7.9% |
+| JPFA | 238,752 | 417,242 | 371,638 | 441,600 | 4.3% |
+| MAIN | (44,227) | (42,968) | (52,112) | (52,391) | −13.5% |
+
+| Feed as % of pre-elimination segment profit | FY2022 | FY2023 | FY2024 | FY2025 |
+|---|---|---|---|---|
+| CPIN [calc] | 79% | 103% | 63% | 45% |
+| JPFA | 68% | 84% | 37% | 42% |
+| MAIN | 345% | 248% | 85% | 77% |
+
+Read the last table first. In the trough year the feed mill was 84–248% of profit at all three (everything else lost money); in the good years it was 42–77%. Feed is the base and the birds are the cycle — the identical structure at three scales. Three refinements: CPIN's feed profit peaked in the *trough* (Rp4.56tn, FY2023) and has fallen two years since as it moved sales external, while its bird segments went from −Rp722bn to +Rp4.0tn; JPFA's DOC segment is the highest-margin bird business in the group (15–17% in good years vs CPIN's 6.8% [calc]), consistent with JPFA selling a larger share of its chicks externally at market prices (39% vs CPIN's 36%) despite a smaller market share (25% vs 38%); and MAIN's downstream has lost money in every year disclosed (FY2020–25) while CPIN's processing swung from −Rp82bn to +Rp862bn in a year — a food business that is really a bird-price business.
+
+### 4.3 Cost structure — where the money goes
+
+| FY2025 | CPIN | JPFA | MAIN |
+|---|---|---|---|
+| Raw materials, Rp bn | 48,226 | 37,926 | 10,357 |
+| — % of manufacturing cost | 83.9% | 79.7% | 89.9% |
+| — % of net sales | 68.2% | 62.5% | 81.6% |
+| Direct labour, % of manufacturing cost | 1.4% | 4.9% | 3.5% |
+| Overhead (incl. depreciation, breeder amortisation), % | 14.7% | 15.4% | 6.6% |
+| Bio-asset fair-value line in P&L | +469,391 | (2,604) [JPFA teardown §7.5] | +2,243 |
+| Selling expense / sales | 3.6% | 4.4% | 2.1% |
+| G&A / sales | 3.3% | 7.2% | 3.6% |
+| What is parked in G&A | Nugen royalty Rp715bn = 31% of G&A | Bond FX-hedge premium Rp133bn; ATS fee Rp71bn | Salaries +70% in 2024 (bonus), held in 2025 |
+
+The raw-material share of sales is the integration ratio seen from the cost side: MAIN's 82% is a feed mill's cost structure, the leaders' 62–68% is a chain that adds bird and processing value on top of the same corn. The bio-asset fair-value line deserves its own caution: CPIN booked +Rp469bn (6% of pre-tax profit, 8% of net profit [calc]) through it in FY2025, and MAIN changed the valuation inputs from 3-year to 1-month price history in 2024 — in a good year — and got its auditor's key-audit-matter a year later. JPFA's is negligible because its breeder roll-forward is cost-style despite a fair-value policy.
+
+### 4.4 Related parties — the cost line that is not operating cost
+
+| FY2025 | CPIN | JPFA | MAIN |
+|---|---|---|---|
+| Affiliate purchases, Rp bn | 3,281 (5.6% of COGS) | 7,124 (15.0% of COGS; Annona 7,046) | 1,770 (15.5% of COGS; SCI + LHJ) |
+| — trend | 5.8% → 5.6% of COGS (FY2021–25) | 22.9% → 14.8% (Annona, FY2022–25) | 9.2% → 15.5% (FY2020–25) |
+| Royalty / management fee | Nugen royalty 715,039 = 1.01% of sales, basis undisclosed since 2009 | ATS fee 71,255; no royalty | none |
+| RP payables, % of trade payables | n/d | 57% (Annona; 110 credit days) | 49% |
+| Frozen affiliate receivables | 202,462 allowance (~78% of gross RP receivables) | — | — |
+| Unquantified arrangements | — | six same-KMP leases/insurances | — |
+| KMP compensation | 85,700 (directors; 1.5% of NP) | 189,045 (4.7% of NP; 12.5% in FY2023) | 152,475 (39% of NP; 110% in FY2023) |
+| Arm's-length statement | boilerplate; TP documentation engagement since 2023 | none in FS; MD&A only | one sentence, PSAK 224 |
+| Share of every dividend to the controller | 55.53% | 55.43% | 57.27% (+2.5% affiliates) |
+
+The three parents extract differently. CP takes a fee off the top — ~Rp715bn a year whatever the cycle, 21.5% of pre-tax profit in the trough. Japfa takes a margin through procurement — 15% of JPFA's cost of goods passes through a private Singapore trader on a "max 5%" margin whose base is never defined, and that trader is also the largest creditor. Leong Hup takes both a purchase margin (rising, 9% → 15.5% of COGS) and, through management pay, 38–39% of net profit in the good years. Per rupiah of profit, MAIN's related-party burden is the heaviest and CPIN's the most predictable. What none discloses: a benchmark price.
+
+### 4.5 Balance sheet and cash conversion
+
+| Rp million, FY2025 | CPIN | JPFA | MAIN |
+|---|---|---|---|
+| Total assets | 45,857,963 | 40,060,430 | 5,704,661 |
+| Cash | 4,460,703 | 3,550,006 (90% USD) | 483,910 |
+| Gross debt | ~6,300,000 [calc] | 11,862,080 | 1,223,913 (+518,095 syirkah) |
+| Net debt | 1,843,412 | 8,312,074 | 740,003 (1,258,098 incl. syirkah) |
+| Net debt / equity | 0.05x | 0.41x | 0.26x (0.44x) |
+| Net debt / EBITDA | n/d (EBITDA not disclosed) | 1.1x | 0.9x (1.5x) |
+| Interest cover (EBIT / finance cost) | ~19x [calc] | 7.7x | 5.7x |
+| USD debt | small (rupiah bank lines) | ~49% (US$350m notes ≈ Rp5.8tn of 11.9tn) | none drawn at FY2025 |
+| Equity (owners) | 34,151,094 | 18,663,756 | 2,880,925 |
+| ROE FY2025 | 16.5% (NI / YE equity) | 23.5% (avg) / 21.4% (YE) | 14.3% (avg) |
+| ROE FY2023 trough | 8.6% (YE) / 8.7% (avg) [calc] | 7.2% (avg) | 3.0% (avg) |
+| CFO FY2025 | 5,773,901 | 5,012,140 | 717,450 |
+| FCF FY2025 [calc] | 4,069,820 | 2,544,642 | 331,359 |
+| Cumulative NI vs CFO | 93% (FY2021–25) | 138% (FY2022–25) | 200% (FY2021–25) |
+| 30 Jun 2026 net debt / equity | n/d | **64.1%** | 0.34x |
+
+Cash conversion is clean at all three — nothing points at trapped receivables. The leverage story is JPFA's alone: it is the only one with USD debt, the one whose gearing rose most in 1H2026 (41.5% → 64.1%, +Rp4.4tn of debt; MAIN also rose, 0.26x → 0.34x), and the only one with a bond maturity (23 March 2026) that its own filings walk up to and then do not mention. CPIN is effectively unlevered and MAIN, having repaid Rp1.4tn over 2023–24, is re-levering for Lampung.
+
+### 4.6 Dividends
+
+| | CPIN | JPFA | MAIN |
+|---|---|---|---|
+| FY2021 | 108 (48.9%) | 60 (34.5%) | nil |
+| FY2022 | nil (100% retained) — then Rp100 paid Nov 2023 with no declared basis | 50 (40.9%) | nil |
+| FY2023 | 30 "final" (91.9% incl. the Nov-23 payment) | nil | nil |
+| FY2024 | 108 (47.7%) | 140 in two tranches (53.9%) | 65 (29.7%) — first ever |
+| FY2025 | 180 (~52%) | 140 (40.7%) | 52 (29.5%) |
+| Policy stated | none | none | none |
+| Buybacks | none since 2010 | four authorisations, none executed | 0.48% of capital (2025) |
+| Equity raised since 2016 | none | Japfa Ltd placement 2018 | none |
+
+None of the three has a payout policy; each has skipped a year (CPIN FY2022, then 91.9% of trough FY2023 profit; JPFA FY2023; MAIN every year before FY2024); the two leaders now pay ~50%. At August 2026 prices the yields are the same (5.9% / 5.9%) for the leaders and 7.8% for MAIN — the market is discounting MAIN's earnings, not its cash.
+
+### 4.7 The 1H2026 scoreboard
+
+| | CPIN | JPFA | MAIN |
+|---|---|---|---|
+| Revenue, 1H2026 | 39,418 bn (+19.2%) | 35,355 bn (+28.7%) | 7,305 bn [calc] (+19.7%) |
+| Net profit | 3,708 bn (+95%) | 2,480 bn attributable (+100%); 2,684 total | 99 bn (+267%) |
+| Q1 → Q2 shape | Q1 NP 2,630 → Q2 ~1,080 [calc] | deck OP 2,615 → 1,118 | NP 123 → (24); feed margin 0.9% |
+| Net margin, 1H | 9.4% | 7.0% (attrib.) | 1.4% |
+| Capex, 1H | n/d | 2,162 bn | 390 bn |
+| Gearing, 30 Jun | n/d | 64.1% (from 41.5%) | 0.34x (from 0.26x) |
+| Segment colour | broiler 17.4tn, feed 13.4tn; GP +47% "volume and COGS efficiency" | "solid volume + higher ASPs"; feed not broken out | feed 50% of mix, live-bird segment −56bn |
+
+The half-year is two quarters that point in opposite directions: a record Q1 on MBG demand and post-culling prices, then a Q2 in which the farm-gate price fell to Rp15,500–17,500/kg (below the Rp19,500 reference and below independent-farmer cost) and corn peaked. The leaders' Q2 still made money because their birds are fed at internal prices and slaughtered in their own plants; MAIN's Q2 lost Rp24bn because its 73% external feed could not be repriced to farmers who were themselves losing Rp5–7k per bird. This is the through-cycle difference in one quarter.
+
+---
+
+## 05. Industry — share of national supply
+
+### The claims
+
+| Market-share map (company decks; source "Frost & Sullivan 2021 data", re-dated "2026" in JPFA's latest) | CPIN | JPFA | New Hope | Cheil Jedang | MAIN | Others |
+|---|---|---|---|---|---|---|
+| Poultry feed capacity | 31–34% | 21–22% | 10% | 7% | 7–8% | 19–41% |
+| DOC output | 38% (MAIN's deck: 35%) | 25% (MAIN's deck: 28%) | 3–7% | 9–10% | 6–7% | 15–21% |
+
+Both JPFA and MAIN reproduce the same third-party map; CPIN prints only its processed-chicken share (57% → 47%, FY2022–25, no source). The three listed names are ~62% of feed capacity and ~69% of chicks on these numbers; the two leaders alone are ~56% and ~63%.
+
+### The scale, in rupiah, against what national data exists
+
+| FY2025 | CPIN | JPFA | MAIN | Three together | National reference |
+|---|---|---|---|---|---|
+| External feed sales, Rp tn (product basis) | 21.0 | 15.8 | 7.4 | 44.2 | GPMT: 2025 output +9.2%; 2026 outlook 35–40m t vs 39m t demand |
+| Broiler/live-bird product sales, Rp tn | 34.0 | 24.5 | 2.7 | 61.3 | national chicken demand 3.92m t (2025); DOC ~3.5bn produced vs ~3.2bn demanded |
+| DOC external sales, Rp tn | 3.5 | 3.5 | 1.9 | 8.9 | |
+| Processing, Rp tn | 10.9 | 10.6 | 0.4 | 22.0 | |
+| Implied feed tonnes at ~Rp8,500/kg = Rp8.5m/t [calc, assumption] | ~6.1m (segment 52.2tn) | ~4.2m (35.8tn) | ~0.9m (7.9tn) | ~11.2m | ~36m t national ⇒ ~31% by this method vs ~62% by the map |
+
+The two methods do not reconcile — the capacity map says 62% of national feed, the revenue-implied tonnage says ~31% of national output — and the gap is either the price assumption, capacity-not-output, or the map's age. That is the state of disclosure: no company prints a tonne, GPMT prints growth rates without a base, and the only shares in circulation are a five-year-old consultant slide. What can be said with confidence is directional: CPIN and JPFA are the two price-setters for chicks and feed; MAIN is a price-taker at 6–8%; and the independent farmers who buy from all three bear the cycle first.
+
+---
+
+## 06. The managed cycle — who is exposed
+
+### The mechanism
+
+Indonesian broiler supply is quota-managed at the top and rationed by instruction at the bottom. All genetics enter as imported grandparent stock under an annual quota (578,000 birds in 2025, raised to 800,000 for 2026 — +38%, linked publicly to MBG demand); 15–18 months later that is chick supply. When live-bird prices fall below the reference (HAP Rp18,000/kg from June 2025; Rp19,500 from 15 July 2026), Ditjen PKH orders early culling of parent stock and destruction of hatching eggs — 2019, 2021, five circulars in 2023 (~10m PS culled, ~105m eggs cut), April 2025. Corn is priced by decree at both ends (HPP Rp5,500 floor, HET Rp7,000 ceiling; feed-corn imports banned since 2017; SPHP subsidised corn to independents only). The structural condition is ~10% DOC oversupply (3.5bn vs 3.2bn chicks, 2025).
+
+### What each down-cycle did
+
+| Episode | CPIN | JPFA | MAIN |
+|---|---|---|---|
+| 2020 COVID | NP Rp3.85tn (record year then) | sales −5%, NP Rp1.22tn, capex halved | net loss Rp39bn (only loss year) |
+| 2021–22 input inflation + oversupply | GM 15.7% → 14.3%; broiler −Rp1.27tn (2021), −316bn (2022); NP −19%; FY2022 dividend skipped | farm −Rp744bn; FCF −656bn; ND/E 81%; bond at 80 cents; S&P cut to B+ | farms and food −Rp324bn; interest cover 0.8x; NP Rp26bn |
+| 2023 trough | GM 13.4%; broiler and DOC both lost (−Rp722bn); NP Rp2.32tn; capex halved | breeding −79%, farm −611bn; NP Rp0.93tn; interest cover 2.2x; no dividend | Q1 net loss Rp173bn; year +Rp63bn |
+| 2024–25 recovery | NP 3.71 → 5.64tn; net debt → 1.8tn | OP ×2.3; net debt −2.0tn; dividend 140 | NP ×7.7 then −19%; two Q2 losses |
+| Q2 2026 | still profitable (~Rp1.1tn [calc]) | OP halved from Q1 (2.6 → 1.1tn) | net loss Rp24bn; feed margin 0.9% |
+
+Amplitude on the FS operating line, trough-to-peak FY2023 → FY2025: CPIN Rp3.65tn → 8.13tn (2.2x); JPFA 2.21 → 6.18tn (2.8x); MAIN 0.31 → 0.76tn → 0.57tn (2.4x then −25%). Same cycle, same timing (trough Q1–Q2, harvest Q4), three amplitudes.
+
+### Exposure to what comes next
+
+Four things arrive together in 2027, and they cut differently:
+
+| Risk | Mechanism | CPIN | JPFA | MAIN |
+|---|---|---|---|---|
+| **2026 GPS quota +38%** | chick supply up from ~2027, into a market already 10% oversupplied | most exposed in absolute terms (38% of DOC) but 64% internal | 25% of DOC, 61% internal; DOC is its best-margin segment (15%) | 78% of DOC sold to independents who will be the first not to restock |
+| **Permentan 10/2024** — ≥50% of chicks to independents from 1 Jan 2027 | forces disintegration of the chick flow; revision under way (draft DOC reference price Rp4,800) | 36% external → must move ~Rp1.3tn of DOC sales outside, or grow DOC (which the FY2025 capex does) | 39% external → ~Rp0.9tn; no mention in any filing | already compliant (78% external) — the only one the rule helps |
+| **MBG budget cut** (§07) | demand pulse withdrawn | processing 15.5% of sales; RPA network is the MBG supplier | processing 17.5%; 1H2026 +28.7% is the most MBG-shaped growth of the three | Q1 2026 explicitly credited to MBG; 3% processing |
+| **Corn** (HET Rp7,000; imports contested; Rp6,600–6,935/kg in 1H2026) | raw material 62–82% of sales; pass-through lag | 10% corn ≈ Rp2.4tn COGS ≈ 31% of PBT [teardown calc] | Rp500/kg ≈ Rp2tn COGS vs Rp3.1tn feed result | Rp500/kg ≈ Rp240bn vs Rp440bn feed result; 0.9% margin already seen |
+
+The second-order effect that inverts the ranking: **the deeper the integration, the more of the 2027 chick surplus the company eats itself.** MAIN's independent-farmer customers absorb the price, and MAIN loses volume; CPIN's and JPFA's own farms absorb the price, and they lose margin on two-thirds of their chick output. The regulation then requires the leaders to sell more chicks to the very farmers the quota expansion will be bankrupting. What the filings do not say: which company's GPS allocation is which — the 800,000 birds are split across 27 breeders and no company discloses its share.
+
+---
+
+## 07. MBG — who benefits, and how
+
+### What it is, and where it stands
+
+Makan Bergizi Gratis is the state free-meals programme: launched 2025, ~Rp900bn a day by late 2025, >20,000 kitchens, 63.13m active recipients and Rp101.1tn disbursed in 1H2026 (target had been 82.9m before duplicate-ID cleanup). It is the demand event of the period for exactly the products the three sell — chicken, eggs, processed portions — and the government linked the 2026 GPS quota expansion to it explicitly. Status at 25 August 2026: the 2026 budget was reported cut to Rp268tn (7 Aug; BGN disputes the framing), recipients trimmed to ~63m with 57.1m projected for 2027, and Bapanas used MBG kitchens as the offtake channel to stop the June 2026 price crash (proposed chicken/egg 3–5 times a week). No filing from any of the three quantifies MBG volumes; CPIN's annual reports do not mention it at all.
+
+### The benefit map
+
+| | CPIN | JPFA | MAIN |
+|---|---|---|---|
+| Direct channel to kitchens | 30 RPA + 2,482 stores + processed brands — the natural supplier of portions | 15 RPA + So Good/JFI plants + cold storage — the same, at 60% of the scale | 1 RPHU, 9,000 t/yr plant — negligible |
+| Indirect (price) | broiler 48% of sales; +Rp1,000/kg on own-farm volume is the largest single sensitivity | commercial farm 40% of sales; ±Rp1,000/kg ≈ ±Rp1.0tn [teardown calc] | broiler 22% of sales; ±Rp140bn |
+| Feed to independents restocking | 40% external feed | 42% | 73% — the most MBG-leveraged feed book |
+| What the 1H2026 numbers show | revenue +19.2%, GP +47% | revenue +28.7% (vs +8.8% FY2025) | Q1 revenue +17%, profit credited to MBG; Q2 loss |
+| What a budget cut does | removes a floor under processing and live bird | same, plus the re-levered balance sheet has less room | independent farmers stop restocking → feed volume, not just price |
+
+Who is a direct beneficiary: the two leaders, through slaughter and processing capacity that independent farmers do not have. Who benefits indirectly: all three, through the live-bird price, in proportion to bird sales. Who is most exposed to the cut: MAIN, because its customers are the marginal restockers, and JPFA, because its 1H2026 growth is the most MBG-shaped and its balance sheet has just been re-levered against it. The counter-signal: the June 2026 crash happened *with* MBG running — a 10% chick surplus overwhelms a demand programme that feeds 63m people a portion a day.
+
+---
+
+## 08. Synthesis — three kinds of company
+
+### CPIN — the scale leader, priced as the scale leader, with a fee on top
+
+The largest feed base (Rp21tn external), the deepest downstream (30 RPA, 2,482 stores, 15.5% processing), the cleanest balance sheet (0.05x), 93% cash conversion, a dividend every year but one, and the best trough margin in the group (3.8% net, FY2023). It is also the company that has never explained a Rp715bn annual royalty to its parent, paid a Rp1.64tn dividend with no declared source, lets its store and farmer counts fall without comment, and is already re-externalising feed and DOC ahead of a rule it never mentions. At 8.9x and 1.47x book it is priced as the sector's quality name; the question the filings leave is whether 1.0% of sales off the top, every year, is the price of the brand or of the family.
+
+### JPFA — the integrated challenger, cheaper for reasons the filings hand you
+
+The same model at ~70% of CPIN's feed scale (segment basis) and 95% of its processing scale, with the best DOC franchise (15–17% margin), a real aquaculture business, vaccines, and the higher operating leverage that made FY2023–25 a 2.8x swing in operating profit — the most of the three. Priced at 6.8x, one book-multiple with CPIN, for three visible reasons: 15% of cost of goods routed through the parent's private trader on an undefined margin; a USD bond that matured in March 2026 with the 1H2026 debt up Rp4.4tn and no explanation; and a third-generation board resident in Singapore that took the parent private last year and now sits on both sides of every related-party line. It has the most to lose from a MBG cut and a 2027 chick surplus, and the least disclosure about either.
+
+### MAIN — the price-taker at a trough multiple
+
+A feed mill with farms attached, at 8% of national feed and 6% of chicks, selling 73% of feed and 78% of chicks to the independent farmers the cycle hits first: net margin −0.6% to 3.9% through FY2020–25, a downstream that has lost money in every disclosed year (FY2020–25), Rp518bn of bank money outside the reported gearing, 2024 key-management pay worth 38% of net profit, and a 300,000 t feed mill (+23%) completing into a Q2 in which its feed margin was 0.9%. It is the only one of the three that Permentan 10/2024 helps. At 0.52x book and 3.8x a non-trough year, the market has priced the model, not the moment.
+
+### The three questions that separate them
+
+1. **What share of the chain does the company own, and will the regulator let it keep it?** Internal feed 60/58/27%, internal DOC 64/61/22%. The leaders' margin premium is this ratio; the 2027 rule attacks it directly.
+2. **How much of the profit leaves through the parent before minorities see it?** Royalty 1.0% of sales (CPIN); 15% of COGS through Annona (JPFA); 15.5% of COGS through SCI/LHJ plus 39% of NP in board pay (MAIN). None is benchmarked.
+3. **What does the balance sheet look like at the next trough?** CPIN unlevered; MAIN 0.34x and rising into new capacity; JPFA 0.64x with a refinancing the filings have not described. The last trough (2023) arrived with JPFA at 0.80x and interest cover 2.2x.
+
+---
+
+## 09. Missing data and open items
+
+Ranked by how much each would change this comparison.
+
+1. **Physical volumes — feed tonnes, DOC pieces, live-bird kg — for all three.** Absent from every filing and deck; the reason §05 cannot reconcile a 62% capacity map with a 31% revenue-implied share, and every unit-economics line is an assumption. Historically in Japfa Ltd's annual report (now private) and CP Foods' segment data; possibly in Fitch/S&P reports and GPMT member statistics.
+2. **JPFA's 1H2026 interim statements** — the US$350m notes' fate at 23 March 2026 and where Rp4.4tn of new debt went. Decides whether JPFA's discount to CPIN is a leverage story or a disclosure story.
+3. **The related-party pricing at all three** — Nugen licence terms (CPIN), Annona's margin and base (JPFA), what SCI/LHJ sell and at what mark-up (MAIN). Decides §4.4. Lives in the parents' accounts (CP Foods, Annona Pte Ltd Singapore, Leong Hup International's RPT note) and the transfer-pricing files each company's auditor prepares.
+4. **Live-bird, DOC and corn price series 2022–Aug 2026** — only anchors found (Rp14,000–22,000/kg; DOC Rp4,000–8,500; corn 4,800–6,935). Bapanas panel harga / Pinsar monthly data would let the quarterly profit series be overlaid on price.
+5. **GPS allocation by company** (2025: 578,000; 2026: 800,000 across 27 breeders) and the 2025–26 culling circulars with volumes — the supply lever, never disclosed per company.
+6. **Permentan 10/2024's revision** — whether the 50% external-DOC rule, the Rp4,800 reference price and the 2027 date survive; the draft was under socialisation in 2026. Decides how much of §06's second-order effect is real.
+7. **MAIN's 1H2026 interim statements and CPIN's Q2 2026 breakout** — MAIN's half-year is two deck figures added; CPIN's Q2 is a subtraction.
+8. **Market data on one date** — CPIN's price, MAIN's August price and all three share counts were not confirmed on 25 Aug 2026; the P/E and P/B rows use 17–24 Aug prints.
+9. **The other integrators** — Cheil Jedang, New Hope, Wonokoyo, Sreeya (SIPD), Widodo Makmur (WMUU): no scale statements found; the "others" 19–41% of the map is unexamined.
+10. **National series** — BPS broiler production tonnes 2023–25, GPPU DOC output per week, GPMT feed tonnes (only growth rates found), per-capita consumption on a consistent basis (company decks say 8–9 kg, Kementan 7.5 kg, CPIN's own AR 12.6 kg).
+11. **MBG procurement** — whether any of the three is a contracted supplier to BGN kitchens, and the tonnage; the CPIN and JPFA "sized to supply ~1.1m t" figure in press is unsourced.
+12. **CPIN's EBITDA and JPFA's FY2025 segment note** — CPIN never prints D&A in a form the teardown could use (so net debt/EBITDA is n/d); JPFA's FY2025 segment sub-tables are OCR-illegible in the scanned annual report.
+13. **Bird-flu events 2025–26** — none located; a 2004–05-scale event is the one shock none of the three has faced on today's footprint.
+
+---
+
+## 10. Sources
+
+### Company filings, via the three teardowns in `~/Documents/Claude/`
+
+| Teardown | Filings read | Period | Notes |
+|---|---|---|---|
+| `CPIN_Analysis.md` (24 Aug 2026) | AR FY2021–FY2025, 1991 prospectus, public-expose decks | FY2021–FY2025 audited; FY2019–20 restated highlights; 1H2026 press | FY2021 segment note OCR-illegible; EBITDA not printed |
+| `JPFA_Analysis.md` (25 Aug 2026) | AR FY2023–FY2025, investor decks FY2020–1H2026, public exposes 2021–25 | FY2022–FY2025 audited (FY2022 from comparatives); FY2019–21 decks; 1H2026 deck | FY2025 statements scanned → OCR; segment note partly illegible |
+| `MAIN_Analysis.md` (24 Aug 2026) | AR FY2021–FY2025, decks FY2021–1H2026, public exposes | FY2020–FY2025 audited (FY2020 from comparatives); 1H2026 deck | Q2 2026 segment reading from a third-party note |
+
+Metrics were extracted from each teardown into a fixed 16-section template (`worknotes/POULTRY/<TICKER>_metrics.md`) and the report was checked against those files by a separate verification pass before delivery.
+
+### Market data and 1H2026 results (web pass, 25 Aug 2026)
+
+- CPIN 1H2026: revenue Rp39,418bn (+19.2%), net profit Rp3,708bn (+95.1%), EPS Rp226; broiler segment Rp17.43tn, feed Rp13.38tn — pintarsaham.id, 11 Aug 2026. Market cap Rp50.34tn — tradingeconomics.com, 17 Aug 2026. MSCI downgrade candidate — bisnis.com, 25 Jul 2026.
+- JPFA 1H2026: revenue Rp35.36tn (+29%), net profit Rp2.48tn (+100%), price Rp2,360, consensus 28 Buy/1 Hold — receh.in / rikopedia.com, 18 Aug 2026. Deck: total profit Rp2,684bn, IBD Rp16,265bn, ND/E 64.1%.
+- MAIN Q1 2026: revenue Rp3.69tn (+17%), net profit Rp123.28bn (+96%, −52% QoQ) — bisnis.com, 25 May 2026; price Rp670 (24 Aug 2026) per the MAIN teardown; 1H2026 from the results deck.
+- Analyst targets (undated 2026 roundup): CPIN Rp6,200, JPFA Rp3,100, MAIN Rp1,700 — shoesmart.co.id.
+
+### Industry, prices and policy
+
+- Live-bird crash and response: Bapanas press release 12 Jun 2026 (Central Java Rp15,500 → 17,000/kg; target Rp19,500 from 15 Jun); Kementan HAP Rp19,500/kg from 15 Jul 2026 — Kompas, 6 Jul 2026.
+- DOC supply: ~3.5bn produced vs ~3.2bn demanded (2025) — GPPU, 21 Jan 2026. GPS quota 578,000 (2025) → 800,000 (2026) — aviNews / dutatv (snippet-level); 580,000 US GPS proposal — bisnis.com, 24 Feb 2026.
+- Feed: GPMT 2025 output +9.22%; 2026 outlook 35–40m t vs 39m t demand — troboslivestock.com. Feed price +10% expected 2026 — Sinar Tani.
+- Corn: Bapanas proposes +150,000 t import quota — Kompas, 20 Aug 2026 (headline only); HPP Rp5,500 / HET Rp7,000 per the MAIN and CPIN teardowns; Rp6,935/kg vs Rp5,800 HAP, Feb 2026 (CPIN teardown).
+- MBG: budget cut to Rp268tn — Media Indonesia / Suara.com, 7 Aug 2026 (BGN denies — Detik); recipients 82.9m → 63.13m, Rp101.1tn 1H2026, 57.1m projected 2027 — Rikopedia, Aug 2026; GPPU "minimal" impact — 21 Jan 2026.
+- Permentan 10/2024: full text via the CPIN teardown (Pasal 23–24); revision under socialisation, draft DOC reference Rp4,800 — Kontan / Poultry Indonesia / berita2bahasa (2026, not fetched in full).
+- Consumption: 7.462 kg/capita 2025 (+2.6%) — Databoks/Kementan; company decks 8.3–8.6 kg (WB/OECD basis); CPIN AR 12.58 kg (2023 est.); govt target 14–15 kg.

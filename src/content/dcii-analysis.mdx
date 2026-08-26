@@ -1,0 +1,1444 @@
+---
+title: "DCII — PT DCI Indonesia Tbk"
+description: "A business-model teardown — 128 MW of reported capacity, 82 MW of it owned, and a platform brand covering three balance sheets."
+date: '2026-08-25'
+tags: [analysis, data-centres, idx]
+---
+
+**What it does:** owns, builds and operates carrier-neutral colocation data centres in Greater Jakarta, plus one in Surabaya. Sells reserved electrical capacity (measured in MW of IT load) to cloud providers, banks, telcos and enterprises on multi-year contracts, together with interconnection, office "flexspace" and on-site technician services. It also operates data centres it does not own, for a share of their revenue.
+
+**Where:** DCI H1 Cibitung (Kabupaten Bekasi, Jawa Barat) · DCI Platform H2 Karawang · DCI Platform E1 Jakarta (Ariobimo Sentral, Kuningan) · DCI E2 Surabaya · land under development at Bintan (Kepulauan Riau). Head office: Equity Tower 17F, SCBD Lot 9, Jakarta.
+
+**Listed:** IDX, ticker **DCII**, 6 January 2021 at Rp420. **2,383,745,900 shares** outstanding — unchanged since listing (no split, no rights issue, no buyback, no bond). Last price **Rp203,700** (24 Aug 2026); market capitalisation **≈ Rp485 trillion**, the third-largest company on the IDX. Never paid a dividend.
+
+**Period covered:** FY2017 – FY2025 audited, plus 1H2026 from public reporting.
+
+**Sources in hand:** IPO prospectus (Jan 2021, 265pp), Annual Reports FY2020–FY2025 (2,073pp), Public Expose decks 2021, 2023, 2024, 2025, 2026 (49 slides). Full inventory in the Sources table at the end. All figures **Rp million** unless stated; `[calculated]` marks anything derived.
+
+---
+
+## THE ONE THING TO UNDERSTAND FIRST
+
+**DCII reports 128 MW of data centre capacity. It owns roughly 82 MW of it. The other ~46 MW — the entire H2 Karawang campus and the entire E1 Jakarta building — sits on the balance sheets of two private companies whose President Commissioner is Otto Toto Sugiri, DCII's own President Director.**
+
+*One qualification, up front, because the rest of this section depends on it.* The filings establish that **DISM and DISP own those buildings** — AR2025 says so in terms ("DISM merupakan anggota DCI Platform yang **memiliki fasilitas pusat data**"), the accounts record DCII being charged "for the **use of DISM's data center building** by the Company", and E1's Uptime Institute certificates are issued to PT DC Indonesia Sukses Perkasa rather than to DCII. They also establish that **Otto Toto Sugiri is President Commissioner of both** [AR2025 p.121]. What no filing anywhere discloses is **who actually owns DISM and DISP.** They are classified only as "manajemen kunci yang sama / the same key management". Press reporting describes DISM as a **Salim Group** entity and the H2 campus as a Salim co-development. So the accurate statement is *chaired by* DCII's President Director, with the economic ownership undisclosed and probably Salim-linked — not *owned by* him. Where this report says "chairman-affiliated", read it that way.
+
+The structure works in both directions at once, and both directions run through the same man:
+
+```
+                     Otto Toto Sugiri
+        President Director of DCII (29.90% shareholder)
+                          │
+        ┌─────────────────┼─────────────────┐
+        │                 │                 │
+   PT DCI INDONESIA   President Comm.   President Comm.
+      Tbk (DCII)      of PT Datacenter   of PT Datacenter
+                      Indonesia Sukses   Indonesia Sukses
+                      Makmur ("DISM")    Perkasa ("DISP")
+        │                 │                 │
+   OWNS: JK1,2,3,5,6  OWNS: H2-01,      OWNS: E1 Jakarta
+   (H1 Cibitung 73MW) H2-02 (Karawang    (19 MW)
+   + E2 Surabaya 9MW   27 MW)
+        │                 │                 │
+        └────────► "DCI PLATFORM — 128 MW" ◄┘
+                    (one brand, one sales
+                     force, one website)
+
+  Money flowing OUT of DCII in FY2025:
+    DISM charges DCII for use of DISM's data centre building ... Rp255,290m
+    DISP charges DCII for use of DISP's data centre building ... Rp  9,229m
+                                                    Total COGS  Rp264,519m
+                                      = 22.7% of DCII's cost of revenues
+                                      = 10.4% of DCII's revenue
+
+  Money flowing IN to DCII in FY2025:
+    10–15% revenue share on DISM's data centre revenue ......... Rp 41,240m
+    10–15% revenue share on DISP's data centre revenue ......... Rp  1,271m
+                                                     Total       Rp 42,511m
+
+  Net cash transfer from DCII to Salim-linked, Sugiri-chaired
+  private vehicles in FY2025:                        Rp222,008m  [calculated]
+```
+
+Three consequences follow, and they reframe the whole company.
+
+**1. The "128 MW" and the "market share" numbers are not comparable to peers.** When Digital Edge or Princeton Digital says 29 MW or 120 MW, that is capacity on their own books earning their own return on their own capital. DCII's 128 MW mixes 82 MW of owned capacity with 46 MW of rented-in capacity on which it earns a resale spread, plus an operating fee. Every per-MW ratio in this report is therefore computed twice — once on the reported 128 MW, once on owned capacity — and the two answers differ by roughly 50%.
+
+**2. The FY2025 revenue growth is substantially a rental arbitrage, not a build.** The "Jasa sewa colocation" line inside cost of revenues went from **Rp35,465m to Rp232,583m — up 556% in one year** [AR2025 p.516]. DCII commissioned only one new building of its own in 2025 (JK6, 36 MW, RFS Q1). The rest of the +40.1% revenue growth came from taking related-party capacity onto its own P&L and reselling it. That is a real business — it is what a platform operator does — but it is a gross-margin-dilutive one, and it is exactly why the EBITDA margin fell from 65.3% to 61.0% and gross margin from 58.3% to 54.1%.
+
+**3. The arrangement is disclosed, but only recently and only partly.** The 10–15% revenue-share mechanism first appears in the FY2025 report [AR2025 pp.198–199, Note 32i]. AR2024 named DISM and DISP as related parties and said only "Pendapatan usaha & beban pokok pendapatan". No transfer-pricing benchmark, no independent valuation, no expiry date and no minimum-volume commitment is disclosed for any of it. The counterparties are not consolidated and their financial statements are not public. Section 10 treats this as the primary red flag.
+
+Everything else about DCII — the 13-year unbroken uptime record, the Tier IV certification, the 22% tax rate that is really 15%, the 0.0001%-a-day trading float, the Rp17 trillion bank facility that is 2.3× the balance sheet — is downstream of understanding that "DCI Platform" is a brand covering three balance sheets, only one of which shareholders own.
+
+---
+
+# 01 — OWNER
+
+## 1.1 Group structure
+
+### Register at 31 December 2025 [AR2025 pp.144–145, Note 18]
+
+| Shareholder | Shares | % | Status | Role at DCII |
+|---|---:|---:|---|---|
+| **Otto Toto Sugiri** | 712,784,905 | **29.90%** | **Pengendali** (controller) | President Director |
+| **Marina Budiman** | 536,505,149 | **22.51%** | **Pengendali** | President Commissioner |
+| **Han Arming Hanafia** | 336,352,227 | **14.11%** | **Pengendali** | none — no board seat, no biography disclosed |
+| **Anthoni Salim** | 265,033,461 | **11.12%** | Non-pengendali | none |
+| Masyarakat (each \<5%) | 533,070,158 | 22.36% | — | — |
+| **Total** | **2,383,745,900** | **100.00%** | | |
+
+The three founders hold **66.52%** together and are named in the accounts as "the ultimate controlling parties" [AR2025 Note 1a]. Anthoni Salim holds **directly and personally**, not through a corporate vehicle — his position moves between securities accounts (2.5m shares from OCBC Sekuritas to Net Sekuritas on 25 Sep 2025) without any change in the percentage. **No Salim Group entity appears anywhere in the related-party note.** Institutional ownership of DCII is reported at **0%**.
+
+Holders of record: **776** (end-2021) → **678** (end-2024) → **1,040** (end-2025). By classification at end-2025: local individuals 81.883% across 1,001 holders; foreign institutions 15.321% across 15 holders; local institutions 2.796% across 18 holders [AR2025 p.147].
+
+### The control chain — and what is *not* in it
+
+```
+   Otto Toto Sugiri   Marina Budiman   Han Arming Hanafia   Anthoni Salim   Public
+        29.90%            22.51%             14.11%            11.12%       22.36%
+          │                 │                  │                 │            │
+          └─────────────────┴──────────┬───────┴─────────────────┴────────────┘
+                                       ▼
+                          PT DCI INDONESIA Tbk (DCII)
+                                       │
+                                  50.005% ▼
+                          PT Sarana Megahtama ("SMT")
+                    est. 6 Oct 2003 · data centre services
+                    total assets Rp217,956m (3.28% of group)
+                    NCI 49.995%: PT Inti Indotek Informatika
+```
+
+**That is the entire consolidated group.** One subsidiary. The report is titled "PT DCI Indonesia Tbk **dan Entitas Anaknya**" — subsidiary, singular.
+
+What sits *outside* the consolidation but inside the "DCI Platform" brand:
+
+| Entity | What it owns / does | Relationship | Consolidated? |
+|---|---|---|---|
+| **PT Datacenter Indonesia Sukses Makmur (DISM)** | H2 Karawang campus (H2-01 + H2-02, 27 MW combined) | Otto Toto Sugiri is **President Commissioner** (2020–present). Co-developed with Salim Group. | **No** |
+| **PT Datacenter Indonesia Sukses Perkasa (DISP)** | E1 Jakarta, 19 MW. Uptime certificates for E1 are issued in DISP's name [PUBEX2025 p.5] | Otto Toto Sugiri is **President Commissioner** (2020–present) | **No** |
+| **PT Sarana Pactindo** (formerly PT Fortress Data Services; merged 14 Mar 2025) | Buys services from DCII | Otto Toto Sugiri Founder & President Commissioner | **No** |
+| **PT Ekagrata Data Gemilang ("EDG")** | Owns a data centre operated by DCII under a 5–7% revenue share; DCII also buys colocation *from* it | Ceased to be a related party **2 April 2024** on Sugiri's resignation as Commissioner | **No** |
+| **PT Indointernet Tbk (IDX: EDGE)** | Founded by the same three founders in 1994; the "EDGE 6 MW" building counted inside DCI Platform's 58 MW in 2021 | Ceased to be a related party **14 March 2024** on Sugiri's resignation as Vice President Commissioner. **Now a listed competitor.** | **No** |
+| **Gallant Venture Ltd (SGX: 5IG)** | Bintan JV partner, 700 ha; Salim-controlled | JV partner, not disclosed as a related party in the FS | **No** |
+
+Two of those relationships were *ended* in 2024 by Sugiri resigning from the counterparty's board. The commercial dealings did not stop — DCII's purchases from EDG were **Rp37,674m in 2025** and its revenue from EDG **Rp18,345m** — but from April 2024 they are reported inside *third-party* balances [AR2025 Note 32h]. The related-party tables therefore show zero for both, which materially understates related-party intensity on any year-on-year comparison.
+
+**Board of Directors and Board of Commissioners, 31 December 2025** [AR2025 p.137]
+
+| Organ | Name | Position | Appointed | Born |
+|---|---|---|---|---|
+| Direksi | **Otto Toto Sugiri** | Presiden Direktur | Akta No. 30, 15 Oct 2020 | 1953 |
+| Direksi | **Evelyn** | Direktur (Finance) | Akta No. 78, 14 Apr 2023 | 1983 |
+| Direksi | **Indri Koesindrijastoeti** | Direktur (Corporate Affairs); Corporate Secretary from Dec 2025 | Akta No. 104, 22 Apr 2025 | 1960 |
+| Komisaris | **Marina Budiman** | Presiden Komisaris | Akta No. 30, 15 Oct 2020 | 1961 |
+| Komisaris | **Darwin Cyril Noerhadi** | Komisaris Independen | Akta No. 104, 22 Apr 2025 | 1961 |
+
+Board composition over time — the trend is the finding:
+
+| Year-end | Directors | Commissioners | of which independent | Independent % of BOC |
+|---|---:|---:|---:|---:|
+| 2020 | 3 | 3 | 1 | 33% |
+| 2021 | 3 | 3 | **2** | 67% |
+| 2022 | 3 | 3 | 2 | 67% |
+| 2023 | **2** | 3 | 2 | 67% |
+| 2024 | 2 | 3 | 2 | 67% |
+| **2025** | **3** | **2** | **1** | **50%** |
+
+Between 2023 and 2025 the Board of Commissioners shrank from three to two and the independent count from two to one, while an independent commissioner (Indri Koesindrijastoeti, independent 2021–2025) **crossed the table to become an executive director**. Nancy Herawati's resignation is recorded in the AGM minutes with no reason given, and she does not appear anywhere in AR2025. Against that, Darwin Cyril Noerhadi is a genuinely heavyweight appointment — former President Director of the Indonesia Stock Exchange (1996–99), former CFO of Medco Energi, PwC corporate-finance partner, and a member of the supervisory board of the Indonesia Investment Authority.
+
+Note also the audit-committee turnover: the FY2024 committee (Nancy Herawati chair, Indri Koesindrijastoeti, Liauw Hendrik, Wita Lesmana) became, in FY2025, Darwin Cyril Noerhadi as chair with Liauw Hendrik and Hartian Widhanto [AR2025 Note 1b].
+
+## 1.2 History
+
+| Year | What happened |
+|---|---|
+| **2011** | Incorporated 18 July 2011 (Akta No. 143, notary Buntario Tigris) as a **foreign-investment (PMA) company**: DCI International Holding Pte. Ltd. (Singapore, incorporated 14 June 2011) 99.963%, Gunawan Tenggarahardja 0.037%. Issued capital Rp30bn. |
+| **2012** | Construction of the first building, **JK1, 3 MW**, begins at Cibitung. **Commercial cooperation with Equinix** begins — two deeds signed 24 Sept 2012 (a commission-fee deed and a technical-services-fee deed). |
+| **2013** | **JK1 commences operations at 99.999% availability.** This is the start of the "100% power uptime since 2013" record. ISO 27001 obtained. |
+| **2014–16** | **First data centre in Southeast Asia to obtain Tier IV Design certification from the Uptime Institute (2014).** Passes TVRA, the Monetary Authority of Singapore's threat and vulnerability assessment — which is what makes the facility usable by Singapore-regulated banks. Issued capital raised to Rp253,273m in Oct 2016, all subscribed by the Singapore holdco. |
+| **2017** | **DCI CloudConnect** launched. Construction of **JK2, 7 MW**, begins. Revenue Rp127,477m; the company is still loss-making on a cumulative basis (accumulated deficit Rp83,882m). |
+| **2018** | **JK2 opens** with **Tier IV Facility** certification. First data centre in Indonesia with **SOC 2 Type 2**. Construction of **JK3, 12 MW**, begins. Revenue Rp293,370m (+130%). |
+| **2019** | "Software-driven data center" concept adopted; **DCI Internet Exchange** launched; **SOC 1 Type 2** obtained. **First year of positive retained earnings.** Revenue Rp489,860m. Tax-holiday application filed via OSS on 7 Aug 2019. |
+| **2020** | **JK3 opens (12 MW)**; construction of **JK5, 15 MW**, begins; **DCI H2-01 Karawang (12 MW)** begins construction. **Tax holiday granted** for JK3 (KMK 53/KM.3/2020, 7 Feb 2020) on a Rp880,574m investment plan. **Equinix relationship terminated** — notice 14 Sept, acknowledged 21 Sept. **6 Oct: DCI buys 20,606 m² of land from the four founders for Rp125,971m.** 15 Oct: par value split 8,000:1, conversion to Tbk, entire governance apparatus created in a single day. Revenue Rp759,365m. |
+| **2021** | **IPO 6 Jan at Rp420** — 357,561,900 new shares (15%), gross Rp150,176m, sole underwriter PT Buana Capital Sekuritas. **JK5 opens (15 MW)**; **H2-01 Karawang opens**; "Platform DCI" launched, counting Indointernet's 6 MW EDGE building. **31 May: Anthoni Salim acquires 265.0m shares (11.12%) at Rp5,277 — carved out of the three founders' own post-IPO holdings, not bought in the market.** 17 June: first IDX suspension, on a manipulation examination. Land revalued: surplus Rp84,894m to OCI. Revenue Rp871,240m. |
+| **2022** | **H2-02 Karawang** construction. TCDD and TCCF Tier IV certifications. Revenue Rp1,043,955m. **EBITDA margin peaks at 67.3%.** |
+| **2023** | **Tier IV Gold TCOS** — first in Southeast Asia. **B Corp** certification. **E1 Jakarta (19 MW)** built and opened; **H2-02 opens**; **JK6 (36 MW)** construction begins. 11 May: entire debt refinanced from **OCBC NISP to Bank Mandiri** — Rp1,251,921m committed, 7.50% fixed for three years. 7 July: **PT Sarana Megahtama acquired, 50.005% for Rp110,000m** — accounted for as an asset purchase, not a business combination. Revenue Rp1,305,846m. |
+| **2024** | JK6 topped off 11 Nov. **Land acquired in Surabaya.** 13 Sept: Bank Mandiri **Rp1,000,000m investment facility** plus a Rp200,000m working-capital line, secured on >50% of net assets (AGM-approved 22 Apr 2024). **Indointernet ceases to be a related party (14 Mar); Ekagrata ceases (2 Apr)** — both by Sugiri resigning from their boards. Revenue Rp1,812,446m. |
+| **2025** | **JK6 (36 MW) RFS Q1, inaugurated 3 June** by two cabinet ministers — Indonesia's largest single data centre building, fully taken by one unnamed global cloud provider. **E2 Surabaya (9 MW)** built in under 12 months, complete Q4. Bintan rebranded "DCI Platform H5 Bintan Data Center Park". **21 Oct: Rp500,000m paid for 2%-coupon Danantara private placements.** 10 Dec: new Rp475,000m Mandiri term loan at 4.6% fixed. 12 Dec: PPJB for 59,726 m² of land at Rp131,397m. Revenue Rp2,540,028m; **net profit crosses Rp1 trillion**; margins compress for the first time. |
+| **2026** | 7 Jan: Tier IV TCOS Gold for JK5 Hall 5A. 6 Apr: **E2 Surabaya inaugurated**. 6–7 May: **Rp17 trillion (≈US$980m) IDR+USD credit facility** disclosed, secured on land, buildings, equipment, accounts and insurance proceeds. ~21 Jul: **Fitch affirms AA-(idn) Stable**, projecting >850 MW by 2027–28, EBITDA Rp5–6tn, and capex of **Rp10–15 trillion a year in 2026–27**. 1H2026: revenue Rp1,777bn (+33.2%), net profit Rp733bn (+18.7%). |
+
+## 1.3 History — recap
+
+Read as one line, the record says this:
+
+**Thirteen years of technical execution wrapped around a persistently opaque ownership perimeter.** The operating record is exceptional and verifiable: from 3 MW to 128 MW, zero critical incidents since 2013, the first Tier IV in Southeast Asia, the first Tier IV Gold TCOS, greenfield-to-service in under twelve months on both JK6 (36 MW) and E2 (9 MW) — a build speed that most APAC operators cannot match. That is a real, hard-won operating moat, and it is why regulated banks and hyperscalers will sign.
+
+Alongside it runs a second pattern that never resolves. The company was foreign-held through a Singapore vehicle for its first decade and was still 99.996% Singapore-held on the day the prospectus was signed. It bought land from its own founders one month before listing at a ~30% premium to what it paid an arm's-length seller six days later. Its controlling shareholder sold 11% of the company to Anthoni Salim in a negotiated crossing four months after the IPO. It has since built roughly a third of its branded capacity inside private companies chaired by its own President Director, rents that capacity back, and reports the whole thing as one platform. It has never paid a dividend, never split the stock despite two public consultations on doing so, and trades on a float that turns over about US$29,000 a day against a US$30bn market capitalisation.
+
+Neither pattern cancels the other. The engineering is genuinely first-rate. The corporate perimeter is genuinely porous. An investor is buying both.
+
+## 1.4 Owner's character
+
+Read only from the record, not asserted:
+
+**They build fast and they build early.** Otto Toto Sugiri founded PT Sigma Cipta Caraka in 1989 (Indonesia's pioneer IT services firm, later TelkomSigma — now listed among DCII's competitors), co-founded PT Indointernet in 1994 (one of Indonesia's first ISPs, now the listed EDGE), and founded DCI in 2011. Marina Budiman, Djarot Subiantoro and Jui Chihtra Gani all came out of Sigma Cipta Caraka too. DCII is the third company these people have built in the same industry. That is why a 12-month greenfield-to-RFS build is credible from them and would not be from a first-time operator.
+
+**They spend on certification, not on marketing.** FY2025 marketing expense was **Rp5,297m — 0.21% of revenue** [AR2025 Note 25]. Promotion and marketing was Rp3,444m; travel Rp1,359m. Against that, the certification stack runs to fourteen items (Tier IV Design, Tier IV Facility, TCDD, TCCF, Tier IV Gold TCOS, ISO 9001/14001/27001/27701/45001/50001, SOC 1 & 2, PCI DSS, TVRA, B Corp, EcoVadis Silver, plus audited compliance with OJK 11/2022 and the IDX data centre guidelines). The company's stated marketing method is "direct offers to prospects" and **"referrals from the existing customer base"** — the same sentence, word for word, in 2020, 2021, 2024 and 2025. This is a business sold on procurement checkboxes and reputation, not on advertising, and management behaves accordingly.
+
+**They retain everything.** No dividend has ever been paid, in fifteen years of existence and six as a listed company. The stated dividend policy at IPO was "up to 20% of net profit, starting FY2022" [PROS p.90]; that policy has never been implemented. Each year since 2023 the AGM has approved exactly **Rp5,000m to the statutory reserve** and retained the remainder "for data centre expansion" — Rp791,713m of FY2024 profit was retained on that basis in April 2025. The statutory reserve stands at Rp25,000m against a Rp59,594m target, 41.9% of the way there `[calculated]`.
+
+**They pay themselves through EBITDA-linked phantom equity, not through dividends.** Directors' remuneration is set by the Board of Commissioners under delegation from the AGM, and includes a **Long Term Incentive in Phantom Shares**: units vesting over three years, priced at **a multiple of EBITDA valuation** using a methodology the Commissioners approve, paid in cash in year four. FY2024 Board of Directors remuneration was **Rp28,779m** against Rp4,150m for the Commissioners — the executive is paid ~6.9× the supervisory board `[calculated]`. FY2025 discloses the Commissioners' Rp4,387m but **not the Directors' figure at all**, which is a disclosure regression from the prior year. Key-management compensation in the accounts — which is the broader figure — was **Rp37,258m in 2025** (Rp24,869m to key management who are also shareholders, Rp12,389m to others) [AR2025 Note 32].
+
+Note what the LTI is indexed to. Phantom units priced off an **EBITDA multiple** reward growing EBITDA in absolute terms. Renting in third-party capacity and reselling it grows EBITDA in absolute terms while diluting margin. The incentive is aligned with the volume-over-margin strategy management explicitly adopted in 2025.
+
+**They disclose late, and they withdraw disclosure.** The pattern is consistent enough to be a characteristic:
+
+| Item | Disclosed | Then |
+|---|---|---|
+| Related-party 10–15% revenue-share mechanism | first quantified in AR2025 | — |
+| Bank loan interest margins (JIBOR + 0.45% / + 0.35%) | quantified in AR2024 | **replaced by "plus margin"** in AR2025 |
+| Facility No. 71 (Rp200,000m working capital) | disclosed in AR2024 | **absent from AR2025**, unexplained |
+| Directors' remuneration | Rp28,779m in AR2024 | **not disclosed** in AR2025 |
+| Beban operasi lain component table | a table in AR2024 | **prose only** in AR2025 |
+| Market-share source | Structure Research, cited 2020–2024 | **dropped entirely** in AR2025 |
+| Cabinet counts (7,500 Cibitung, 1,280 EDGE) | AR2021 only | **never repeated** |
+| Contracted % of installed capacity ("91%") | AR2021 only | **never repeated** |
+
+**They behave conservatively with the balance sheet, right up until they don't.** DSCR has never been below 1.94× against a 1.25× covenant; debt-to-equity fell from 1.95× (2020) to 0.35× (2024) against a 3.0× ceiling; the company was free-cash-flow positive in 2022 and 2023 and repaid debt. Then in FY2025 capex went to Rp1.72tn, debt rose 77%, and in May 2026 a **Rp17 trillion facility — 2.3× the entire balance sheet** — was signed. Fitch expects Rp10–15tn of capex a year in 2026–27. The conservative phase is over; whether the same discipline survives an 8× step-up in spending is the open question.
+
+## 1.5 RPT — related-party transactions
+
+**Anchor: FY2025 revenue Rp2,540,028m; cost of revenues Rp1,167,028m; total assets Rp6,648,415m; total liabilities Rp2,642,880m.**
+
+### The channels, and their size
+
+| Channel | FY2025 | % of anchor | FY2024 | FY2023 |
+|---|---:|---|---:|---:|
+| **Cost of revenues from related parties** | **264,787** | **22.69% of COGS · 10.42% of revenue** | 18,130 (2.39%) | 35,372 (6.62%) |
+| — of which DISM (use of DISM's building) | **255,290** | 21.88% of COGS | 3,801 | 217 |
+| — of which DISP (use of DISP's building) | 9,229 | 0.79% | 4,553 | 16 |
+| — of which Ekagrata (pre-cessation) | – | – | 8,839 | 29,472 (5.52%) |
+| — of which Indointernet (pre-cessation) | – | – | 937 | 5,667 |
+| — of which Sarana Pactindo | 268 | 0.02% | – | – |
+| **Revenue from related parties** | **56,846** | **2.24% of revenue** | 38,688 (2.13%) | 43,787 (3.35%) |
+| — DISM (operating fee + revenue share) | 41,240 | 1.62% | 17,430 | 9,035 |
+| — Sarana Pactindo / Fortress Data Services | 14,335 | 0.56% | 9,276 | 2,482 |
+| — DISP | 1,271 | 0.05% | 4,733 | – |
+| **Trade payables to related parties** | **84,592** | **3.20% of liabilities** | 1,981 (0.10%) | 10,683 (0.73%) |
+| — of which DISM | **83,220** | 3.15% | 601 | – |
+| **Trade receivables from related parties** | 15,888 | 0.24% of assets | 23,765 (0.50%) | 12,114 (0.32%) |
+| **Deferred revenue from related parties** | 6,347 | 0.24% of liabilities | 6,407 | 9,948 |
+| **Key-management compensation** | **37,258** | 1.47% of revenue | 33,315 | 36,163 |
+| **G&A from related parties** | – | – | 41 | 5,730 |
+
+The table starts at FY2023 because that is where the consolidated series begins, and it therefore understates the history. **The peak year of related-party revenue intensity was FY2021, at Rp111,573m — 12.81% of revenue, of which DISM alone was Rp92,675m (10.64%)** — see §2.2. Related-party revenue then fell back to 2–3% and has stayed there, while related-party *cost* has exploded. The direction of the relationship inverted between 2021 and 2025: DCII used to be paid by these entities; it now pays them.
+
+### The agreements, one by one [AR2025 Note 32, pp.525–538]
+
+**PT Datacenter Indonesia Sukses Makmur (DISM) — the big one.** Two agreements.
+- *Master Service Agreement, 16 April 2021* — DCII provides services to DISM on order letters.
+- *Data Center Facility Operation and Support Agreement, 18 June 2021* — DISM is building a data centre; DCII manages the preparation of operational processes, provides building-monitoring and security expertise, manages day-to-day activities of the facility **"but not the operation"**, conducts periodic performance review, and works jointly with DISM on generating deals and contracts. Fee: **US$500,000 one-time technical consulting fee plus 10–15% per month of DISM's monthly recurring revenue** from all facilities at the data centre. MRR includes colocation, cross-connect and interconnection; **excludes power pass-through**. Amended 1 December 2023 to **10% for billable capacity of 10 MW and above, 15% below 10 MW**, on DISM facilities "registered as DCI Platform members".
+- Running the other way: **DISM charged DCII Rp255,290m in FY2025 (Rp3,801m in FY2024) "for the use of DISM's data center building by the Company"**, and the payable to DISM stands at **Rp83,220m**, non-interest bearing, up from Rp601m.
+
+**PT Datacenter Indonesia Sukses Perkasa (DISP).** *Data Center Facility Operation and Support Agreement, 24 November 2023*, same scope. Fee: **US$250,000 one-time plus 10–15% of DISP's MRR**, power excluded. DISP charged DCII Rp9,229m (2025) and Rp4,553m (2024) for use of DISP's building. E1's Uptime Institute certificates are issued to DISP, not to DCII [PUBEX2025 p.5].
+
+**PT Ekagrata Data Gemilang (EDG)** — the template for the whole structure, and the oldest. *Data Center Operation and Technical Support Agreement, 16 November 2020* — signed one month before the IPO and disclosed in the prospectus with **"Jangka Waktu: Tidak diatur"** (term: not regulated) and no fee at all [PROS p.77]. The fee was in fact **Rp4,350m one-time plus 5% of EDG's monthly colocation, cross-connect and interconnection revenue, excluding power** — raised to **5–7% by amendment on 25 March 2022**. Separately DCII *buys* from EDG under a Purchase Service Agreement (24 May 2022, expiring 31 May 2027) and a Master Purchase Agreement (31 May 2022, 5 years auto-renewing): **Rp37,674m of purchases in FY2025**. Since 2 April 2024 all of this sits in third-party lines.
+
+**PT Indointernet Tbk (EDGE).** *Master Service Agreement 1 Nov 2013* (DCII sells to Indointernet: Rp16,632m in 2025) and *Subscription Agreement 7 Nov 2016* (DCII buys data-communication network services from Indointernet: Rp3,680m in 2025). Since 14 March 2024, third-party lines.
+
+**PT Sarana Pactindo** (ex-Fortress Data Services, merged 14 Mar 2025). Master Service Agreement 16 Nov 2022; DCII sells to it (Rp14,335m in 2025).
+
+**The founders, December 2020 — the land deal.** Four Akta Jual Beli (Nos. 22–25/2020, all 14 Dec 2020) transferred **20,606 m²** in Kabupaten Bekasi from **Marina Budiman, Otto Toto Sugiri, Bing Moniaga and Han Arming Hanafia** to DCI for **Rp125,971,054,253**, paid in full on 7 October 2020, at a uniform **Rp6.11m per m²**. Six days later DCI bought **28,048 m² from PT Mega Manunggal Property**, an arm's-length third party, for **Rp131,682m — Rp4.695m per m²**. The founders were paid a **~30% premium per square metre** `[calculated]`. No valuation reference, no fairness opinion and no explanation appears anywhere in the prospectus or the accounts. The purchase was funded by a purpose-specific **Rp97,000m twelve-month OCBC "Fixed Loan — akuisisi tanah"**, repaid 13 October 2021. Title was still uncertified in DCI's name at the date of the legal opinion.
+
+### How to read the RPT block
+
+Two economically distinct things are bundled in these tables and should be separated.
+
+**(a) The fee business is small, high-margin and defensible.** DCII earns **Rp42,511m of fee and revenue-share income from DISM and DISP** (Rp56,846m across all related parties) on assets it did not fund. On any measure this is a good business: near-zero incremental cost, no capital, and it extends the brand's footprint. The problem is only that the counterparties are chaired by DCII's own President Director, so the 10–15% rate was not negotiated at arm's length in any observable sense.
+
+**(b) The rent business is large, margin-dilutive and new.** Rp264,787m of related-party cost of revenues in FY2025, up 14.6× in a year, is not a fee arrangement — it is DCII buying wholesale capacity from its chairman's private companies and reselling it retail. The "Jasa sewa colocation" COGS line (Rp232,583m, 9.16% of revenue) is the P&L expression of the same thing. This transaction is not visible as a lease under PSAK 73: the group's entire recognised right-of-use asset is **Rp1,658m of office space** [AR2025 Note 9]. Renting 46 MW of data hall is expensed, not capitalised, which keeps it out of the debt-to-equity covenant.
+
+The arm's-length assertion is boilerplate and identical each year: "dilakukan secara rutin dan/atau berulang, serta dilaksanakan dengan persyaratan dan kondisi yang wajar dan sebanding dengan transaksi pihak ketiga". No benchmark, no comparable, no independent opinion supports it. The Audit Committee is described as involved "in certain transactions" without saying which.
+
+---
+
+# 02 — MODEL
+
+## 2.1 The product category — a primer, because this is a new industry
+
+Before the segments, the physics. Everything in this report hangs off one sentence:
+
+> **A colocation data centre is a power-delivery and heat-removal utility that rents itself out by the kilowatt on long contracts.**
+
+### Power is the product; space is the packaging
+
+A server rack is a steel frame roughly 0.6 m × 1.1 m × 2 m — about **one square metre of floor**. What separates a cheap rack from an expensive one is not its footprint but **how many kilowatts you may draw through it**. Every watt drawn must be (1) delivered from the grid through transformers and switchgear, (2) backed up by UPS and batteries so it never drops, (3) backed up again by diesel generators for a grid failure, and (4) **removed as heat**, because essentially 100% of the electricity going into a server comes back out as heat.
+
+Steps 1–4 *are* the building. None of them scale with square metres; all of them scale with kilowatts. Hence the conventions:
+
+- **Capex is quoted in US$ per MW of IT load** — not per m².
+- **Revenue is quoted in US$ per kW per month** — not per m².
+- Floor area is a by-product. At 5 kW/rack you need ten times the floor plate per MW that you need at 50 kW/rack.
+
+"10,000 m² of data centre" tells you almost nothing. "**20 MW of IT load, Tier IV, 82% utilised**" tells you everything. This is why DCII quotes itself in MW and why every table in this report does the same.
+
+### The four business models, and which one DCII is in
+
+| Model | What the customer buys | Deal size | Contract | Who DCII is |
+|---|---|---|---|---|
+| **Retail colocation** | A rack, half-rack or cage with a power commitment | 1 rack – 500 kW | 1–3 yrs | partly |
+| **Wholesale colocation** | An enclosed suite or a whole data hall, priced per kW reserved | 500 kW – 20 MW | 5–10 yrs | **mostly, and increasingly** |
+| **Hyperscale build-to-suit / powered shell** | A purpose-built building to one tenant's spec | 20–200 MW | 10–15 yrs, triple-net | JK6 resembles this |
+| **Cloud (IaaS/PaaS)** | Compute and storage as a service | per VM / GPU-hour | consumption | **no — these are its customers** |
+
+The first three are **landlord businesses**. The fourth is a technology business. AWS, Azure, Google Cloud and Alibaba are DCII's *tenants*, not its competitors — a distinction worth holding onto, because their capex announcements are DCII's demand, not its threat, right up until they decide to self-build.
+
+Retail commands a large premium per kW because of granularity and service. Digital Realty's own Q2 2026 signings show the gradient cleanly: **0–1 MW leases at ~US$280/kW/month versus >1 MW at ~US$157/kW/month**, a 78% gap on its blended book; separately disclosed, the retail premium runs **88% in the Americas, 73% in APAC and 61% in Europe**. Any operator drifting from retail to wholesale sees revenue per MW fall and margin percentage fall, even as absolute profit rises. **Hold that thought for §7.5 and the FY2025 margin compression.**
+
+### What is on the invoice
+
+| Line | What it is | Typical price |
+|---|---|---|
+| Space + power (base rent) | Reserved kW of IT capacity plus the footprint | US$150–475/kW/month |
+| Metered power | Actual kWh drawn, at cost or cost-plus | pass-through in wholesale; bundled in retail |
+| **Cross-connect** | A physical fibre or copper patch between two customers inside the building | US$100–300/month each |
+| Remote hands ("smart hands") | The operator's technicians touching your kit | US$100–200/hour |
+| Setup / rack-and-stack | One-off | US$500–3,000 |
+
+Cross-connects matter far beyond their price. A patch cable has near-zero marginal cost and ~100% gross margin, but its real function is **switching cost**: once 200 of your counterparties, carriers and cloud on-ramps are one cable away inside a building, leaving means re-establishing 200 relationships. This is the network-effect moat in colocation, and it is why Equinix's churn is 1.8% a quarter. DCII sells this as "Interconnection Service" and "DCI Internet Exchange"; it does not disclose the revenue or the count, which is a real gap (§ Missing Data).
+
+### The three capacity numbers you must never confuse
+
+| Term | Meaning |
+|---|---|
+| **Installed / commissioned** | MW physically built, tested and energised. What the capex bought. |
+| **Contracted (booked)** | MW under signed contract, including capacity not yet delivered or ramped. |
+| **Billed (utilised)** | MW actually generating revenue this month. |
+
+The gap between contracted and billed is **backlog** — the highest-quality forward visibility in the business. DCII disclosed all three exactly once, in the prospectus, at 31 August 2020: **installed 22,200 kVA, contracted 17,593 kVA, online 16,690 kVA** — 79.2% contracted, 75.2% online. It has disclosed a contracted ratio once since (**91% of installed capacity contracted at end-2021**), and nothing at all since then. Fitch's July 2026 review states a **contracted-to-shell ratio above 90%**, which is the only current datapoint and comes from the rating agency, not the company.
+
+### Tier certification — why DCII's certificates are the product
+
+The Uptime Institute grades the *topology* of the power and cooling systems:
+
+| Tier | Redundancy | Uptime | Annual downtime | Build cost |
+|---|---|---|---|---|
+| I Basic | N | 99.671% | 28.8 hrs | — |
+| II Redundant components | N+1 | 99.741% | 22.0 hrs | — |
+| **III Concurrently maintainable** | N+1, one active path | 99.982% | 1.6 hrs | **US$9–14m/MW** |
+| **IV Fault tolerant** | 2N or 2N+1, both paths live, compartmented | **99.995%** | **26.3 min** | **US$14–22m/MW** |
+
+Tier III means you can take any single component offline for planned maintenance without dropping the load. **Tier IV means any single unplanned failure, at any time, is survived automatically**, with physical compartmentation so a fire in one path cannot reach the other. The premium is roughly **US$5–8m/MW (+30–55%)** and is spent almost entirely on electrical redundancy — a second transformer, a second generator yard, a second UPS plant, and the walls between them.
+
+Certification comes in three flavours: **Design Documents** (paper review), **Constructed Facility** (on-site testing — the credible one), and **Operational Sustainability / TCOS** (ongoing operations). DCII holds all three, and TCOS at **Gold**, first in Southeast Asia. For a bank, an exchange or a Monetary Authority of Singapore-regulated entity, the certificate is the procurement checkbox that permits the signature. That is the commercial function.
+
+The SLA is a separate, contractual promise — typically **99.999%** ("five nines", 5.3 minutes a year), with penalties as service credits of **25–200% of monthly base rent** for falling below, up to 500% for connection outages. The asymmetry is brutal: a 26-second outage under a hyperscale SLA can cut a facility's annual NOI by ~6.7%; an hour can erase 40%. **This is why "we have never had an outage in thirteen years" is not marketing — it is a balance-sheet asset**, and it is DCII's single strongest claim.
+
+### Unit economics of the asset class
+
+```
+Worked example: a 50 MW wholesale facility, triple-net, at US$150/kW/month
+  Contracted capacity            50 MW = 50,000 kW
+  Rent           50,000 × $150 × 12                 = $90.0m/yr
+  less management + ground lease                    = ($5.0m)
+  less capital reserves                             = ($5.0m)
+  Stabilised NOI                                    = $80.0m/yr  ≈ $1.6m per MW
+  Development cost @ $11.5m/MW × 50                 = $575m
+  YIELD ON COST = 80 / 575                          = 13.9%
+  Exit value @ 6.0% cap rate                        = $1.33bn
+  Value created                                     = $755m
+```
+
+**Build at a 10–13% yield on cost; own an asset the market values at a 5.5–7% cap rate.** That spread, capitalised, is the entire value-creation engine of the industry, and it is why operators raise capital to build rather than harvesting cash — and why DCII pays no dividend. Digital Realty is building 769 MW at an expected **11.9% stabilised yield**, 64% pre-leased.
+
+Three consequences matter for reading DCII's accounts:
+
+1. **A new hall is dilutive for 12–24 months.** On commissioning, depreciation starts in full, interest stops being capitalised, fixed opex runs at near-full level, and revenue is near zero and ramps. A fast-growing operator therefore shows *falling* margins even when every individual asset is improving. Separate the stabilised book from the pipeline.
+2. **EBITDA margins are 45–60% and net income is small.** Equinix runs ~53%, Digital Realty ~55% — but net income is only 11–22% of EBITDA. The gap is depreciation (US$11m/MW of 20–30-year assets) and interest. Net income under IFRS tells you little about cash.
+3. **You cannot compare EBITDA margins across operators without knowing who books the power.** An operator that resells electricity shows a bigger revenue line and a lower margin percentage for identical economics. Normalise to **EBITDA per MW**, not margin percentage. DCII **absorbs** power (see §2.2), so its margin is structurally lower than a pure triple-net landlord's and its PUE is its own problem.
+
+### The AI shift, in one table
+
+| Cooling | How | Density supported | PUE |
+|---|---|---|---|
+| Traditional air (CRAC/CRAH + containment) | Chilled air, hot-aisle containment | **4–8 kW/rack**, ~15 kW max | 1.4–2.0 |
+| Rear-door heat exchangers | Water coil on the back of the rack | 20–40 kW/rack | 1.2–1.4 |
+| **Direct-to-chip liquid** | Coolant through cold plates on the GPU | **40–100 kW/rack** | 1.1–1.3 |
+| Immersion | Servers submerged in dielectric fluid | 100–250 kW/rack | 1.02–1.10 |
+
+An NVIDIA **GB200 NVL72** rack draws **~120–132 kW** — fifteen to thirty times what the world's existing colocation floor was designed for. Above ~40 kW/rack, liquid cooling is not an optimisation, it is the only option. Crucially, **retrofit is mostly not viable**: the binding constraint on an old building is the utility feed, the substation and the generator yard, not the cooling. You cannot put 130 kW racks into a hall whose incoming capacity was sized for 8 kW. **AI capacity is therefore overwhelmingly new-build** — which favours whoever can build fastest with power already secured. That is the specific reason DCII's sub-12-month build record and its Cikarang Listrindo supply matter more in 2026 than they did in 2020.
+
+And the split that decides where Indonesia sits: **training** campuses (500–1,000 MW, latency-insensitive) follow the cheapest electrons on earth and will not come to Java. **Inference** (20–100 MW, 20–50 ms metro latency budget) must sit near the users. Indonesia's 229 million internet users plus its financial-sector data-residency rules make it an inference-and-enterprise market. That is the structural case, and it is a real one.
+
+---
+
+## 2.2 Segment 1 — Colocation (92.8% of FY2025 revenue)
+
+### Product
+
+DCII sells exactly four things, and the descriptions have not changed a word since 2020:
+
+| Product | What it is | Unit |
+|---|---|---|
+| **Colocation** | "Reliable colocation with global operational standards and an SLA of 99.999%. Available in a dedicated facility (**private suite**) or **shared space**." | MW of IT load / cabinets |
+| **Interconnection Service** | "Direct interconnection for various industries into the DCI ecosystem, within and across data centre locations, and to other strategic locations via **dark fibre**." | per cross-connect |
+| **Flexspace** | Enclosed work areas adjacent to (but outside) the data hall, for 24-hour NOC operation, monitoring or disaster recovery. Meeting rooms, showers, leisure room, parking, café, meals. | m² |
+| **Smart Hands** | 24/7 on-site technicians acting as the customer's eyes and hands. Five technicians at IPO. | per hour |
+
+Two further named services appear in the history but not in the current product table: **DCI CloudConnect** (2017, direct access to global cloud providers) and **DCI Internet Exchange** (2019, peering between customers to cut network cost and latency). No AI/GPU-hosting SKU, no liquid-cooling product and no managed-services line has ever been introduced.
+
+**Revenue by product, FY2019 – FY2025** — the audited statements disaggregate into exactly two buckets, and no further:
+
+| Rp m | FY2019 | FY2020 | FY2021 | FY2022 | FY2023 | FY2024 | FY2025 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| **Colocation** | 461,121 | 721,409 | 828,006 | 988,985 | 1,234,625 | 1,699,843 | **2,358,219** |
+| **Lain-lain (Others)** | 28,739 | 37,956 | 43,234 | 54,970 | 71,221 | 112,603 | **181,809** |
+| **Total revenue** | **489,860** | **759,365** | **871,240** | **1,043,955** | **1,305,846** | **1,812,446** | **2,540,028** |
+| Colocation % | 94.1% | 95.0% | 95.0% | 94.7% | 94.6% | 93.8% | **92.8%** |
+| Third parties | 478,568 | 747,003 | 759,667 | 1,014,443 | 1,262,059 | 1,773,758 | 2,483,182 |
+| **Related parties** | 11,292 | 12,362 | **111,573** | 29,512 | 43,787 | 38,688 | **56,846** |
+| *related parties, % of revenue* `[calculated]` | 2.3% | 1.6% | **12.8%** | 2.8% | 3.4% | 2.1% | 2.2% |
+
+**Look hard at FY2021 in that table.** Related-party revenue went from Rp12,362m to **Rp111,573m — 12.81% of revenue — in one year**, of which **DISM alone was Rp92,675m, or 10.64% of total revenue** [FY2021 Note 30]. Third-party revenue that year grew only **1.69%** (Rp747,003m → Rp759,667m); **88.7% of FY2021's entire revenue growth came from related parties** `[calculated]`. DISM was therefore one of the four customers above 10% of revenue in FY2021 — and it is a company chaired by DCII's own President Director. The arrangement that AR2025 finally described in 2026 was already the largest single driver of growth five years earlier.
+
+Segment gross margin, FY2025 [AR2025 Note 34]: **Colocation 53.97%; Others 55.11%**. In FY2024 those were 57.82% and 65.90% — both fell. The "Others" bucket is where interconnection, flexspace, smart hands and the platform revenue-share fees sit, all mixed together. **DCII has never broken them out**, which means the interconnection moat described in §2.1 cannot be measured at this company at all.
+
+**Pricing is never disclosed.** No Rp/kW, no Rp/rack, no Rp/m², no ASP series, no escalator, no contract tenor beyond "6 months to 5 years" (prospectus) and "larger-scale and longer-term" (AR2025). Management stated at IPO that **"there is no material impact of price changes on revenue"** over the prior three years [PROS p.41]. The only way to get at price is to derive it — see §8.2.
+
+### Supply chain — the physical asset map
+
+```
+  PT Cikarang Listrindo Tbk (IPP, listed IDX:POWR)
+  15 Feb 2016 business-cooperation agreement, auto-renewing
+  for as long as the supplier holds its generation licence.
+  Rp396,786m of electricity purchased in FY2025 = 15.62% of revenue.
+  Sole >10% supplier. No take-or-pay, no volume, no tariff disclosed.
+                    │
+                    ▼  two independent substations (redundant) — a Tier IV requirement
+  ┌─────────────────────────────────────────────────────────────────┐
+  │                       DCI H1 CIBITUNG CAMPUS                     │
+  │            8.5–8.7 ha · Kabupaten Bekasi, Jawa Barat             │
+  │                    ambition: up to 300 MW                        │
+  │   JK1  3 MW (2013)   JK2  7 MW (2018)   JK3 12 MW (2020)         │
+  │   JK5 15 MW (2021)   JK6 36 MW (RFS Q1-2025)                     │
+  │                       = 73 MW  ← OWNED BY DCII                   │
+  └─────────────────────────────────────────────────────────────────┘
+                    │  ~25 km
+  ┌─────────────────▼───────────────────────────────────────────────┐
+  │        DCI PLATFORM H2 KARAWANG — 86 ha · >600 MW potential      │
+  │        H2-01 (2021)  +  H2-02 (2023)  =  27 MW combined          │
+  │        30 MW solar PV planned on 30 ha                           │
+  │                       = 27 MW  ← OWNED BY DISM                   │
+  └─────────────────────────────────────────────────────────────────┘
+  ┌─────────────────────────────────────────────────────────────────┐
+  │  DCI PLATFORM E1 JAKARTA — Ariobimo Sentral, Kuningan            │
+  │  11 storeys, ~30,000 m², up to ~4,000 racks, 19 MW (2023)        │
+  │  "first Tier IV data centre in downtown Jakarta"                 │
+  │  Uptime certificates issued to PT DC Indonesia Sukses Perkasa    │
+  │                       = 19 MW  ← OWNED BY DISP                   │
+  └─────────────────────────────────────────────────────────────────┘
+  ┌─────────────────────────────────────────────────────────────────┐
+  │  DCI E2 SURABAYA — Intiland Tower · 9 MW · built <12 months      │
+  │  complete Q4-2025, commercial Q1/H1-2026 (report contradicts      │
+  │  itself), >1,000,000 safe man-hours, DR site for Jakarta         │
+  │                       = 9 MW   ← OWNED BY DCII                   │
+  └─────────────────────────────────────────────────────────────────┘
+  ┌─────────────────────────────────────────────────────────────────┐
+  │  BINTAN "DCI Platform H5 Data Center Park" — 700 ha KEK/FTZ      │
+  │  JV with Gallant Venture Ltd (SGX, Salim). >1,000 MW scalable.   │
+  │  Up to US$18bn. 2 GW solar + 900 MW gas planned by Gallant.      │
+  │  Business model: SELL OR LEASE LAND to hyperscalers.             │
+  │                       = 0 MW   ← LANDBANK, NOT CAPACITY          │
+  └─────────────────────────────────────────────────────────────────┘
+
+  REPORTED TOTAL "DCI PLATFORM": 128 MW across 9 buildings, 4 locations
+  OWNED BY DCII:                  82 MW  (64% of the headline)
+  OWNED BY RELATED PARTIES:       46 MW  (36% of the headline)
+```
+
+**The capacity ladder** (each figure company-disclosed; the "owned" column is `[calculated]` from the building list):
+
+| Year-end | Reported "Platform" MW | Buildings | Owned by DCII (MW) | New that year |
+|---|---:|---:|---:|---|
+| 2013 | 3 | 1 | 3 | JK1 |
+| 2018 | 10 | 2 | 10 | JK2 |
+| 2020 | 22 | 3 | 22 | JK3 |
+| 2021 | **58** (incl. Indointernet's 6 MW EDGE) | — | 37 | JK5; H2-01 (DISM) |
+| 2022 | 64 | — | 37 | H2-02 built (DISM) |
+| 2023 | 83 | 7 | 37 | E1 (DISP); H2-02 live |
+| 2024 | **119** | 8 | **73** | JK6 complete (RFS Q1-2025) |
+| 2025 | **128** | 9 | **82** (73 live + E2's 9 not yet commercial) | JK6 RFS; E2 built |
+
+Two notes on that table. The 2022 and 2023 figures are **restatements**: the 2023 public expose deck gave 52 MW for 2022 and 82 MW for 2023, revised upward the following year; AR2022's own bar chart also labels 2020 as 37 MW where the operating figure was 22 MW. And the 2021 platform number **included a 6 MW downtown Jakarta building that DCII did not own** — operated under a revenue-share agreement with PT Ekagrata Data Gemilang, the data-centre vehicle associated with PT Indointernet, a company the same three founders had co-founded and which is today the listed competitor EDGE. **The habit of counting other people's buildings in the headline number dates from the day the "Platform" brand was invented.**
+
+**Inputs.** The physical supply chain of a data centre is an assembly business: transformers, switchgear, UPS and batteries, diesel generators, chillers, CRAC/CRAH units, PDUs, racks and containment — bought from a concentrated global vendor set (Schneider, Vertiv, ABB, Eaton, Siemens Energy, Hitachi Energy, Cummins, Caterpillar, Trane, Carrier, Stulz, Munters, Rittal). **DCII names not one of them.** The prospectus disclosed 29 material vendor agreements with no counterparty and no value. The only construction counterparty ever named is **PT Sumaraja Indah** (civil works, 17 Jan 2018 agreement: JK3 Rp246,886m, JK5 Rp98,275m, JK6 purchase orders Rp299,000m in 2024 plus Rp27,436m in 2025). Trakindo Utama appears once, in the FY2020/21 notes, for procurement and installation.
+
+This matters more in 2026 than it used to. Data centres went from ~2% of global electrical-equipment demand in 2020 to ~40% by 2026, and lead times blew out accordingly: **large power transformers 100–210 weeks** (from ~50), **DC-spec MV switchgear 2–3 years**, **diesel gensets >3 MW 90–110 weeks**, **chillers >500 tons 40–60 weeks**. An operator holding equipment slots ordered in 2023–24 has an option worth more than its balance sheet. DCII's ability to deliver JK6 (36 MW) and E2 (9 MW) each in under twelve months, "including electrical readiness", is direct evidence that it holds those slots. **It is also completely undisclosed** — there is no equipment purchase commitment anywhere in the accounts.
+
+### Purchase — what the business buys and owns
+
+**Fixed assets: Rp5,130,503m net = 77.2% of total assets** `[calculated]` (2024: Rp3,906,239m = 81.0%).
+
+Gross carrying amount at 31 Dec 2025 [AR2025 Note 8]:
+
+| Class | Gross Rp m | % of gross | Accumulated depreciation | Net Rp m | Useful life |
+|---|---:|---:|---:|---:|---|
+| **Tanah / Land** (at fair value) | 1,079,091 | 16.8% | — | **1,079,091** | not depreciated |
+| **Peralatan mekanis dan listrik** | 2,851,613 | 44.5% | (779,215) | 2,072,398 | 4–20 yrs |
+| **Bangunan / Building** | 1,380,956 | 21.5% | (323,493) | 1,057,463 | 8–20 yrs |
+| Peralatan kantor dan komputer | 172,762 | 2.7% | (102,130) | 70,632 | 4 yrs |
+| Peralatan jaringan | 170,298 | 2.7% | (76,051) | 94,247 | 4–8 yrs |
+| Perabot / Kendaraan | 3,464 | 0.1% | (2,965) | 499 | 4–8 yrs |
+| **Aset dalam penyelesaian (CIP)** | **756,173** | **11.8%** | — | **756,173** | — |
+| **Total** | **6,414,357** | 100% | **(1,283,854)** | **5,130,503** | |
+
+The shape is exactly what §2.1 predicts: **mechanical and electrical equipment is the single largest class at 44.5% of gross assets, larger than the buildings**. The building is a box around the electrical plant.
+
+**Construction in progress at 31 Dec 2025:**
+
+| Project | % complete | Carrying amount | Est. completion |
+|---|---:|---:|---|
+| Pusat data **JK 6 (Phase 3)** | 15.25% | 475,886 | 2026 |
+| Pusat data **E 2 (Phase 1)** | 80.98% | 280,287 | 2026 |
+| **Total** | | **756,173** | |
+
+JK6 is being fitted out in phases exactly as §2.1 describes — the shell built once, the plant installed as contracts are signed. At 31 Dec 2024 "JK 6 (Phase 1)" was 72.37% complete at Rp766,748m; a year later Phase 3 is 15.25% complete. That is a live, multi-year fit-out, not a finished building.
+
+**Land.** Carried at **fair value, Level 2**, revalued annually by **KJPP Dino Farid & Rekan** (report dated 19 Feb 2026 for the 31 Dec 2025 balance; SMT's land valued 31 Dec 2025). Method: comparable market data in a **non-active market**, adjusted for size, location and condition. **Carrying amount if held at cost would be Rp720,204m** — so **Rp358,887m of the land value is revaluation uplift** `[calculated]`, 9.0% of total equity. Land valuation is the **single Key Audit Matter** in both FY2024 and FY2025, precisely because Level 2 inputs in a non-active market involve judgement.
+
+Land additions in FY2025 were **Rp228,020m of real purchases**, plus the subsequent-event purchase of **59,726 m² for Rp131,397m (Rp2.20m/m²)** signed 12 Dec 2025 and paid 11 Feb 2026. Land rights are **HGB expiring by 2047**; management believes they are extendable.
+
+**Capex by year:**
+
+| Rp m | FY2020 | FY2021 | FY2022 | FY2023 | FY2024 | FY2025 | TTM Jun-26 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Capex (cash, "perolehan aset tetap") | 818,394 | 498,812 | 310,887 | 315,744 | 881,481 | **1,721,642** | **2,413,720** |
+| Capex (accrual: fixed-asset additions / segment note) | — | — | — | 202,764¹ | 1,150,183 | 1,517,029 | — |
+| Non-cash additions via payables/accruals | — | — | — | — | 340,782 | 124,060 | — |
+
+Note the two definitions differ materially and neither is wrong — the accrual figure is the economic spend, the cash figure is when it was paid. **Always state which.** ¹ Rp202,764m for FY2023 is the additions column of the fixed-asset movement schedule; the segment note's *belanja modal* line begins in FY2024. The step-change is unmistakable: three years at Rp310–500bn, then 2.8× in 2024, then double again in 2025, and Fitch expects **Rp10–15 trillion a year in 2026–27** — six to nine times the FY2025 level.
+
+**"Reserves-equivalent" — the landbank.** For a planter it is planted hectares; for a miner it is tonnes; for a data centre it is **land with power access**:
+
+| Site | Land | Stated ceiling | Live |
+|---|---|---|---|
+| H1 Cibitung | 8.5–8.7 ha *(the report gives both, on different pages)* | 300 MW (AR2025); "scalable to 220 MW" (PUBEX2026) | 73 MW |
+| H2 Karawang | 86 ha (30 ha earmarked for solar) | >600 MW | 27 MW |
+| E1 Jakarta | building only | — | 19 MW |
+| E2 Surabaya | not disclosed | — | 9 MW |
+| **Bintan H5** | **700 ha** (KEK + FTZ) | **>1,000 MW** | **0** |
+| Group ambition | | **>2,000 MW** | **128 MW** |
+
+Treat the ceilings as capability statements, not plans. The H1 ceiling was quietly **cut from "up to 300 MW" to "scalable to 220 MW"** between the FY2024 and FY2025 public-expose decks — a 27% reduction that is nowhere explained.
+
+**The pipeline.** Fitch (July 2026) expects capacity to rise from ~128 MW to **>850 MW by 2027–28**. Baxtel lists JK7 and JK8 at H1, H2-03 at Karawang, and E3/E5 in Jakarta as pipeline facilities; a downtown-Jakarta Tier IV topping-off took place 15 Jan 2026, probably E3. **None of these appears in any DCII filing.**
+
+**Acquisitions and impairments.** One acquisition ever: **PT Sarana Megahtama, 50.005% for Rp110,000m** via 5,001 new shares, 7 July 2023. Management assessed it as **not a business combination**, so the cost was allocated to identifiable assets at relative fair value and **no goodwill was recognised**. What came in was **Rp189,624m of land and Rp3,129m of building** — i.e. DCII paid Rp110bn for half of a land-holding entity carrying Rp193m of property. NCI of Rp107,293m arose on the transaction. SMT contributes **Rp1,226m of profit** in FY2025 on Rp217,956m of assets — a **0.56% return on assets** `[calculated]`; the Rp613m on the face of the P&L is the 49.995% minority's half. **No impairment has ever been recognised on anything.**
+
+### Process — how the product is made and what it costs
+
+The physical process, in the order the money moves:
+
+```
+  1. SALES ORDER      customer signs a solution design + delivery target
+  2. IMPLEMENTATION   the sales-implementation unit installs materials,
+                      network and power to the customer's cage/suite
+                      → this is the "Material instalasi" cost line
+  3. OPERATIONS       24/7 running of power, cooling, security and network
+                      to the SLA. AI/predictive maintenance on M&E plant.
+                      → electricity + depreciation + maintenance + salaries
+  4. BILLING          monthly recurring per the sales order; deferred
+                      revenue where the customer prepays
+```
+
+**Cost of revenues: Rp1,167,028m = 45.95% of revenue** (FY2024: Rp755,402m = 41.68%) `[calculated]`
+
+| Rp m | FY2019 | FY2020 | FY2021 | FY2022 | FY2023 | FY2024 | FY2025 | FY25 % of rev |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| **Listrik / Electricity** | 70,699 | 115,789 | 148,962 | 199,993 | 241,163 | 284,756 | **457,760** | **18.02%** |
+| **Penyusutan / Depreciation** | 62,300 | 103,071 | 144,729 | 173,588 | 185,736 | 204,247 | **279,779** | **11.01%** |
+| **Jasa sewa colocation** *(rent-in)* | – | – | – | – | – | 35,465 | **232,583** | **9.16%** |
+| Gaji dan kompensasi | 12,432 | 16,932 | 21,134 | 22,667 | 32,410 | 35,886 | 41,704 | 1.64% |
+| **Material instalasi** | 77,630 | 116,371 | 57,853 | 5,571 | 8,789 | 132,038 | **40,265** | 1.59% |
+| Pemeliharaan / Maintenance | 3,947 | n/d | n/d | n/d | n/d | 15,589 | 18,445 | 0.73% |
+| Lisensi dan komisi *(Equinix)* | 16,739 | 17,675 | **–** | – | – | – | – | – |
+| Amortisasi aset takberwujud | – | – | 321 | 965 | 1,825 | 1,968 | 2,826 | 0.11% |
+| Lain-lain | 12,795 | 19,451 | 22,239 | 41,596 | 64,312 | 45,453 | 93,666 | 3.69% |
+| **Total** | **252,595** | **389,289** | **395,238** | **444,380** | **534,235** | **755,402** | **1,167,028** | **45.95%** |
+
+Five things to take from that table.
+
+**(a) Electricity plus depreciation is the business.** Together they were **52.7% of cost of revenues in 2019, rising to 84.1% in 2022 and 79.9% in 2023, then falling to 63.2% in 2025** as the rent-in line arrived `[calculated]`. Electricity itself has run in a narrow **14.4–19.2% of revenue band** across seven years (14.4% in 2019, 19.2% in 2022, 18.0% in 2025) — consistent with power being repriced through to customers within the bundled price rather than absorbed at a fixed rate.
+
+**(b) DCII absorbs power; it does not pass it through as a landlord.** All electricity is bought from **PT Cikarang Listrindo Tbk** — an independent power producer at Cibitung, **not PLN**. In FY2025 Cikarang Listrindo supplied **Rp396,786m = 86.7% of the electricity line** `[calculated]`; in earlier years it was 100%. Because DCII buys the power and sells a bundled kW price, **PUE is a direct gross-margin driver for shareholders, not for tenants**. That makes DCII's refusal to publish a PUE number more significant than it looks (§ Missing Data). One external report puts JK5's PUE at 1.5 (2021); Indonesian best-in-class in a tropical climate is 1.4–1.6, since free cooling is unusable year-round.
+
+**(c) "Material instalasi" is a capex-cycle line hiding inside cost of sales.** It is the physical fit-out of a customer's cage or suite, and it tracks *new capacity commissioned in the year*, not the installed base. It was Rp116,371m in the JK3/JK5 build year of 2020, Rp5,571m in the quiet year of 2022, Rp132,038m in 2024, Rp40,265m in 2025. **Gross margin swings of five percentage points come from this line alone and mean nothing about the underlying business.**
+
+**(d) The FY2021 margin expansion was an accounting artefact, not operating leverage.** Revenue grew 14.7% and cost of revenues grew **1.5%**, lifting gross margin from 48.7% to 54.6%. The mechanism: electricity (+33,173) and depreciation (+41,658) both grew hard, but were more than offset by **material instalasi halving (−58,518)** and **licensing and commission going to exactly zero (−17,675)** because the Equinix agreement was terminated in September 2020. Strip both out and the run-rate cost base grew **+32.2%**, faster than revenue `[calculated]`. This is worth remembering whenever DCII's margin moves.
+
+**(e) The FY2025 margin compression is real, and it is the rent-in line.** "Jasa sewa colocation" went from Rp35,465m to **Rp232,583m, +555.8%** — and Rp264,787m of total cost of revenues came from related parties, 22.69% of COGS. Management's own explanation for the margin fall is different and softer: *"strategic pricing optimisation to secure larger-scale and longer-term contracts… a deliberate volume-driven approach"* [AR2025 p.183]. Both can be true. But the arithmetic says the biggest single new cost in FY2025 was renting a chairman-affiliated building, not discounting to customers.
+
+**Operating expenses below gross profit** are trivially small for a company of this size and worth noting for exactly that reason:
+
+| Rp m | FY2023 | FY2024 | FY2025 | FY25 % of revenue |
+|---|---:|---:|---:|---:|
+| Beban pemasaran / Marketing | 5,264 | 5,451 | **5,297** | **0.21%** |
+| Beban umum dan administrasi / G&A | 82,470 | 79,376 | **125,660** | **4.95%** |
+| — of which salaries | 63,774 | 56,079 | 79,688 | 3.14% |
+| — of which professional fees | 6,116 | 6,798 | **26,719** *(+293%)* | 1.05% |
+| Total employee cost (COGS + G&A) | 96,184 | 91,965 | **121,392** | **4.78%** |
+
+**184 employees run 128 MW.** Revenue per employee is **Rp13.8bn** on the annual-report headcount (Rp20.5bn on the FS's unaudited 124) `[calculated]`. This is a capital business, not a labour business, exactly as the prospectus said in 2020 when 96 people ran 22 MW.
+
+### Distribute — how the product is sold
+
+**Customers.** DCII has never named a colocation customer. What exists:
+
+| | FY2020 | FY2021 | FY2024 | FY2025 |
+|---|---|---|---|---|
+| Headline count | — | — | "200+" | **"270+"** |
+| Global cloud providers | 3 | 3 | 6 | 6 |
+| Global social / Indonesian e-commerce | 7 | 7 | 5 | 5 |
+| Financial institutions | 124 | — | 100+ | 100 |
+| Telcos → Network service providers | >30 | >35 | 70+ | 80 |
+| Other industries / SOEs | >100 | — | 30+ | 60 |
+| Connectivity providers on-net | >30 | >35 | >50 | **>80** |
+| Local suppliers | — | — | 569 | 670 |
+
+Cloud on-ramps physically present in DCII buildings, per the company's own website: **Google Cloud, AWS, Microsoft Azure, Alibaba Cloud, Huawei Cloud, BytePlus** (ByteDance's enterprise arm). An on-ramp means the provider has equipment in the building — this is the closest thing to a confirmed hyperscaler tenant list. The only individually named customer found anywhere is **PT Bank Jtrust Indonesia Tbk**, at E1. **JK6's entire 36 MW is taken by "a major global cloud provider", unnamed.**
+
+**Customer concentration — the number the narrative never mentions** [revenue note, each year]:
+
+| Period | Customers >10% of revenue | Combined Rp m | % of revenue |
+|---|---:|---:|---:|
+| FY2017 | 1 | 16,523 | 13.0% |
+| FY2018 | 1 | 44,001 | 15.0% |
+| FY2019 | 3 | 208,489 | 42.6% |
+| 8M2020 (prospectus) | 3 | 293,798 | **59.6%** |
+| FY2020 | 2 | 345,060 | 45.4% |
+| FY2021 | 4 | 501,149 | **57.5%** |
+| FY2022 | 3 | 503,375 | 48.2% |
+| FY2023 | 2 | 525,089 | 40.2% |
+| FY2024 | 3 | 891,515 | **49.2%** |
+| **FY2025** | **2** | **1,217,909** | **47.95%** |
+
+**Two customers are half the company.** That has been true, in some form, every year since 2019. It appears only in the revenue note; it appears in no highlights table, no public-expose deck and no MD&A. Worse, the financial-risk note in every single year asserts the opposite: *"The Group has no concentration of credit risk as its trade receivables relate to a large number of ultimate customers."* Those two statements sit forty pages apart in the same document and cannot both be true in any useful sense. The prospectus at least argued the case honestly — that switching costs are high because migration creates downtime — and named concentration inside the top-ranked risk factor.
+
+**Contract terms.** "6 months to 5 years" at IPO, across **97 material customer agreements**. Since then: nothing quantified. No weighted-average remaining term, no escalator, no take-or-pay disclosure, no churn, no renewal rate, no backlog. The only forward-looking operational statement in six years of reports is **"recurring revenues increased 52.3%"** (FY2025) and **"recurring revenue Rp741bn of Rp871bn"** (FY2021, ~85% of revenue).
+
+**Selling cost is 0.21% of revenue.** There is effectively no sales machine. The stated method is direct approach plus **referrals from existing customers**, and the sales strategy is set once a year by the sales team with management. For a business whose largest customers are global hyperscalers this is plausible — those deals are negotiated, not sold — but it also means growth depends entirely on inbound demand and on the certification stack.
+
+---
+
+## 2.3 Segment 2 — the DCI Platform fee and rent business (not separately reported)
+
+This is not a disclosed segment. It has to be assembled from the related-party note, and it is where the company is quietly changing shape.
+
+**What DCII sells to the platform members:**
+
+| Counterparty | Agreement | Fee | FY2025 revenue |
+|---|---|---|---|
+| **DISM** | Data Center Facility Operation and Support Agreement, 18 Jun 2021 | US$500,000 one-time + **10% of MRR on billable capacity ≥10 MW, 15% below 10 MW** (amended 1 Dec 2023). MRR excludes power pass-through. | Rp41,240m |
+| **DISP** | Data Center Facility Operation and Support Agreement, 24 Nov 2023 | US$250,000 one-time + **10–15% of MRR** | Rp1,271m |
+| **EDG** *(no longer a related party)* | Data Center Operation and Technical Support Agreement, 16 Nov 2020 | Rp4,350m one-time + **5% of MRR**, raised to **5–7%** on 25 Mar 2022 | Rp18,345m *(in third-party lines)* |
+| **Sarana Pactindo** | Master Service Agreement, 16 Nov 2022 | not disclosed | Rp14,335m |
+
+**What DCII buys back:**
+
+| Counterparty | What | FY2025 | FY2024 |
+|---|---|---:|---:|
+| **DISM** | "use of DISM's data center building by the Company" | **255,290** | 3,801 |
+| **DISP** | "use of DISP's data center building" | 9,229 | 4,553 |
+| **EDG** *(third-party lines)* | colocation + procurement (agreements to 31 May 2027) | 37,674 | 36,259 |
+| **Indointernet** *(third-party lines)* | data-communication network services | 3,680 | 4,776 |
+
+Reverse-engineer the DISM fee and you get an estimate of the H2 campus's revenue. At a **10% share** on Rp41,240m of fee income, DISM's MRR-based revenue would be roughly **Rp412bn**; at 15%, roughly **Rp275bn** `[calculated]`. Against 27 MW of installed capacity that is Rp10–15bn per MW — plausible, and in the same range as DCII's own revenue per MW (§8.2). The fee arrangement is therefore economically meaningful: DCII is capturing perhaps a tenth of the revenue of a campus it did not fund.
+
+But the rent flow is four to six times larger than the fee flow, and running the wrong way. **DCII paid Rp264,519m to DISM and DISP in FY2025 and received Rp42,511m back.** On a net basis, **Rp222,008m of cash left the listed company** for private companies chaired by its President Director. And the direction reversed in a single year: in FY2024 DCII paid DISM and DISP Rp8,354m and received Rp22,163m — a **net inflow of Rp13,809m** `[calculated]`. That is a Rp236bn swing in twelve months, unexplained anywhere in the MD&A.
+
+There is a defensible commercial logic: JK6's 36 MW is fully committed to a single cloud provider, so other contracted demand had to be served from somewhere, and renting a related party's building is faster than building. There is also a less comfortable reading: the group is being run as one platform with the capital-hungry assets held privately and the listed vehicle used as the distribution channel. **Nothing in the disclosure lets an outside shareholder distinguish between the two.**
+
+---
+
+## 2.4 Segment 3 — Bintan (a land play, not a data centre)
+
+Worth isolating because the economics are different from everything above.
+
+- **700 hectares** on Bintan Island, Kepulauan Riau, inside both a **Special Economic Zone (KEK)** and a **Free Trade Zone** — under an hour by ferry from Singapore, and sub-2 ms by fibre.
+- Partner: **Gallant Venture Ltd** (SGX: 5IG), controlled by Anthoni Salim. Combined ambition of ~1.9 GW, **up to US$18bn** of investment, first complex targeted 2027.
+- Power: initially fossil-fired, then a **2 GW solar farm and a 900 MW gas plant**, both to be built by Gallant Venture — i.e. not by DCII.
+- **The business model is different: DCII will sell or lease land to hyperscalers and cloud companies**, as well as building on site. That is a land-and-power developer's model, with land-sale gains and ground rents, not a colocation landlord's model with US$/kW/month.
+- Naming is inconsistent across sources — "DCI Hyperscale 3 Sky (H3)" in one, "H5 Data Center Park" on DCII's own site. An earlier 2023 statement put the campus at **3,000 MW with 100% renewable energy**; the current framing is >1,000 MW.
+
+**Status in the accounts: nothing.** No entity, no capex line, no commitment, no hectares, no investment figure appears in any DCII filing. AR2024 called it "tahap penjajakan" (exploratory); AR2025 calls it "tahap awal pengembangan lahan" (initial land development). **Treat Bintan as a free option with an unknown strike price, not as capacity.** Batam's entire pipeline is ~400 MW against Johor's 8,542 MW; the Singapore-spillover trade has overwhelmingly gone to Malaysia, not to the Riau islands.
+
+---
+
+# 03 — DEMAND
+
+## 3.1 The macro base — why Indonesia is structurally under-built
+
+| Metric | Figure | As at |
+|---|---|---|
+| Population | 284m, median age 30.4 | 2026 |
+| Internet users | **229m — 80.7% penetration** *(company cites 229m / 80.66%, APJII 2025)* | 2026 |
+| Digital economy value | ~US$130bn; projected **US$200–360bn by 2030** (Google/Temasek/Bain) | 2026 |
+| E-commerce GMV | US$100bn+, **44% of all SE Asian e-commerce GMV** | 2026 |
+| Cloud spend | US$2.44bn, 14.5% CAGR | 2025 |
+| Indonesia DC market revenue | US$2.81bn → **US$6.08bn by 2031 (13.7% CAGR)** (Arizton) | 2026 |
+| DCII's own cited forecast | **~13.9% CAGR to ~US$3.09bn by 2030** (Mordor) | AR2025 |
+| **IT load per capita** | **2.3 W** vs **7 W** for APAC | 1H2026 |
+
+**The single demand ratio that matters:** Indonesia has 229 million internet users and 44% of Southeast Asia's e-commerce GMV, but only ~344 MW of live data centre capacity — against Johor's 1,110 MW and Singapore's 1,118 MW, markets serving 4m and 6m people. Per capita, Indonesia is under-built by roughly two orders of magnitude.
+
+The bear counter is equally simple and equally true: **most Indonesian traffic has always been served from Singapore, and only regulation or latency forces it home.** DCII's own prospectus made this point against itself in 2020, noting that PP 71/2019 was "kurang berpihak pada penyedia layanan Pusat Data lokal" — unhelpful to local operators — because private operators may host offshore.
+
+## 3.2 Who the customers actually are, by tier
+
+**Tier 1 — hyperscalers. These are the megawatts.**
+AWS *Asia Pacific (Jakarta)* since Dec 2021 (US$5bn/15yr commitment); Microsoft **Azure Indonesia Central launched 28 May 2025** inside a US$1.7bn 2024–28 commitment, with BCA, Pertamina, Adaro, Telkom, Siloam and the Ministry of Finance among 100+ launch customers; Google Cloud Jakarta since Jun 2020; **Oracle Indonesia North launched Jul 2025 — in Batam, not Jakarta**; Alibaba Cloud (2 AZs since 2018/19), Tencent Cloud (2021), Huawei Cloud; ByteDance/TikTok, whose Tokopedia merger in Jan 2024 put a very large Indonesian transactional dataset squarely inside OJK and PP 71 scope.
+
+Critically, **Indonesian hyperscalers have historically leased rather than self-built** — unlike in Johor. That is the structural reason DCII, PDG, BDx and Digital Edge exist as third-party landlords with hyperscaler anchor tenants. A shift to self-build is the single biggest threat to the model.
+
+**Tier 2 — domestic digital.** GoTo, Grab, Traveloka, Blibli, Bukalapak, Shopee Indonesia, the digital banks. Mostly heavy *public-cloud* consumers rather than direct colocation tenants — they drive hyperscaler MW, not their own racks. (No DCII–GoTo relationship is publicly established; GoTo's announced 2025 cloud agreements are with Tencent and Alibaba.)
+
+**Tier 3 — banks and financial institutions. This is the legally captive segment.** BCA, Mandiri, BRI, BNI, the insurers, the exchange, payment processors. Small in MW, high in price per kW, and it is exactly what DCII's E1 CBD asset and its TVRA/PCI DSS/SOC/OJK-11/2022 certification stack are built for. DCII disclosed **124 BFSI clients in 2020** and ~100 financial institutions in 2025.
+
+**Tier 4 — government.** Pusat Data Nasional, ministries, the sovereign-AI push. Politically important, commercially patchy, and volatile — the **June 2024 PDN ransomware attack paralysed 282 government agencies** and became a national scandal.
+
+**Tier 5 — telcos**, who are simultaneously customers, landlords and competitors. Telkom's NeutraDC and Indosat's BDx/Zankore are the two domestic vehicles trying to move up from carrier to AI-infrastructure provider.
+
+## 3.3 The regulatory floor — what is actually captive
+
+This is the most misunderstood part of the Indonesian data-centre case, and it has been **loosened once already**.
+
+**PP 71/2019 (in force Oct 2019) replaced PP 82/2012 and *relaxed* localisation.** PP 82/2012 had required *all* electronic system operators to site data centres and DR centres in Indonesia. PP 71/2019 split them: **Public ESOs** (state bodies and their appointees) must stay onshore unless the technology is unavailable domestically; **Private ESOs may host offshore**, subject to registration with Komdigi, granting authorities access for supervision and law enforcement, and consent rules for cross-border transfer. Administrative fines run to 2% of annual revenue, enforceable from October 2024. **This is why AWS, Google and Microsoft could serve Indonesia from Singapore for years.**
+
+**The real onshore mandate is sectoral, and it lives at OJK, not Komdigi:**
+
+| Rule | Effect |
+|---|---|
+| **OJK Reg 11/2022** | Banks: **primary data centre AND disaster-recovery centre must be in Indonesia.** The hard localisation. |
+| OJK Reg 3/2024 | Fintech (ITSK) localisation |
+| OJK Reg 27/2024 | Crypto-asset services must use Indonesian data centres |
+| OJK Reg 4/2021 | Non-bank financial institutions |
+| Bank Indonesia PBI 23/6/2021 | Payment-system processing authorisation |
+
+DCII is independently audited for compliance with **OJK Regulation 11/2022** and with the **IDX IT Infrastructure and Data Center Design Guidelines v2.0** (auditor: Veda Praxis) [AR2025 pp.37–41]. Those two audits are the licence to serve the captive segment.
+
+**The PDP Law (UU 27/2022) is fully enforceable since 17 October 2024 — and has no regulator.** As at August 2026 the **Lembaga PDP** required by Article 58 has never been established; the presidential regulation creating it was submitted 20 May 2026 and remains unsigned, and the implementing regulation setting fine procedures cleared review in December 2025 and is also unsigned. **The 2%-of-revenue administrative fine is therefore structurally unavailable today.** Enforcement runs on older instruments and on access-blocking.
+
+**The practical read.** Demand that converts reliably into Indonesian colocation today is: OJK-regulated financial workloads, government workloads, and latency-sensitive inference. Everything else — general consumer internet, e-commerce, most SaaS — is legally free to sit in Singapore, and largely does. **If the Lembaga PDP is finally stood up and the 2% fine becomes live, that is a step-change upward in Indonesian colocation demand. It is the single biggest free option in this case, and it has slipped repeatedly since 2022.**
+
+## 3.4 AI demand — real, but announcement-heavy
+
+This is the live swing factor, and the reason Jakarta's development pipeline jumped 56% in six months.
+
+- **Zankore by Indosat** (Indosat Ooredoo Hutchison + Ooredoo + NVIDIA + Nokia), announced **7 Aug 2026**: a target of **1 GW of NVIDIA "DSX AI Factory" infrastructure across SE Asia, with an initial ~200 MW in H1 2027** on GB300 NVL72, based in Indonesia. Bundled with Sahabat-AI (an Indonesian LLM), an AI Centre of Excellence and an AI-RAN programme.
+- **BDx CGK4 at Jatiluhur** — launched Dec 2024 as an AI campus, NVIDIA DGX-Ready certified, live with H100s and specced for GB200 NVL72 liquid-cooled density.
+- Indonesia's national AI strategy targets AI contributing **9.7% of GDP by 2030**; the Indonesian AI market is projected from ~US$2.4bn (2025) to ~US$10.9bn (2030), ~28.7% p.a. [cited in AR2025].
+- McKinsey, cited by DCII itself: **AI workloads could more than triple between 2025 and 2030.**
+
+**The caveat to hold.** Almost every AI number is an *announcement*, denominated in a target year two to four years out, dependent on GPU allocation, PLN energisation and financing that has not closed. Treat the 1 GW Zankore figure as aspiration; **the 200 MW H1-2027 tranche is the number worth tracking.** Note also DCII's own more sober framing in AR2025 [p.69]: weaker macro conditions have produced "**siklus belanja modal perusahaan dan hyperscaler yang lebih berhati-hati**" — more cautious hyperscaler capex cycles, tighter financing and a **higher threshold for new greenfield commitments**.
+
+## 3.5 Absorption — the number that decides everything
+
+| Period | Jakarta live MW | Vacancy | Implied let MW |
+|---|---:|---:|---:|
+| H2 2024 | ~250–280 (est.) | **36%** (C&W) / 27% (KF) | ~180 |
+| H1 2025 | ~300 (est.) | **31%** (C&W) | ~207 |
+| Q1 2026 | 344 (KF) | **21%** (KF) | ~272 |
+| **1H 2026** | **344** (KF) | **20.5%** (KF) | **~273** |
+
+Vacancy is falling and net absorption is positive — roughly **90 MW of net take-up between H2 2024 and 1H 2026, about 55 MW a year**. That is the demand side's honest run-rate. Section 04 puts it against supply.
+
+---
+
+# 04 — SUPPLY
+
+## 4.1 The Jakarta market, triangulated (mid-2026)
+
+Three brokers published within weeks of each other. They agree on live capacity and diverge on pipeline definitions:
+
+| Metric | Knight Frank (31 Jul 2026) | Cushman & Wakefield (5 Aug 2026) | BMI/Fitch (14 Apr 2026) |
+|---|---|---|---|
+| Jakarta live IT capacity | **344 MW** | n/p | ~340 MW |
+| Under construction | **329 MW** | (APAC 4,764 MW) | — |
+| Committed pipeline | **1.6 GW** | **1.7 GW total development, +56% HoH** | ~1.5 GW |
+| Early-stage landbank | 2.3 GW+ | — | — |
+| Vacancy | **20.5%** | (APAC 10.3%) | — |
+| Construction cost | **US$10.5–11.6m per MW** — among APAC's cheapest | — | — |
+| Forecast | live capacity to **more than triple by 2027** | — | — |
+
+**The single most important supply fact: Jakarta's development pipeline more than doubled in twelve months (709 MW → 1,700 MW) while operational capacity barely moved.** Indonesia is not a built-out market; it is a market where a very large wave of capacity is scheduled to land in 2026–2029, gated by power energisation and construction lead time rather than by capital.
+
+Set that against demand: **329 MW under construction is ~96% of the existing live base, and roughly six years of demonstrated net absorption at 55 MW a year.** Jakarta's 20.5% vacancy is already the second-worst in APAC after Bangkok, against Johor at 0.7% and Singapore at 4.9%.
+
+Two things could reconcile the gap, and the DCII case rests on which one you believe:
+1. **Absorption accelerates violently** because AI and hyperscaler demand arrives as 20–50 MW single leases rather than 1–2 MW enterprise deals. The tell is pre-leasing — NeutraDC's Batam campus was reported fully secured before launch, and DCII's own contracted-to-shell ratio is above 90% per Fitch.
+2. **Much of the pipeline never gets energised** — PLN connection, financing and GPU allocation fail, and the 1.7 GW stays on paper. This is broadly what happened in Johor, where 1.2 GW was contracted and only ~600 MW drawn.
+
+**Be very careful with "Indonesia has X GW" headlines.** One source puts national capacity at 600–650 MW in 1H2026 "rising to 1.7 GW by year-end", which cannot be reconciled with Knight Frank's 344 MW for Jakarta unless the former counts *contracted grid MVA* rather than *live IT load*. Always check which.
+
+## 4.2 Operator by operator
+
+| Operator | Backer | Live IT MW | Announced pipeline |
+|---|---|---:|---|
+| **DCI Indonesia (DCII)** | founders + Anthoni Salim | **128** *(of which 82 owned)* | H1 to 220 MW; H2 to 600 MW+; Bintan >1,000 MW; group target **>2,000 MW**; Fitch expects **>850 MW by 2027–28** |
+| **BDx Indonesia** | I Squared Capital + Indosat | CGK3 live; CGK4 live with H100s | **1.2 GW of contracted PLN power** (3 Jun 2026): CGK4 788 MVA/650 MW, CGK3A ~60 MVA, CGK5 385 MVA/300 MW |
+| **Digital Edge / EDGE DC (IDX: EDGE)** | Stonepeak + PT Indointernet | ~29 MW, 4,600 racks | **CGK campus, Bekasi: 500 MW expandable to 1 GW, US$4.5bn**; bldg 1 Q4-2026 |
+| **Princeton Digital Group** | Warburg Pincus, Ontario Teachers', Mubadala | ~22 MW+ | **JC3 Bekasi 120 MW / US$1bn**, phase 1 Q4-2026; ~230 MW Indonesia total; a further 240 MW GIIC build |
+| **DayOne** (ex-GDS Intl) | SoftBank/Coatue | Nongsa live (hosts Oracle Indonesia North) | **450 MW Batam**, PPA signed |
+| **NeutraDC (Telkom)** | state | ~18 MW | Batam 51 MW with Singtel/Medco, reported fully pre-let; PLN deal for up to 200 MW at Cikarang (Aug 2026) |
+| **EDGNEX (DAMAC)** | DAMAC | — | **144 MW, US$2.3bn**, target Dec 2026 |
+| **NTT DATA** | NTT | Jakarta 1 & 2 (Bekasi) | ~45 MW campus |
+| **Digital Realty / Bersama (BDIA)** | DLR 50% + Saratoga/Provident | CGK11 5 MW initial | expandable to 32 MW |
+| **Equinix** | — | own Jakarta build, US$74m, opened May 2025 | — |
+| Racks Central, ST Telemedia, EdgeConneX, BW Digital | various | — | Batam pipelines of 95 / 322 / 200 MW |
+
+**DCII's market share.** Against Knight Frank's 344 MW Jakarta live base, DCII's ~119 MW of Jakarta-corridor capacity is roughly **35%** — but only ~73 MW of that is owned, which is **~21%** `[calculated]`. On a national basis (580 MW installed across 217 facilities at 1H2026), DCII is ~22–26%. The company's own historical claims of **51% (2020)** and **62% (2021)**, both sourced to Structure Research, are stale: the market has roughly quadrupled since, and **AR2025 drops Structure Research entirely**, replacing it with JLL, McKinsey, CBRE, Kearney, BCG and Mordor — none of whom are cited for a DCII market share at all. The disappearance of the market-share claim from the FY2025 report is itself a datapoint.
+
+**BDx's 1.2 GW PLN power commitment, signed 3 June 2026, is the competitive event of the year.** A single rival has contracted more grid power than the entire live Indonesian market. If it energises, DCII's incumbency premium erodes fast.
+
+**Foreign capital dominates.** BMI puts domestic operators at only ~10% of live Indonesian capacity. DCII is competing against Warburg Pincus, Ontario Teachers', Mubadala, I Squared, Stonepeak, SoftBank and DAMAC — balance sheets that can outspend it and accept lower returns for longer. That is the real meaning of "largest domestic operator".
+
+## 4.3 The regional frame — Singapore, Johor, Batam
+
+| | Johor | **Jakarta** | Batam | Singapore |
+|---|---:|---:|---:|---:|
+| Live IT capacity (mid-2026) | **1,110 MW** | **344 MW** | est. \<100 MW | **1,118 MW** |
+| Pipeline | **8,542 MW** | 1.6–1.7 GW + 2.3 GW landbank | >400 MW | ~561 MW |
+| Vacancy | **0.7%** | **20.5%** | — | **4.9%** |
+| Industrial power tariff | ~US$0.12/kWh | **I-4/TT Rp996.74 ≈ US$0.056/kWh** | same PLN tariff | ~US$0.15–0.20/kWh |
+| Construction cost | — | **US$8.0–11.6m/MW** | — | US$14.5/watt |
+
+Singapore paused new data centre approvals from 2019, replaced the pause in 2022 with a tightly rationed allocation, and in 2026 released a further ~200 MW under DC-CFA2 with Jurong Island flagged for up to ~700 MW. **The displaced demand went overwhelmingly to Johor, not to Batam** — Malaysia went from ~10 MW in 2021 to ~1.3 GW in 2024. Johor won on land contiguity, a road causeway to Singapore, grid headroom and active government courtship. Batam's counter-offers are SEZ tax treatment, sub-2 ms latency via the Nongsa–Changi cable (landed 20 Jul 2026), and the one thing Johor cannot match — **being inside Indonesia for data-sovereignty purposes**. BMI's framing is right: **Batam is a compliance-led hub, not a scale hub**, and Bintan sits in the same category.
+
+**Malaysia's policy turn is Indonesia's tailwind.** An informal moratorium on non-AI data centres has run since mid-2024 and was confirmed in Parliament on 24 Feb 2026; Johor rejected ~30% of 2024 applications; grid connections take up to 18 months; and in November 2025 Malaysian data centres drew 603 MW against 1,276 MW of contracted maximum demand — the government has sold far more power than is being drawn and is reluctant to sell more.
+
+## 4.4 Power — the binding constraint, and Indonesia's real edge
+
+**PLN tariffs effective 1 April 2026:**
+
+| Group | Description | Rp/kWh | US$/kWh @ 17,692 |
+|---|---|---:|---:|
+| **I-4 / TT** | Large industry >30,000 kVA, transmission voltage | **996.74** | **0.0563** |
+| I-3 / TM | Industry >200 kVA, medium voltage | 1,114.74 | 0.0630 |
+| B-3 / TM | Business >200 kVA, medium voltage | 1,114.74 | 0.0630 |
+
+**Indonesian industrial power is roughly half Malaysia's and a third of Singapore's.** For an AI campus where electricity is 40–60% of operating cost, that is decisive, and it is the strongest single argument for Indonesian capacity taking regional share. Combined with build costs of US$8–11.6m/MW — among APAC's cheapest — this is the durable structural advantage. Note it is an *administered* price, frozen for non-subsidy groups through 2025 and into 2026, not a market one.
+
+**Java has generation surplus but not connection capacity.** PLN reports a ~6.8 GW surplus concentrated on Java; the constraints are transmission, substations, permitting and land. **RUPTL 2025–2034** (issued 28 May 2025) adds 69.5 GW nationally, of which **33.5 GW to Java-Madura-Bali**, plus 47,758 circuit-km of transmission and 107,950 MVA of substations, and **explicitly names data centres a priority load**. The next RUPTL, expected late 2026, is worth watching for whether MW are ring-fenced for the West Java clusters.
+
+**The PLN monopoly is the sector's structural sore point.** PLN holds a legal monopoly over generation, transmission and distribution, so an operator cannot build its own utility-scale renewable plant and wheel the power to its campus. That collides with the fact that ~60% of data centre operators face net-zero-by-2030 commitments while Indonesian REC supply is short. The fix is **power wheeling under the RUU EBET**, stalled since 2019. Whether it passes with a wheeling provision is a genuine, checkable catalyst.
+
+**DCII's specific position on power is unusual and under-appreciated.** Its Cibitung campus does not buy from PLN at all — it buys from **PT Cikarang Listrindo Tbk**, a listed independent power producer serving the Cikarang industrial estates, under a 15 February 2016 business-cooperation agreement that renews automatically for as long as Cikarang Listrindo holds its generation licence. Two independent substations feed the campus, which is a Tier IV requirement. DCII also holds its **own generation licence** (Izin Operasi Usaha Penyediaan Tenaga Listrik Untuk Kepentingan Sendiri, valid to 12 July 2029) and ~25 approved diesel gensets. **No PLN agreement for any DCII site is publicly documented.** That is simultaneously a strength (a private, industrial-estate-grade supply outside PLN's queue) and an undisclosed dependency (one supplier, no take-or-pay, no tariff, no term).
+
+## 4.5 Policy and tax
+
+- **Foreign ownership: unrestricted.** Under Perpres 10/2021 as amended by Perpres 49/2021, data centres carry **no foreign ownership cap**. This is why the pipeline is foreign-funded.
+- **Tax holidays** under PMK 130/2020 as amended by PMK 69/2024 run from 50%/5 years at Rp100–500bn of investment up to **100%/20 years at ≥Rp30tn**. DCII has two (see §8.4). Whether a data centre qualifies as a "pioneer industry" is not clean, and the **OECD Pillar Two** global minimum tax blunts holidays for in-scope multinationals — though DCII itself is explicitly **out of scope of PMK 136/2024** [AR2025 Note 30j].
+- **KEK / SEZ Batam and Bintan** carry CIT reductions, VAT exemption, import-duty waivers and tax holidays of up to 20 years. This is the fiscal logic of the Bintan project.
+
+---
+
+# 05 — KEY VARIABLES
+
+What actually moves this model, ranked, with weights.
+
+**1. Contracted MW, and the pace at which contracted becomes billed.** Revenue is capacity × price × utilisation, and price barely moves (see 2). Every Rp of revenue growth since 2019 has come from more MW. At ~Rp20–25bn of revenue per operating MW, **each incremental 10 MW commissioned and filled is worth roughly Rp200–250bn of annual revenue** `[calculated]` — about 8–10% of FY2025 revenue. The 36 MW of JK6 alone, fully ramped, is worth roughly Rp720–900bn.
+
+**2. Price per kW — flat, and the evidence says it stays flat.** Management stated at IPO that price changes had no material effect on revenue over three years, and has never disclosed an ASP since. Derived revenue per operating MW (§8.2) has moved within a narrow band. **Do not underwrite rate increases.** In a market at 20.5% vacancy with 329 MW under construction, the risk is negative renewal spreads, and DCII's own FY2024 report names "**perang harga**" — a price war — as a risk [AR2024 p.71].
+
+**3. Electricity — 18.0% of revenue, 39.2% of cost of revenues, one supplier.** A 10% move in the Cikarang Listrindo tariff is **Rp39.7bn on FY2025 numbers — 3.4% of pre-tax profit** `[calculated]` (Cikarang Listrindo supplied Rp396,786m of the Rp457,760m total; a 10% move across the whole electricity line would be Rp45.8bn, or 3.9%), before any repricing to customers. Because DCII absorbs power rather than passing it through, this is a shareholder risk, not a tenant risk.
+
+**4. PUE — undisclosed, and it is a direct margin lever.** At a tropical-climate PUE of 1.5 versus 1.35, a 100 MW IT load consumes 15% more purchased power for the same billable output. On FY2025's Rp457.8bn electricity bill, **each 0.1 of PUE is worth roughly Rp30bn of gross profit** `[calculated]`. DCII publishes no number.
+
+**5. The rent-in spread.** Rp232.6bn of "jasa sewa colocation" cost in FY2025 against related-party revenue of Rp56.8bn. If the resale margin on rented capacity is materially thinner than on owned capacity — and the FY2025 margin compression says it is — then **mix shift toward rented capacity is a structural margin headwind independent of pricing**.
+
+**6. Utilisation ramp and the J-curve.** JK6 (36 MW) was RFS in Q1 2025 and is still in Phase 3 fit-out at 15.25% complete. E2 (9 MW) commences commercially in 2026. Both carry full depreciation and full fixed opex from commissioning. **A fast-growing operator shows falling margins even when every asset is improving** — this is the single most important thing to hold in mind when reading DCII's declining margin series.
+
+**7. Interest rates.** 83.5% of bank debt is floating at 31 Dec 2025. Disclosed sensitivity: **±100 bp changes pre-tax profit by ±Rp12,738m** — 1.08% of FY2025 pre-tax profit. Small today; on Fitch's projected Rp10–15tn a year of capex it becomes large fast.
+
+**8. The tax holiday roll-off.** Sheltered taxable income fell from Rp423,624m to Rp360,999m and the effective tax rate rose from 11.82% to 15.14%. The JK3 holiday's 100% band appears to have run 2020–2024 and JK5's 2021–2025 `[calculated inference — the FS do not state expiry]`. **A move from a 15.1% to a 22% effective rate is roughly Rp81bn of net profit at FY2025 scale** `[calculated]`, unless new facilities win new holidays.
+
+**9. Customer concentration.** Two customers were 47.95% of FY2025 revenue. A single non-renewal by a hyperscale tenant vacates capacity in 20 MW blocks, not 200 kW blocks. This is the largest single-event risk in the business.
+
+**10. Currency.** Revenue contracts are billed predominantly in Rupiah and capex is "predominantly Rupiah-denominated" per AR2025's new capital-commitment section — but **USD trade receivables collapsed from US$12.25m to US$3.12m in one year** while Rupiah receivables rose, evidence of a deliberate shift of the customer book to Rupiah billing. Equipment prices still reference USD. The May 2026 Rp17tn facility is **IDR and USD**, which reintroduces FX exposure on the liability side for the first time. The IDR is at 17,692/US$ against ~16,300 a year earlier.
+
+---
+
+# 06 — VICISSITUDES
+
+Data centres are not a cyclical commodity business, so the shocks that matter are different in kind. What the record shows:
+
+**Covid-19 (2020–21) was a tailwind, not a shock.** Revenue grew 55.0% in 2020 and 14.7% in 2021 while the Indonesian economy contracted 2.07%. The prospectus is explicit that the pandemic accelerated the digital economy. There is no down-year anywhere in DCII's history: revenue has risen every year since 2017, from Rp127bn to Rp2,540bn — a **CAGR of 45.3% over eight years** `[calculated]`.
+
+**The single-site era (2013–2021) was the real fragility, and it has been reduced.** The prospectus ranked "**bencana alam**" — natural disaster — as a material risk explicitly because "**sebagian besar sumber pendapatan Perseroan berasal dari SATU LOKASI**". Everything DCII earned came out of one 8.5-hectare campus in Kabupaten Bekasi. That is now four locations across two provinces, with E2 Surabaya explicitly designed as Jakarta's redundancy site. A repeat of the 2020 Jakarta floods, or a seismic event, would now impair rather than halt the business.
+
+**The SLA is the asymmetric exposure.** Under a 99.999% SLA with credits of 25–200% of monthly base rent, a **26-second outage can cost ~6.7% of a facility's annual NOI, and an hour over 40%**. DCII has never had one: zero critical incidents since 2013, 100% power uptime, and — the strongest evidence — an Uptime Institute **Tier IV Gold TCOS**, which audits operations rather than design. The correct way to hold this is that the downside is not gradual. Thirteen years of flawless operation is worth a premium precisely because one bad afternoon is worth a large discount.
+
+**Regulatory reversal has already happened once.** PP 82/2012 required all operators to host onshore; **PP 71/2019 removed that for private operators.** DCII's own MD&A called the change unhelpful to local providers. A future government could tighten again (the PDP Law regulator, the One Data Bill) or loosen further. **Demand that rests on regulation rests on politics.**
+
+**The 2021 and 2025 share-price episodes.** DCII rose from Rp420 to Rp59,000 within six months of listing and was **suspended by the IDX on 17 June 2021 pending an examination into possible transaction manipulation**, remaining halted for fourteen trading days. In February 2025 it was halted twice in three days and placed on the **Papan Pemantauan Khusus with a Full Call Auction mechanism**; in July 2025 it was suspended again for nine trading days, by which point it was up 723.6% year to date, reopening on the FCA board. (The +81.45%-in-a-week figure belongs to the February 2025 episode, not July.). It reached Rp398,000 in August 2025 and is **down ~49% from that peak**. None of this touched the operating business — but it is the record of how this security behaves, and §8.5 explains why.
+
+**What a genuine down-cycle would look like, since there has never been one.** The sequence would be: Jakarta vacancy stops falling as the 329 MW under construction energises → renewal spreads go negative → DCII's already-flat revenue per MW starts falling → the J-curve on JK6 Phase 3 and E2 lengthens → depreciation and interest on Rp10–15tn a year of new capex arrive on schedule while revenue does not → covenant headroom (DSCR 4.27×, DER 0.47×) compresses fast from a very comfortable base. The company has never operated with meaningful leverage and has never operated in an oversupplied market. Both conditions arrive simultaneously in 2026–2028.
+
+---
+
+# 07 — FINANCIALS
+
+Basis of preparation, stated once: figures are **Rp million**. FY2017–FY2022 are **stand-alone**; **FY2023 onward are consolidated** with PT Sarana Megahtama (acquired 7 Jul 2023), so the equity, NCI and asset lines break comparability at that point. Auditors: KAP Siddharta Widjaja & Rekan (KPMG) for FY2017–2019; **KAP Purwantono, Sungkoro & Surja / Purwanto Susanti dan Surja (EY)** from the 8M2020 IPO stub onward. **Unmodified opinion in every year; no emphasis of matter in any year.** From FY2022 there has been exactly **one Key Audit Matter, in every year: the valuation of land.**
+
+## 7.1 Asset
+
+A blank cell (—) below means the line was not separately extracted for that year, not that it was undisclosed: the FY2019–FY2022 notes carry the detail but this analysis pulled it only for the consolidated years. Totals are complete for every year.
+
+| Rp m | FY2019 | FY2020 | FY2021 | FY2022 | FY2023 | FY2024 | FY2025 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Kas dan setara kas | 68,151 | 78,963 | 50,497 | 237,192 | 403,869 | 217,005 | **255,781** |
+| Piutang usaha (total) | — | — | — | — | 264,064 | 630,100 | **615,774** |
+| Persediaan | — | — | — | — | 9,242 | 7,079 | 20,282 |
+| PPN dibayar di muka | — | — | — | — | 9,824 | 25,984 | 34,126 |
+| **Aset lancar** | **164,864** | **227,038** | **297,288** | **441,994** | **691,453** | **889,157** | **938,956** |
+| **Aset tetap - neto** | — | — | — | 2,752,442 | 2,961,443 | 3,906,239 | **5,130,503** |
+| Investasi pada instrumen utang | – | – | – | – | – | – | **501,238** |
+| Aset takberwujud / hak guna / lain | — | — | — | 23,128 | 23,588 | 24,669 | 77,718 |
+| **Aset tidak lancar** | **1,513,276** | **2,209,254** | **2,694,325** | **2,775,570** | **2,985,031** | **3,930,908** | **5,709,459** |
+| **TOTAL ASET** | **1,678,140** | **2,436,292** | **2,991,613** | **3,217,564** | **3,676,484** | **4,820,065** | **6,648,415** |
+| growth | +55.6% | +45.2% | +22.8% | +7.6% | +14.3% | +31.1% | **+37.9%** |
+| Fixed assets % of total assets `[calculated]` | — | — | — | 85.5% | 80.5% | 81.0% | **77.2%** |
+
+**Annotations, year by year:**
+
+- **FY2020 +45.2%** — JK3 completed and entered service; JK5 construction started; **4.8 hectares of adjoining land bought**, including the 20,606 m² from the founders.
+- **FY2021 +22.8%** — JK5 completed. Receivables jumped **+Rp120,805m (+115.8%)** against revenue growth of only 14.7%; **DSO went from 50 to 94 days**, with Rp31,514m sitting 61+ days overdue where FY2020 had none, and still **no expected-credit-loss provision**. This is the first appearance of a pattern that returns in 2025.
+- **FY2022 +7.6%** — the quiet year. Capex Rp310,887m, essentially maintenance level; cash built to Rp237,192m; the balance sheet did almost nothing.
+- **FY2023 +14.3%** — first consolidated year. **Rp192,753m of assets acquired with SMT (Rp189,624m of it land, Rp3,129m building)**; E1 and H2-02 came into the platform but not onto the balance sheet; cash peaked at Rp403,869m.
+- **FY2024 +31.1%** — JK6 built. Construction in progress went from Rp31,606m to **Rp766,748m**. Receivables **more than doubled to Rp630,100m** on 38.8% revenue growth, taking DSO to 126.9 days `[calculated]`. Cash fell Rp186,864m.
+- **FY2025 +37.9%** — JK6 fitted out and E2 built: fixed assets +Rp1,224,264m. **Rp228,020m of land purchased.** And a genuinely new line: **Rp501,238m of "investasi pada instrumen utang"** — see §10.2, because it does not belong in a data centre's balance sheet on any obvious logic.
+
+**Receivables quality — the line to watch:**
+
+| | 31 Dec 2024 | 31 Dec 2025 |
+|---|---:|---:|
+| Belum jatuh tempo / Not past due | 560,639 | **390,416** |
+| 1–30 days past due | 25,083 | 80,725 |
+| 31–60 days | 3,694 | 17,351 |
+| 61–90 days | 5,749 | **71,014** |
+| >90 days | 34,935 | **56,268** |
+| **Total past due** | **69,461 (11.0%)** | **225,358 (36.6%)** `[calculated]` |
+| ECL provision | **nil** | **nil** |
+| DSO `[calculated]` | 126.9 days | 88.5 days |
+
+DSO improved because revenue grew faster than the book — but **the composition deteriorated sharply: past-due receivables more than tripled and now make up over a third of the book, with no impairment recognised at all.** Management's position is that "the trade receivables are collectible". For a business whose customers are hyperscalers and licensed banks that may well be right, and the historical evidence supports it ("risiko gagal bayar oleh pelanggan sangat minim terjadi"). But **Rp127,282m of receivables more than 60 days overdue** against zero provision is a judgement, not a fact, and it is not explained anywhere.
+
+## 7.2 Liability
+
+| Rp m | FY2019 | FY2020 | FY2021 | FY2022 | FY2023 | FY2024 | FY2025 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Utang usaha — pihak ketiga | — | — | — | — | 47,057 | 338,590 | 194,024 |
+| **Utang usaha — pihak berelasi** | — | — | — | — | 10,683 | 1,981 | **84,592** |
+| Beban akrual | — | — | — | — | 72,871 | 154,521 | 180,486 |
+| — of which acquisition of fixed assets | — | — | — | — | — | 93,500 | **141,640** |
+| Pendapatan yang ditangguhkan | — | — | — | — | 121,387 | 146,894 | 148,082 |
+| Utang bank — bagian lancar | — | — | — | — | 226,009 | 242,922 | 289,131 |
+| **Liabilitas jangka pendek** | **374,625** | **509,609** | **465,692** | **468,215** | **517,732** | **943,827** | **988,671** |
+| Utang bank — jangka panjang | — | — | — | — | 906,701 | 818,457 | **1,589,055** |
+| Liabilitas imbalan kerja jk panjang | — | — | — | — | 29,639 | 38,732 | 47,605 |
+| **Liabilitas jangka panjang** | **761,963** | **1,206,769** | **1,310,967** | **1,164,152** | **951,802** | **872,575** | **1,654,209** |
+| **TOTAL LIABILITAS** | **1,136,588** | **1,716,378** | **1,776,659** | **1,632,367** | **1,469,534** | **1,816,402** | **2,642,880** |
+| **Total debt** (bank + lease) | 824,352 | 1,403,964 | 1,385,392 | 1,298,634 | 1,134,847 | 1,061,379 | **1,879,227** |
+| **Debt / equity (covenant basis)** | **1.52×** | **1.95×** | **1.14×** | **0.82×** | **0.51×** | **0.35×** | **0.47×** |
+| Net debt / EBITDA `[calculated]` | 2.96× | 3.19× | 2.36× | 1.51× | 0.84× | 0.71× | **1.05×** |
+| Working capital `[calculated]` | — | — | — | — | +173,721 | **(54,670)** | **(49,715)** |
+
+**Business payable.** Trade payables are non-interest bearing with **no guarantees given**. Note the composition swing: third-party payables ran to Rp338,590m at end-2024 (the JK6 build) then fell to Rp194,024m, while **related-party payables went from Rp1,981m to Rp84,592m — almost entirely the Rp83,220m owed to DISM** for use of its building. Accrued expenses are dominated by **"perolehan aset tetap" (Rp141,640m)** — the build programme visible in the payables, exactly as it was in the 2020 prospectus.
+
+**Deferred revenue of Rp148,082m** is customer prepayment — a genuine working-capital benefit that has funded the business for years. It is why current ratio has been below 1.0× for most of DCII's history without ever creating a liquidity problem. Working capital is **negative Rp49,715m** at end-2025, which the notes describe as "a temporary situation… the Group recognized the payable related to the acquisition of fixed assets", backed by Rp225,000m of undrawn facility.
+
+**Business loan — the whole financing history in one table:**
+
+| Period | Lender | Structure | Pricing |
+|---|---|---|---|
+| 2016–2020 | **PT Bank OCBC NISP Tbk**, sole lender | TL1–TL7 + KRK + Fixed Loan, limits ≈Rp1,633,248m. Drawn **Rp1,088,291m = 67% of the plafon at 31 Aug 2020**, rising to Rp1,359,916m (83%) at 31 Oct 2020 | 9.75% fixed (2016) → 9.0–10.25% → **all repriced to JIBOR-3M + 2.50%** on 17 Jul 2020 → **+2.00%** from 26 Sep 2021. Tenors extended 60 → 108 months. |
+| **11 May 2023** | **PT Bank Mandiri (Persero) Tbk** | Credit Facility Agreements **No. 34–38**, limit **Rp1,251,921m**, purpose: general corporate + **take-over of the OCBC NISP facility**. 89 months / to 23 Oct 2030. Fully drawn. Rp1,383,606m repaid to OCBC in 2023. | **7.50% fixed for 3 years**, then 3M JIBOR + margin. Amended 8 Aug 2025 to **3M Compounded IndONIA + margin from 11 May 2026**. |
+| **13 Sep 2024** | Bank Mandiri | **Fasilitas Kredit Investasi No. 70**, limit **Rp1,000,000m**, capex. 78 months / to 13 Mar 2031. Rp150,000m drawn at end-2024; **fully utilised** by end-2025. Plus **No. 71**, a Rp200,000m working-capital line (undrawn, and absent from AR2025). | 1M JIBOR + margin → **1M Compounded IndONIA + margin** from 23 Aug 2025, amended again 9 Dec 2025. |
+| **10 Dec 2025** | Bank Mandiri | Credit Facility Agreement **No. 62**, limit **Rp475,000m**. 87 months / to 9 Mar 2033. **Rp250,000m drawn, Rp225,000m undrawn.** | **4.60% fixed p.a.** |
+| **6–7 May 2026** | reported **BCA** (Fitch also names Bank Mandiri) | **Rp17 trillion (≈US$980m)**, IDR **and USD**. Secured on land, buildings, existing and future data centre machinery and equipment, operating accounts and insurance claim proceeds. | tenor, pricing, covenants and drawn amount **not disclosed** |
+
+**Covenants, in every agreement since 2016:** DSCR > 1.25×; Debt/Equity ≤ 3.0×. Actuals disclosed in the annual reports:
+
+| | FY2020 | FY2021 | FY2022 | FY2023 | FY2024 | FY2025 |
+|---|---:|---:|---:|---:|---:|---:|
+| DSCR (required >1.25×) | 2.97 ⚠ | **1.93** ⚠ | 3.91 | 2.87 | 3.99 | **4.27** |
+| Debt/Equity (required \<3.0×) | 1.95 | 1.14 | 0.82 | 0.51 | 0.35 | **0.47** |
+
+⚠ The FY2020 and FY2021 DSCR figures are the weakest data in this table. The **FY2020 and FY2021 audited notes state the covenant but never disclose the actual DSCR**; the only FY2021 figure available is AR2022's comparative, which reads **1.93×** in the Indonesian column and **1.91×** in the English — the report contradicts itself. The 2.97× for FY2020 comes from AR2020's MD&A and does not appear in the notes. Treat the pre-2022 DSCR series as indicative only. Note also that the *audited notes* assert compliance in every year without disclosing the ratios; the figures above come from the MD&A. Note also the OCBC covenant that mattered most at IPO and is now gone: a **stepped debt/equity ceiling of 3.0× (2020–22), 2.5× (2023–24) and 2.0× from 2025**, against 1.68× at the prospectus date. That stepping ceiling is the clearest structural reason the IPO happened when it did.
+
+**Security.** At 31 Dec 2025 the Mandiri facilities are secured on trade receivables (Rp200,000m pledged), land and certain mechanical and electrical equipment, **the Rp501,238m of Danantara debt instruments**, and a Rp35,625m restricted time deposit. AGMs in both April 2024 and April 2025 specifically approved **pledging more than 50% of the company's net assets**. At IPO the equivalent package was Rp850,000m of hak tanggungan over the single main land parcel plus Rp725,000m of fidusia — **Rp1,575,000m against a Rp646,104m equity base**.
+
+**Interest-rate mix at 31 Dec 2025:** floating Rp1,568,287m (83.5%), fixed Rp309,899m `[calculated]`. Average interest cost on bank debt **5.95%** `[calculated]`. Maturity: Rp292,153m within a year, Rp812,056m in 1–3 years, Rp586,618m in 3–5 years, Rp200,000m beyond.
+
+## 7.3 Equity
+
+| Rp m | FY2021 | FY2022 | FY2023 | FY2024 | FY2025 |
+|---|---:|---:|---:|---:|---:|
+| Modal ditempatkan dan disetor | 297,968 | 297,968 | 297,968 | 297,968 | 297,968 |
+| Tambahan modal disetor - neto | 101,254 | 101,254 | 101,254 | 101,254 | 101,254 |
+| Komponen lainnya dari ekuitas | 38,740 | 38,740 | 38,740 | 38,740 | 38,740 |
+| **Surplus revaluasi (tanah)** | 250,088 | 252,789 | 252,583 | 252,550 | **252,945** |
+| Saldo laba — cadangan umum | 5,000 | 10,000 | 15,000 | 20,000 | **25,000** |
+| Saldo laba — belum ditentukan | 521,904 | 884,446 | 1,394,062 | 2,185,499 | **3,180,968** |
+| **Sub-total (owners)** | 1,214,954 | 1,585,197 | 2,099,607 | 2,896,011 | **3,896,875** |
+| Kepentingan non-pengendali | – | – | 107,343 | 107,652 | **108,660** |
+| **TOTAL EKUITAS** | **1,214,954** | **1,585,197** | **2,206,950** | **3,003,663** | **4,005,535** |
+
+Four observations.
+
+**Nothing has been issued since the IPO.** Modal saham and tambahan modal disetor are frozen at Rp297,968m and Rp101,254m across every year. **2,383,745,900 shares**, unchanged. No rights issue, no split, no bonus issue, no buyback, no convertible, no bond. The IPO raised Rp150,176m gross (Rp105,481m of agio less Rp4,227m of issue costs), and that is the only external equity the company has ever taken.
+
+**"Komponen lainnya dari ekuitas" of Rp38,740m is a currency-translation fossil.** It is the difference between share-capital payments of Rp253,273m and their translation amount of Rp292,013m, arising on **1 January 2018 when the functional currency changed from US dollars to Rupiah** at Rp13,542/US$. Unchanged since. It also tells you something: DCII kept its books in dollars until 2018.
+
+**The revaluation surplus is Rp252,945m — 6.3% of equity — and it is not cash.** Rp165,194m of it was already on the balance sheet at 31 December 2017 and sat unchanged through 2020; **Rp84,894m was added by the FY2021 revaluation** (to OCI, valued by KJPP Wiseso, Saladin & Rekan in a report dated **24 February 2022, one day before the audit opinion**), and the movements since are trivial. So roughly two-thirds is pre-IPO and one-third is FY2021. Land carried at Rp1,079,091m would be **Rp720,204m at cost** — the Rp358,887m difference is the cumulative uplift `[calculated]`. This sits inside the KAM every year for good reason.
+
+**No dividend has ever been paid.** There is no dividend row anywhere in the statement of changes in equity for FY2020, 2021, 2022, 2023, 2024 or 2025, and no dividend line in financing cash flows. Since **FY2021** the pattern is fixed: Rp5,000m to the general reserve each year, everything else retained. The FY2024 profit of **Rp796,712,538,450** was allocated Rp5bn to reserve and **Rp791,712,538,450 retained**, per Akta No. 103 of 22 April 2025.
+
+## 7.4 Cashflow
+
+| Rp m | FY2020 | FY2021 | FY2022 | FY2023 | FY2024 | FY2025 | TTM Jun-26 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| **Kas neto dari aktivitas operasi** | 343,605 | 434,964 | 673,655 | 741,401 | 837,636 | **1,538,803** | 1,485,664 |
+| Perolehan aset tetap | (818,968) | (498,812) | (310,887) | (315,744) | (881,481) | **(1,721,642)** | (2,413,720) |
+| Perolehan aset takberwujud | (115) | (6,810) | — | (1,133) | (1,249) | (12,111) | — |
+| **Pembelian aset keuangan (Danantara)** | – | – | – | – | – | **(500,000)** | — |
+| **Kas neto untuk aktivitas investasi** | (818,394) | (503,418) | (316,713) | (309,594) | (873,007) | **(2,226,832)** | — |
+| Penerimaan dari utang bank | 642,540 | 185,792 | 8,154 | 1,346,435 | 150,000 | **1,100,000** | — |
+| Pembayaran utang bank | — | — | — | (1,509,156) | (217,983) | (274,733) | — |
+| Pembayaran beban keuangan | — | — | — | (101,241) | (83,076) | (97,912) | — |
+| **Kas neto dari aktivitas pendanaan** | 485,601 | 39,988 | (170,247) | (265,130) | (151,510) | **726,252** | — |
+| **Free cash flow** `[calculated]` | (475,478) | (70,658) | +362,768 | +424,524 | (45,094) | **(194,950)** | **(928,056)** |
+| Kas akhir tahun | 78,963 | 50,497 | 237,192 | 403,869 | 217,005 | **255,781** | — |
+
+**Operating cash conversion is excellent and improving.** CFO went from 45% of revenue in 2020 to **60.6% in FY2025** `[calculated]`, and FY2025 CFO of Rp1,538,803m is 99.3% of EBITDA. Receipts from customers of Rp2,555,542m actually exceeded revenue of Rp2,540,028m — deferred revenue is being taken in faster than it is recognised.
+
+**Operating cash flow has never once covered investing cash flow in a build year.** 2020, 2021, 2024, 2025 and the trailing twelve months to June 2026 are all free-cash-flow negative. The two positive years, 2022 and 2023, are the two years capex ran at ~Rp310bn — maintenance level. **This is the defining shape of the business: it is free-cash-flow positive only when it stops growing.**
+
+**The FY2023 gross flows are the refinancing.** Rp1,346,435m drawn and Rp1,509,156m repaid is the OCBC NISP → Bank Mandiri takeover, not new leverage.
+
+**FY2025 is the inflection.** Capex nearly doubled, a Rp500,000m financial-asset purchase appeared from nowhere, Rp1,100,000m of new bank debt was drawn, and free cash flow went to **negative Rp194,950m** — running at **negative Rp928,056m** on a trailing-twelve-month basis to June 2026. Against Fitch's projected **Rp10–15 trillion a year of capex in 2026–27**, free cash flow will be deeply negative for years, and the Rp17tn facility is the plan for funding it. AR2025's new capital-commitment section says the expansion will be funded **80% from equity and 20% from bank facilities** — a statement that is difficult to reconcile with a Rp17tn debt facility and no equity issuance, and which presumably means retained earnings rather than new shares.
+
+## 7.5 Income statement
+
+| Rp m | FY2017 | FY2018 | FY2019 | FY2020 | FY2021 | FY2022 | FY2023 | FY2024 | FY2025 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| **Pendapatan** | 127,477 | 293,370 | 489,860 | 759,365 | 871,240 | 1,043,955 | 1,305,846 | 1,812,446 | **2,540,028** |
+| growth | — | +130.1% | +67.0% | +55.0% | +14.7% | +19.8% | +25.1% | +38.8% | **+40.1%** |
+| Beban pokok pendapatan | (78,140) | (156,566) | (252,595) | (389,289) | (395,238) | (444,380) | (534,235) | (755,402) | **(1,167,028)** |
+| **Laba bruto** | 49,337 | 136,804 | 237,265 | 370,076 | 476,002 | 599,575 | 771,611 | 1,057,044 | **1,373,000** |
+| *gross margin* | 38.7% | 46.6% | 48.4% | 48.7% | **54.6%** | 57.4% | **59.1%** | 58.3% | **54.1%** |
+| Beban pemasaran | (636) | (2,975) | (1,720) | (1,524) | (1,112) | (2,032) | (5,264) | (5,451) | (5,297) |
+| Beban umum dan administrasi | (25,247) | (34,568) | (41,935) | (55,796) | (55,921) | (69,842) | (82,470) | (79,376) | **(125,660)** |
+| **Laba usaha** | 24,621 | 99,536 | 193,019 | 311,282 | 418,388 | 526,783 | 684,015 | 974,814 | **1,264,651** |
+| *operating margin* | 19.3% | 33.9% | 39.4% | 41.0% | 48.0% | 50.5% | 52.4% | **53.8%** | 49.8% |
+| Beban keuangan | (13,318) | (24,298) | (47,296) | (77,050) | (87,824) | (83,488) | (99,207) | (79,791) | (89,504) |
+| **Laba sebelum pajak** | 11,327 | 75,077 | 145,907 | 234,508 | 332,159 | 445,050 | 591,284 | 903,583 | **1,180,715** |
+| Beban pajak penghasilan | 36,308 | (13,486) | (39,272) | (51,367) | (70,708) | (77,208) | (76,797) | (106,763) | (178,769) |
+| **Laba tahun berjalan** | 47,635 | 61,591 | 106,635 | 183,141 | 261,451 | 367,842 | 514,487 | 796,820 | **1,001,946** |
+| *net margin* | 37.4% | 21.0% | 21.8% | 24.1% | 30.0% | 35.2% | 39.4% | **44.0%** | **39.4%** |
+| **EBITDA** | 48,040 | 137,950 | 255,634 | 415,693 | 564,804 | 702,853 | 873,557 | 1,182,777 | **1,549,677** |
+| *EBITDA margin* | 37.7% | 47.0% | 52.2% | 54.7% | 64.8% | **67.3%** | 66.9% | 65.3% | **61.0%** |
+| **EPS (Rp, full)** | — | — | 53 | 90 | 110 | 154 | 216 | 334 | **420** |
+| **Effective tax rate** `[calculated]` | n/m | 18.0% | 26.9% | 21.9% | 21.3% | 17.4% | **13.0%** | **11.8%** | **15.1%** |
+
+**Annotated, where the numbers move for a reason:**
+
+- **FY2018 +130%** — JK2's 7 MW came into service. First full year of scale.
+- **FY2019 +67.0%** — first year of positive retained earnings, after an accumulated deficit that ran to Rp83,882m in 2017.
+- **FY2020 +55.0%** — JK3's 12 MW came online. Finance costs +62.9% on debt taken to build JK3 and buy land.
+- **FY2021: the margin jump is an artefact.** Gross margin +5.9 pp on cost of revenues growing only 1.5%. As set out in §2.2(d), that is **material instalasi halving (−Rp58,518m)** in a lighter build year plus **licensing and commission going to zero (−Rp17,675m)** on the Equinix termination. The recurring cost base actually grew 32.2%. Ignore the FY2021 margin.
+- **FY2022 EBITDA margin peaks at 67.1%.** This is the high-water mark of the owned-asset, enterprise-mix era.
+- **FY2023 +25.1%**, first consolidated year, E1 and H2-02 into the platform. Note **beban keuangan of Rp99,207m — the highest ever** — because the year carried both the old OCBC debt and the new Mandiri debt across the May refinancing.
+- **FY2024 +38.8%** and the best margins DCII ever reported: operating margin 53.8%, net margin 44.0%. Finance costs *fell* to Rp79,791m on the 7.5% fixed Mandiri rate and a shrinking debt balance. **The effective tax rate bottomed at 11.8%.** This year is the clean, pre-dilution picture of the business.
+- **FY2025 +40.1% with every margin down.** Gross margin −4.2 pp, EBITDA margin −4.3 pp, net margin −4.5 pp. Two mechanisms, in order of size: **(i) the Rp232,583m "jasa sewa colocation" line** — renting related-party capacity to resell; **(ii)** management's stated **"pricing optimisation to secure larger-scale and longer-term contracts… a deliberate volume-driven approach"**. Add **G&A +58.3%**, of which professional fees +293% to Rp26,719m, and a **tax rate rising from 11.8% to 15.1%** as the tax holiday shelters less. Net profit still crossed Rp1 trillion.
+
+**Quarterly shape — worth looking at, because it is not what a recurring-revenue book looks like:**
+
+| Rp m | Q1'25 | Q2'25 | Q3'25 | Q4'25 | Q1'26 | Q2'26 |
+|---|---:|---:|---:|---:|---:|---:|
+| Revenue | 773,552 | 560,566 | 588,741 | 617,169 | 858,101 | 919,320 |
+| Gross profit | 519,687 | 275,110 | 283,965 | 294,238 | 485,530 | 478,168 |
+| **Gross margin** | **67.2%** | **49.1%** | **48.2%** | **47.7%** | **56.6%** | **52.0%** |
+| Net income | 418,845 | 198,101 | 208,039 | 176,348 | 377,755 | 354,778 |
+
+**Gross margin swings between 47.7% and 67.2% quarter to quarter.** A pure colocation rental book does not do that. It points to a meaningful non-recurring component — installation, fit-out or equipment revenue recognised at handover — sitting alongside the recurring rental, exactly consistent with the "material instalasi" line inside cost of sales. Q1 2025 in particular booked Rp519,687m of gross profit on Rp773,552m of revenue, a 67.2% margin that has not recurred, and it is why headlines in early 2026 reported a "net profit decline" in Q1 2026 (−9.8%) against +10.9% revenue — a base effect, not a deterioration. **The composition of that quarter is not disclosed anywhere.**
+
+**1H2026:** revenue **Rp1,777,421m (+33.2%)**, net profit **Rp732,533m (+18.7%)**, EPS Rp307, total assets Rp8.02tn (+20.6%), equity Rp4.74tn (+18.3%). Growth continues; the margin gap between revenue and profit growth persists.
+
+---
+
+# 08 — SECTION
+
+## 8.1 The capacity ledger — reconciling 128 MW to what shareholders own
+
+Every building the filings name, with who owns it:
+
+| Campus | Building | MW | Construction started | Operational / RFS | Owner |
+|---|---|---:|---|---|---|
+| **DCI H1 Cibitung** | JK1 | 3 | 2012 | **2013** | **DCII** |
+| | JK2 | 7 | 2017 | **2018** (Tier IV Facility on opening) | **DCII** |
+| | JK3 | 12 | 2018 | **2020** | **DCII** |
+| | JK5 | 15 | 2020 | **2021** (green-field in 12 months) | **DCII** |
+| | JK6 | **36** | 2023 | **Q1 2025**, inaugurated 3 Jun 2025 | **DCII** |
+| | *subtotal* | **73** | | 8.5–8.7 ha; ceiling cut 300 → 220 MW | |
+| **DCI Platform H2 Karawang** | H2-01 | **15 or 12** ⚠ | 2020 | 2021 | **DISM** |
+| | H2-02 | **12 or 15** ⚠ | 2022 | 2023 | **DISM** |
+| | *subtotal* | **27** | | 86 ha; >600 MW potential; 30 MW solar on 30 ha | |
+| **DCI Platform E1 Jakarta** | E1 | **19** | 2023 | 2023 | **DISP** |
+| **DCI E2 Surabaya** | E2 | **9** | 2025 | complete Q4-2025; commercial Q1/H1-2026 | **DCII** |
+| **Bintan H5** | — | 0 | — | land development | JV w/ Gallant Venture |
+| **REPORTED TOTAL** | | **128** | 9 buildings, 4 locations | | |
+| **OWNED BY DCII** | | **82** | | | **64%** |
+
+⚠ **The two Karawang buildings' capacities are reported inconsistently and the reports contradict each other.** AR2022 states H2-01 at **15 MW** (construction begun 2020) and H2-02 at **12 MW**; AR2023 and AR2025 swap them to 12 MW and 15 MW. The 2021 platform total only reconciles on AR2022's version: 37 (H1) + **15** (H2-01) + 6 (EDGE) = 58 ✓. Either way the combined H2 campus is 27 MW, which is the figure every deck and report agrees on and the one used throughout this report.
+
+**There is no JK4.** The building sequence runs JK1, JK2, JK3, JK5, JK6 — the number four was skipped, almost certainly for the same reason it is skipped in lifts across Chinese-influenced Asia. The prospectus's only "JK" reference at all was a Construction All Risk policy naming a **"JK5 Project (Phase 0)"** insured for Rp119,253m from April 2020 — evidence of a fifth build that Chapter VIII never mentioned.
+
+**Cross-checks that tie:** 3+7+12+15+36 = 73 (H1) ✓ matches "kapasitas kampus DCI-H1 menjadi 73 MW"; 73+27+19 = 119 ✓ (end-2024); 119+9 = 128 ✓ (end-2025). AR2025 also states 100% SLA achieved across "**8 gedung pusat data yang telah beroperasi**" — eight operating buildings at end-2025, with E2 as the ninth, built but not yet commercial.
+
+**Book-value cross-check on ownership.** Gross fixed assets at 31 Dec 2025, excluding land (Rp1,079,091m) and construction in progress (Rp756,173m), are **Rp4,579,093m**. Spread over the 73 MW of H1 that is **Rp62.7bn per MW ≈ US$3.8m per MW** at Rp16,500 `[calculated]`. Spread over the reported 128 MW it would be Rp35.8bn/MW ≈ US$2.2m/MW — which is implausibly cheap against the prospectus's own stated build cost of **US$5.5m per MW** and against the Knight Frank benchmark of US$10.5–11.6m/MW for Jakarta. **The balance sheet supports ownership of roughly the H1 campus plus land plus E2 in progress, not 128 MW.** This is the arithmetic behind the opening section.
+
+## 8.2 Unit economics — what a DCII megawatt actually earns
+
+Nothing here is disclosed; all of it is derived, and the method is stated so it can be redone.
+
+**Method:** operating MW at each year-end from §8.1 (excluding buildings not yet in service); average of opening and closing for the year; revenue divided by that average. Exchange rate ~Rp16,500/US$ for FY2025.
+
+| | FY2021 | FY2022 | FY2023 | FY2024 | FY2025 |
+|---|---:|---:|---:|---:|---:|
+| Operating MW at year-end | 49 | 64 | 83 | 83 | 119 |
+| Average operating MW `[calculated]` | 35.5 | 56.5 | 73.5 | 83.0 | 101.0 |
+| Revenue (Rp m) | 871,240 | 1,043,955 | 1,305,846 | 1,812,446 | 2,540,028 |
+| **Revenue per average operating MW (Rp m)** | 24,542 | 18,477 | 17,766 | 21,837 | **25,149** |
+| **Revenue per MW (US$m)** `[calculated]` | ~1.7 | ~1.3 | ~1.2 | ~1.4 | **~1.52** |
+| EBITDA (Rp m) | 564,804 | 702,853 | 873,557 | 1,182,777 | 1,549,677 |
+| **EBITDA per average operating MW (Rp m)** | 15,910 | 12,440 | 11,885 | 14,250 | **15,343** |
+| Capex (Rp m) | 498,812 | 310,887 | 315,744 | 881,481 | 1,721,642 |
+
+**Implied price per kW per month**, at three utilisation assumptions — because DCII discloses no utilisation figure at all:
+
+| FY2025 revenue per operating MW = US$1.52m | US$/kW/month |
+|---|---:|
+| at 100% utilisation | **US$127** |
+| at 85% utilisation | **US$149** |
+| at 75% utilisation | **US$169** |
+| at 60% utilisation | **US$211** |
+
+Against CBRE's published APAC asking rates — **Singapore US$330–475, Tokyo US$280, Sydney US$188** — a blended realised rate of roughly **US$150–210/kW/month inclusive of power recharge** puts Jakarta at **one-third to one-half of Singapore**. Strip out the electricity pass-through (Rp457,760m ÷ 101 MW ÷ 12 = ~US$23/kW/month at 100% utilisation, more at lower utilisation) and the underlying space-and-cooling rate is plausibly **US$100–170/kW/month**. DCII should sit at the premium end of Jakarta on Tier IV certification, the E1 CBD asset and thirteen years of unbroken power. `[All of this is calculated, not disclosed; a ±10 pp change in the utilisation assumption moves the answer ~15%.]`
+
+**The finding that matters: revenue per MW is not rising.** It was US$1.7m/MW in 2021, fell to US$1.2m in 2023 as capacity was added faster than it filled, and recovered to US$1.52m in 2025 — essentially back where it started five years and 90 MW earlier. **Growth is volume, not price.** That is consistent with management's own IPO statement that price changes have no material effect on revenue, with the 2026 pricing-optimisation language, and with a Jakarta market at 20.5% vacancy.
+
+**Yield on cost.** Against a build cost of roughly **US$3.8m/MW at H1** (book) or the US$5.5m/MW the prospectus stated, and EBITDA of ~Rp15.3bn (US$0.93m) per operating MW:
+
+```
+  EBITDA per MW                        US$0.93m
+  ÷ book capex per MW (H1, derived)    US$3.80m   →  yield on cost ≈ 24%
+  ÷ prospectus build cost              US$5.50m   →  yield on cost ≈ 17%
+  ÷ Knight Frank Jakarta benchmark     US$10.5m   →  yield on cost ≈  9%
+```
+
+Against a global development benchmark of **10–13% stabilised yield on cost** (Digital Realty is building 769 MW at 11.9%), DCII's *book* returns look exceptional — but the denominator is doing the work. Its oldest buildings were built a decade ago at a fraction of today's cost, and the accumulated depreciation of Rp1,283,854m has already come off. **The relevant question for a shareholder is not the yield on the 2013 asset base but the yield on the Rp10–15 trillion a year that Fitch expects to be spent from here**, at 2026 equipment prices, into a market with 329 MW under construction. Nothing in the disclosure lets that be computed.
+
+## 8.3 Contracted, billed and the disclosure that stopped
+
+The single most useful operating metric in this industry, and DCII's history with it:
+
+| Date | Installed | Contracted | Online/billed | Source |
+|---|---|---|---|---|
+| **31 Aug 2020** | **22,200 kVA** | **17,593 kVA (79.2%)** | **16,690 kVA (75.2%)** | prospectus [PROS p.81] |
+| 31 Dec 2021 | 37 MW (Cibitung) | **91% of installed** | — | AR2021 [p.73] |
+| 2022–2025 | 64 / 83 / 119 / 128 MW | **not disclosed** | **not disclosed** | — |
+| Jul 2026 | 128 MW | **contracted-to-shell >90%** | — | **Fitch**, not the company |
+
+The prospectus also disclosed a full space-and-power utilisation table for 2017–Aug 2020, showing gross and net floor area, customer usage, and installed vs used kW. **That table has never appeared again.** Nor has the cabinet count (7,500 at Cibitung, 1,280 at EDGE — disclosed once, in AR2021, and never repeated), the utilisation percentage, the churn rate, the renewal rate, the weighted-average contract term or the backlog.
+
+What survives is a single proxy: **"recurring revenues"** growth, disclosed as +26.15% (2021), +38.8% (2024) and **+52.3% (2025)**, with recurring revenue quantified exactly once, at Rp741bn of Rp871bn in FY2021 (~85%). Recurring revenue growing 52.3% while total revenue grew 40.1% implies the recurring share rose in FY2025 — which is a good sign, and the only one available.
+
+**This is the most important gap in the whole filing set.** Without installed-versus-contracted-versus-billed, an outside investor cannot distinguish a company filling its halls from one building into vacancy, and cannot compute the J-curve drag in any given year.
+
+## 8.4 The tax holiday, and what happens when it ends
+
+DCII holds two corporate income tax holidays under PMK 150/PMK.010/2018, each attached to a specific building:
+
+| | **JK 3** | **JK 5** |
+|---|---|---|
+| Applied via OSS | 7 Aug 2019 | 23 Dec 2021 |
+| Granting decree | **KMK No. 53/KM.3/2020**, 7 Feb 2020 | **KMK No. 16/TH/PMA/2021**, 13 Sep 2021 ⚠ |
+| Utilisation decree | KMK No. 57/KM.3/2021, 17 Feb 2021 | KMK No. 318/KM.3/2022, 2 Aug 2022 |
+| Investment plan | **Rp880,574m** | **Rp1,033,146m** |
+| First tax year | **2020** | **2021** |
+| Form | 100% CIT reduction for **5 years**, then **50% for 2 more**, plus exemption from third-party withholding on main-business income | same |
+
+⚠ Note the anomaly, reproduced as printed: **JK5's granting decree (13 September 2021) pre-dates the OSS application it is said to grant (23 December 2021).** The accounts give both dates without comment.
+
+The effect, and the roll-off:
+
+| | FY2020 | FY2021 | FY2022 | FY2023 | FY2024 | FY2025 |
+|---|---:|---:|---:|---:|---:|---:|
+| Taxable income sheltered (Rp m) | 25,759 | 13,759 | n/d | 241,508 | **423,624** | **360,999** |
+| Tax saved (Rp m) | 5,667 | 3,027 | 20,070 | 53,132 | **93,197** | **79,420** |
+| **Effective tax rate** `[calculated]` | 21.9% | 21.3% | 17.4% | **13.0%** | **11.8%** | **15.1%** |
+| Statutory rate | 25% → 22% | 22% | 22% | 22% | 22% | 22% |
+
+**The holiday is worth about Rp79–93bn a year — 8–12% of net profit — and it is now shrinking.** The FS do not state expiry years. On the disclosed start years, JK3's 100% band would run 2020–2024 with 50% in 2025–26, and JK5's 2021–2025 with 50% in 2026–27 `[calculated inference]`. That is consistent with sheltered income falling Rp62.6bn and the ETR rising 3.3 pp in FY2025. **On a straight-line reversion from 15.1% to the 22% statutory rate, net profit would be roughly Rp81bn lower at FY2025 scale** `[calculated]` — unless JK6, E2 and future buildings win holidays of their own, which on Rp10–15tn of planned investment would qualify for the 100%/15-year or 100%/20-year bands if data centres are accepted as a pioneer industry. **Whether they are is genuinely unclear** and is one of the more consequential open items in this report.
+
+No tax dispute, audit, objection or SKP has ever been disclosed. DCII is explicitly **out of scope of Pillar Two** (PMK 136/2024).
+
+## 8.5 The float — why this security behaves the way it does
+
+This is not an operating matter, but it is inseparable from the company.
+
+| Measure | Figure | Source |
+|---|---|---|
+| Shares outstanding | 2,383,745,900 | audited |
+| Register "public" (\<5% holders) | **22.36%** (533.1m shares) | AR2025 |
+| **IDX-defined free float** | **18.55%** (442.2m shares) | IDX filings, Feb 2026 |
+| Reported actually circulating | **~3.81%** (90.9m shares) | reported Mar 2025 |
+| KSEI ownership concentration | **99.96%** | reported Jul 2026 |
+| **Average daily transaction value** | **Rp479.8 million (~US$29,000)** | Jul 2026 |
+| Market capitalisation | **~Rp485–494 trillion** — 3rd largest on IDX | Aug 2026 |
+| Institutional ownership | **0%** | Aug 2026 |
+| Turnover as % of market cap per day | **~0.0001%** | `[calculated]` |
+
+The four float numbers measure different things and no filing reconciles them. What is not in dispute is the consequence. On **16 July 2026** the order book showed **one to two lots (100–200 shares)** at successive price levels; DCII fell 7.4% and **took roughly 15 points off the IHSG**, making it the single largest negative contributor to the Indonesian market index that day.
+
+A top-three index weight with a two-lot order book means the market capitalisation is a mathematical artefact of the last price, and the last price is set by trivial volume. This is the mechanism behind every episode in §06: the IDX suspension of June 2021, the twin halts of February 2025, the Full Call Auction board, the July 2025 suspension, the Rp398,000 peak and the 49% drawdown since.
+
+Management has been asked about it. In February 2025 it confirmed it was "exploring" a stock split to improve liquidity; in July 2025 it denied split rumours and stated there was no corporate action. **No split, no rights issue, no bonus issue, no buyback and no bond has ever occurred.** The share count is the same 2,383,745,900 it has been since 6 January 2021.
+
+## 8.6 Peer frame — capacity, capital and who is paying for it
+
+| | DCII | EDGE (Digital Edge / Indointernet) | BDx | PDG |
+|---|---|---|---|---|
+| Live IT MW | 128 reported / **82 owned** | ~29 | CGK3 + CGK4 live | ~22+ |
+| Backer | founders + Anthoni Salim | **Stonepeak** | **I Squared Capital + Indosat** | **Warburg Pincus, Ontario Teachers', Mubadala** |
+| Announced pipeline | >850 MW by 2027–28 (Fitch) | **500 MW → 1 GW, US$4.5bn** | **1.2 GW of contracted PLN power** | 230 MW Indonesia + 240 MW GIIC |
+| Funding | bank debt + retained earnings; **no equity since 2021** | infrastructure equity | infrastructure equity | infrastructure equity |
+| Market cap per live MW | **~Rp3.7tn** | **~Rp331bn** | private | private |
+
+The last row is the uncomfortable one. On the reported figures DCII trades at roughly **eleven times EDGE's market capitalisation per megawatt of live capacity** — and that comparison uses DCII's reported 128 MW, not its owned 82 MW, which would widen the gap by a further 56%. This report takes no view on valuation, which is Zunio's section, but the structural point belongs here: **the gap is not explained by capacity, and it has to be explained by something — certification, growth, the Bintan option, or the float.**
+
+The strategic point is separate and harder. DCII is a domestically owned operator competing for the same tenants against Warburg Pincus, Ontario Teachers', Mubadala, I Squared, Stonepeak, SoftBank and DAMAC. Those balance sheets can outspend it and accept lower returns for longer. **BMI puts domestic operators at ~10% of Indonesian live capacity.** DCII's answers are speed (sub-12-month builds), certification (Tier IV Gold TCOS, first in Southeast Asia), incumbency (the meet-me room, the fibre density, thirteen years of uptime) and cheap power at Cibitung. Those are real. Whether they survive 1.7 GW of committed pipeline is the question the next three years answer.
+
+---
+
+# 09 — IMPORTANT TRANSACTIONS
+
+## 9.1 The founder land purchase, December 2020
+
+One month before the IPO, DCI bought **20,606 m² in Kabupaten Bekasi from Marina Budiman, Otto Toto Sugiri, Bing Moniaga and Han Arming Hanafia** for **Rp125,971,054,253**, under four deeds (AJB Nos. 22–25/2020, all 14 Dec 2020), paid in full on 7 October 2020 at a uniform **Rp6.11m per m²**.
+
+Six days after the founders' deal, DCI bought **28,048 m² from PT Mega Manunggal Property**, an arm's-length third party, for **Rp131,682m — Rp4.695m per m²**.
+
+**The founders were paid a ~30% higher price per square metre than an unrelated seller in the same week, in the same district, for a larger parcel.** `[calculated]` No valuation, no fairness opinion and no explanation appears in the prospectus, the legal opinion or any annual report. The purchase was funded by a purpose-specific **Rp97,000m twelve-month OCBC "Fixed Loan — akuisisi tanah"**, repaid in October 2021. Title was still being certified into the company's name at the date of the legal opinion, which flagged it as an exception to its own clean opinion on asset title.
+
+## 9.2 The IPO, January 2021 — and what it did not restructure
+
+**357,561,900 new shares at Rp420**, 15% of enlarged capital, gross **Rp150,176m**, sole underwriter **PT Buana Capital Sekuritas**, effective 29 December 2020, listed 6 January 2021. Use of proceeds: **80% capex** (51 low-voltage panels for JK5, Rp67,281m; 6 gensets, Rp58,356m) and the rest working capital. Realisation: Rp119,763m of the Rp125,637m capex plan and Rp20,312m of working capital, fully utilised by 2023.
+
+Three features are worth stating plainly.
+
+**The Singapore holding company was not unwound before listing.** At the prospectus date **DCI International Holding Pte. Ltd. held 99.996%**, and post-offer it would hold **84.996%**. The only "restructuring" resolved in Akta No. 30 was the change of status from **PMA to non-PMA** effective at or after listing. The distribution of shares from the Singapore vehicle to the individuals happened **after** listing — the register at 30 April 2021 shows the holdco gone and named individuals in its place, with no filing explaining the mechanism.
+
+**There was no lock-up on any pre-IPO share.** The prospectus states it explicitly and the legal opinion confirms it: "**Tidak terdapat larangan bagi DCI International Holding Pte. Ltd. dan Gunawan Tenggarahardja untuk mengalihkan sebagian atau seluruh kepemilikan sahamnya**". Every pre-IPO share was free to move from day one.
+
+**The offer was priced at roughly 8x FY2019 earnings and 6.3x annualised 8M2020 earnings.** Rp420 against post-split FY2019 EPS of ~Rp52.6 `[calculated]`; annualising the 8M2020 net profit of Rp105,218m gives Rp157,827m against an implied post-money market capitalisation of Rp1,001bn = **6.3x**.
+
+## 9.3 Anthoni Salim's entry, May 2021
+
+On **31 May 2021**, four months after listing, **265,033,461 shares (11.12%) changed hands at Rp5,277**. The block was **carved out of the three founders' own post-IPO holdings** — Otto Toto Sugiri went from 815.1m to 712.8m shares, Marina Budiman from 650.0m to 536.5m, Han Arming Hanafia from 407.5m to 336.4m, a combined reduction of **286,939,503 shares** `[calculated from the published registers]` against the **265,033,461** Salim received. **The ~21.9m-share balance went somewhere else and is unaccounted for.** It was a negotiated crossing, not a market purchase. Reported consideration is inconsistent across sources — Rp1.01tn for 192.7m shares in one, ~Rp1.4tn for 265.0m in another, both at Rp5,277 — and the discrepancy is unresolved.
+
+The stake has been **completely static at 11.12% ever since**; Salim has never added and never sold, and holds directly rather than through a vehicle. On 15 June 2021 DCII was notified that he intended to **pledge (gadai) DCII shares**, described by the corporate secretary as "part of Salim Group's investment plans in Indonesia"; whether the pledge was executed or released has never been disclosed.
+
+The relationship is operational as well as financial: **H2 Karawang was co-developed with the Salim entity DISM**, **E1 was built "in collaboration with Salim Group"**, and **Bintan is a JV with Salim's SGX-listed Gallant Venture Ltd**. Salim is not labelled a controller (the three founders are), holds no board seat, and appears nowhere in the related-party note — his exposure runs entirely through DISM, DISP and Gallant, none of which DCII consolidates.
+
+## 9.4 The Equinix termination, September 2020
+
+DCI's relationship with Equinix began in 2012 with two deeds signed 24 September 2012 — an **Akta Biaya Komisi** (commission fee) and an **Akta Biaya Layanan Teknis** (technical services fee), both renewed on 1 January 2019. DCI gave notice of termination on **14 September 2020**, effective 30 days later; Equinix acknowledged on 21 September 2020. The fees ran through the **"Lisensi dan komisi"** line: Rp16,739m in FY2019 and **Rp17,675m in FY2020, going to exactly zero in FY2021**.
+
+Two months later, on **16 November 2020**, DCI signed the **Data Center Operation and Technical Support Agreement with PT Ekagrata Data Gemilang** — Rp4,350m plus **5% of EDG's monthly recurring revenue**. Structurally, DCII stopped paying a foreign operator a fee and started charging a related party one. **Equinix subsequently entered Indonesia on its own**, investing US$74m and opening its own Jakarta facility in May 2025. It is now a competitor.
+
+## 9.5 The refinancing, May 2023 — OCBC NISP to Bank Mandiri
+
+Credit Facility Agreements Nos. 34–38 dated **11 May 2023** replaced seven years of OCBC NISP facilities in a single transaction: **Rp1,251,921m committed at 7.50% fixed for three years**, 89 months to 23 October 2030, fully drawn, explicitly for "**pengambilalihan fasilitas hutang dari PT Bank OCBC NISP Tbk**". **Rp1,383,606m was repaid to OCBC in 2023.** The AGM had mandated pledging more than 50% of net assets.
+
+This was a straight cost-of-funds trade — from JIBOR + 200 bp floating to 7.50% fixed for three years, right before Indonesian rates rose — and it shows in the numbers: finance costs fell from Rp99,207m (FY2023) to **Rp79,791m (FY2024)** while the business grew 38.8%. Note the fixed period **expires 11 May 2026**, after which the loan reprices to 3-month Compounded IndONIA plus an undisclosed margin.
+
+## 9.6 The Sarana Megahtama acquisition, July 2023
+
+**50.005% of PT Sarana Megahtama for Rp110,000m**, via 5,001 newly issued SMT shares, deed of 7 July 2023. The minority is **PT Inti Indotek Informatika (49.995%)**, a party described nowhere. Management assessed the transaction as **not a business combination**, so the price was allocated across identifiable assets at relative fair value and **no goodwill arose**. What came in: **Rp189,624m of land and Rp3,129m of building**.
+
+SMT is DCII's only subsidiary. It contributed **Rp1,226m of profit in FY2025** on Rp217,956m of assets — a return on assets of **0.56%** `[calculated]`; the Rp613m that appears on the face of the P&L is the 49.995% minority's share, not SMT's whole result. No summarised financial information for it is disclosed beyond total assets. Its stated purpose was "preparation of the Company's business development as data center service provider"; what it is actually developing has never been said.
+
+## 9.7 The Danantara purchase, October 2025
+
+On **21 October 2025** DCII paid **Rp500,000m** for two long-term debt instruments issued by **PT Danantara Investment Management (Persero)** through **private placement**, maturing October 2030 and October 2032, bearing a **fixed coupon of 2% per annum**. The instruments are **pledged to Bank Mandiri**. They are carried at **Rp501,238m using unobservable valuation inputs**, with a **day-one deferred difference of Rp89,068m**, of which Rp2,533m was released to profit in FY2025. See §10.2.
+
+## 9.8 The Rp17 trillion facility, May 2026
+
+Disclosed 6–7 May 2026: a credit facility of **Rp17 trillion (≈US$980m)**, denominated in **both IDR and USD**, reported as from **Bank Central Asia** with Fitch also naming Bank Mandiri. Purpose: capex for "construction and completion of data centre facilities and the fulfilment of customer demand for contracted capacity". Collateral: **land, buildings, existing and future data centre machinery and equipment, operating current accounts at the lender, and insurance claim proceeds** — a full security package.
+
+**Rp17 trillion is 2.3× DCII's entire March-2026 balance sheet and 3.9× its equity.** Tenor, pricing, covenants and amounts drawn have not been disclosed. This is the single largest financial event in the company's history and it is the mechanism by which Fitch's Rp10–15 trillion of annual capex gets funded. It also introduces **USD debt into a company whose revenue is now billed predominantly in Rupiah** — the FX position reverses from a natural long-dollar asset position to a liability exposure.
+
+---
+
+# 10 — RED FLAG
+
+## 10.1 The platform perimeter — related-party capacity, both bought and operated
+
+**The evidence.** DCII reports 128 MW; ~46 MW of it (H2 Karawang 27 MW, E1 Jakarta 19 MW) is owned by **PT Datacenter Indonesia Sukses Makmur** and **PT Datacenter Indonesia Sukses Perkasa**, both of which have **Otto Toto Sugiri — DCII's President Director and 29.90% shareholder — as President Commissioner** [AR2025 p.121, Note 32]. E1's Uptime Institute certificates are issued in DISP's name, not DCII's [PUBEX2025 p.5]. DCII's own gross fixed assets, net of land and CIP, support roughly the 73 MW H1 campus, not 128 MW (§8.1).
+
+**The money flow, FY2025.** DCII paid DISM **Rp255,290m** "for the use of PT Datacenter Indonesia Sukses Makmur's data center building by the Company" and DISP **Rp9,229m** on the same basis — together **Rp264,519m — 22.66% of cost of revenues and 10.41% of revenue**, against **Rp8,354m, or 1.11% of COGS, a year earlier**. Including every related party, related-party COGS went from 2.39% to 22.69% of cost of revenues. It received **Rp42,511m** back as operating fees and revenue share. **Net Rp222,008m left the listed company** `[calculated]`. The payable to DISM stands at Rp83,220m, non-interest bearing.
+
+**Why it deserves suspicion, specifically:**
+
+1. **The pricing is unbenchmarked.** A 10–15% revenue share and an unstated rent per MW, both set between a company and its own President Director's private vehicles. The arm's-length assertion is identical boilerplate in every year, supported by no comparable, no valuation and no independent opinion.
+2. **The direction of value is asymmetric.** DCII bears the tenant relationship, the SLA risk, the brand and the sales cost; the private vehicles bear the capex and collect the rent. The listed shareholders fund the demand generation; the private vehicles own the assets that demand fills.
+3. **It is not a lease.** Renting ~46 MW of data hall is expensed as "jasa sewa colocation", not capitalised under PSAK 73. The group's entire recognised right-of-use asset is **Rp1,658m of office space**. That keeps roughly Rp232.6bn of annual obligation off the balance sheet and out of the debt-to-equity covenant, with **no disclosed term, no minimum commitment and no renewal mechanism**.
+4. **It scaled 14.6× in one year with no explanation.** Related-party cost of revenues went from Rp18,130m to Rp264,787m between FY2024 and FY2025. The annual report explains the margin decline as pricing strategy and does not mention the rent line at all in the MD&A.
+5. **Disclosure came late.** The 10–15% mechanism, the US$500,000 and US$250,000 consulting fees, and the DISM/DISP agreement names all appear for the first time in the FY2025 report, four to five years after the agreements were signed. The 2020 EDG agreement was disclosed in the prospectus with the term "**Tidak diatur**" and no fee at all.
+6. **It is not new — it is just newly reversed.** In FY2021, related-party *revenue* was **Rp111,573m, 12.81% of the company's revenue**, of which **DISM alone was Rp92,675m (10.64%)** — one of the four customers above 10% that year, and **88.7% of the year's entire revenue growth** `[calculated]`. Third-party revenue grew 1.69% in FY2021. The platform-fee model was already the growth engine five years before the agreements behind it were described in the accounts; what changed by FY2025 is that the cash now flows the other way.
+
+7. **Two related parties were de-related by a resignation, not by a divestment.** Otto Toto Sugiri resigned from the boards of PT Indointernet (14 Mar 2024) and PT Ekagrata Data Gemilang (2 Apr 2024). Commercial dealings continued at scale — Rp37,674m of purchases from EDG and Rp18,345m of revenue in FY2025 — but now sit in **third-party** lines. The related-party tables therefore understate the true intensity, and any year-on-year comparison of related-party exposure is broken.
+
+**What would settle it:** DISM's and DISP's audited accounts, the rent per MW paid, an independent transfer-pricing benchmark, and a statement of who owns DISM and DISP and in what proportions. None of that is public.
+
+## 10.2 Rp500 billion at a 2% coupon, pledged to the lender
+
+DCII paid **Rp500,000m** in October 2025 for privately placed Danantara paper yielding **2% fixed**, at a time when its own bank debt cost ~5.95% and its time deposits earned 5.0%. On any ordinary reading this is a **negative-carry asset of roughly Rp20bn a year in foregone spread** `[calculated]` — Rp500,000m × (5.95% − 2%) = Rp19,750m, or Rp15,000m against the 5.0% it earns on its own time deposits —, funded in a year when the company drew Rp1,100,000m of new bank debt and ran free cash flow of negative Rp194,950m.
+
+The accounting compounds the question. Because the instruments are not traded, fair value is determined using **unobservable inputs**, and the difference between the Rp500,000m transaction price and the assessed fair value — **Rp89,068m** — was recognised as a **deferred day-one gain**, released to profit over time (Rp2,533m in FY2025, of which Rp1,238m appears on the face of the P&L). In other words, the company booked a valuation gain on a below-market-rate instrument it had just bought at par, using inputs no third party can observe.
+
+The instruments are **pledged as collateral to Bank Mandiri**. That is the only functional explanation the filings support — that the paper is a security-package component rather than an investment. **No business rationale is given anywhere.** PT Danantara Investment Management is a state entity; DCII is a private company with no disclosed state relationship. This is Rp500bn — 12.5% of equity and half a year's capex — deployed without explanation.
+
+## 10.3 "No concentration of credit risk" against two customers at 48% of revenue
+
+Every set of accounts since 2019 contains both of these statements:
+
+> *Note 23 (revenue):* "individual customers with total transactions of **more than 10% of revenues** consist of transactions with **2 customers**… amounting to **Rp1,217,909**" — **47.95% of FY2025 revenue.**
+>
+> *Note 37b (financial risk):* "The Group has **no concentration of credit risk** as its trade receivables relate to a **large number of ultimate customers**."
+
+The second statement is about receivables and the first about revenue, so they are not literally contradictory — but **the accounts disclose no receivables concentration at all**, which means the assertion of no concentration is unsupported by any disclosed number, while the one concentration figure that does exist points the other way. Set alongside **past-due receivables rising from 11.0% to 36.6% of the book with zero expected-credit-loss provision**, the combination is uncomfortable. The prospectus was more honest: it put customer concentration inside the top-ranked risk factor and argued the mitigant explicitly.
+
+## 10.4 The pre-IPO founder land premium
+
+Covered in §9.1 and repeated here because it belongs on this list: **a ~30% price premium per square metre paid to four insiders in the same week as an arm's-length purchase in the same district, one month before listing, with no valuation and no explanation, funded by a purpose-specific bank loan.** Rp126bn is small against today's balance sheet; it was **19.5% of equity** at the time `[calculated]`. What makes it a flag is not the amount but the absence of any process around it, in a document that had to satisfy OJK.
+
+## 10.5 Disclosure that goes backwards
+
+Individually minor; as a pattern, a flag. Between FY2024 and FY2025 the company **withdrew** the loan interest margins (JIBOR + 0.45% and + 0.35%, replaced by "plus margin"), **dropped** a Rp200,000m facility from the note with no explanation, **stopped disclosing directors' remuneration** (Rp28,779m the year before), **replaced** a component table for other operating expenses with prose, and **dropped Structure Research** — the source of every market-share claim it had made since 2020 — without replacing the claim. Meanwhile a Rp22,165m "Lain-lain" line in other operating income, eight times the prior year, is not broken out at all.
+
+Against that, FY2025 *added* real disclosure: the revenue-share mechanism, a segment profitability table, a capital-commitment section, and — for the first time — the full sustainability data series (electricity 264.0 GWh, water 610,833 m³, Scope 1/2/3 emissions). The direction is not uniformly bad. But the items withdrawn are all items an outside analyst would use to check the related-party economics or the cost of debt, and the items added are all items that make the growth story easier to tell.
+
+## 10.6 What was checked and does *not* qualify
+
+For completeness, the things that look like flags and are not:
+
+- **No litigation, ever.** No court case, arbitration, competition proceeding, tax dispute, labour dispute or somasi against the company or any director or commissioner, in any year from the prospectus to FY2025. No administrative sanction from OJK or the IDX.
+- **The audit opinion has been unmodified every year**, with no emphasis of matter, and the only Key Audit Matter is land valuation — which is the right KAM for a company carrying Rp1,079bn of Level 2 land.
+- **No restatement.** Every FY2024 figure in AR2024 is identical to the FY2024 comparative in AR2025. The FY2024 cost-of-revenue *disaggregation* changed (Rp96,507m of "Lain-lain" was split into three named lines) but the total did not.
+- **The covenant record is clean** — DSCR never below 1.94× against 1.25×, DER never above 1.95× against 3.0×, and no breach in fifteen years.
+- **The going-concern position is strong**: Rp1.54tn of operating cash flow, Rp225,000m undrawn, Rp255,781m of cash, and a Rp17tn facility signed.
+- **The uptime record is verifiable through third parties** — Uptime Institute Tier IV Design, Constructed Facility, TCDD, TCCF and **Gold TCOS**, plus SOC 1 and 2 Type 2, PCI DSS, TVRA, ISO 9001/14001/27001/27701/45001/50001, B Corp, EcoVadis Silver, and audited compliance with OJK 11/2022 and the IDX data centre guidelines. This is not a company that fakes its operations.
+
+The pattern across §10.1–10.5 is not fraud and it is not incompetence. It is a **group being run as one enterprise across a listed vehicle and several private ones, with the listed vehicle disclosing the minimum the rules require and no more.** That is legal in Indonesia and common among family-controlled listed companies. It is also the reason a shareholder cannot compute this business's economics from its accounts.
+
+---
+
+# MISSING DATA AND OPEN ITEMS
+
+Ranked by how much each would change the analysis. For the top items, where the data most likely sits and what it would decide.
+
+**1. Who owns DISM and DISP, on what terms DCII rents from them, and what those entities earn.**
+*Would decide:* whether the "128 MW / market leader" framing is meaningful, whether the FY2025 margin compression is a mix effect or a value transfer, and what DCII's real return on capital is. *Likely location:* the Indonesian company registry (AHU) filings for both entities; Salim Group / Gallant Venture disclosures; any POJK 42 affiliated-transaction disclosure DCII may have filed with the IDX. **Nothing in the annual reports discloses the shareholders of either company, the rent per MW, the term, or any minimum commitment.**
+
+**2. Installed vs contracted vs billed MW, and utilisation, for every year since 2021.**
+*Would decide:* whether DCII is filling its halls or building into vacancy, and the size of the J-curve drag in each year. *Likely location:* investor presentations to institutions, Fitch's full rating report (which quotes contracted-to-shell >90%), or a Structure Research Jakarta report. Disclosed by the company **once**, at 31 August 2020, and once as "91% contracted" at end-2021. Never since.
+
+**3. Price per kW per month, and any escalator or renewal-spread data.**
+*Would decide:* whether the flat revenue-per-MW in §8.2 reflects stable pricing or a mix shift from retail to wholesale, and whether Jakarta's 20.5% vacancy is already forcing rates down. *Likely location:* Structure Research *Jakarta Data Centre Market* or Arizton's *Indonesia Colocation Portfolio Report* — both paywalled, and **Jakarta/Johor/Batam rates are published nowhere free**. This is the one research report worth buying if the thesis turns on pricing.
+
+**4. PUE.** DCII has never published a number, in six annual reports, while claiming efficiency "better than internal design targets and national industry standards" and winning an award for a "Low-PUE" building. *Would decide:* roughly Rp30bn of gross profit per 0.1 of PUE `[calculated]`, and whether the Cibitung estate is competitive with new liquid-cooled builds. *Likely location:* the sustainability report of a customer, or an Uptime Institute filing.
+
+**5. Rack density (kW/rack) and whether any DCII facility is actually liquid-cooled.** AR2025 names liquid cooling only as an industry requirement; JK6 is described as having "advanced cooling technologies and flexible power configurations"; the only cooling technology named for DCII's own estate is a **chilled water system**. External reporting describes JK6 as "AI-ready with liquid cooling". *Would decide:* whether DCII can serve GB200-class AI workloads at all, or only inference and enterprise at conventional density.
+
+**6. The identity of the tenant that took all 36 MW of JK6.** *Would decide:* the concentration question — JK6 alone is 28% of reported capacity, and two customers are already 48% of revenue. The cloud on-ramp list (Google, AWS, Azure, Alibaba, Huawei, BytePlus) narrows it but names nobody.
+
+**7. The Rp17 trillion facility's tenor, pricing, covenants and drawn amount**, and whether BCA and Bank Mandiri are co-lenders or two separate facilities. *Would decide:* the leverage path through the Rp10–15tn-a-year capex programme, and the covenant headroom at the point where DER stops being 0.47×. *Likely location:* the FY2026 annual report, or an IDX material-transaction disclosure.
+
+**8. Why Rp500bn was placed in 2%-coupon Danantara paper.** *Would decide:* whether this is a collateral arrangement, a state-relationship cost, or something else entirely. *Likely location:* the FY2026 notes, if the position moves.
+
+**9. Receivables concentration by customer, and why Rp127bn is more than 60 days overdue with no provision.** *Would decide:* whether the "no concentration of credit risk" assertion has any support.
+
+**10. Capex per MW on the new build programme.** DCII discloses total capex but never per-MW, and the split between H1 fit-out, E2 and land is not given. Without it, the yield on the Rp10–15tn cannot be estimated at all.
+
+**11. Interconnection / cross-connect revenue and count.** Bundled inside "Lain-lain" (Rp181,809m in FY2025) with flexspace, smart hands and the platform fees. Since interconnection density is the primary switching-cost moat in colocation, its absence removes the ability to assess the moat quantitatively.
+
+**12. Contract structure:** weighted-average remaining term, escalators, take-or-pay minimums, churn, renewal rate, backlog. Disclosed once at IPO as "6 months to 5 years" across 97 agreements. Nothing since.
+
+**13. Equipment purchase commitments and secured vendor slots.** With transformer lead times at 100–210 weeks and DC-spec switchgear at 2–3 years, an operator's forward equipment position is close to being the growth constraint. DCII discloses **no equipment commitment of any kind** — only the PT Sumaraja Indah civil-works POs (Rp36,880m outstanding on JK6).
+
+**14. Power arrangements beyond Cibitung.** Cikarang Listrindo supplies H1 under a 2016 agreement with no tariff, volume or term disclosed. **No PLN agreement for any DCII site appears anywhere** — not in the filings and not in PLN's own publicity, which names Digital Edge, NeutraDC, BDx and Microsoft but not DCII. How E1, E2, H2 and any future Karawang expansion are powered is unknown.
+
+**15. Bintan:** hectares owned versus optioned, capital committed, the JV ownership split with Gallant Venture, and the timeline. Currently a Forbes interview and a website page, with **zero presence in the audited accounts**.
+
+**16. FY2025 directors' remuneration**, and the number of LTI phantom units granted and their carrying value. AR2024 disclosed Rp28,779m; AR2025 discloses neither.
+
+**17. Han Arming Hanafia.** A named controller holding 14.11% with no board seat, no biography and no role disclosed in any of six annual reports or the prospectus.
+
+**18. The composition of Q1 2025.** A 67.2% gross margin on Rp773,552m of revenue, unrepeated in any other quarter, driving a +193% net profit print that has distorted every subsequent year-on-year comparison. No disclosure explains it.
+
+**19. Reconciliation of the four float numbers** — 22.36% register public, 18.55% IDX free float, ~3.81% circulating, 99.96% KSEI concentration. No filing reconciles them.
+
+**20. Sources not supplied for this analysis:** no interim (quarterly or half-year) financial statements were provided, so FY2026 figures in this report come from public reporting rather than from filings; no public expose deck for 2022; no IDX monthly ownership filings; no Fitch rating report in full; and no Structure Research, Cushman & Wakefield or Knight Frank primary report — all market-sizing here is from their press summaries.
+
+**Corrections made in the course of this analysis** (a verification pass re-derived every table figure and every `[calculated]` number against the source notes; these are the discrepancies it settled):
+- FY2020 revenue is **Rp759,365m**, not the Rp795.4bn that circulated in 2021 press coverage — the quoted +55.02% growth rate only reconciles off Rp759,365m.
+- 1H2026 growth is **+33.2% revenue / +18.7% net profit**, not the "+10.9% / +9.7%" reported in August 2026 — those are the Q1-only rates, carried over in error.
+- FY2019 EBITDA is reported three different ways across the filings: **Rp255,623m** (prospectus and the AR2023 five-year table), **Rp256,546m** (AR2020) and **Rp255,634m** (AR2021). FY2020 EBITDA is Rp416,553m in AR2020 and Rp415,693m in AR2021. This report uses the AR2021 figures throughout.
+- The JK5 civil-works contract value with PT Sumaraja Indah appears as **Rp77,850m** in the prospectus, **Rp107,850m** in AR2020 and **Rp98,275m** in the FY2021 notes onward. This report uses Rp98,275m, the figure repeated in every year since.
+- The H1 Cibitung land area is given as **8.5 hectares** in the highlights sections and **8.7 hectares** in the capital-investment sections of the same reports. Both are quoted as printed.
+- The H1 capacity ceiling was **reduced from "up to 300 MW" to "scalable to 220 MW"** between the FY2024 and FY2025 public expose decks, unexplained.
+- AR2025 states E2 Surabaya commences commercially in "Triwulan I 2026" in one section and "paruh pertama tahun 2026" in another; it was inaugurated **6 April 2026**.
+- AR2025's sustainability narrative states no B3 (hazardous) waste was generated in 2025 while the table on the facing pages reports **56.92 tonnes**.
+- **The two Karawang buildings' capacities are reported inconsistently.** AR2022 gives H2-01 = 15 MW and H2-02 = 12 MW; AR2023 and AR2025 swap them. Only AR2022's version reconciles the 2021 platform total of 58 MW. The combined 27 MW is agreed everywhere and is what this report uses.
+- **The 2022 and 2023 capacity figures are restatements.** The 2023 public expose deck gave 52 MW (2022) and 82 MW (2023); both were revised upward the following year. AR2022's bar chart also labels 2020 as 37 MW where operating capacity was 22 MW.
+- **The FY2020 and FY2021 DSCR are not in the audited notes at all** — only in the MD&A — and AR2022 reports FY2021 as 1.93x in Indonesian and 1.91x in English. Treat the pre-2022 DSCR series as indicative.
+- **FY2020 capex is Rp818,968m**, not the Rp818,394m net investing cash flow with which it is easily confused; FY2022 net investing cash flow is Rp316,713m, not the Rp310,887m capex line.
+- **The reported "Rp613m" of subsidiary profit is the minority's half**, not SMT's result — SMT earned ~Rp1,226m.
+- **JK5's tax-holiday granting decree (13 Sep 2021) pre-dates the OSS application it grants (23 Dec 2021)**, as printed in the accounts.
+- **The Salim block does not fully reconcile:** the three founders' holdings fell by 286,939,503 shares while Salim received 265,033,461. The ~21.9m difference is unexplained.
+
+---
+
+## Sources
+
+| Document | Pages | Period covered | Notes |
+|---|---:|---|---|
+| **Prospektus Penawaran Umum Perdana Saham PT DCI Indonesia Tbk** | 265 | FY2017, FY2018, FY2019 audited; **8M to 31 Aug 2020** audited (8M2019 comparative unaudited) | The single richest document. Chapter VIII (business, ownership, material agreements), Chapter V (MD&A), Chapter XVII (legal opinion) and Chapter XVIII (audited FS). FY2017–19 audited by KAP Siddharta Widjaja & Rekan (KPMG); 8M2020 by KAP Purwantono, Sungkoro & Surja (EY), Peter Surja, 17 Nov 2020. The auditor's report pages are image scans and could not be read from the text layer. |
+| **Laporan Tahunan 2020** | 217 | FY2020, with FY2019 and FY2018 comparatives | Audited FS from p.107. Shareholder register at 31 Dec 2020 **and** at 30 Apr 2021 — the only place the post-IPO unwinding of the Singapore holdco is visible. No related-party section in the GCG chapter. |
+| **Laporan Tahunan 2021** | 220 | FY2021, with FY2020 comparative | Audited FS from p.112. **The only report containing cabinet counts (7,500 / 1,280) and a contracted-capacity percentage (91%).** First disclosure of Anthoni Salim on the register. |
+| **Laporan Tahunan 2022** | 270 | FY2022, with FY2021 comparative | Audited FS from p.162. Last stand-alone (unconsolidated) year. Contains the only realisation table for IPO proceeds. |
+| **Laporan Tahunan 2023** | 389 | FY2023, with FY2022 comparative | Audited FS from p.268. **First consolidated year** (PT Sarana Megahtama from 7 Jul 2023). Full transcription of the OCBC → Mandiri refinancing. FY2023 auditor signature page is an image; partner name inferred from the report number. |
+| **Laporan Tahunan 2024** | 418 | FY2024, with FY2023 comparative | Audited FS from p.298. **The financial highlights table, org chart, HR training table and every sustainability table are images with no text layer** — those FY2024 figures are recoverable only from AR2025's comparative columns. Contains the loan interest margins that AR2025 removes. |
+| **Laporan Tahunan 2025** | 559 | FY2025, with FY2024 comparative | Audited FS from p.436. Auditor KAP Purwanto Susanti dan Surja (EY), Arief Somantri AP.1174, unmodified, 4 Mar 2026, one KAM (land valuation). **First disclosure of the DISM/DISP 10–15% revenue-share mechanism, the segment profitability table, the capital-commitment section and the full sustainability data series.** The English column is font-corrupted throughout; the Indonesian text is authoritative. |
+| **Paparan Publik 2021** (FY2020 book year) | 15 | FY2020 | Image-only deck. Source of the "51% market share / 72.5 MW Jakarta market" claim (Structure Research) and the 8.5 ha / 300 MW campus statement. |
+| **Paparan Publik 2023** (FY2022) | 8 | FY2022 | Image-only. DCI Platform map with E1 "Construction", H3 Bintan "Planning". |
+| **Paparan Publik 2024** (FY2023) | 7 | FY2023 | Image-only. E1 upgraded to Live. |
+| **Paparan Publik 2025** (FY2024) | 11 | FY2024 | Image-only. **First per-site MW breakdown; Uptime certificates for E1 shown issued to PT DC Indonesia Sukses Perkasa.** "270+ customers". |
+| **Paparan Publik 2026** (FY2025) | 8 | FY2025 | Image-only. Estate split into "Hyperscale DCs" (H1/H2/H3) and "Edge DCs" (E1/E2); H1 ceiling cut to 220 MW. A section divider carries invisible text reading "Indonesia Data Center Market Overview" — a market section present in the source presentation but absent from the filed deck. |
+
+**Series provenance.** The FY2017–FY2019 income-statement and balance-sheet series come from the **comparative columns of the IPO prospectus**, not from three separate annual reports — DCII was not listed and published none. FY2020 figures appear in both AR2020 and AR2021 and are identical except for EBITDA, which AR2021 restates. FY2022 is the last stand-alone year and FY2023 the first consolidated one, so equity, NCI and asset lines are not continuous across that boundary. Quarterly figures for FY2025 and 1H2026, and all FY2026 data, come from public reporting of IDX filings that were **not supplied for this analysis**.
+
+**Market, industry and peer data** (Sections 03, 04 and parts of 08 and 02.1) come from web research conducted 25 August 2026, not from the filings: Knight Frank *Data Centre Atlas 2026* and its 1H2026 release; Cushman & Wakefield *APAC Data Centre Update* H1 2025 and H1 2026; CBRE *Global Data Center Trends 2026*; BMI/Fitch Solutions (Apr 2026); Fitch Ratings' affirmation of AA-(idn) (Jul 2026); PLN's April 2026 tariff schedule and RUPTL 2025–2034; Perpres 10/2021 and 49/2021; PP 71/2019; OJK Regulations 11/2022, 3/2024, 27/2024 and 4/2021; UU 27/2022 (PDP); PMK 130/2020 as amended by PMK 69/2024; and company disclosures from BDx, Digital Edge, Princeton Digital Group, DayOne, NeutraDC and Gallant Venture. Where a capacity or pricing figure comes from a paywalled report seen only in press summary, that is stated at the point of use. **Jakarta, Johor and Batam US$/kW/month asking rates are not published free anywhere** — the pricing in §8.2 is derived from DCII's own accounts using the stated method, not quoted.

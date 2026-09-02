@@ -1,0 +1,802 @@
+---
+title: "GGRM — PT Gudang Garam Tbk"
+description: "A business-model teardown — a kretek maker that collects two-thirds of its revenue for the state, and spent what was left on an airport."
+date: '2026-09-02'
+tags: [analysis, tobacco, idx]
+---
+
+**What it does:** makes clove cigarettes (*kretek*) in Kediri and Gempol, East Java, and sells them across Indonesia through its own distribution company. Second-largest legal cigarette maker in the country by volume, behind HM Sampoerna. Since 2020 it has also built and now runs Dhoho airport in Kediri and is building a toll road from Kediri to Tulungagung.
+
+**Market cap:** about Rp39 triliun at 2 September 2026 (≈Rp20,300 a share; 1,924,088,000 shares). Family stake 76.2%, public 23.8%.
+
+**Period covered:** audited financial years FY2020–FY2025 line by line, FY2017–FY2019 from highlights tables only, 1H2026 from press reports, and the 1990 IPO prospectus for the company's origins.
+
+**Sources in hand:** annual reports FY2021–FY2025 (five, bilingual, each with the audited statements at the back), public-expose decks 2023–2025, and the July 1990 IPO prospectus (scanned; OCR'd). Web research for the excise tariff tables 2016–2026, industry data and 2026 events. Full source table at the end. Figures in Rp million in tables unless stated; `[calc]` marks a figure derived here rather than printed in a filing.
+
+---
+
+## THE ONE THING TO UNDERSTAND FIRST
+
+When Gudang Garam sells a pack of cigarettes, most of the money is not its own. Roughly two-thirds of the shelf price of a machine-made pack is tax: a fixed excise duty per stick set by the Finance Ministry each year, a regional "cigarette tax" that is one-tenth of the excise, and VAT charged on the government's minimum retail price. The company pays all three up front — it buys excise stamps (*pita cukai*) from Customs, sticks one on every pack, and only then may the pack leave the factory. The stamp cost sits in inventory until the pack is sold and then goes through cost of goods sold.
+
+This shapes everything in the accounts. Gudang Garam books the full pack price, tax included, as revenue, and books the tax as its biggest cost. So its reported revenue of Rp89 triliun in 2025 is really about Rp25 triliun of its own money plus Rp65 triliun collected for the state. Its reported gross margin of 10% looks like a commodity business; on the money it actually keeps, the margin is nearer 38%. The reported net margin of under 2% hides a business that converts about 6–7% of its own revenue into profit, and did over 20% before 2021. Section 08 rebuilds the whole P&L on both bases, per stick, for every year from 2017.
+
+The second thing follows from the first. Because the excise is a fixed rupiah amount per stick that the government raises by decree, and because the company's customers are largely lower-income smokers who cannot absorb price rises, the tariff decision each autumn is the single most important number in Gudang Garam's year — more than clove prices, more than volumes, more than anything management controls. From 2020 to 2024 the machine-made tariff rose 66% in four steps; the company's own take per stick fell by a fifth in the first two of those years and had barely recovered by the fourth. Volume halved, from 96 billion sticks in 2019 to 47 billion in 2025, as smokers moved down to hand-rolled products taxed at a third of the rate, and to illegal untaxed cigarettes. Then the government froze the tariff for 2025 and 2026 and has said it intends to hold 2027 flat too, and in the first half of 2026 the company's profit went from almost nothing to Rp3 triliun on revenue that was still falling. Nothing about the business changed; the tax stopped rising.
+
+The third thing is what the owners did with the money while this was happening. Between 2020 and 2024 the family-controlled board pushed almost Rp12 triliun of cigarette cash into an airport for their home town, then in 2024 committed to a Rp10 triliun toll road. Both are 50-year concessions that hand the asset back to the state for nothing at the end, both lose money, and neither has been tested for impairment. In the years when the airport was being built the company skipped its dividend twice. In 2026 it paid out 99% of profit.
+
+Evidence: the tax mechanics in §2.1 (Distribute) and §08.1–08.2; the volume collapse in §03; the airport and toll road in §08.4 and §09; the dividend record in §1.4.
+
+---
+
+# 01 — OWNER
+
+## 1.1 Group structure
+
+Gudang Garam is a family company that happens to be listed. The Wonowidjojo family controls it through two private holding companies and a few direct personal stakes, and the register has not moved by a single share in six years except for a commissioner's 5,600 shares when he left the board.
+
+```
+Wonowidjojo family (second generation: Susilo, Juni Setiawati, Sigid Sumargo, Sumarto;
+third generation: Indra Gunawan — Vice President Director since 2022)
+   │  Susilo holds 19.85% and Juni 9.92% of Suryaduta; the other Suryaduta holders are never named
+   │
+   ├── PT Suryaduta Investama ──────── 69.29% ──┐   ← stated "ultimate parent" in every FS
+   │      (Juni: Commissioner; Susilo: Director) │
+   │                                              ├──► PT GUDANG GARAM Tbk (1,924,088,000 shares)
+   ├── PT Suryamitra Kusuma ─────────  6.26% ────┘        │
+   │      (Juni: President Commissioner;                    │
+   │       Susilo: President Director)                      │
+   ├── Juni Setiawati Wonowidjojo, personally  0.58%        │
+   ├── Susilo Wonowidjojo, personally           0.09%        │
+   └── Public                                  23.78%        │
+                                                            ▼
+        ┌─────────────────────────────────────────────────────────────────────────┐
+        │ Cigarettes: the listed company itself (Kediri and Gempol plants)          │
+        │ PT Surya Madistrindo 99.99% — sole distributor, 19 regional trading subs  │
+        │ PT Surya Pamenang 99.99% — paperboard mill, Kediri                        │
+        │ PT Surya Inti Tembakau 100% — tobacco processing (said to have stopped    │
+        │    operating July 2024, still consolidated)                               │
+        │ PT Surya Dhoho Investama 99.99% — Dhoho airport, Kediri (Rp14.3tn assets) │
+        │ PT Surya Sapta Agung Tol 99.99% — Kediri–Tulungagung toll road            │
+        │ PT Surya Kerta Agung / Kertaagung Toll — earlier toll vehicles, drained   │
+        │ PT Surya Air, Galaxy Prime Ltd (BVI), Prime Galaxy Ltd (BVI) — aircraft   │
+        │ PT Graha Surya Media, PT Surya Wisata, PT Surya Abadi Semesta — minor     │
+        └─────────────────────────────────────────────────────────────────────────┘
+```
+
+Two points about this chart. First, the family's own trading companies sit *outside* the listed group: PT Surya Zig Zag (cigarette paper), PT Taman Sriwedari and PT Bukit Dhoho Indah are "owned by the same ultimate shareholders" and appear only in the related-party note. Second, the listed company is where the operating plants are; there is no layer above it holding the factories. The economics sit in the listco. What does not sit in the listco is the retail margin — the distribution company is consolidated, but the retailer's cut and any margin taken by the family's outside companies are invisible.
+
+Free float is 23.8% and foreign ownership within it has drifted from 7.9% to 5.7% since 2021. The number of shareholders fell from 34,000 to 27,000 between 2023 and 2025.
+
+## 1.2 History
+
+| Year | What happened |
+|---|---|
+| 1958 | Surya Wonowidjojo (Tjoa Ing Hwie), a former employee of a Kediri kretek maker, founds "Tjap Gudang Garam" as a sole proprietorship making hand-rolled and corn-husk (*klobot*) cigarettes |
+| 1979 | First cigarette-making machines installed; machine-made (SKM) filter kretek begins |
+| 1983 | Surya's son Rachman Halim becomes President Director (the founder's health failing); Juni Setiawati joins the board as commissioner |
+| 1985 | Founder dies. His widow Tan Siok Tjien holds the largest stake |
+| 1990 | IPO: 57.8m new shares at Rp10,250, listed 27 Aug 1990. 85% of proceeds repay bank debt. Pre-IPO capital was restructured by capitalising a Rp124bn shareholder loan and eliminating a two-class share structure (voting "Serial A" shares) |
+| 1990 | Volume 40.7bn sticks; 34.7% of national kretek volume, ahead of Djarum and far ahead of Sampoerna (4.1%) |
+| 1993 | PT Surya Pamenang paperboard mill starts, so the company makes its own packaging board |
+| 1996 | Last change to share capital; nothing since |
+| 2000s | Gempol plant near Surabaya added (the filings give three different years for this — see §MISSING) |
+| 2004 | PT Surya Madistrindo set up as sole distributor, replacing the three family-owned distributors of the 1990 era |
+| 2008 | Rachman Halim dies; brother Susilo Wonowidjojo becomes President Director (June 2009), sister Juni Setiawati President Commissioner |
+| 2019 | Peak volume, 95.9bn sticks; 25.6% market share |
+| 2020 | Excise +23%; dividend skipped; first Rp1.4tn injected into PT Surya Dhoho Investama for a Kediri airport |
+| 2022 | Airport concession signed with the Ministry of Transport (7 Sep 2022, 50 years); Susilo's son Indra Gunawan becomes Vice President Director |
+| 2023 | Airport reaches commercial-operation criteria 29 Dec 2023; Rp12.4tn of self-constructed airport recognised as "construction revenue" |
+| 2024 | First flight 5 Apr 2024, inauguration 18 Oct 2024. Toll-road concession signed 27 Feb 2024, first work order 1 Oct 2024. Dividend skipped again |
+| 2025 | Excise frozen; headcount cut 27% through early retirement; short-term debt repaid; three-quarters of the old toll vehicles' capital pulled back and Rp1.8tn pushed into the new toll SPV |
+| 2026 | Excise frozen again; FY2025 dividend Rp800/share, 99% of profit; a third-generation family member, Adhi Wibhawa Wonowidjojo, appointed commissioner (June 2026) |
+
+## 1.3 History — recap
+
+For sixty years this was one thing done well: a kretek maker that grew with the market, moved from hand to machine when the market did, and kept its factories, its packaging and its distribution inside the family. The founder's children ran it in sequence — Rachman Halim for 25 years, then Susilo since 2009 — and the third generation is now being installed. The company has not issued a share since 1996, never bought back a share, never taken long-term debt of any size, and never diversified out of tobacco until 2020.
+
+Then two things happened at once. The government began raising excise faster than the company could pass it on, and the family began spending the company's cash on infrastructure for Kediri. The first halved the business; the second absorbed the cash the business still threw off. The record from 2020 to 2025 is of a company that named the excise risk correctly every year, was hit harder than it said each time, and kept building the airport regardless.
+
+## 1.4 Owner's character
+
+What the record shows, not what anyone says:
+
+**They pay themselves through dividends, not salary, and only when they choose to.** The stated policy is 20–40% of earnings. Actual payouts have run between 64% and 99% in the years a dividend was paid, and zero in two of the last seven fiscal years. With 76% of the shares, the family took roughly Rp9.6 triliun of the Rp12.6 triliun paid out between 2021 and 2025. Board pay is modest by comparison — Rp100–190 billion a year for thirteen people, with no per-person disclosure and no share scheme — but in 2024, the year of no dividend and Rp981 billion of profit, the boards' pay equalled 19% of that profit.
+
+**The dividend is a residual after the family's projects, not a commitment to minorities.** The two skipped years were 2020 (from FY2019's record profit of Rp10.9tn, "because of COVID") and 2024 (from FY2023, "to strengthen the financial condition"). In both years the company was pushing Rp2–4tn into the airport. In 2026, with the airport built and the toll road still early, it paid out 99% of a small profit.
+
+| Fiscal year | Per share (Rp) | Total (Rp bn) | Paid | Payout `[calc]` | What else was happening |
+|---|---:|---:|---|---:|---|
+| FY2018 (press) | 2,600 | 5,003 | Jul 2019 | 64% | Peak year |
+| FY2019 | nil | – | – | 0% | Record profit Rp10.9tn; AGMS Aug 2020 declines to pay; Rp1.4tn into airport SPV |
+| FY2020 | 2,600 | 5,003 | Jul 2021 | 65% | Rp2.0tn into airport SPV |
+| FY2021 | 2,250 | 4,329 | Jul 2022 | 77% | Rp2.9tn into airport SPV |
+| FY2022 | 1,200 | 2,309 | Jul 2023 | 83% | Rp4.1tn into airport SPV; profit halved |
+| FY2023 | nil | – | – | 0% | Rp1.3tn into airport, Rp0.9tn into toll SPV |
+| FY2024 | 500 | 962 | Jul 2025 | 98% | Rp1.8tn into new toll SPV |
+| FY2025 | 800 | 1,539 | Jul 2026 | 99% | Toll road under construction |
+
+FY2016–FY2018 dividends are not in this source set; press reports (Bisnis) give Rp2,600 for each, the same amount four years running — a fixed rupiah sum rather than a fixed ratio.
+
+**They keep the family in every seat that matters.** Susilo Wonowidjojo (70) has been a director since 1976 and President Director since 2009. His sister Juni Setiawati (71) has been a commissioner since 1983 and President Commissioner since 2009. His son Indra Gunawan (39) was made Vice President Director in 2022 after ten years in the company. A third-generation member, Adhi Wibhawa Wonowidjojo, joined the Board of Commissioners in June 2026. The non-family directors are long-serving employees: the corporate secretary since 2000, the finance director since 2007 (joined 1983), two plant directors since 2019. Of the three independent commissioners, two have served 24 and 12 years; the "independent director" label quietly disappeared from the 2025 accounts. The audit committee — chair and both members — was replaced wholesale in 2025: the new independent commissioner, Hanlim Suprianto, took the chair from Gotama Hengdratsonata (who stays on the board), and two former KPMG partners replaced the members of ten years' standing.
+
+**They respond to downturns by cutting people, not by changing the model.** The 2023 volume collapse was met with price rises; the 2024 profit collapse with a 27% headcount cut in 2025 (30,308 to 21,964 people) executed as an "early retirement programme" that the filings describe only through a Rp305 billion pension credit. No factory closure, no brand withdrawal, no exit from any segment has ever been disclosed. Two plants named in the 2021 accounts (Karanganyar, Sumenep) simply stop being mentioned.
+
+**They do not explain.** Nine documents, and there is no statement of why an airport, no budget for it before it was built, no traffic figure since, no impairment test, no explanation for the 2025 toll-vehicle reshuffle, no reason for the headcount cut, and no numeric guidance in any year. The annual report is among the shortest of any IDX large-cap (about 160 pages, 60 of them the financial statements).
+
+## 1.5 RPT
+
+Dealings with companies owned by the same family — related-party transactions — are small, one-directional and stable. The listed group buys cigarette paper and packaging from PT Surya Zig Zag and something unspecified from PT Taman Sriwedari, together about 1.3–3.0% of what it buys in a year. Nothing is sold to related parties, nothing is lent to or borrowed from them, no rent or guarantees are disclosed. In 2021 the company bought Rp22.5bn of land or assets for the airport from PT Bukit Dhoho Indah, also family-owned.
+
+| Rp m | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+|---|---:|---:|---:|---:|---:|---:|
+| Purchases from PT Surya Zig Zag | 251,035 | 280,650 | 248,610 | 160,868 | 159,428 | 126,884 |
+| Purchases from PT Taman Sriwedari | 34,960 | 29,557 | 27,741 | 21,071 | 29,774 | 20,529 |
+| **Total, as % of all purchases** | **2.8%** | **1.6%** | **2.2%** | **1.3%** | **3.0%** | **3.0%** |
+| Owed to them at year end (within trade payables) | 13,792 | 24,918 | 16,431 | 10,325 | 10,268 | 7,994 |
+| Key management compensation (13 people) | 154,412 | 151,753 | 180,680 | 180,437 | 188,979 | 102,339 |
+| — as % of profit to owners `[calc]` | 2.0% | 2.7% | 6.5% | 3.4% | **19.3%** | 6.6% |
+
+The contrast with 1990 is instructive: at the IPO, 98% of the company's receivables were owed by three family-owned distributors, and the company had lent Rp61bn to PT Surya Zig Zag at 15%. Those channels were closed by bringing distribution inside the group (PT Surya Madistrindo, 2004). What remains is the paper supplier. The real related-party question today is not these purchases; it is the airport and toll road, which are intra-group and therefore never appear in this note at all — see §10.
+
+---
+
+# 02 — MODEL
+
+Gudang Garam has one business and two side activities. Cigarettes are 98% of revenue and all of the profit. Paperboard (PT Surya Pamenang) is a mill that mostly feeds the cigarette business and has lost money since 2023. Infrastructure (the airport and the toll road) is a place cigarette cash goes. The model below is the cigarette business; the other two are in §08.3–08.4.
+
+## 2.1 Cigarettes
+
+### Product
+
+A kretek is a cigarette whose filler is roughly two-thirds tobacco and one-third chopped clove buds, with a flavouring "sauce" added. Gudang Garam makes three kinds:
+
+| Type | How made | Share of GG volume 2025 | Excise tier GG sits in | Tax per 12-pack 2025 |
+|---|---|---:|---|---:|
+| **SKM** — *sigaret kretek mesin* | Machine-made, filter; the full-flavour "high tar" lines (Surya, GG International, GG Merah) are almost all of it; "light" lines (Signature Mild, GG Mild, Surya Pro Mild) are under 1% | 85% | SKM Golongan I (>3bn sticks a year) | Rp19,071 |
+| **SKT** — *sigaret kretek tangan* | Hand-rolled, unfiltered, in the Kediri plant; the traditional product (GG Merah, Djaja, Sriwedari) plus, since 2024, hand-rolled versions of the SKM flagships (GG International Kretek, GG Signature Kretek) | 15% | SKT Golongan I, lower price band (HJE Rp1,555–2,170/stick) | Rp6,837 |
+| **Klobot** | Corn-husk wrapped, a legacy product | \<0.1% | KLB | negligible |
+
+Two things are missing from this list. There is no white (non-clove) cigarette; Gudang Garam has never made one, so it has no presence in the segment Marlboro and Dunhill occupy. And there is no "heated" or vapour product — Sampoerna sells Rp1.2tn a half-year of IQOS-type sticks; Gudang Garam sells none.
+
+Revenue by product, Rp m:
+
+| | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+|---|---:|---:|---:|---:|---:|---:|
+| SKM | 104,678,647 | 114,542,248 | 114,270,862 | 96,022,298 | 86,621,351 | 79,412,089 |
+| SKT | 8,550,207 | 8,554,087 | 8,766,918 | 9,302,106 | 9,366,286 | 7,935,877 |
+| Klobot | 25,010 | 19,315 | 17,097 | 11,669 | 9,959 | 7,714 |
+| Paperboard (external) | 1,128,701 | 1,599,930 | 1,432,437 | 1,039,322 | 876,145 | 798,006 |
+| Construction of own airport / toll road | – | – | – | 12,417,623 | 1,570,104 | 820,733 |
+| Others | 94,746 | 165,686 | 195,378 | 159,979 | 211,638 | 395,339 |
+| **Total revenue** | **114,477,311** | **124,881,266** | **124,682,692** | **118,952,997** | **98,655,483** | **89,369,758** |
+| Export (all products) | 1,909,069 | 1,798,626 | 1,483,636 | 1,498,166 | 1,317,235 | 1,144,066 |
+
+All of these revenue figures include the tax collected for the state. Export is under 2% and carries no Indonesian excise.
+
+### Supply chain
+
+```
+ Tobacco farmers (Java, Madura, NTB) ──┐                      Clove farmers (Sulawesi, Maluku, Java) ──┐
+   ~95% domestic leaf, ~5% imported     │                       100% domestic                           │
+   bought at harvest, aged up to 2 yrs  │                       aged ~10 months                         │
+                                        ▼                                                              ▼
+                       ┌──────────────────────────────────────────────────────────────────────────┐
+                       │  KEDIRI (HQ, founding site) and GEMPOL (near Surabaya)                    │
+                       │  primary processing: leaf conditioning, clove chopping, blending, "sauce" │
+                       │  secondary: hand-rolling halls (SKT) │ making & packing machines (SKM)   │
+                       │  in-house printing; PT Surya Pamenang board mill next door               │
+                       └──────────────────────────────────────────────────────────────────────────┘
+                                        │  every pack gets an excise stamp bought from Customs
+                                        ▼
+                       PT Surya Madistrindo (sole distributor) → 66 area offices, 44 stock points,
+                       >5,000 vehicles → wholesalers and ~hundreds of thousands of retail outlets
+```
+
+The physical chain has not changed since 1990: buy leaf and cloves at harvest, hold them for a year or two so that the blend is consistent across seasons, process in Kediri and Gempol, stamp, ship. What has changed is the distribution layer (from three family-owned distributors to a wholly-owned one) and the scale of the stock holding — see Purchase below.
+
+### Purchase — raw materials and inventory
+
+The company buys two crops and holds them for a long time. Tobacco is bought at harvest and aged; the 1990 prospectus said up to 26 months, and the modern balance sheet says the same thing in numbers. At end-2025 raw material stock was about two and a half years of the year's raw-material usage. This is deliberate: a kretek brand is a blend, and a blend that tastes the same every year needs leaf from several harvests in the warehouse at once. It also means the company's largest asset is a pile of dried leaves and cloves.
+
+| Rp m | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+|---|---:|---:|---:|---:|---:|---:|
+| Raw and supplementary materials (leaf, cloves, sauce, paper, filters) | 23,976,996 | 28,531,434 | 26,957,083 | 30,557,943 | 26,412,995 | 22,270,498 |
+| Excise stamps bought, not yet used | 4,338,779 | 7,174,191 | 5,774,450 | 5,226,455 | 2,328,765 | 1,773,676 |
+| Finished goods (stamped, unsold) | 8,723,119 | 8,732,553 | 12,081,039 | 7,908,154 | 8,630,953 | 6,552,988 |
+| Goods in process, spare parts, in transit | 2,855,629 | 3,018,047 | 2,827,313 | 2,793,414 | 3,053,225 | 2,791,517 |
+| **Total inventories** | **39,894,523** | **47,456,225** | **47,639,885** | **46,485,966** | **40,425,938** | **33,388,679** |
+| Inventories as % of total assets | 51% | 53% | 54% | 50% | 48% | 44% |
+| Raw material stock ÷ raw material used in year `[calc]` | 1.7 yrs | 2.0 | 1.9 | 2.9 | 2.5 | 2.4 |
+
+No write-down of inventory has ever been booked, and in 2023 the insured value was below the carrying value.
+
+What the company pays for its crops is never disclosed — not a tonnage, not a price, not a sourcing region in any modern filing. What can be seen is the raw-material cost per stick, which rose from Rp157 to Rp196 between 2020 and 2025 (§08.2). Cloves are the volatile input: farm-gate prices fell to around Rp60,000/kg in 2020 and have since traded at Rp100,000–140,000, so a rising clove bill is likely to be part of that per-stick rise. The two-year buffer stock is what stops a bad clove harvest from showing up in any single year's margin, and is why the company can say, every year, that supply risk is "managed via inventory buffer".
+
+### Purchase — plant and fixed assets
+
+The cigarette plants are old, paid for, and shrinking as a share of the balance sheet. Fixed assets (net) fell from Rp32 triliun in 2022 to Rp20 triliun in 2025, mostly because Rp12.4 triliun of airport construction was moved out of "fixed assets" into a separate "concession rights" line in 2023 — the airport is not a building the company owns but a right to operate one for fifty years. Cigarette capex has fallen from Rp3.7tn in 2020 to under Rp1tn in 2025, which is roughly the depreciation charge on the cigarette plant. The company is maintaining, not expanding.
+
+| Capex by segment, Rp m | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+|---|---:|---:|---:|---:|---:|---:|
+| Cigarettes | 3,735,529 | 3,147,274 | 2,719,985 | 1,225,489 | 1,330,656 | 990,884 |
+| Airport / toll road (in "others" before 2022) | 1,260,377 | 1,863,958 | 2,758,586 | 5,612,827 | 65,026 | 2,528 |
+| Others (aircraft, media; toll vehicles before 2024) | *above* | *above* | 65,049 | 784,287 | 25,482 | 12,545 |
+| Paperboard | 54,144 | 76,616 | 96,066 | 66,601 | 78,120 | 44,225 |
+| **Total** | **5,050,050** | **5,087,848** | **5,639,686** | **7,689,204** | **1,499,284** | **1,050,182** |
+
+No capacity figure for Kediri or Gempol has been published since the 1990 prospectus (63.6bn sticks a year on 54 machines then). At 47bn sticks today, and with the plants sized for the 96bn of 2019, utilisation is probably around half — which is why the 2025 headcount cut is the first of what may be several.
+
+### Process — how a stick is made and what it costs
+
+The making is simple and the cost of making is small. Leaf and cloves are conditioned, cut and blended with the sauce; for SKM the blend is fed into making machines that form the rod and attach a filter, then packing machines; for SKT the blend goes to hand-rolling halls where a worker rolls, cuts and packs by hand. Both then receive a stamped pack. The manufacturing cost of a stick — leaf, cloves, paper, filter, labour and factory overhead — was about Rp280 in 2025. The tax on the same stick was about Rp1,390.
+
+| Cost of goods sold, Rp m | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+|---|---:|---:|---:|---:|---:|---:|
+| Raw materials used | 14,099,167 | 14,571,324 | 14,335,838 | 10,697,043 | 10,375,710 | 9,125,971 |
+| Direct labour | 912,172 | 968,573 | 973,797 | 949,517 | 900,674 | 798,754 |
+| Factory overhead | 3,958,137 | 4,161,255 | 4,111,902 | 3,900,699 | 3,743,451 | 3,251,595 |
+| **Manufacturing cost** | **18,969,476** | **19,701,152** | **19,421,537** | **15,547,259** | **15,019,835** | **13,176,320** |
+| **Excise stamps, VAT and cigarette tax** | **78,662,740** | **91,099,726** | **97,593,866** | **73,297,918** | **73,631,184** | **64,815,697** |
+| Inventory movements, promotion stock, merchandise `[calc]` | (602,584) | (441,121) | (3,671,787) | 2,902,336 | (1,661,920) | 778,886 |
+| Cost of construction (airport / toll) and other | 59,435 | 248,898 | 243,473 | 12,609,863 | 2,286,760 | 1,614,381 |
+| **Total cost of revenue** | **97,089,067** | **110,608,655** | **113,587,089** | **104,357,376** | **89,275,859** | **80,385,284** |
+| Tax line as % of total COGS | 81% | 82% | 86% | 70% | 82% | 81% |
+| Tax line as % of revenue | 69% | 73% | 78% | 62% | 75% | 73% |
+
+Read the table this way: of every Rp100 of cost, about Rp81 is money handed to the state, Rp11 is leaf and cloves, Rp4 is factory overhead and Rp1 is the wages of the people who make the cigarettes. Hand-rolling matters for the mix (an SKT stick needs many more hands than an SKM stick) and for politics (the government protects hand-rolling jobs with a lower tariff), but it does not matter for the cost line — direct labour is 1% of COGS.
+
+Overheads outside the factory are Rp6.6–7.7 triliun a year: selling costs (transport, advertising, promotion and the sales force — never split out) and general administration. Selling costs fell by a third in 2025, the first real cut; the note does not say whether that was advertising or fleet.
+
+### Distribute — the tax, the price, and who gets what
+
+This is the part of the model that decides everything, so it is worth being exact about the mechanics.
+
+**The stamp.** Indonesian tobacco excise is a *specific* duty: a fixed rupiah amount per stick, set by tier, paid by buying excise stamps from the Directorate General of Customs and Excise. The producer orders stamps (a "CK-1" order), may take up to about two months' credit on them, sticks them on packs, and the excise is deemed paid when the pack leaves the factory. Two more taxes ride on the stamp: a regional cigarette tax (*pajak rokok*) of 10% of the excise, and VAT at an effective 9.9% (9.1% before April 2022) of the government-set minimum retail price (*harga jual eceran*, HJE). All three are collected at the factory gate, all three sit in the stamp cost.
+
+**The tier.** The excise rate depends on the type of cigarette and on the factory's annual volume. Any factory making more than 3 billion machine-made sticks a year is "Golongan I" for SKM and pays the top rate; Gudang Garam makes 40 billion, so there is no tier relief available to it — the tiers exist to protect small makers, not to grade large ones. For hand-rolled, the top tier starts at 2 billion sticks and is split into two price bands; Gudang Garam's SKT products sit in the lower band. The full tier tables for 2016–2026 are in §08.1.
+
+**The price.** Because the tax is a fixed amount per stick, a rise in the tariff does not scale with the price — it lands as a fixed rupiah amount that the producer must either pass to the smoker or absorb. Gudang Garam's customers are largely lower-income. Between 2020 and 2022 the company chose to absorb: its own take per stick fell about 20% while the tax per stick rose 35%. From mid-2022 it began "more frequent price increments" and its take recovered, but each rise cost volume.
+
+| Per stick, Rp | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Price GG books per stick (revenue ÷ sticks) | 1,059 | 1,124 | 1,152 | 1,262 | 1,351 | 1,491 | 1,715 | 1,807 | 1,872 |
+| Tax per stick (stamp line ÷ sticks) | ~620 | ~690 | ~700 | 877 | 1,000 | 1,182 | 1,193 | 1,386 | 1,389 |
+| **GG's own take per stick** `[calc]` | **~440** | **~430** | **~450** | **385** | **351** | **309** | **522** | **421** | **483** |
+| Tax as % of GG's price | ~59% | ~62% | ~61% | 69% | 74% | 79% | 70% | 77% | 74% |
+
+2017–2019 tax per stick is estimated from the tariff tables and GG's volume mix (the COGS split is not disclosed for those years); 2020–2025 is the actual stamp line in the accounts. 2017–2019 price per stick uses total revenue, which includes ~1.5% paperboard.
+
+**Who gets what from a pack.** Take a 12-stick machine-made pack at the government's 2025 minimum price for a top-tier maker, Rp28,500. Rp19,071 (67%) is excise, cigarette tax and VAT. The remaining Rp9,429 is shared between the retailer, the wholesaler, Gudang Garam's distributor and Gudang Garam's factory. Gudang Garam's own blended take of about Rp483 a stick (Rp5,800 a pack, pulled down by the cheaper hand-rolled packs in the mix) is consistent with the trade keeping something like a third of the after-tax value at the minimum price. The company's actual declared prices for Surya and GG International sit above the minimum and are never published, so the real split cannot be derived from the filings; what can be said is that the state's Rp19,071 is fixed and everyone else's share is the remainder.
+
+**The customer.** Nobody buys more than 10% of the company's output; receivables are under a month of sales; distributors lodge Rp417bn of guarantee deposits with the company. The company effectively sells for cash. The end customer is the reason volume has halved: the government minimum for a top-tier machine-made 12-pack went from about Rp13,000 in 2019 to Rp27,000 in 2024, and the smoker either traded down to hand-rolled (taxed at a third of the rate), to a small maker's tier-II brand, or to an untaxed illegal pack.
+
+---
+
+# 03 — DEMAND
+
+## 3.1 Indonesian cigarettes
+
+Indonesia is the second-largest cigarette market in the world by sticks and the only large one where clove cigarettes dominate. Legal production peaked at around 350 billion sticks a year in 2019 on Customs data and has been shrinking since, faster from 2023. Nielsen's series — the one Gudang Garam quotes — has an unexplained break in 2023 that makes the level unreliable but the direction clear:
+
+| Billion sticks | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+|---|---:|---:|---:|---:|---:|---:|
+| Industry, as reported in PE2023/PE2024 and AR2021–24 | 220.2 | 240.3 | 249.3 | 226.9 | 211.7 | – |
+| Industry, restated in PE2025/AR2025 | – | – | 249.3 | 258.5 | 244.3 | 223.7 |
+| — of which machine-made high-tar (SKM HT) | 53% | 53% | 51% | 43%* | 41%* | – |
+| — machine-made low-tar (SKM LT) | 24% | 22% | 21% | 26%* | 23%* | – |
+| — hand-rolled (SKT) | 19% | 21% | 23% | 27%* | 31%* | – |
+| — white (SPM) | 4.5% | 4.5% | 4.6% | 4.6% | 4.4% | – |
+| **Gudang Garam volume** | **89.7** | **91.1** | **82.5** | **61.4** | **53.1** | **46.7** |
+| GG market share as reported | 26.6% | 27.1% | 25.5% | 21.2% | 17.4% | 15.2% |
+
+\* restated series. The reported GG share of 17.4% for 2024 cannot be reproduced from either industry series (53.1 ÷ 244.3 = 21.7%); the 2023-onward share figures should be read as direction only.
+
+Three demand shifts, in order of importance to Gudang Garam:
+
+**Down-trading from machine-made full-flavour to hand-rolled.** SKT's share of the legal market rose from 19% to 31% in four years. This is not nostalgia; it is arithmetic. A hand-rolled pack from a top-tier maker carries Rp6,837 of tax against Rp19,071 for a machine-made one, so the retail gap between the two widened from about Rp6,000 a pack in 2020 to over Rp12,000 by 2024. Gudang Garam is 85% SKM. Sampoerna, whose hand-rolled business is five times Gudang Garam's, has been the beneficiary — its 1H2026 revenue grew while Gudang Garam's fell.
+
+**Illegal cigarettes.** Estimates run from a few percent to almost half the market depending on who is counting; Customs seized 816 million sticks in the first nine months of 2025, up 37%. The government's own explanation for freezing the tariff in 2025 and 2026 was that further rises would push more volume untaxed. Whatever the true share, on the series the company used at the time the legal market lost 22 billion sticks in 2023 and GG lost 21 billion of them; on the restated series the market grew that year and GG still lost 21 billion. Either way the loss sat in GG's segment.
+
+**Purchasing power.** The company's customer is the lower-middle-income smoker whose real income has not recovered since 2020. Every annual report since 2021 names this; none quantifies it.
+
+Demand drivers that would help: a growing adult population (still true), and a government that treats the excise as an industry-protection lever as much as a health lever (true again since 2025). Demand drivers that hurt: PP 28/2024, the health-law regulation that bans sales within 200 metres of schools, bans single-stick sales, tightens advertising, and contemplates plain packaging — the implementing ministerial rules were still being drafted in 2026.
+
+## 3.2 Paperboard
+
+PT Surya Pamenang sells about Rp0.8tn of board outside the group and Rp0.4tn inside it. External sales have halved since 2021 and the mill has lost money for three years. It exists to guarantee packaging supply, not to earn a return.
+
+---
+
+# 04 — SUPPLY
+
+## 4.1 Producers and the tier system
+
+The legal market is four large makers and several hundred small ones. Sampoerna (Philip Morris) leads with about 27–29%; Gudang Garam 15–21% depending on the series; Djarum (private) a similar order of magnitude; BAT's Bentoel and Nojorono behind; Wismilak the only other listed name, small but growing fast on the down-trading trend (revenue +34% in 2025).
+
+The tier system is the supply-side structure that matters. A factory making under 3 billion machine-made sticks a year pays Rp746 of excise per stick in 2025 against Rp1,231 for the big four — a 40% discount, and the small maker's minimum price for a 12-pack is Rp17,820 where Gudang Garam's is Rp28,500. Since 2022 the government has merged tiers (13 in 2016, 8 since 2022) to narrow that gap, but the 3-billion cliff remains. Below it sits a large, fragmented tier-II industry that has taken volume from the majors every year since 2020.
+
+| Where GG sits | 2016 | 2018 | 2020 | 2022 | 2024 | 2025–26 |
+|---|---:|---:|---:|---:|---:|---:|
+| SKM Gol. I excise, Rp/stick (GG's rate) | 480 | 590 | 740 | 985 | 1,231 | 1,231 |
+| SKM Gol. II excise (small makers) | 300–340 | 370–385 | 455–470 | 600 | 746 | 746 |
+| Gol. II discount to Gol. I | 29–38% | 35–37% | 36–39% | 39% | 39% | 39% |
+| SKT Gol. I lower band (GG's SKT rate) | 245 | 290 | 330 | 345 | 378 | 378 |
+| SKT Gol. III (smallest hand-rollers) | 80–90 | 100 | 110 | 115 | 122 | 122 |
+
+## 4.2 Raw material supply
+
+Indonesia grows both crops. Clove output is around 150,000 tonnes a year, over 85% from ten provinces, mostly Sulawesi and Maluku; the kretek industry is essentially the only buyer, so prices swing with the harvest (a Rp60,000/kg trough in 2020, Rp140,000 in 2025). Tobacco leaf is grown across Java, Madura and NTB, with imports of about 160,000 tonnes a year filling the gap for Virginia and Oriental grades. Gudang Garam discloses nothing about its own purchases. Its two-year stock policy is the supply strategy.
+
+## 4.3 The regulatory economics
+
+The government's take from a pack is set once a year by Finance Ministry regulation (PMK), normally announced in the last quarter for the following January. The history since 2016, in headline terms:
+
+| Year | Weighted-average tariff change | HJE floor | Regulation | What the company faced |
+|---|---:|---|---|---|
+| 2016 | +11% | raised | PMK 198/2015 | steady annual rises |
+| 2017 | +10.5% | raised | PMK 147/2016 | |
+| 2018 | +10% | held | PMK 146/2017; tiers 12→10 | |
+| 2019 | **0%** | held | PMK 156/2018 (election year) | volume peaks |
+| 2020 | **+23%** (SKM I +25%) | +35% | PMK 152/2019 | the shock year |
+| 2021 | +12.5% (SKM I +17%, SKT 0%) | held | PMK 198/2020 | SKT exempted "for jobs" |
+| 2022 | +12% (SKM I +14%, SKT +3.5–4.5%) | raised | PMK 192/2021; tiers 10→8 | |
+| 2023 | +10% (SKM I +12%, SKT +5%) | raised | PMK 191/2022, two-year rule | |
+| 2024 | +10% (SKM I +12%, SKT +5%) | raised | PMK 191/2022 | GG profit −82% |
+| 2025 | **0%** | +9.5% | PMK 97/2024 | first freeze |
+| 2026 | **0%** | held (single press source) | no new PMK; 2025 rules stay in force | second freeze |
+| 2027 | minister says "constant, neither up nor down" (May 2026) | – | not yet regulated | |
+
+Two things in that table drive the whole company. From 2020 to 2024 the SKM Golongan I rate rose 66% while the SKT rate rose 14%, so the tax gap between the two products — which the government uses to protect hand-rolling jobs — more than doubled. And the two freezes are political: the finance minister's stated reasons were factory layoffs and illegal cigarettes, with the alternative lever now being production-counting machines in factories rather than higher rates.
+
+---
+
+# 05 — KEY VARIABLES
+
+Five inputs move the model; two of them are set by the government.
+
+| Variable | What it is | Weight | Sensitivity `[calc]` |
+|---|---|---|---|
+| **1. SKM Golongan I tariff** | Fixed excise per machine-made stick, set yearly by PMK | 1,231 of GG's ~1,872 price per stick (incl. 10% cigarette tax and VAT ≈ 1,589 stack) | +10% tariff ≈ +Rp135–160/stick of cost with the cigarette tax and any VAT rise riding on it ≈ Rp5.5–6.5tn a year at 40bn SKM sticks; GG's 2025 operating profit was Rp2.8tn. Absorbed, it wipes out profit twice over; passed on, it costs volume |
+| **2. GG's own price per stick** | Revenue per stick less tax per stick — what it keeps | ~Rp480/stick in 2025 | Every Rp10/stick change = Rp0.47tn of profit on 47bn sticks. The 2020–22 decision to absorb tax cost about Rp75/stick, i.e. ~Rp6tn of annual profit |
+| **3. Volume, and SKM/SKT mix** | Sticks sold; SKT is lower-taxed but lower-value | 46.7bn sticks, 85% SKM | 1bn sticks ≈ Rp0.5tn of own revenue and, at 2025 margins, ~Rp60bn of operating profit. The mix shift to SKT cuts tax per stick but also own take per stick |
+| **4. Raw-material cost per stick** | Leaf, cloves, paper, filter | Rp196/stick, ~40% of own take | +10% cloves (≈ a third of the blend, maybe half of raw-material value) ≈ +Rp10/stick ≈ Rp0.5tn |
+| **5. Fixed overhead** | Factory overhead + selling + G&A | ~Rp10tn a year, ~Rp210/stick at 2025 volume | Largely fixed; every 1bn sticks lost adds ~Rp4/stick to unit overhead. The 2025 headcount cut took ~Rp1.5tn out of the run-rate |
+
+The variable that does not appear: interest. Debt was used only to carry excise-stamp inventory and was almost entirely repaid in 2025; interest was 0.5% of revenue at its worst.
+
+---
+
+# 06 — VICISSITUDES
+
+This is not a cyclical business in the commodity sense — demand does not swing with GDP — but it has had two kinds of shock and a slow structural decline.
+
+**The excise shock, 2020–2024.** The machine-made tariff rose by a cumulative 66% while the company's customers lost income. The company absorbed first and raised prices late; a 20% gross margin became 9%, profit went from Rp10.9tn to Rp1.0tn, and volume halved. Profit fell in four of the five years. The 2023–2024 two-year rule produced a tolerable 2023 and a terrible 2024, and the next multi-year rule could do the same.
+
+**The relief, 2025–2026.** Freeze the tariff and the same business earns Rp3tn in a half-year. Nothing operational changed between 2024 and 1H2026 except headcount; the swing in annualised profit was about Rp4tn. That is the measure of how little management controls.
+
+**Structural: the product is being taxed out of its own market.** Every year since 2019 the legal market has shrunk and GG has shrunk faster. Hand-rolled has grown as a share, and GG's hand-rolled business — the one it started with — is a fifth of Sampoerna's. The 2024 launch of hand-rolled versions of the machine-made flagships is the first sign of the company following the smoker down the tax ladder.
+
+**The self-inflicted one: infrastructure.** The airport and toll road are 50-year concessions that return the asset to the state for nothing; they lose Rp0.4–0.5tn a year before any write-down. At the 2024 level of cigarette profit that is about a sixth of it.
+
+For scale, in 1990 the company carried bank debt at 19–20% interest, had 48,000 employees, and earned a 23% gross margin under an excise system charged as a percentage of price. The move to a fixed amount per stick is why a price rise no longer protects the margin: the state's share is fixed in rupiah, and the company's share is whatever is left.
+
+---
+
+# 07 — FINANCIALS
+
+Audited line items FY2020–FY2025 (FY2020, FY2022 and FY2024 from the comparative columns of the following year's statements); FY2017–FY2019 from the five-year highlights tables only, marked `[HL]`. Rp million. Movements are annotated only where something happened.
+
+## 7.1 Asset
+
+| | 2019 `[HL]` | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Cash | n/a | 4,774,272 | 4,169,740 | 4,407,033 | 4,256,264 | 3,705,754 | 3,613,292 |
+| Trade receivables | n/a | 2,556,127 | 2,773,872 | 2,181,496 | 1,952,036 | 1,840,880 | 1,923,276 |
+| Inventories | n/a | 39,894,523 | 47,456,225 | 47,639,885 | 46,485,966 | 40,425,938 | 33,388,679 |
+| Prepaid VAT | n/a | 1,680,362 | 4,466,524 | 828,585 | 1,023,764 | 1,256,572 | 292,447 |
+| Other current | n/a | 632,645 | 446,217 | 388,128 | 397,152 | 361,762 | 220,568 |
+| **Current assets** | ~52,078,909 | **49,537,929** | **59,312,578** | **55,445,127** | **54,115,182** | **47,590,906** | **39,438,262** |
+| Fixed assets, net | n/a | 27,605,038 | 29,780,132 | 32,426,439 | 24,551,034 | 22,058,112 | 20,208,777 |
+| Concession rights (airport, toll road) | – | – | – | – | 13,007,978 | 14,329,730 | 14,902,111 |
+| Other non-current | n/a | 1,048,442 | 871,659 | 691,051 | 776,629 | 960,528 | 702,503 |
+| **Total assets** | **78,647,274** | **78,191,409** | **89,964,369** | **88,562,617** | **92,450,823** | **84,939,276** | **75,251,653** |
+
+### Working capital
+
+Half of everything the company owns is inventory, and a third of that inventory, at the peak, was excise stamps and stamped packs — tax paid to the state before the smoker has paid the company. This is the company's working-capital cycle: buy stamps on two months' credit from Customs, hold them, sell the pack, collect within a month. When the tariff rises, the same number of stamps costs more and the cycle absorbs more cash; when volume falls, it releases it.
+
+- **2021:** inventories +Rp7.6tn, of which stamps +Rp2.8tn; prepaid VAT +Rp2.8tn. The 2020–21 tariff rises were paid for in stock before they were paid for by smokers. Financed with short-term bank debt (+Rp4tn).
+- **2022:** finished goods jump to Rp12.1tn (+38%) as sales stalled — product stamped at 2022 rates sitting unsold.
+- **2023–2025:** the cycle unwinds. Stamps in stock fall from Rp5.8tn to Rp1.8tn and finished goods to Rp6.6tn as volume falls; Rp13tn of working capital is released over three years and used to repay the banks.
+
+Receivables are trivial (a month of sales, no concentration, no related-party balances). Prepaid VAT is never explained in any note and swings by trillions.
+
+### Fixed asset
+
+- **2020–2022:** airport construction runs through construction-in-progress inside fixed assets; Rp5.9tn of "others" capex over three years.
+- **2023:** Rp12.4tn is reclassified from fixed assets into "airport concession rights" — an intangible, because the company does not own the airport, it owns fifty years of the right to charge for it. The fixed-asset line drops by a quarter despite Rp7.7tn of additions. Amortisation of the right began at Rp248bn a year.
+- **2024:** Rp0.9tn of land moved into toll-road concession rights; toll road construction now accrues as an intangible under construction (Rp2.4tn by end-2025).
+- **No impairment test is disclosed in any year** for the Rp14.9tn of concession rights, although the airport has lost money since it opened.
+
+## 7.2 Liability
+
+| | 2019 `[HL]` | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Short-term bank loans and current maturities (incl. overdrafts) | n/a | 6,029,226 | 9,980,336 | 10,071,084 | 13,395,817 | 9,375,398 | 761,931 |
+| Trade payables | n/a | 1,123,703 | 1,002,233 | 1,308,958 | 1,064,716 | 1,127,437 | 682,560 |
+| **Excise, VAT and cigarette tax payable** | n/a | **9,059,132** | **16,102,573** | **16,266,318** | **11,884,812** | **8,406,774** | **7,862,212** |
+| Other current | n/a | 797,931 | 1,284,141 | 1,478,650 | 3,191,088 | 1,914,606 | 1,418,249 |
+| **Current liabilities** | ~25,256,503 | **17,009,992** | **28,369,283** | **29,125,010** | **29,536,433** | **20,824,215** | **10,724,952** |
+| Long-term bank loan | n/a | 156,667 | 122,667 | 65,385 | – | – | – |
+| Pension obligations | 1,765,824 | 1,996,074 | 1,538,656 | 1,188,123 | 1,322,726 | 1,343,683 | 1,093,068 |
+| Other non-current (incl. airport upgrade obligation from 2023) | 515,298 | 506,208 | 645,489 | 328,133 | 728,821 | 854,787 | 862,796 |
+| **Total liabilities** | **27,716,516** | **19,668,941** | **30,676,095** | **30,706,651** | **31,587,980** | **23,022,685** | **12,680,816** |
+
+### Business payable
+
+The biggest thing the company owes is tax on stamps it has bought but not yet paid for. Customs gives producers roughly two months to pay for excise stamps, so at any year-end there is a large balance owed to the state — Rp16tn at the 2021–22 peak, 56% of all current liabilities, and 73% of a much smaller total in 2025. This is free credit from the government and it is the reason the company could carry Rp47tn of inventory on Rp10tn of bank debt. It also cuts the other way: a return to volume growth would have to rebuild the stamp stock and absorb cash again. Trade payables to actual suppliers are about a month of raw-material purchases.
+
+- **2021:** excise payable +78% to Rp16.1tn — the 2021 tariff rise and a bigger stamp order ahead of the 2022 rise.
+- **2023–2025:** falls with volume to Rp7.9tn.
+
+### Business loan
+
+Since listing the company has not borrowed long-term in any meaningful amount. What it borrows is one-to-three-month revolving rupiah facilities from a dozen banks, used to fund stamp purchases and, in 2020–2023, to fund the airport while paying dividends. Debt peaked at Rp13.4tn in 2023 (six lenders, 6.3% average rate, no security given) and was repaid to Rp0.8tn in 2025 out of the working-capital release. Undrawn facilities at end-2025: Rp28tn. Interest was never more than 0.5% of revenue; covenants are described as "determined financial ratios" and never quantified.
+
+## 7.3 Equity
+
+| | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Share capital + premium (unchanged since 1996) | 1,015,744 | 1,015,744 | 1,015,744 | 1,015,744 | 1,015,744 | 1,015,744 | 1,015,744 |
+| Retained earnings | 49,948,338 | 57,540,043 | 58,305,843 | 56,873,532 | 59,880,407 | 60,934,156 | 61,585,349 |
+| Other | (33,379) | (33,379) | (33,379) | (33,379) | (33,379) | (33,379) | (33,379) |
+| Non-controlling interest | 55 | 60 | 66 | 69 | 71 | 70 | 3,123 |
+| **Total equity** | **50,930,758** | **58,522,468** | **59,288,274** | **57,855,966** | **60,862,843** | **61,916,591** | **62,570,837** |
+| Total liabilities ÷ equity | 54% | 34% | 52% | 53% | 52% | 37% | 20% |
+| Return on equity `[calc]` | 21% | 13% | 9.5% | 4.8% | 8.7% | 1.6% | 2.5% |
+
+Equity is 98% retained earnings. Nothing has been raised from shareholders since 1996 and nothing returned except dividends. The only movement other than profit and dividends is the 2025 appearance of Rp3.1bn of outside interest, created when the old toll-road vehicle was diluted to 93% — an unexplained by-product of the toll reshuffle in §09.
+
+## 7.4 Cashflow
+
+| | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 | Cum. |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Cash from customers | 113,799,384 | 124,662,749 | 125,276,203 | 106,766,028 | 97,197,490 | 88,467,423 | |
+| Cash to suppliers (stamps and materials) | (85,504,722) | (110,646,705) | (106,238,153) | (92,333,584) | (81,826,425) | (69,274,105) | |
+| Operating expenses, wages, interest, tax, other | (10,816,948) | (8,690,877) | (9,170,066) | (10,023,181) | (8,843,994) | (7,587,452) | |
+| **Operating cash flow** | **17,477,714** | **5,325,167** | **9,867,984** | **4,409,263** | **6,527,071** | **11,605,866** | **55,213,065** |
+| Capex (cash) | (5,351,416) | (4,934,572) | (5,423,876) | (5,698,121) | (3,185,010) | (2,477,544) | (27,070,539) |
+| **Free cash flow** `[calc]` | **12,126,298** | **390,595** | **4,444,108** | **(1,288,858)** | **3,342,061** | **9,128,322** | **28,142,526** |
+| Dividends paid | – | (5,002,629) | (4,329,198) | (2,308,906) | – | (962,044) | (12,602,777) |
+| Net bank borrowing / (repayment) | (11,120,000) | 3,528,000 | (266,205) | 3,311,538 | (3,750,000) | (8,500,000) | |
+| Net profit, for comparison | 7,647,729 | 5,605,321 | 2,779,742 | 5,324,516 | 980,804 | 1,559,586 | 23,897,698 |
+
+Over six years the company generated Rp55tn of operating cash against Rp24tn of profit. Rp18tn of the gap is depreciation (a non-cash charge); the other Rp13tn is the stamp cycle unwinding as volume fell. Of the Rp28tn left after capex, Rp12.6tn went to shareholders and the rest repaid the banks. The airport was funded by borrowing in 2021–2023 and repaid from the working-capital release in 2024–2025: in effect, the shrinking of the cigarette business paid for the airport.
+
+- **2020:** Rp17.5tn operating cash on Rp7.6tn profit — the 2019 stamp inventory sold through at the higher 2020 price, and no dividend paid.
+- **2021:** operating cash −70% as Rp7.6tn of new inventory was bought; dividend resumed (Rp5tn) and debt taken.
+- **2023:** free cash flow negative; the only year. Airport capex Rp5.6tn plus a dividend; debt to its peak.
+- **2025:** Rp11.6tn operating cash on Rp1.6tn profit; Rp8.5tn of debt repaid.
+
+## 7.5 Income statement
+
+| | 2017 `[HL]` | 2018 `[HL]` | 2019 `[HL]` | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Revenue (incl. tax collected) | 83,305,925 | 95,707,663 | 110,523,819 | 114,477,311 | 124,881,266 | 124,682,692 | 118,952,997 | 98,655,483 | 89,369,758 |
+| Cost of revenue | (65,084,263) | (77,063,336) | (87,740,564) | (97,089,067) | (110,608,655) | (113,587,089) | (104,357,376) | (89,275,859) | (80,385,284) |
+| **Gross profit** | **18,221,662** | **18,644,327** | **22,783,255** | **17,388,244** | **14,272,611** | **11,095,603** | **14,595,621** | **9,379,624** | **8,984,474** |
+| Operating expenses and other | (6,984,409) | (7,487,523) | (7,710,165) | (7,342,389) | (6,910,846) | (7,186,677) | (7,156,023) | (7,476,164) | (6,152,717) |
+| **Operating profit** | **11,237,253** | **11,156,804** | **15,073,090** | **10,045,855** | **7,361,765** | **3,908,926** | **7,439,598** | **1,903,460** | **2,831,757** |
+| Interest | n/a | n/a | n/a | (382,722) | (74,919) | (262,405) | (578,782) | (502,906) | (278,212) |
+| Tax | n/a | n/a | n/a | (2,015,404) | (1,681,525) | (866,779) | (1,536,300) | (419,750) | (993,959) |
+| **Net profit** | **7,755,347** | **7,793,068** | **10,880,704** | **7,647,729** | **5,605,321** | **2,779,742** | **5,324,516** | **980,804** | **1,559,586** |
+| EPS (Rp) | 4,030 | 4,050 | 5,655 | 3,975 | 2,913 | 1,445 | 2,767 | 510 | 809 |
+| Gross margin | 21.9% | 19.5% | 20.6% | 15.2% | 11.4% | 8.9% | 12.3% | 9.5% | 10.1% |
+| Operating margin | 13.5% | 11.7% | 13.6% | 8.8% | 5.9% | 3.1% | 6.3% | 1.9% | 3.2% |
+| Net margin | 9.3% | 8.1% | 9.8% | 6.7% | 4.5% | 2.2% | 4.5% | 1.0% | 1.7% |
+| Effective tax rate `[calc]` | n/a | n/a | n/a | 20.9% | 23.1% | 23.8% | 22.4% | 30.0% | 38.9% |
+
+- **2019:** peak. Excise frozen for the election year; volume +13%; profit Rp10.9tn.
+- **2020:** excise +23% absorbed; gross margin −5 points; volume −6.5%. Tax rate dips to 21% on the cut in the corporate rate to 22%.
+- **2021:** revenue +9% is entirely tax pass-through; the company's own revenue fell. Profit −27%. A Rp417bn pension credit ("past service cost") flatters the year and is never explained.
+- **2022:** the worst margin year: 8.9% gross, Rp2.8tn profit. Tax charge includes a Rp136bn assessment.
+- **2023:** price rises catch up; own take per stick +69%; profit +92% despite volume −26%. Revenue includes Rp12.4tn of non-cash airport "construction revenue" at zero margin, which is why the gross margin reads 12.3% rather than ~14%. A Rp547bn prior-year tax adjustment — 36% of the tax charge — with no explanation.
+- **2024:** the second 12% SKM step; volume −13.5%; profit −82% to Rp981bn. Tax rate 30% because subsidiaries (airport, paperboard) now lose money that earns no tax relief.
+- **2025:** revenue −9%, profit +59% on cost cuts (selling expenses −32%, a Rp305bn pension curtailment credit from the headcount cut) rather than recovery. Tax rate 39%: Rp301bn of subsidiary tax losses written off as unrecoverable — the first admission that the infrastructure losses may never shelter tax.
+- **1H2026 (press):** revenue Rp41.2tn (−7%), gross margin 15%, net profit Rp3.0tn against Rp117bn a year earlier. Tax stack inside COGS Rp28.3tn, down 14% on revenue down 7%.
+
+The reported margins are the wrong lens for this company. Section 08.2 rebuilds them on the money it keeps.
+
+---
+
+# 08 — SECTION
+
+## 8.1 The excise tiers, 2016–2026
+
+Indonesian tobacco excise is set once a year by Finance Ministry regulation and consists of a fixed rupiah amount per stick (the *tarif spesifik*) plus a minimum retail price per stick (*HJE minimum*) that the producer must declare on the stamp. Both depend on the product type and on the factory's annual volume, which places it in a *golongan* (tier). Two other charges ride on the excise: the regional cigarette tax at 10% of excise, and VAT at an effective 8.7% of HJE (to 2016), 9.1% (2017–March 2022) and 9.9% (April 2022 onward, held at 9.9% by PMK 11/2025 when the headline VAT rate rose).
+
+Sources: the PMK annexes themselves for 2015/198, 2016/147, 2017/146, 2019/152, 2020/198, 2022/109 (restating 2021/192) and 2024/97, DDTC's reproduction of PMK 191/2022 for 2023–24, and press for the 2019 and 2026 freezes. The reconstruction was tested against Gudang Garam's own "excise, VAT and cigarette tax per pack" table (§8.2): it matches to within Rp2 a pack for 2020–2026. Cells marked `?` are inferred from adjacent years and not read from the regulation.
+
+### Tier thresholds (production in the prior year)
+
+| Type | Golongan I | Golongan II | Golongan III |
+|---|---|---|---|
+| SKM, SPM (machine-made) | > 3 billion sticks | ≤ 3 billion (until 2021 split into IIA/IIB by HJE band) | – |
+| SKT, SPT (hand-rolled) | > 2 billion sticks (two HJE bands: IA/IB, from 2022 "upper/lower") | 0.5–2 billion (IIA/IIB until 2017) | ≤ 0.5 billion (IIIA/IIIB until 2017) |
+| SKTF/SPTF (hand-rolled with filter) | no tier — taxed at the SKM Gol. I rate | | |
+| Klobot, kelembak-menyan, shredded tobacco, cigars | no volume tier; KLM split I/II by price band from 2022 | | |
+
+Layer count: 13 (2016) → 12 (2017) → 10 (2018: SKT II and III sub-bands merged) → 10 (2019–2021; a roadmap to 5 layers was cancelled) → 8 (2022: SKM and SPM II sub-bands merged) → 8 (2023–2026).
+
+### Excise tariff, Rp per stick (per gram for TIS, per cigar for CRT)
+
+| Tier | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 | 2026 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| **SKM I** (GG's tier) | 480 | 530 | 590 | 590 | 740 | 865 | 985 | 1,101 | 1,231 | 1,231 | 1,231 |
+| SKM IIA | 340 | 365 | 385 | 385 | 470 | 535 | → II | | | | |
+| SKM IIB | 300 | 335 | 370 | 370 | 455 | 525 | → II | | | | |
+| SKM II (merged) | | | | | | | 600 | 669 | 746 | 746 | 746 |
+| SPM I | 495 | 555 | 625 | 625 | 790 | 935 | 1,065 | 1,193 | 1,336 | 1,336 | 1,336 |
+| SPM IIA | 305 | 330 | 370 | 370 | 485 | 565 | → II | | | | |
+| SPM IIB | 255 | 290 | 355 | 355 | 470 | 555 | → II | | | | |
+| SPM II (merged) | | | | | | | 635 | 710 | 794 | 794 | 794 |
+| SKT/SPT IA — upper band | 320 | 345 | 365 | 365 | 425 | 425 | 440 | 461? | 483 | 483 | 483 |
+| **SKT/SPT IB — lower band** (GG's tier) | 245 | 265 | 290 | 290 | 330 | 330 | 345 | 361 | 378 | 378 | 378 |
+| SKT/SPT IIA | 155 | 165 | → II | | | | | | | | |
+| SKT/SPT IIB | 140 | 155 | → II | | | | | | | | |
+| SKT/SPT II (merged) | | | 180 | 180 | 200 | 200 | 205 | 214 | 223 | 223 | 223 |
+| SKT/SPT IIIA | 90 | 100 | → III | | | | | | | | |
+| SKT/SPT IIIB | 80 | 80 | → III | | | | | | | | |
+| SKT/SPT III (merged) | | | 100 | 100 | 110 | 110 | 115 | 118 | 122 | 122 | 122 |
+| SKTF/SPTF | = SKM I | = SKM I | 590 | 590 | 740 | 865 | 985 | 1,101 | 1,231 | 1,231 | 1,231 |
+| KLM (single) / KLM I from 2022 | 22 | 22 | 25 | 25 | 25 | 25 | 440 | 461 | 483 | 483 | 483 |
+| KLM II | | | | | | | 25 | 25 | 25 | 25 | 25 |
+| KLB (klobot) | 28 / 22 | 28 / 22 | 30 | 30 | 30 | 30 | 30 | 30 | 30 | 30 | 30 |
+| TIS (shredded, per g, 3 bands) | 28/22/6 | 28/22/6 | 30/25/10 | 30/25/10 | 30/25/10 | 30/25/10 | 30/25/10 | 30/25/10 | 30/25/10 | 30/25/10 | 30/25/10 |
+| CRT (cigars, per cigar, 5 bands) | 110,000 / 22,000 / 11,000 / 1,320 / 275 — unchanged every year 2016–2026 | | | | | | | | | | |
+| HPTL (other tobacco products) | – | – | ad valorem 57% of HJE from 2018 (not verified from the annex) | | | | | | | | |
+| REL (e-cigarettes) | – | – | separate regulation from 2018; +15% a year 2023–24; 2025: liquid Rp636/ml, pod Rp6,776/cartridge, solid Rp3,074/g | | | | | | | | |
+| **Year-on-year change, SKM I** | | +10.4% | +11.3% | 0% | +25.4% | +16.9% | +13.9% | +11.8% | +11.8% | 0% | 0% |
+| **Year-on-year change, SKT IB** | | +8.2% | +9.4% | 0% | +13.8% | 0% | +4.5% | +4.6% | +4.7% | 0% | 0% |
+| **Headline weighted average, all tiers** | +11.2% | +10.5% | +10.0% | 0% | +23% | +12.5% | +12% | +10% | +10% | 0% | 0% |
+
+### Minimum retail price (HJE floor), Rp per stick
+
+| Tier | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 | 2026 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| **SKM I** | 1,000 | 1,120 | 1,120 | 1,120 | 1,700 | 1,700 | 1,905 | 2,055 | 2,260 | 2,375 | 2,375 |
+| SKM II (IIA / IIB bands until 2021) | >740 / 590–740 | >820 / 655–820 | >895 / 715–895 | same | >1,275 / 1,020–1,275 | same? | 1,140 | 1,255 | 1,380 | 1,485 | 1,485 |
+| SPM I | 930 | 1,030 | 1,130 | 1,130 | 1,790 | 1,790 | 2,005 | 2,165 | 2,380 | 2,495 | 2,495 |
+| SPM II (IIA / IIB until 2021) | >800 / 505–800 | >900 / 585–900 | >935 / 640–935 | same | >1,485 / 1,015–1,485 | same | 1,135 | 1,295 | 1,465 | 1,565 | 1,565 |
+| SKT I upper band | >1,115 | >1,215 | >1,260 | same | >1,460 | >1,460 | >1,635 | >1,800? | >1,980? | >2,170 | >2,170 |
+| **SKT I lower band** | 775–1,115 | 860–1,215 | 890–1,260 | same | 1,015–1,460 | same | 1,135–1,635 | 1,250–1,800 | 1,375–1,980 | 1,555–2,170 | same |
+| SKT II (IIA / IIB until 2017) | >605 / 430–605 | >730 / 470–730 | ≥470 | ≥470 | ≥535 | ≥535 | ≥600 | ≥720 | ≥865 | ≥995 | ≥995 |
+| SKT III (IIIA / IIIB until 2017) | ≥400 / ≥370 | ≥465 / ≥400 | ≥400 | ≥400 | ≥450 | ≥450 | ≥505 | ≥605 | ≥725 | ≥860 | ≥860 |
+
+The HJE floor matters in two ways. VAT is charged on it, so a higher floor raises the VAT even in a year when the excise is frozen (2025: excise flat, floor +5%, so the per-pack tax still rose 0.7%). And it is a price floor: a producer may not sell below it, so the 2020 jump of 52% in the SKM I floor forced the retail price of a Surya pack up whether or not Gudang Garam wanted it to.
+
+## 8.2 The tax stack against Gudang Garam's price, and the margins on both bases
+
+Putting the three taxes together for the two tiers Gudang Garam actually sits in gives the "stack" per stick. The company prints the same numbers per 12-pack in its annual reports; the reconstruction matches them to within Rp2 a pack from 2020, and within 2% for 2017–2019 (when its declared price sat a little above the floor).
+
+| Rp per stick, at the HJE floor | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 | 2026 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| **SKM Gol. I** excise | 480 | 530 | 590 | 590 | 740 | 865 | 985 | 1,101 | 1,231 | 1,231 | 1,231 |
+| + cigarette tax (10% of excise) | 48 | 53 | 59 | 59 | 74 | 86 | 98 | 110 | 123 | 123 | 123 |
+| + VAT (8.7% / 9.1% / 9.9% of HJE floor) | 87 | 102 | 102 | 102 | 155 | 155 | 189 | 203 | 224 | 235 | 235 |
+| **= SKM tax stack per stick** `[calc]` | **615** | **685** | **751** | **751** | **969** | **1,106** | **1,272** | **1,415** | **1,578** | **1,589** | **1,589** |
+| × 12 = per pack `[calc]` | 7,380 | 8,219 | 9,011 | 9,011 | 11,624 | 13,274 | 15,265 | 16,975 | 18,934 | 19,071 | 19,071 |
+| GG's own printed figure per 12-pack | – | 8,316 | 9,221 | 9,221 | 11,624 | 13,274 | 15,267 | 16,976 | 18,935 | 19,071 | 19,071 |
+| Stack as % of the HJE floor | 62% | 61% | 67% | 67% | 57% | 65% | 67% | 69% | 70% | 67% | 67% |
+| **SKT Gol. I lower band** stack per stick `[calc]` | 337 | 370 | 400 | 400 | 455 | 455 | 492 | 521 | 552 | 570 | 570 |
+| GG's printed SKT figure per 12-pack | – | 4,499 | 4,893 | 4,893 | 5,466 | 5,466 | 5,903 | 6,250 | 6,623 | 6,837 | 6,837 |
+| SKM stack ÷ SKT stack | 1.8× | 1.9× | 1.9× | 1.9× | 2.1× | 2.4× | 2.6× | 2.7× | 2.9× | 2.8× | 2.8× |
+
+Now the company's side. Its price per stick is what it books as revenue (tax included) divided by sticks sold; its tax per stick is the stamp line in cost of goods sold divided by the same sticks; the difference is what it keeps, out of which it pays for leaf, cloves, factories, salesmen, head office and tax on profit. The per-stick tax is lower than the SKM stack above because a sixth of the sticks are hand-rolled and 2–3% are exported without excise.
+
+| Rp per stick | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Sticks sold (billion) | 78.7 | 85.2 | 95.9 | 89.7 | 91.1 | 82.5 | 61.4 | 53.1 | 46.7 |
+| **Price booked per stick** ("ASP", tax included) | 1,059 | 1,124 | 1,152 | 1,262 | 1,351 | 1,491 | 1,715 | 1,807 | 1,872 |
+| Tax per stick (stamp line ÷ sticks; 2017–19 estimated from tariffs) | ~620 | ~690 | ~700 | 877 | 1,000 | 1,182 | 1,193 | 1,386 | 1,389 |
+| **Own take per stick** `[calc]` | ~440 | ~430 | ~450 | 385 | 351 | 309 | 522 | 421 | 483 |
+| Raw materials per stick | n/a | n/a | n/a | 157 | 160 | 174 | 174 | 195 | 196 |
+| Direct labour per stick | n/a | n/a | n/a | 10 | 11 | 12 | 16 | 17 | 17 |
+| Factory overhead per stick | n/a | n/a | n/a | 44 | 46 | 50 | 64 | 70 | 70 |
+| **Gross profit per stick** | 232 | 219 | 237 | 194 | 157 | 134 | 238 | 177 | 193 |
+| Selling + G&A per stick | 89 | 88 | 80 | 82 | 76 | 87 | 117 | 141 | 132 |
+| **Operating profit per stick** | 143 | 131 | 157 | 112 | 81 | 47 | 121 | 36 | 61 |
+| **Net profit per stick** | 99 | 91 | 113 | 85 | 62 | 34 | 87 | 18 | 33 |
+
+Group figures (paperboard and, from 2023, construction are inside gross and operating profit; 2023 excludes the Rp12.4tn zero-margin construction revenue from the base). The cigarette segment alone earned Rp110 / 76 / 42 / 122 / 45 / 73 per stick in 2020–2025.
+
+And the margins, side by side:
+
+| | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 | 1H2026 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Tax as % of booked revenue | ~59% | ~62% | ~61% | 69% | 74% | 79% | 70% | 77% | 74% | 69% |
+| **Reported gross margin** (on tax-inclusive revenue) | 21.9% | 19.5% | 20.6% | 15.2% | 11.4% | 8.9% | 12.3% | 9.5% | 10.1% | 14.5% |
+| **Reported operating margin** | 13.5% | 11.7% | 13.6% | 8.8% | 5.9% | 3.1% | 6.3% | 1.9% | 3.2% | n/a |
+| **Reported net margin** | 9.3% | 8.1% | 9.8% | 6.7% | 4.5% | 2.2% | 4.5% | 1.0% | 1.7% | 7.2% |
+| Own revenue (booked revenue less tax), Rp tn | ~34 | ~37 | ~43 | 35.8 | 33.8 | 27.1 | 33.2 | 23.5 | 23.7 | 12.9 |
+| **Gross margin on own revenue** `[calc]` | ~53% | ~51% | ~53% | 48.6% | 42.2% | 41.0% | 43.9% | 40.0% | 37.9% | 46.4% |
+| **Operating margin on own revenue** `[calc]` | ~33% | ~30% | ~35% | 28.0% | 21.8% | 14.4% | 22.4% | 8.1% | 11.9% | n/a |
+| **Net margin on own revenue** `[calc]` | ~22% | ~21% | ~25% | 21.4% | 16.6% | 10.3% | 16.0% | 4.2% | 6.6% | 23.0% |
+
+What the two tables say, in order:
+
+**The tax rose faster than the company could charge.** From 2019 to 2024 the SKM stack per stick rose from Rp751 to Rp1,578, a rise of Rp827. The company's booked price per stick rose by Rp655. It gave up the difference, plus more: its own take fell from about Rp450 to Rp421, and in the worst year, 2022, to Rp309. Every rupiah of tariff it did not pass on came straight out of gross profit, because the tariff is a fixed cost per stick and nothing else in the stick got cheaper.
+
+**The reported margins are a ratio of two numbers the company does not control.** Reported gross margin fell from 21% to 9% between 2017 and 2022. On the company's own revenue it fell from 53% to 41% — a real deterioration, but a business still keeping two-fifths of its own sales as gross profit. The reported figures are dragged down mechanically because the denominator (revenue) swells with every tariff rise while the numerator does not. Any comparison of Gudang Garam's "gross margin" with a non-tobacco company, or with a company in a country where excise is netted out of revenue, is meaningless.
+
+**Overheads did not shrink with volume.** Selling and administrative cost per stick rose from about Rp80 to Rp140 between 2019 and 2024 as 96 billion sticks became 53 billion and the sales fleet, offices and head office stayed. That is why operating margin on own revenue fell from 35% to 8% — a far bigger fall than gross margin — and why the 2025 headcount and selling-cost cuts mattered more to profit than anything the government did that year.
+
+**When the tariff stopped, the margin came back.** In 1H2026 the stack per stick was flat for the second year, price rose, volume fell less, and the net margin on own revenue went back to 23%, where it was in 2017. The reported net margin of 7% is the same business seen through the tax-inclusive lens. If the government holds 2027 flat as the minister has said, the arithmetic continues: every rupiah of price increase falls through to profit until volume gives way.
+
+**And the ceiling.** Even in the good years the company kept about a quarter or less of its own revenue as profit and under a tenth of the pack price. There is no lever inside the company that changes that ratio by more than a few points; the lever is in the Ministry of Finance.
+
+## 8.3 Segments: one business, two loss-makers
+
+| Rp m | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+|---|---:|---:|---:|---:|---:|---:|
+| Cigarettes — revenue | 113,342,388 | 123,277,398 | 123,242,989 | 105,488,265 | 96,194,099 | 87,744,101 |
+| Cigarettes — operating result | 9,874,326 | 6,894,995 | 3,498,177 | 7,484,926 | 2,398,149 | 3,385,647 |
+| Cigarettes — assets | 69,637,338 | 79,031,688 | 74,445,415 | 71,747,886 | 63,580,897 | 54,294,502 |
+| Paperboard — revenue (incl. intra-group) | 1,813,417 | 2,371,538 | 2,265,463 | 1,626,535 | 1,457,519 | 1,163,292 |
+| Paperboard — result | 194,965 | 467,362 | 427,083 | (28,182) | (103,921) | (95,931) |
+| Infrastructure — revenue (own construction) | – | – | – | 12,417,623 | 1,574,003 | 823,504 |
+| Infrastructure — result | – | – | (9,089) | (21,037) | (377,391) | (442,857) |
+| Infrastructure — assets | *in others* | *in others* | 8,938,116 | 15,519,869 | 17,462,416 | 17,147,690 |
+| Others (aircraft, media, tourism) — result | (20,995) | 491 | (5,659) | (2,512) | (9,777) | (18,783) |
+| Eliminations | (2,441) | (1,083) | (1,586) | 6,403 | (3,600) | 3,681 |
+| **Group operating profit** | **10,045,855** | **7,361,765** | **3,908,926** | **7,439,598** | **1,903,460** | **2,831,757** |
+| Infrastructure assets as % of group (2020–21: airport SPV only) | 5% | 7% | 10% | 17% | 21% | 23% |
+| Infrastructure loss as % of cigarette profit | – | – | 0.3% | 0.3% | 16% | 13% |
+
+The infrastructure "revenue" is not money from anyone. Under the accounting rule for concessions (ISAK 112), a company that builds an asset it will operate under a government concession books the construction as if it had sold construction services to itself, at a value it sets, with a matching cost — so revenue and cost both appear and profit is nil. Rp12.4tn of 2023 revenue and Rp0.8tn of 2025 revenue are this. Strip it out and the group's 2023 revenue fell 14.6%, not 4.6%.
+
+## 8.4 Dhoho airport and the Kediri–Tulungagung toll road
+
+**What was built.** An international-standard airport at Grogol, Kediri, built by the company's subsidiary PT Surya Dhoho Investama under a public-private partnership signed with the Ministry of Transport on 7 September 2022 (though construction and land buying began in 2020, before the agreement). Angkasa Pura I operates it under a joint-operation agreement for a management fee. First commercial flight 5 April 2024.
+
+**What it cost and on what terms.** Rp13.0tn of concession rights on the balance sheet, funded by Rp11.7tn of share capital injected into the subsidiary between 2020 and 2024, all of it from cigarette cash and short-term bank debt. The concession runs 50 years from commercial operation, is not renewable, and at the end the subsidiary hands the airport to the state for nothing. The subsidiary also carries a Rp590bn obligation to upgrade the airport later. Amortisation is Rp248bn a year, which implies a life of about 52 years against a 50-year term (the filing does not reconcile the two), and the segment lost Rp443bn in 2025 after that charge. No passenger numbers, no revenue split, no fee to Angkasa Pura, no impairment test, no forecast has ever been published.
+
+**What was then decided.** In February 2024, with the airport just finished and the cigarette business about to have its worst year, the company signed a second 50-year concession, for a toll road from Kediri (and the airport) to Tulungagung, through PT Surya Sapta Agung Tol. Reported cost Rp9.9–10tn. Work order issued 1 October 2024; Rp2.4tn of construction booked by end-2025; not yet open. Same terms: hand back for nothing at year 50, no renewal.
+
+**The reshuffle.** Two older vehicles, PT Surya Kerta Agung and its subsidiary PT Surya Kertaagung Toll, had been capitalised with about Rp1.7tn in 2020–2023 for the same road. In 2025 Rp0.99tn was withdrawn from the first and Rp0.93tn from the second, leaving the second with Rp6bn of assets and a 93% ownership (down from 99.99%) — someone else now owns 7% of an empty company — while Rp1.8tn went into the new vehicle. No explanation is given anywhere.
+
+Why a cigarette company builds an airport is not stated in any document. What can be observed: Kediri is the family's home town and the site of its founding factory; the airport was built on land partly bought from a family-owned company (PT Bukit Dhoho Indah); and the company's own business had Rp12tn of surplus cash a year in 2019–2020 with nowhere inside tobacco to put it.
+
+## 8.5 Headcount and the hand-rolling question
+
+| | 1990 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Employees | 48,050 | 30,940 | 33,647 | 31,559 | 28,337 | 30,308 | 21,964 |
+| — women (mostly hand-rollers) | 37,649 | n/a | 11,188 | 10,149 | 8,563 | 11,612 | 8,598 |
+| SKT sticks (billion) | n/a | 9.1 | 9.0 | 8.6 | 8.4 | 8.1 | 6.8 |
+| Direct labour, Rp bn | – | 912 | 969 | 974 | 950 | 901 | 799 |
+| Pension credits booked ("past service cost") | – | – | 417 | 338 | – | – | 305 |
+
+Hand-rolling is where the people are. In 1990 the company had 48,000 employees, 32,000 of them production workers and most of those women rolling by hand; today the whole company is 22,000 people. The 2024 report says headcount rose 7% "attributable to an increase in hand rollers" — in a year SKT volume fell — and the 2025 report says 8,344 people left under an "early retirement programme" that appears in the accounts only as a Rp305bn pension credit and a 32% fall in selling expenses. The press reported it as 200 voluntary retirements at Kediri; the accounts say 8,344 fewer people. Neither the annual report nor the company has reconciled the two.
+
+The tension is that hand-rolled is the one segment growing in the market (SKT share 19% → 31% of the legal market), taxed at a third of SKM, and the company's own origin — yet Gudang Garam's SKT volume has fallen every year since 2020 while Sampoerna's has grown. The 2024 launch of hand-rolled versions of GG International and GG Signature is the company's first move to follow the smoker down the tax ladder. Whether it can do so while cutting its rolling workforce by a quarter is the operational question the filings do not answer.
+
+## 8.6 Peers, briefly
+
+| FY2025 | HM Sampoerna (HMSP) | Gudang Garam (GGRM) | Wismilak (WIIM) |
+|---|---:|---:|---:|
+| Revenue, Rp tn (tax included) | 112.2 | 89.4 | 6.4 |
+| Reported gross margin | 18.4% | 10.1% | 22.1% |
+| Reported net margin | 5.9% | 1.7% | 6.6% |
+| Net profit, Rp tn | 6.6 | 1.6 | 0.4 |
+| 1H2026 revenue growth | +2.4% | −7.2% | n/a |
+| Hand-rolled revenue 1H2026, Rp tn | 16.4 | 3.6 | n/a |
+| Market cap | Rp81tn (Jun 2024) | Rp39tn (Sep 2026) | Rp2tn (Jun 2024) |
+| Market share 2024 (own / Nielsen) | 27.4% | 17.4% | ~2% |
+
+Sampoerna's reported margins are higher for two structural reasons that have nothing to do with efficiency: a third of its revenue is hand-rolled (lower tax per stick, so less of the revenue is tax), and it has a smoke-free line with no excise stack at all. Wismilak, a tier-II maker paying Rp746 rather than Rp1,231 per stick, grew revenue 34% in 2025 selling cheap machine-made packs into exactly the demand Gudang Garam lost.
+
+---
+
+# 09 — IMPORTANT TRANSACTIONS
+
+## 9.1 The 1990 IPO and the pre-IPO clean-up
+
+Before listing, the family capitalised a Rp124bn shareholder loan and a revaluation surplus into share capital, collapsed a two-class share structure (704 voting "Serial A" shares held by insiders against 1,047 non-voting) into one class, and sold 12% to the public at Rp10,250. Eighty-five percent of the proceeds repaid bank debt then costing 19–20%. The prospectus's legal opinion admitted that SKM output already exceeded the factory's licensed 9.4bn sticks a year; the directors called it immaterial. The three family-owned distributors that held 98% of receivables were later replaced by a wholly-owned distributor (2004). Effect: the family kept 88%, and has diluted since only by never buying back — 76% today.
+
+## 9.2 Succession, 2008–2009 and 2022–2026
+
+Rachman Halim's death in 2008 passed control to his brother Susilo (President Director) and sister Juni Setiawati (President Commissioner), who have now held those seats for seventeen years. Susilo's son Indra Gunawan was made Vice President Director in June 2022 at 36, and a further family member, Adhi Wibhawa Wonowidjojo, became a commissioner in June 2026. The 2025 AGMS reappointed both boards to 2030. Effect on the numbers: none visible — the boards' composition has not changed the dividend, capex or product decisions in any traceable way.
+
+## 9.3 Dhoho airport, 2020–2024: Rp11.7tn out of the cigarette business
+
+Injections into PT Surya Dhoho Investama: Rp1.4tn (2020), Rp2.0tn (2021), Rp2.9tn (2022), Rp4.1tn (2023), Rp1.3tn (2024). Concession agreement 7 Sep 2022, commercial-operation criteria met 29 Dec 2023, first flight 5 Apr 2024. Booked as Rp13.0tn of 50-year concession rights, amortised at Rp248bn a year; segment loss Rp377bn (2024) and Rp443bn (2025). Financed by Rp7tn of short-term bank borrowing in 2021–2023 and two skipped dividends. Effect: fixed assets and intangibles went from 35% to 47% of the balance sheet; the group tax rate rose to 39% as the subsidiary's losses earned no relief; Rp0.4–0.5tn a year now comes off operating profit indefinitely.
+
+## 9.4 The toll road, 2024–2025: a second Rp10tn commitment
+
+Concession signed 27 Feb 2024 for the Kediri–Tulungagung toll road, 50 years from the first work order (1 Oct 2024), via PT Surya Sapta Agung Tol; capitalised with Rp0.9tn in 2024 and Rp1.8tn in 2025; Rp2.4tn of construction booked by end-2025. The competitive tender through the Finance Ministry's PPP office was public. Reported total cost about Rp10tn — between one and three years of recent free cash flow. Effect so far: Rp0.8tn of self-assessed construction revenue in 2025 at zero margin; the real effect begins when construction spend ramps, which the company has not scheduled in any document.
+
+## 9.5 The 2025 restructuring that was not called one
+
+Headcount −8,344 (−27%), a Rp305bn pension-curtailment credit, selling expenses −Rp1.4tn, short-term debt repaid from Rp9.4tn to Rp0.8tn, Rp1.9tn withdrawn from the old toll vehicles. The 2025 annual report's "four pillars" of strategy replaced "people development" with "workforce review for productivity and cost efficiency" — the only place the cut is acknowledged. Effect: the cost base entering 2026 is about Rp1.5tn a year lower, which with the tariff freeze is most of the 1H2026 profit.
+
+## 9.6 Dividends: two skips and a 99% payout
+
+FY2019 (skipped, Aug 2020, record profit), FY2023 (skipped, June 2024), FY2025 (Rp800, 99% of a Rp1.56tn profit, June 2026). The pattern tracks the airport's cash needs, not earnings. Effect: Rp12.6tn paid out over 2020–2025 against Rp28tn of free cash flow; the balance built the airport and repaid its debt.
+
+---
+
+# 10 — RED FLAG
+
+## 10.1 Rp14.9tn of concession rights that have never been tested for loss
+
+The airport concession (Rp13.0tn at cost, Rp12.5tn after amortisation) has lost money in both years since opening; the toll road (Rp2.4tn and rising) will not open for years. Accounting rules require an asset showing signs of impairment to be tested against the cash it will generate. No test, no cash-generating-unit, no discount rate and no forecast is disclosed in any year, and the auditor (Siddharta Widjaja & Rekan, the KPMG member firm) did not make it a key audit matter — the sole KAM every year is revenue recognition on cigarettes. A write-down of the airport to what it can earn would take a large slice of the Rp62.6tn of equity in one line. Money flow: cigarette cash → subsidiary share capital → an asset that reverts to the state at year 50.
+
+## 10.2 Revenue the company pays itself
+
+Rp12.4tn (2023), Rp1.6tn (2024) and Rp0.8tn (2025) of revenue is the company recognising the construction of its own airport and toll road at "fair value as determined by" the subsidiary. It is permitted by the concession accounting standard, but it means a fifth of 2023 revenue was not a sale to anyone, and the group's revenue trend is mis-stated in the headline highlights for three years. It also means the size of the infrastructure assets on the balance sheet was set by the company that built them.
+
+## 10.3 The airport and toll road are intra-group and therefore invisible in the related-party note
+
+The related-party note names two paper suppliers and a land seller. It does not cover the Rp13tn airport, built on land partly bought from family-owned PT Bukit Dhoho Indah, whose contractors, fees and land prices are never disclosed; nor the management fee paid to Angkasa Pura I; nor whether any family company is a contractor, landowner or tenant of either project. Directors sit on the boards of PT Bukit Dhoho Indah and PT Puri Dhoho Kediri (per their biographies) — both outside the listed group, both named after the airport. What checked: FS Notes on related parties 2021/2023/2025 (purchases from two counterparties only); director biographies in AR2021–2025.
+
+## 10.4 The 2025 toll-vehicle reshuffle
+
+Rp1.92tn of capital withdrawn from PT Surya Kerta Agung and PT Surya Kertaagung Toll, ownership of the latter falling from 99.99% to 93.33% — creating a 6.7% outside holder of an entity with Rp6bn of assets — and Rp1.8tn injected into PT Surya Sapta Agung Tol. Who the new 6.7% holder is, what they paid, and why the money went out one door and in another, is not stated. Rp3.1bn of non-controlling interest appeared in equity as a result.
+
+## 10.5 Two BVI aircraft companies and a private airline
+
+Galaxy Prime Ltd and Prime Galaxy Ltd (British Virgin Islands, "non-scheduled air transport") and PT Surya Air hold about Rp1.3tn of assets between them — the only assets the group holds outside Indonesia. Their revenue is inside "others" (Rp90bn a year for the whole segment). Who flies, who pays, and whether the family uses them is not disclosed.
+
+## 10.6 Unexplained items inside the tax and pension lines
+
+A Rp547bn "prior-year tax adjustment" in 2023 (36% of that year's tax charge), a Rp136bn tax assessment in 2022, Rp301bn of subsidiary tax losses written off in 2025, and pension "past service cost" credits of Rp417bn (2021), Rp338bn (2022) and Rp305bn (2025) that together added Rp1.06tn to profit over five years. None has a sentence of explanation. No tax dispute, contingency, litigation or subsequent-events note exists in any year — the commitments note is always the last.
+
+## 10.7 A market-share figure that cannot be reproduced
+
+The company reports 17.4% (2024) and 15.2% (2025) share of a Nielsen industry volume that its own 2025 documents restated upward by 14% for 2023 and 2024 without a footnote. 53.1bn ÷ 244.3bn is 21.7%, not 17.4%. Either the share is computed on a third series or the restatement was partial. The share series is the company's only external performance metric and it is not checkable.
+
+## 10.8 The 99% payout
+
+Rp1.54tn paid in July 2026 from a Rp1.56tn profit, while the toll road needs perhaps Rp7tn more and the airport loses Rp0.4tn a year. The stated policy is 20–40%. A 76% holder receiving Rp1.2tn is the only visible beneficiary of a payout at four times the top of the policy range.
+
+What was checked and found clean: the share register (unchanged, no pledges disclosed), related-party purchases (small, stable, priced "at arm's length" per the note), bank debt (unsecured, repaid, no covenant breach asserted), receivables (no related-party balances, no concentration), auditor (unmodified opinion every year; no change of auditor since at least 2020), and no share issue, buyback or option scheme of any kind.
+
+---
+
+# MISSING DATA AND OPEN ITEMS
+
+Ranked by how much the answer would change the analysis.
+
+1. **Airport economics.** Passenger numbers, airport revenue, the Angkasa Pura fee, and any impairment analysis for the Rp13.0tn concession right. Lives in PT Surya Dhoho Investama's own accounts (not public) and possibly in Ministry of Transport KPBU disclosures. Would decide whether the equity is overstated by Rp5–10tn.
+2. **Toll-road budget, schedule and funding.** Total cost, construction timetable, and whether the company will borrow long-term for it. Lives in the PPJT with BPJT and the Kompas progress reports (blocked). Would decide the dividend capacity for 2027–2030.
+3. **Volume by brand and the company's actual declared prices (HJE) for Surya 12/16 and GG International.** Never disclosed. Would allow a real price-elasticity estimate rather than a blended per-stick take.
+4. **The 2025 headcount cut.** Who left (rollers vs sales vs office), severance paid, which plant. The filing gives only the pension credit; press gives 200 people. Would decide whether the company is exiting hand-rolling.
+5. **The 2027 excise regulation.** The minister's May 2026 statement is not a PMK. Would decide the whole 2027 P&L.
+6. **Clove and tobacco purchase volumes and prices.** Never disclosed by the company; national series behind BPS/Databoks paywalls. Would decide whether the Rp157→196 raw-material cost per stick is price, mix or quality.
+7. **The related-party question on the infrastructure.** Contractors, landowners, and the roles of PT Bukit Dhoho Indah and PT Puri Dhoho Kediri. Lives in land registry and the subsidiaries' contracts.
+8. **The unexplained tax and pension items** (§10.6). Lives in the tax notes the company chooses not to write.
+9. **A consistent industry-volume series.** Nielsen's 2023 restatement; HMSP's annual reports quote Nielsen and would give a second source.
+10. **PP 28/2024 implementing rules** (plain packaging, 200 m school ban). Draft Permenkes status as of 2026 not found.
+11. **FY2016 volumes, FY2016–2017 dividends, FY2017–2019 line-item statements.** Earlier annual reports (AR2016–AR2020) were not supplied; the five-year highlights tables are the only source.
+12. **Lease liabilities** — right-of-use assets appear on the balance sheet every year with no matching liability or note.
+13. Smaller items: the 6.7% outside holder of PT Surya Kertaagung Toll created in 2025; the status of the Karanganyar and Sumenep plants (named in 2021, absent since) and of PT Surya Inti Tembakau ("ceased operating July 2024" per AR2024, still consolidated with Rp507bn of assets); the distributor margin and outlet count behind Rp417bn of guarantee deposits; and date conflicts between reports (Gempol plant 1993/2002/2008, Surya Pamenang 1990/1993, Rachman Halim's appointment 1979/1980/1983, Dhoho's first flight 2024 vs 2025).
+
+## Sources
+
+| Document | Pages | Period covered | Used for |
+|---|---|---|---|
+| Annual Report 2025 (bilingual, with audited consolidated FS at pp. 101–164) | 166 | FY2025, comparative FY2024; five-year highlights FY2021–25 | FY2025 and FY2024 line items; boards, shareholders, MD&A, excise per-pack table 2020–2026, headcount |
+| Annual Report 2024 | 160 | FY2024 (comparative FY2023) | Front matter and MD&A only; FS not re-transcribed (FY2024 taken from AR2025 comparatives) |
+| Annual Report 2023 (FS pp. 97–158) | 158 | FY2023, comparative FY2022; highlights FY2019–23 | FY2023 and FY2022 line items; airport concession note; boards |
+| Annual Report 2022 | 152 | FY2022 (comparative FY2021) | Front matter and MD&A only |
+| Annual Report 2021 (FS pp. 101–156) | 156 | FY2021, comparative FY2020; highlights FY2017–21 | FY2021 and FY2020 line items; FY2017–2019 highlights (revenue, gross/operating/net profit, EPS, volumes, total assets/liabilities/equity) |
+| Public Expose deck, 30 Nov 2023 | 22 | 9M2023 | Industry and GG volumes by segment, cost breakdown |
+| Public Expose deck, 29 Aug 2024 | 20 | 1H2024 | Same; Nielsen series (original) |
+| Public Expose deck, 11 Sep 2025 | 22 | 1H2025 | Same; Nielsen series (restated); excise per-pack 2017–2024; "impact of excise" section |
+| IPO Prospectus, 19 Jul 1990 (scanned, OCR) | 153 | FY1988–FY1989, Q1 1990 | History, family ownership at IPO, 1990 volumes, excise structure then, related-party distributors |
+| Finance Ministry regulations PMK 198/2015, 147/2016, 146/2017, 156/2018, 152/2019, 198/2020, 192/2021 & 109/2022, 191/2022, 96/2024 & 97/2024, 63/2022, 11/2025 (via jdih.kemenkeu.go.id, DDTC, Kemenkeu press releases) | – | Excise years 2016–2026 | §8.1 tier tables |
+| Press: Bisnis, Kontan, Antara, Kompas, DDTC, IDNFinancials, Trading Economics (Sep 2026) | – | 1H2026 results, June 2026 AGMS, 2026–27 excise stance, market cap | §07, §1.4, §04 |
+
+Series caveat: FY2017–FY2019 revenue, profit and volume come from the highlights tables inside AR2021 and AR2023, not from those years' own audited statements, and FY2017–2019 tax-per-stick is estimated from tariffs. FY2020, FY2022 and FY2024 line items are the comparative columns of the following year's audited statements. Web-sourced tariff cells marked `?` in §8.1 are inferred from adjacent years.

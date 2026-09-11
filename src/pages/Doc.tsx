@@ -1,8 +1,25 @@
-import { Suspense } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Suspense, useEffect } from 'react'
+import { Link, useLocation, useParams } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
 import Layout from '../components/Layout'
 import { getDoc, formatDate } from '../lib/docs'
+
+// Search results deep-link into a section, but the browser resolves `#id` long
+// before the document's chunk has rendered a heading to match it. Rendering
+// this inside the Suspense boundary delays the scroll until the content is
+// actually in the DOM.
+function ScrollToHash() {
+  const { hash } = useLocation()
+
+  useEffect(() => {
+    if (!hash) return
+    document
+      .getElementById(decodeURIComponent(hash.slice(1)))
+      ?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }, [hash])
+
+  return null
+}
 
 // Shown while a document's chunk downloads. Mirrors body-text rhythm so the
 // page doesn't jump when the real content lands.
@@ -74,6 +91,7 @@ export default function Doc() {
         >
           <Suspense fallback={<DocSkeleton />}>
             <Component />
+            <ScrollToHash />
           </Suspense>
         </div>
       </article>

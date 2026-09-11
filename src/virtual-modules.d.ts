@@ -12,3 +12,15 @@ declare module 'virtual:content-manifest' {
   }
   export const manifest: ManifestEntry[]
 }
+
+// Also generated in vite.config.ts, by the `search-index` plugin: every
+// document flattened to plain text and split at its headings. Import it only
+// with a dynamic `import()` — it is megabytes of prose and belongs in its own
+// on-demand chunk, not in the initial graph.
+declare module 'virtual:search-index' {
+  export interface IndexedDoc {
+    slug: string
+    sections: { h: string; id: string; d: number; t: string }[]
+  }
+  export const index: IndexedDoc[]
+}

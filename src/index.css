@@ -12,3 +12,29 @@
     box-sizing: border-box;
   }
 }
+
+/* Data-visualisation tokens.
+   Values come from the dataviz reference palette — categorical slots 1–3 plus
+   chart chrome — with the dark column validated against this app's slate-900
+   card surface rather than the palette's default dark surface. */
+@layer base {
+  :root {
+    --viz-series-1: #2a78d6; /* market value */
+    --viz-series-2: #eb6834; /* cost basis */
+    --viz-series-3: #1baf7a; /* dividends */
+    --viz-ink-muted: #898781;
+    --viz-grid: #e1e0d9;
+    --viz-axis: #c3c2b7;
+    --viz-surface: #ffffff;
+  }
+
+  .dark {
+    --viz-series-1: #3987e5;
+    --viz-series-2: #d95926;
+    --viz-series-3: #199e70;
+    --viz-ink-muted: #898781;
+    --viz-grid: #2c2c2a;
+    --viz-axis: #383835;
+    --viz-surface: #0f172a;
+  }
+}

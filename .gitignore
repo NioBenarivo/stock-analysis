@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Real portfolio figures — kept out of git and off the deployed site.
+src/data/portfolio.local.ts

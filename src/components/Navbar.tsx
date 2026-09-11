@@ -19,6 +19,14 @@ function isTypingTarget(target: EventTarget | null): boolean {
   return !!el && (el.isContentEditable || ['INPUT', 'TEXTAREA', 'SELECT'].includes(el.tagName))
 }
 
+function navClass({ isActive }: { isActive: boolean }) {
+  return `rounded-lg px-3 py-1.5 text-sm transition-colors ${
+    isActive
+      ? 'bg-slate-100 font-medium text-slate-900 dark:bg-slate-800 dark:text-white'
+      : 'text-slate-500 hover:bg-slate-50 hover:text-slate-800 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200'
+  }`
+}
+
 export default function Navbar() {
   const { theme, setTheme } = useTheme()
   const [searchOpen, setSearchOpen] = useState(false)
@@ -62,18 +70,14 @@ export default function Navbar() {
           </button>
 
           <nav className="flex items-center gap-1">
-            <NavLink
-              to="/"
-              end
-              className={({ isActive }) =>
-                `rounded-lg px-3 py-1.5 text-sm transition-colors ${
-                  isActive
-                    ? 'bg-slate-100 font-medium text-slate-900 dark:bg-slate-800 dark:text-white'
-                    : 'text-slate-500 hover:bg-slate-50 hover:text-slate-800 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200'
-                }`
-              }
-            >
+            <NavLink to="/" end className={navClass}>
               Library
+            </NavLink>
+            <NavLink to="/portfolio" className={navClass}>
+              Portfolio
+            </NavLink>
+            <NavLink to="/calculator" className={navClass}>
+              Calculator
             </NavLink>
           </nav>
 

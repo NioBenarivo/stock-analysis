@@ -10,11 +10,13 @@ import {
   YAxis,
 } from 'recharts'
 import {
+  contributedBy,
   formatCompact,
   formatDay,
   formatMonth,
   formatNumber,
   formatRupiah,
+  hasCashFlows,
   type EventType,
   type MonthSnapshot,
   type PortfolioEvent,
@@ -22,8 +24,8 @@ import {
 
 // Two panels sharing one time axis.
 //
-// The top panel is the portfolio itself: two lines, eight month-end points,
-// nothing else on it. The bottom is a rug — one lane per kind of activity, one
+// The top panel is the portfolio itself: two lines — three once transfers are
+// known — at eight month-end points, nothing else on it. The bottom is a rug — one lane per kind of activity, one
 // tick per day it happened. Trades used to be pinned onto the market-value
 // line, which put eighty-odd markers on an interpolated position the portfolio
 // never actually held; they buried the line and the height under them meant
@@ -36,14 +38,29 @@ import {
 // in the tooltip and in the Activity table below.
 
 const PANEL_MARGIN = { top: 8, right: 12, bottom: 4, left: 4 }
-const AXIS_WIDTH = 64
+// Wide enough for the longest lane label ("Withdrawals"); both panels share the
+// value so their plot areas start at the same x and the time axis lines up.
+const AXIS_WIDTH = 82
 const LANE_HEIGHT = 30
 
 const EVENT_LABEL: Record<EventType, string> = {
   dividend: 'Dividend',
   buy: 'Buy',
   sell: 'Sell',
+  deposit: 'Deposit',
+  withdrawal: 'Withdrawal',
 }
+
+/** Cash transfers wear their own colour in both panels — the line above and
+    the ticks below are the same money, seen cumulatively and one at a time. */
+const CASH_COLOR = 'var(--viz-series-4)'
+
+function laneColor(type: EventType): string {
+  if (type === 'dividend') return 'var(--viz-series-3)'
+  if (type === 'deposit' || type === 'withdrawal') return CASH_COLOR
+  return 'var(--viz-ink-muted)'
+}
+
 
 function timestamp(date: string): number {
   return new Date(`${date}T00:00:00`).getTime()
@@ -53,6 +70,10 @@ interface MonthRow {
   t: number
   marketValue: number
   costBasis: number
+  /** Idle rupiah at this month end — outside market value, inside the account. */
+  cash: number
+  /** Own money in the account at this month end; null when unknown. */
+  contributed: number | null
 }
 
 // Lanes run top to bottom in this order, matching the filter buttons above the
@@ -62,6 +83,8 @@ const LANES: { type: EventType; label: string }[] = [
   { type: 'dividend', label: 'Dividends' },
   { type: 'sell', label: 'Sells' },
   { type: 'buy', label: 'Buys' },
+  { type: 'deposit', label: 'Deposits' },
+  { type: 'withdrawal', label: 'Withdrawals' },
 ]
 
 // One row per day something happened. Each lane key holds that lane's y, or
@@ -93,7 +116,7 @@ function buildActivity(
 
 // A 3×13 tick, not a dot: at this density round marks blur into each other,
 // where verticals still read as separate days.
-function LaneTick({ cx, cy, dividend }: { cx?: number; cy?: number; dividend?: boolean }) {
+function LaneTick({ cx, cy, fill }: { cx?: number; cy?: number; fill?: string }) {
   if (cx == null || cy == null) return null
   return (
     <g>
@@ -105,7 +128,7 @@ function LaneTick({ cx, cy, dividend }: { cx?: number; cy?: number; dividend?: b
         width={3}
         height={13}
         rx={1.5}
-        fill={dividend ? 'var(--viz-series-3)' : 'var(--viz-ink-muted)'}
+        fill={fill}
         stroke="var(--viz-surface)"
         strokeWidth={1.5}
         paintOrder="stroke"
@@ -135,6 +158,20 @@ function ValueTooltip({ active, payload }: { active?: boolean; payload?: { paylo
         <Reading color="var(--viz-series-1)" label="Market value" value={formatRupiah(row.marketValue)} />
         <Reading color="var(--viz-series-2)" label="Cost basis" value={formatRupiah(row.costBasis)} />
         <Reading label="Unrealised" value={formatRupiah(row.marketValue - row.costBasis)} muted />
+        {row.contributed != null && (
+          <>
+            <Reading color={CASH_COLOR} label="Net cash in" value={formatRupiah(row.contributed)} />
+            {/* Profit counts the cash; the market-value line above does not, so
+                a month sitting on idle rupiah shows a gap wider than its loss.
+                The cash row is what closes that gap. */}
+            <Reading label="Cash not invested" value={formatRupiah(row.cash)} muted />
+            <Reading
+              label="Profit on it"
+              value={formatRupiah(row.marketValue + row.cash - row.contributed)}
+              muted
+            />
+          </>
+        )}
       </dl>
     </TooltipShell>
   )
@@ -230,6 +267,8 @@ export default function PortfolioChart({
         t: timestamp(month.date),
         marketValue: month.marketValue,
         costBasis: month.costBasis,
+        cash: month.cash,
+        contributed: hasCashFlows ? contributedBy(month.date) : null,
       })),
     [months],
   )
@@ -241,13 +280,20 @@ export default function PortfolioChart({
   const xDomain = useMemo<[number, number]>(() => {
     const all = [...monthRows.map((r) => r.t), ...events.map((e) => timestamp(e.date))]
     if (all.length === 0) return [0, 1]
-    return [Math.min(...all), Math.max(...all)]
+    // Two days of slack at each end: a transfer on the very first or last day
+    // sits exactly on the plot boundary otherwise, and half the tick is cut off.
+    const slack = 2 * 24 * 60 * 60 * 1000
+    return [Math.min(...all) - slack, Math.max(...all) + slack]
   }, [monthRows, events])
 
   // Lines are read for their shape, so the axis frames the data rather than
   // starting at zero — which would flatten every month into the same band.
   const yDomain = useMemo<[number, number]>(() => {
-    const values = monthRows.flatMap((row) => [row.marketValue, row.costBasis])
+    const values = monthRows.flatMap((row) =>
+      row.contributed == null
+        ? [row.marketValue, row.costBasis]
+        : [row.marketValue, row.costBasis, row.contributed],
+    )
     if (values.length === 0) return [0, 1]
     const min = Math.min(...values)
     const max = Math.max(...values)
@@ -279,6 +325,7 @@ export default function PortfolioChart({
       <figcaption className="mb-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs">
         <LegendKey color="var(--viz-series-1)">Market value</LegendKey>
         <LegendKey color="var(--viz-series-2)">Cost basis</LegendKey>
+        {hasCashFlows && <LegendKey color={CASH_COLOR}>Net cash in</LegendKey>}
       </figcaption>
 
       <div className="h-[280px] w-full">
@@ -311,6 +358,18 @@ export default function PortfolioChart({
               cursor={{ stroke: 'var(--viz-axis)', strokeWidth: 1 }}
               isAnimationActive={false}
             />
+            {hasCashFlows && (
+              <Line
+                type="linear"
+                dataKey="contributed"
+                name="Net cash in"
+                stroke={CASH_COLOR}
+                strokeWidth={2}
+                dot={{ r: 3, strokeWidth: 0, fill: CASH_COLOR }}
+                activeDot={{ r: 5, stroke: 'var(--viz-surface)', strokeWidth: 2 }}
+                isAnimationActive={false}
+              />
+            )}
             <Line
               type="linear"
               dataKey="costBasis"
@@ -380,7 +439,7 @@ export default function PortfolioChart({
                 <Scatter
                   key={lane.type}
                   dataKey={lane.type}
-                  shape={<LaneTick dividend={lane.type === 'dividend'} />}
+                  shape={<LaneTick fill={laneColor(lane.type)} />}
                   isAnimationActive={false}
                 />
               ))}

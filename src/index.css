@@ -22,6 +22,7 @@
     --viz-series-1: #2a78d6; /* market value */
     --viz-series-2: #eb6834; /* cost basis */
     --viz-series-3: #1baf7a; /* dividends */
+    --viz-series-4: #8b5cf6; /* cash in and out */
     --viz-ink-muted: #898781;
     --viz-grid: #e1e0d9;
     --viz-axis: #c3c2b7;
@@ -32,6 +33,7 @@
     --viz-series-1: #3987e5;
     --viz-series-2: #d95926;
     --viz-series-3: #199e70;
+    --viz-series-4: #9575e8;
     --viz-ink-muted: #898781;
     --viz-grid: #2c2c2a;
     --viz-axis: #383835;

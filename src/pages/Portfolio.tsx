@@ -3,30 +3,52 @@ import { ArrowDownRight, ArrowUpRight, Wallet } from 'lucide-react'
 import Layout from '../components/Layout'
 import PortfolioChart from '../components/PortfolioChart'
 import {
+  cashFlows,
   events as allEvents,
   formatDay,
   formatMonth,
   formatNumber,
   formatRupiah,
+  hasCashFlows,
   hasPortfolioData,
   latestMonth,
+  lifetimeCashKnown,
   months,
+  profitOn,
   totalOf,
   unrealised,
   type EventType,
+  type PortfolioEvent,
 } from '../data/portfolio'
 
 const EVENT_FILTERS: { type: EventType; label: string }[] = [
   { type: 'dividend', label: 'Dividends' },
   { type: 'sell', label: 'Sells' },
   { type: 'buy', label: 'Buys' },
+  { type: 'deposit', label: 'Deposits' },
+  { type: 'withdrawal', label: 'Withdrawals' },
 ]
+
+// A running net beside each row: the question "how much of my own money is in
+// here" is answered by the last line, not by adding the column up. The flows
+// never change, so this is computed once rather than per render.
+const cashRows = cashFlows.reduce<(PortfolioEvent & { running: number })[]>((rows, flow) => {
+  const previous = rows.length > 0 ? rows[rows.length - 1].running : 0
+  return [...rows, { ...flow, running: previous + (flow.type === 'deposit' ? flow.amount : -flow.amount) }]
+}, [])
+
+const netCashIn = cashRows.length > 0 ? cashRows[cashRows.length - 1].running : 0
 
 const UP = 'text-[#006300] dark:text-[#0ca30c]'
 const DOWN = 'text-[#d03b3b]'
 
 export default function Portfolio() {
   const [hidden, setHidden] = useState<EventType[]>([])
+
+  const filters = useMemo(
+    () => EVENT_FILTERS.filter(({ type }) => allEvents.some((event) => event.type === type)),
+    [],
+  )
 
   const shown = useMemo(
     () => allEvents.filter((event) => !hidden.includes(event.type)),
@@ -65,6 +87,8 @@ export default function Portfolio() {
 
   const gain = unrealised(latestMonth)
   const dividends = totalOf('dividend')
+  const profit = profitOn(latestMonth)
+  const since = formatMonth(months[0].date)
 
   return (
     <Layout>
@@ -77,7 +101,9 @@ export default function Portfolio() {
           </p>
         </div>
 
-        <div className="mb-8 grid grid-cols-2 gap-4 lg:grid-cols-4">
+        <div
+          className={`mb-8 grid grid-cols-2 gap-4 ${hasCashFlows ? 'lg:grid-cols-3' : 'lg:grid-cols-4'}`}
+        >
           <Stat label="Market value" value={formatRupiah(latestMonth.marketValue)} />
           <Stat
             label="Unrealised"
@@ -85,6 +111,28 @@ export default function Portfolio() {
             tone={gain.value >= 0 ? 'up' : 'down'}
             detail={`${gain.value >= 0 ? '+' : ''}${gain.percent.toFixed(2)}% on cost`}
           />
+          {hasCashFlows && (
+            <>
+              <Stat
+                label="Net cash in"
+                value={formatRupiah(profit.contributed)}
+                detail={
+                  lifetimeCashKnown
+                    ? `${cashFlows.length} transfer${cashFlows.length === 1 ? '' : 's'}`
+                    : `Value at ${since} plus later transfers`
+                }
+              />
+              {/* Unrealised measures today's holdings against what they cost.
+                  This measures the account against your own money, so realised
+                  gains and dividends are inside it. */}
+              <Stat
+                label={lifetimeCashKnown ? 'Total profit' : `Profit since ${since}`}
+                value={formatRupiah(profit.gain)}
+                tone={profit.gain >= 0 ? 'up' : 'down'}
+                detail={`${profit.gain >= 0 ? '+' : ''}${profit.percent.toFixed(2)}% on cash in`}
+              />
+            </>
+          )}
           <Stat
             label="Dividends received"
             value={formatRupiah(dividends)}
@@ -97,7 +145,7 @@ export default function Portfolio() {
             activity table below both render against this slice. */}
         <div className="mb-4 flex flex-wrap items-center gap-2">
           <span className="mr-1 text-xs text-slate-500 dark:text-slate-400">Show</span>
-          {EVENT_FILTERS.map(({ type, label }) => {
+          {filters.map(({ type, label }) => {
             const on = !hidden.includes(type)
             return (
               <button
@@ -208,6 +256,79 @@ export default function Portfolio() {
             </tbody>
           </table>
         </Section>
+
+        {hasCashFlows && (
+          <Section
+            title="Cash in and out"
+            caption={`Net ${formatRupiah(netCashIn)}`}
+          >
+            <table className="w-full text-sm">
+              <thead>
+                <Tr head>
+                  <Th>Date</Th>
+                  <Th>Type</Th>
+                  <Th>Note</Th>
+                  <Th right>Amount</Th>
+                  <Th right>Running net</Th>
+                </Tr>
+              </thead>
+              <tbody>
+                {cashRows.map((row, i) => (
+                  <Tr key={`${row.date}-${i}`}>
+                    <Td>{formatDay(row.date)}</Td>
+                    <Td>
+                      <span className={row.type === 'deposit' ? UP : DOWN}>
+                        {row.type === 'deposit' ? 'Deposit' : 'Withdrawal'}
+                      </span>
+                    </Td>
+                    <Td>
+                      <span className="text-slate-500 dark:text-slate-400">
+                        {row.note ?? '—'}
+                      </span>
+                    </Td>
+                    <Td right>
+                      <span className={row.type === 'deposit' ? UP : DOWN}>
+                        {row.type === 'deposit' ? '+' : '−'}
+                        {formatRupiah(row.amount)}
+                      </span>
+                    </Td>
+                    <Td right>{formatRupiah(row.running)}</Td>
+                  </Tr>
+                ))}
+              </tbody>
+              <tfoot>
+                <Tr>
+                  <Td>
+                    <span className="font-medium text-slate-900 dark:text-white">Net cash in</span>
+                  </Td>
+                  <Td>{''}</Td>
+                  <Td>{''}</Td>
+                  <Td right>{''}</Td>
+                  <Td right>
+                    <span className="font-medium text-slate-900 dark:text-white">
+                      {formatRupiah(netCashIn)}
+                    </span>
+                  </Td>
+                </Tr>
+              </tfoot>
+            </table>
+          </Section>
+        )}
+
+        {hasCashFlows && !lifetimeCashKnown && (
+          <p className="mt-3 text-xs text-slate-400 dark:text-slate-500">
+            These transfers start inside the statement window, so the chart's cash line
+            begins at the {since} portfolio value and adds them from there. Give{' '}
+            <code className="rounded bg-slate-100 px-1 py-0.5 dark:bg-slate-800">
+              openingBalance
+            </code>{' '}
+            in{' '}
+            <code className="rounded bg-slate-100 px-1 py-0.5 dark:bg-slate-800">
+              portfolio.local.ts
+            </code>{' '}
+            once the list goes back to the first rupiah, and it becomes lifetime profit.
+          </p>
+        )}
 
         <Section
           title="Activity"

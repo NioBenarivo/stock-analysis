@@ -1,0 +1,676 @@
+---
+title: "POWR — PT Cikarang Listrindo Tbk"
+description: "A business-model teardown — a flat, high-payout private utility that has become a toll-taker on Indonesia's data-center boom, and tells you the toll volume but not the toll rate."
+date: '2026-09-22'
+tags: [analysis, power, data-centers, idx]
+---
+
+**What it does:** Indonesia's oldest and largest independent power producer selling directly to industrial customers. Since 1993 it has built, owned and operated gas, coal and (now) solar and biomass generation behind its own transmission and distribution network inside five adjacent industrial estates east of Jakarta (Jababeka, MM-2100, EJIP, Hyundai Inti Development, Lippo Cikarang — 5,375 ha, Bekasi Regency), under an exclusive "IUPTLU terintegrasi" licence that makes it a private power utility (PPU) rather than a PLN customer or a merchant generator. It sells the same power two ways: retail, at a premium price, to more than 2,500 industrial tenants of those estates (2025: 90.0% of revenue), and wholesale, at a much lower price, to state utility PLN under a legacy take-or-pay contract (10.0% of revenue). All operations and all revenue are in Indonesia; the Company reports in US dollars but bills customers in Rupiah with a monthly FX adjustment.
+
+**Why this report exists:** the estates POWR serves — Cikarang, and neighbouring Karawang — have become one of Indonesia's two hyperscale data-center clusters, and data centers have gone from 2% of POWR's industrial kilowatt-hours in 2019 to 9% in 2025 and 12% in mid-2026, with the Company guiding to 14% / 17% / 20% by 2026F / 2027F / 2028F. Section 3.7 builds a bottom-up earnings model for that growth, cross-checked against an independent sell-side model (Stockbit), because POWR does not itself disclose data-center revenue, margin or customer count.
+
+**Market:** Rp1,020/share (14-Sep-2026, most recent price point found; see §3.6 for the caveat on staleness) × 15,851,499,100 shares outstanding (ex-treasury) = **Rp16.17tn ≈ US$905m market cap** [calculated, IDR/US$17,856]. Trailing P/E ≈13.0x, dividend yield ≈8.2% (stockanalysis.com, 14-Sep-2026).
+
+**Period covered:** FY2013–FY2015 from the 2016 IPO prospectus; FY2018–FY2025 audited (six annual reports, FY2020–FY2025 in hand plus the FY2018–2020 comparative inside AR2020); 1Q25/1Q26 and 1H25/1H26 from investor decks. Web research filled in tariff regulation, gas policy, the data-center landscape and peer/analyst context.
+
+**Sources in hand:** six annual reports (AR2020 676pp, AR2021 596pp, AR2022 466pp, AR2023 474pp, AR2024 468pp, AR2025 438pp), the 2016 IPO prospectus (602pp, Indonesian), and seven investor-presentation decks (FY2021 through 1H2026). Full source table at the end.
+
+**Conventions:** US$ million unless stated (the Company's functional and reporting currency). "Industrial" = the >2,500 tenants of the five estates, billed directly by POWR; "PLN" = the state utility, POWR's only wholesale customer. `[calculated]` marks every figure derived here rather than printed in a filing. MVA ("energized capacity") is the contracted/offtake capacity a customer has purchased, not its actual draw — the distinction matters throughout §2.6 and §3.7.
+
+---
+
+## THE ONE THING TO UNDERSTAND FIRST
+
+**POWR is a low-growth, low-leverage, high-payout legacy power utility that has, almost by geographic accident, become a toll-taker on Indonesia's data-center boom — and it tells you the toll volume but not the toll rate.**
+
+Strip out data centers and the rest of the business has barely grown in five years: non-data-center industrial volume has been flat at roughly 3.1–3.3 TWh a year since 2021 [calculated from deck and AR series, §2.6], PLN volume is shrinking as a legacy take-or-pay contract runs down, and the installed generation fleet has been unchanged at 1,144 MW of gas and coal since 2017 (only lately supplemented by 45.7 MWp of solar, 70 MW of biomass co-firing and a 50 MW gas-engine project under construction). Against that flat base, the Company discloses a second, fast-growing customer class — data centers — in unusual detail on one axis and near-total silence on the other:
+
+- **What POWR discloses:** energized data-center capacity by year (32 MVA in 2019 → 227 MVA at end-2025 → a Company-guided 303/385/447 MVA for 2026F/2027F/2028F, a stated 34% CAGR 2019–2028F) and data centers' share of industrial kilowatt-hours sold (2% in 2019 → 9% in 2025 → 12% in 1H2026 → a guided 14%/17%/20% for 2026F/2027F/2028F) [AR2025 p.192, 197; decks FY21–1H26, §2.6 and §3.7].
+- **What POWR does not disclose, in any of the six annual reports or seven decks:** the number of data-center customers, their names, the tariff or contract terms offered to them (capacity charge vs energy charge, minimum-take, tenor), data-center revenue or margin, or — critically — the **load factor** implied by that capacity. Working back from the one year the Company does split industrial revenue finely enough (FY2025: data centers were 9.1% of industrial kWh but 16.5% of industrial MVA), data-center load factor is running at roughly **16%**, against roughly **29%** for all other industrial customers combined [calculated, §3.5, §3.7]. That gap — customers paying to reserve capacity years before they draw the power — is both the opportunity (headroom for volume to catch up to contracted capacity with no new capex) and the central uncertainty (if the ramp stalls, or if data-center customers are billed mostly on the capacity charge rather than the energy charge, the kVA growth the Company advertises will not convert one-for-one into revenue).
+
+Three further facts complete the picture. First, **POWR's own forecasting record on data centers is patchy**: the 2022 deck (published under a different management cycle) guided to 160 MVA for 2022; actual was 106 MVA. The 2023 deck repeated the same missed 160 MVA target for 2023; actual was 130 MVA. Only from 2024 did guidance and outcome converge (FY2024 deck: 225 MVA for 2025; actual 227 MVA) [DECKS_notes §9a]. Second, **2025 was not actually a clean year to read the trend from**: an "unprecedented" gas-supply disruption (Pertamina EP's Subang field shut down unplanned in August 2025, compounding a PGN shortfall that had been running since February 2024) forced diesel substitution, pushed fuel cost per kWh sold from 6.58¢ to 7.10¢, and cut consolidated net profit 4.4% even as industrial revenue grew [AR2025 p.176, 156]. Third, the **company itself is controlled, not widely held**: three private holding companies (Udinda Wahanatama, Brasali Industri Pratama, Pentakencana Pakarperdana), whose principals occupy four of six Board of Commissioners seats and the CEO's chair, jointly hold 83.76% of the shares; free float is roughly 13–15% [AR2025 p.118, 122] — governance context that matters when reading a nine-figure remuneration line against a net profit that fell in 2025 (§1.3–1.4).
+
+So the investment question this report tries to answer is not "does POWR benefit from Indonesia's data-center boom" — it plainly does, and is one of the very few ways to buy that theme on the IDX — but **how much, at what margin, and how fast**, given that the Company will not say. Section 3.7 builds that number three independent ways and triangulates a range.
+
+---
+
+# 01 — MANAGEMENT
+
+## 1.1 History and milestones
+
+| Date | Event |
+|---|---|
+| 28-Jul-1990 | Founded (Notarial Deed No.187, Lukman Kirana SH); approved 5-Oct-1991 [PRO p.14, 98] |
+| 1991–92 | 150 kV switchyard built, interconnected to the Java-Bali-Madura grid; licence No.29/MMP/KKI-III/1992 (17-Mar-1992) grants exclusive supply to the five Cikarang estates |
+| Oct-1993 | Commercial operations begin: 2× GE Frame 6B gas turbines, 60 MW at Jababeka |
+| 1996 | First PLN power-purchase agreement, 150 MW; capacity reaches 180 MW |
+| 1998 | Combined-cycle conversion on six gas turbines → 300 MW |
+| 2006 | IUKU licence renewed for 30 years from 11-Dec-2006 (to 2036); capacity to 409 MW (2× GE 9E added) |
+| 2010 | First international bond: Senior Notes 2015, US$300m, 9.25% |
+| 2011 | Second PLN PPA, 150 MW (total 300 MW contracted at the time); steam turbines added on two 9E units → 646 MW |
+| 2012 | Senior Notes 2019, US$500m, 6.95% (refinances the 2015 notes and funds the Babelan coal-plant build); third 9E unit → 755 MW |
+| Jul-2015 | MM-2100 gas plant (1× GE 9E, 109 MW, standby) commercial → 864 MW gas capacity total |
+| 18-Nov-2015 → 1-Mar-2016 → 4-Mar-2016 | IPO approved, then **cancelled**, then **re-approved** with a smaller share count (1,608,716,000 shares vs an originally approved 2,555,019,000) [PRO p.100–101] |
+| **14-Jun-2016** | **IPO on IDX**: 1,608,716,000 new shares (10.0% of enlarged capital) at Rp1,500, gross Rp2.41tn (~US$272m) — the first PPU listed on the Indonesian exchange |
+| Sep-2016 | Senior Notes 2026 issued, US$550m, 4.95% (refinances the 2019 notes; then the lowest 10-year coupon achieved in Asia by a non-bank, non-SOE issuer that year) |
+| 2017 | Babelan coal plant (2×140 MW CFB, biomass-capable boilers) commercial → **1,144 MW** total conventional capacity, unchanged since |
+| Sep-2017/2018 | PT Bahtera Listrindo Jaya (BLJ) established — coal/biomass shipping subsidiary, still POWR's only wholly-owned operating subsidiary until 2025 |
+| 2018 | First solar (52.5 kWp pilot at the Jababeka office); share buyback programme launched (Phase I, Oct-2018) |
+| 4-Jan-2020 | First PLN PPA tranche (150 MW, from 1996) **expires**; only the 2011 tranche (150 MW, to May 2031, 72% take-or-pay) remains |
+| 2021 | Biomass co-firing capability added at Babelan (28 MW); first EV-charging pilot |
+| 2023 | First I-REC (renewable-certificate) sales, 6,018 MWh |
+| **2024–25** | PGN gas supply constrained from Feb-2024 (declining upstream wells); **Aug-2025** unplanned Pertamina EP (Subang field) shutdown compounds it — "unprecedented" disruption, diesel substitution, still interrupted at FY2025 year-end |
+| Mar–Apr 2025 | **US$350m Senior Notes 2035 (5.65%) issued; US$500m Senior Notes 2026 (4.95%) redeemed** — first refinancing of the Company's debt stack since 2016, saving ~US$5m/yr of interest |
+| 2025 | First investment-grade credit ratings (Moody's Baa3, S&P BBB-, both stable); biomass co-firing expanded to 70 MW; two new renewable-energy subsidiaries (PT Energi Baik Alami, PT Alami Energi Lestari) established; 50 MW gas-engine project (4×12.5 MW, US$44.0m) begins construction at MM-2100 |
+| Aug-2026 | Gas engine >99% complete; grid synchronisation planned early Aug-2026 (per the 1H26 deck) |
+
+*Source: PROSPECTUS2016 (founding, IPO mechanics); AR2020–AR2025 milestone pages; investor decks for 2025–26 events.*
+
+## 1.2 Ultimate beneficial ownership
+
+### Register at 31-Dec-2025 (of 16,087,156,000 issued shares, Rp200 par) [AR2025 p.118]
+
+| Holder | Shares | % of issued | Who it is |
+|---|---|---|---|
+| PT Udinda Wahanatama | 4,903,778,030 | 30.48% | Holding vehicle; principals Sutanto Joso (President Commissioner of POWR), Djeradjat Janto Joso (POWR Commissioner), Andrew K. Labbaika (POWR President Director/CEO) |
+| PT Brasali Industri Pratama | 4,285,134,845 | 26.64% | Holding vehicle of the Brasali family; principal Iwan P. Brasali (POWR Commissioner) |
+| PT Pentakencana Pakarperdana | 4,285,064,945 | 26.64% | Holding vehicle; principal Fenza Sofyan (POWR Commissioner) |
+| Commissioners & Directors (direct) | 225,285,333 | 1.39% | Largest individual holder: Png Ewe Chai (VP Director), 174,386,780 sh = 1.08% |
+| Public (each \<5%) | 2,152,235,947 | 13.38% | ~20,559 holders (Dec-2025); 88.7% domestic institutional, 5.4% foreign |
+| Treasury shares | 235,656,900 | 1.47% | Bought back 2018–2020; being partially re-issued as employee share bonuses |
+
+**The three holding companies (83.76% of issued shares) "jointly control the Company"** [AR2025 p.122] — no single parent, no named individual UBO chain above the three holdcos is disclosed in any of the six annual reports read. Free float, on the Company's own reckoning, is ~14.8% (public 13.38% + management 1.39%) [AR2025 p.122], below what IDX regulation typically expects; the Company's decks (1Q26/1H26) describe an active treasury-share sell-down programme, begun 14-May-2026, aimed at reaching the 15% minimum free float by March 2027, alongside a separate note that treasury shares were partly used to fund an employee share bonus (204 million shares were referenced in the 1H26 deck's free-float discussion, a figure that post-dates and is lower than the 235.66m reported at 31-Dec-2025 in AR2025 — consistent with the sell-down and bonus issuance both drawing the treasury balance down through 2026).
+
+### The control chain
+
+```
+        Sutanto Joso        Brasali family          Fenza Sofyan
+      (POWR founder,       (Iwan P. Brasali =         (POWR
+   President Commissioner)  POWR Commissioner)      Commissioner)
+             │                     │                     │
+             ▼                     ▼                     ▼
+   PT Udinda Wahanatama   PT Brasali Industri   PT Pentakencana
+        30.48%              Pratama 26.64%      Pakarperdana 26.64%
+             │                     │                     │
+             └──────────────┬──────────────┬─────────────┘
+                             ▼
+              PT CIKARANG LISTRINDO Tbk (POWR)   ◄── mgmt+directors 1.39%,
+                    83.76% jointly held               public ~13.4%, treasury 1.5%
+```
+
+**A candid ownership history survives only in the 2016 prospectus** and is worth recording because none of the six annual reports repeats it. The company was founded in 1991 by six individuals in roughly equal shares (Sutanto Joso, Sudwikatmono, Budi Brasali, Ismail Sofyan, Ibrahim Risjad, Fonny Handayani Dwi Putro Widodo); by 1994 those stakes had been folded into holding companies, several of which merged in 1997–2003, and — the one fact with no trace in any later filing — **PT Jababeka Infrastruktur held 21% of the Company from March 1997 to August 2003**, when it sold out to PT Polamegah Utama [PRO p.108–110]. Sutanto Joso separately sat on the board of PT Kawasan Industri Jababeka (the estate developer) from 1989 to 2002. Today's three-way 30/27/27 split traces to a December 2009 transaction in which the last outside holder, Polamegah, sold its remaining stake asymmetrically to Udinda (which got the larger share) [PRO p.111]. No current equity tie between POWR and the Jababeka estate developer is disclosed, though POWR still pays "developer fees" to (unnamed) estate developers worth a steady ~0.9% of industrial revenue every year since at least 2013 (§1.4).
+
+## 1.3 Group structure and subsidiaries
+
+POWR runs an unusually thin corporate structure for a company its size: **no joint ventures, no associates, and — until 2025 — a single wholly-owned subsidiary.**
+
+| Entity | Business | POWR % | Established | Note |
+|---|---|---|---|---|
+| PT Bahtera Listrindo Jaya (BLJ) | Solid-fuel (coal/biomass) shipping — tugboats and barges | 99.998% | 2017 | Total assets US$14.0m (2025); the other 0.002% is held by a named individual, "Janti Joso Brasali" — a name that spans both controlling families and is not otherwise explained |
+| PT Energi Baik Alami (EBA) | Renewable-energy holding company | 99.998% | 16-Jun-2025 | New; assets US$3.0m |
+| PT Alami Energi Lestari (AEL) | Renewable-energy operating business (held via EBA) | 99.996% indirect | 8-Aug-2025 | New; assets US$1.0m; not yet operating at year-end |
+
+The 2025 formation of EBA/AEL is the first sign of the Company acting on its long-stated ambition to pursue renewables "outside Cikarang" [AR2025 p.163, 201] — nothing has been transacted through them yet. A prior financing subsidiary, Listrindo Capital B.V. (Netherlands), issued the Company's bonds until the Company itself assumed that role directly in September 2019 and the Dutch vehicle was sold.
+
+### Boards (31-Dec-2025)
+
+| Name | Role | Age | Background and other roles | POWR shares |
+|---|---|---|---|---|
+| Sutanto Joso | President Commissioner (2020–; VP Commissioner 2016–20; President Director 2007–15) | 83 | **Founder of the Company (1990)**; Commissioner of PT Udinda Wahanatama; founder of Supraboga Lestari (99 Ranch Market); ex-Commissioner PT Kawasan Industri Jababeka 1989–2002; family relation to Djeradjat Janto Joso | 0.07% |
+| Fenza Sofyan | Commissioner (since 2004) | 59 | Director of PT Pentakencana Pakarperdana; Metropolitan-group property roles (Metropolitan Land, Metropolitan Kentjana) | 0.002% |
+| Djeradjat Janto Joso | Commissioner (since 2004) | 58 | President Director of PT Udinda Wahanatama; family of Sutanto Joso | — |
+| Iwan P. Brasali | Commissioner (since 2004) | 60 | President Director of PT Brasali Industri Pratama; Commissioner, Metropolitan Land Tbk & Metropolitan Kentjana Tbk | 0.03% |
+| Ir. Kiskenda Suriahardja | Independent Commissioner | 69 | Ex-President Director, Telkomsel | — |
+| Drs. Josep Karnady | Independent Commissioner, Audit Committee Chair | 86 | President Commissioner, PT Mata Air Boga Lestari | — |
+| Andrew K. Labbaika | President Director / CEO (since 2016; Director since 1996) | 61 | Director of PT Udinda Wahanatama (a controlling shareholder) | 0.08% |
+| Png Ewe Chai | Vice President Director | 79, Malaysian | Engineer by background; largest individual insider holder | 1.08% |
+| Christanto Pranata | ESG & Finance Director (CFO) | 40 | Ex-audit manager at EY Indonesia (2007–14) — the same firm group that has audited POWR throughout | — |
+| Richard Noel Flynn | Director (technical/operations) | 59, Irish | Independent Director 2015–2024; reclassified non-independent 2025 | — |
+| Yudho Pratikto | Director, Marketing & Business Development (from 1-Jan-2025) | 55 | At the Company since 1994; new board seat, plausibly linked to the data-center commercial push (inference) | 0.13% |
+
+**Governance reading.** Four of six commissioners (and the CEO) are principals of the three controlling holding companies; both independent commissioners are 69 and 86 and have served since the Company's 2015/16 pre-IPO governance overhaul, a full decade. Independence sits at 33% of the Board of Commissioners, at the OJK's 30% floor rather than above it. The Board's term runs to the 2026 AGM. **Board + Commissioner remuneration was US$22.4m in 2025 (2024: US$26.4m)** — about 4.0% of net sales and **31% of net profit** [AR2025 p.261] — high for a board of this size (12 people) relative both to peers and to a year in which profit fell 4.4%; a separate, overlapping perimeter in the financial-statement notes ("key management plus commissioners") gives US$26.6m (2025) / US$31.7m (2024) [AR2025 p.366], a gap the Company does not explain in any year we read. No per-person pay is disclosed in any annual report from 2013 to 2025.
+
+## 1.4 Related party transactions
+
+**POWR's audited financial statements carry no related-party-transactions note at all** — an unusual absence for a company whose three controlling shareholders' principals sit on its Board. The MD&A states in every year read, in near-identical language, that there were "no material transactions containing conflicts of interest and/or transactions with affiliated parties and/or related parties" [AR2025 p.203, and equivalently in every prior AR]. The only related-party-flavoured disclosure across six annual reports is key-management compensation (§1.3) and the statement that all fuel suppliers and all customers are third parties.
+
+That said, several recurring items sit close enough to the ownership structure to flag, none of them concluded by the Company:
+
+- **"Developer fees"**, paid to the (unnamed) developers of the five estates, have run at a strikingly stable **0.8–0.9% of industrial revenue every year from 2013 to 2025** [calculated: US$3.0m/1990-15 → US$4.49m/2025], which reads as a formula-driven, long-standing arrangement rather than an arm's-length negotiated fee, but the counterparties and the formula are never named.
+- **BLJ's 0.002% minority holder, "Janti Joso Brasali,"** carries a surname that spans both the Joso and Brasali controlling families — recorded, not concluded, since the Company gives no further detail.
+- **Sutanto Joso's board seat at PT Kawasan Industri Jababeka (1989–2002)** and the three commissioners' concurrent seats at Metropolitan Land Tbk / Metropolitan Kentjana Tbk (a separate Jabodetabek property group) sit adjacent to POWR's own estate/property-adjacent business without any disclosed transaction.
+- **A 2016-vintage related-party gas transporter, GPS ("Gas Pipeline Services"),** controlled by the same shareholder group, charged POWR US$0.36/MMBtu on Pertamina-sourced gas at IPO — the last year this appeared in any document we hold; by AR2020 the Company states flatly that there is "no related-party supplier," so either the arrangement lapsed or GPS's ownership changed. Neither is stated.
+- **The single litigation exposure that touches a related party**: the Supreme Court's 2023 decision holding POWR, Pertamina Gas and the Ministry of ESDM jointly and severally liable to PT Gasindo Pratama Sejati for Rp175.74bn (about US$11.1m) over a reserve gas-pipeline permit; POWR paid its US$3.7m share in 2024 and recorded a right of claim against its co-defendants, recovered in 2025 [AR2024 Note 26; AR2025 p.170].
+
+## 1.5 Dividends and reinvestment history
+
+POWR has paid a semi-annual (interim + final) cash dividend every year since its 2016 IPO except the token payout structured around the listing itself, at a **payout ratio that has run 64–96% of net income** and averaged roughly 85% over the last five years — high even against the Company's own IPO-era policy commitment of "not less than 60%."
+
+| Fiscal year | Interim (US$m) | Final (US$m) | Total (US$m) | DPS (Rp) | Payout ratio (reported) |
+|---|---|---|---|---|---|
+| 2019 | 28.0 | 44.7 | 72.7 | — | 64% |
+| 2020 | 18.4 | 40.6 | 59.0 | 53 | 79% |
+| 2021 | 22.9 | 43.1 | 66.0 | 61 | 73% |
+| 2022 | 24.8 | 44.8 | 69.6 | 66 | 96% |
+| 2023 | 30.0 | 43.1 | 73.1 | 73 | 95% |
+| 2024 | 28.1 | 43.9 | 72.0 | 74 | 96% |
+| 2025 | 22.9 | *(final proposed at the 2026 AGM; not in AR2025)* | *≥22.9* | *≥24* | *not printed* |
+
+*Source: AR2025 p.198–201, cross-checked against payments in the cash-flow statement.*
+
+Dividends have consistently been comfortably covered by free cash flow in the years we can compute it: FY2025 cash from operations was US$155.3m against PPE purchases of US$56.1m plus US$7.3m of advances, for free cash flow of **US$91.9m** [calculated] against US$66.9m of dividends actually paid in the year (73% of FCF); FY2024 FCF was US$102.3m against US$71.2m paid (70%). The Company has needed essentially no external financing for its ordinary business since 2016 — the only debt-market activity in the whole period was the like-for-like 2025 refinancing of the 2016 bond (§3.1) — and capex has been modest relative to depreciation (capex/D&A running roughly 0.9–1.0x in most recent years, reflecting a fleet that has not added conventional MW since 2017). The corollary, visible in §2.7, is that **POWR has not needed to build a single new power plant to serve the data-center boom so far** — it has been absorbed within existing capacity and a 50.7% reserve margin [AR2025 p.163].
+
+---
+
+# 02 — MODEL
+
+## 2.1 Product
+
+POWR sells one product — electricity — to two very different buyers on two very different economics, plus a small, newly-disclosed green layer on top.
+
+```
+                    ┌─────────── PILLAR 1: INDUSTRIAL RETAIL (90.0% of FY2025 revenue) ───────────┐
+Gas (PGN, PEP) ────►│  >2,500 tenants of 5 industrial estates · billed in Rp, monthly FX adjustment │──► US¢14.4/kWh (2025)
+Coal (AGM,Adaro, ──►│  fuel pass-through formula (undisclosed terms) · 18-day payment terms          │    (vs US¢13.3 blended)
+ Kideco)            │  customer mix: automotive 28.7%, electronics 17.0%, "other" 15.5%,             │
+Biomass, solar ────►│  consumer goods 12.1%, DATA CENTERS 9.1%, food 8.4%, chemicals 5.4%, ...       │
+                     └───────────────────────────────────────────────────────────────────────────────┘
+                    ┌─────────── PILLAR 2: PLN WHOLESALE (10.0% of FY2025 revenue) ─────────────────┐
+                     │  Legacy 150 MW PPA (2011–May 2031), 72% take-or-pay, annual true-up            │──► US¢7.95/kWh (2025)
+                     │  tariff tracks the average gas price POWR pays for PLN-dedicated volume         │
+                     └───────────────────────────────────────────────────────────────────────────────┘
+                    ┌─────────── PILLAR 3: GREEN LAYER (small, growing) ───────────────────────────────┐
+                     │  I-REC sales 79,580 MWh (2025, +34% YoY); rooftop solar leased to customer sites │
+                     │  (finance-lease accounting, 45.7 MWp installed); biomass co-firing 70 MW capacity│
+                     └────────────────────────────────────────────────────────────────────────────────┘
+```
+
+The industrial/PLN split has moved steadily toward industrial as PLN's legacy contract has shrunk: industrial was 73.6% of revenue in FY2019 and is 90.0% in FY2025 [calculated, TIMESERIES §1.3]. The premium industrial customers pay for POWR's power over what PLN pays — roughly **1.8×** on a per-kWh basis in 2025 (14.4¢ vs 8.0¢) — reflects PLN's cost-plus wholesale contract against the Company's ability to price closer to what its captive estate tenants would otherwise pay PLN's own, higher industrial tariff class (§2.4).
+
+### Revenue and volume by customer class, FY2025 vs FY2024 (US$ thousand; GWh) [AR2025 p.161, 176]
+
+| | 2025 revenue | 2024 revenue | Δ | 2025 GWh | 2024 GWh | Δ |
+|---|---|---|---|---|---|---|
+| Industrial | 498,161 | 471,148 | +5.7% | 3,455 | 3,365 | +2.6% |
+| PLN | 55,335 | 75,872 | −27.1% | 696 | 770 | −9.6% |
+| **Total** | **553,496** | **547,020** | **+1.2%** | **4,150** | **4,135** | **+0.4%** |
+
+Industrial revenue growth (+US$27.0m) breaks into roughly half volume, half price/mix: +90 GWh at the 2024 rate contributes ~+US$12.6m, and the remaining ~+US$14.4m comes from a higher average realised tariff — consistent with the fuel-cost pass-through mechanism (§2.4) working with a lag, and with data centers' higher weight in the mix [calculated].
+
+## 2.2 Supply chain — the physical asset map
+
+### Generation fleet (installed MW, at 31-Dec-2025) [AR2025 p.23, 153]
+
+| Plant | Type | Capacity | Commissioned | Role |
+|---|---|---|---|---|
+| PLTGU Jababeka | Gas (combined-cycle + simple-cycle) | 755 MW | 1993–2012 | Primary baseload |
+| PLTG MM-2100 | Gas (simple-cycle) | 109 MW | 2015 | Standby/reserve |
+| PLTU Babelan | Coal (2× 140 MW CFB) + biomass co-firing | 210 MW coal + 70 MW co-firing | 2017 (co-firing 2021, expanded 2025) | Baseload + renewables |
+| Solar (rooftop, various estate sites) | Solar PV | 45.7 MWp | 2018–ongoing | Customer-sited, green offering |
+| **Total conventional** | | **1,074 MW** (864 gas + 210 coal) | | |
+| **Total installed incl. renewables** | | **1,189.7 MW** | | 50.7% reserve margin vs 20–35% "safe range" guideline |
+| Gas engine (under construction) | Gas reciprocating, 4×12.5 MW | 50 MW | >99% complete, COD guided early Aug-2026 | Fast-start balancing for solar intermittency |
+
+Two of the ten gas turbines (218 MW) run purely as backup and are excluded from the "conventional" 1,144 MW headline figure the Company usually quotes. **No new conventional capacity has been added since 2017** — the entire data-center ramp described in §2.6–§3.7 has so far been served from a fleet whose MW footprint is eight years old, financed by a reserve margin the Company itself calls comfortable.
+
+### Transmission and distribution
+
+~60 circuit-km of 150 kV transmission (101 towers) linking the three plant sites, feeding ~2,000 circuit-km of 20 kV distribution across the five estates via an 18-bay 150 kV switchyard and eight 60/80 MW distribution transformers at MM-2100 [AR2025 p.152, 154, 160]. Network losses have stayed below 1.0% every year for at least five years (0.5% in 2025) — an efficient, short-haul, industrial-grade network, not a sprawling one.
+
+### Energized capacity and customer flow
+
+```
+   Gas/coal/biomass/solar generation ──► 150 kV transmission ──► 20 kV distribution ──► industrial estate tenant
+                (1,190 MW installed)         (~60 ckm)              (~2,000 ckm)         (offtake agreement: contracted
+                                                                                           "energized" kVA, billed on
+                                                                                           usage + fuel pass-through)
+                                                         └──► PLN (150 MW PPA, 72% take-or-pay, annual true-up)
+```
+
+Total industrial energized capacity was **1,376 MVA at end-2025** (1,354 MVA end-2024, +1.6%), of which data centers held **227 MVA (16.5%)** — up from 212 MVA (15.7%) a year earlier; essentially all of the year's net capacity growth (+15 of +22 MVA) came from data centers [AR2025 p.46, 161, 192].
+
+## 2.3 Purchase — what the business buys and owns
+
+### Fixed assets: US$723.4m = 60.7% of total assets (FY2025) [AR2025 p.167–174]
+
+| | Amount | % of total assets |
+|---|---|---|
+| PPE, net | 723.4m | 60.7% |
+| Cash + investments (time deposits, bonds) | 309.3m | 26.0% |
+| Trade & other receivables | 48.8m | 4.1% |
+| Inventories | 63.5m | 5.3% |
+| Finance-lease receivables (customer solar) | 18.9m | 1.6% |
+| Investment property, other | 27.6m | 2.3% |
+| **Total assets** | **1,191.5m** | 100% |
+
+PPE cost is US$1,813.9m with US$1,090.5m of accumulated depreciation (60.1% depreciated); US$567.4m of fully-depreciated assets remain in use — an old fleet still running at 95.8% availability [AR2025 p.399–402]. A third-party appraisal (KJPP Munir, Wisnu, Heru & Rekan, dated 14-Feb-2025) valued PPE at US$1.006bn at end-2024 against a book value of US$730.1m — a 38% unbooked gain, consistent with an asset base that has not been revalued through a long period of Rupiah depreciation and US$-denominated replacement cost inflation [AR2025 p.401].
+
+### Capex
+
+| US$m | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+|---|---|---|---|---|---|---|
+| PPE additions (cash) | ~19 | ~50 | 43.2 | 27.9–30.8 (three figures disclosed — see §"Anything odd") | 52.6 | 58.9 |
+| Capex/depreciation [calculated] | 0.3x | 0.9x | 0.8x | 0.5x | 0.9x | 1.0x |
+
+Capex has been driven almost entirely by **maintenance replacement plus two discretionary growth projects**, both under way at end-2025:
+
+- **50 MW gas engine at MM-2100** (4×12.5 MW, MAN Energy Solutions turbines via an EPC consortium): total budget US$44.0m (≈US$880/kW), US$32.8m spent, 94% complete, targeted COD 2026 — explicitly framed as balancing/flexibility capacity to firm the solar programme, not as DC-specific capacity [AR2025 p.189–190, 401].
+- **An unexplained US$28.7m "substation project"**, 85% complete at both end-2024 and end-2025 (cost rose slightly, completion percentage did not) — the only capital item in the Company's disclosures that is large enough, and unexplained enough, to plausibly be DC-related grid reinforcement, but the Company never says so (§"Anything odd").
+
+No numeric 2026 capex budget is disclosed in any document read; management's only capex-relevant guidance is a target of +15 MWp of solar per year and completion of the gas engine.
+
+### Fuel supply — the "reserves" of a power company
+
+| Fuel | 2025 supplier(s) | Contract to | 2025 spend | % of fuel cost |
+|---|---|---|---|---|
+| Natural gas | PT Perusahaan Gas Negara (PGN); PT Pertamina EP (PEP) | PGN to 31-Mar-2035 (amended Nov-2023); PEP to 31-Dec-2029 (amended Dec-2024) | US$171.3m | 58.1% |
+| Coal | PT Antang Gunung Meratus (to Apr-2027), PT Adaro Indonesia (to Jul-2028), PT Kideco Jaya Agung (to Dec-2026) | | US$85.3m | 28.9% |
+| Diesel (backup) | Not named | | US$26.0m (2024: US$4.0m — the gas-disruption effect) | 8.8% |
+| Biomass | Palm-kernel shells (Sumatra/Kalimantan), wood chips (West Java/Banten/Lampung) | | US$12.2m | 4.1% |
+
+**No gas or coal price (US$/MMBtu, US$/tonne) and no fuel volumes (BBTUD, tonnes) are disclosed in any of the six annual reports** — the single reference point across the whole filing set is the government's HGBT (special gas price) of US$7/MMBtu for public-interest power plants, and even that the Company never confirms applies to its own supply [AR2025 p.146]. The 2016 prospectus, uniquely, gave real numbers: Pertamina at US$4.37/MMBtu for PLN-dedicated volume vs US$6.73/MMBtu for estate-customer volume (a two-tier price built into the fuel-pass-through economics), and PGN at ~US$9.10/MMBtu — from which an implied 2015 blended gas cost of ~US$7.7–7.9/MMBtu can be backed out [PRO p.176, calculated]. Whether that structure survives to 2025 is unknown. Coal-supplier purchase disclosures do not add up to the coal expense line in any year we checked (2025: named suppliers account for US$61.7m of an US$85.3m coal expense — a US$23.6m gap, presumably freight/shipping through BLJ and spot purchases, never reconciled) [calculated].
+
+### The pipeline
+
+No large generation project is planned beyond the 50 MW gas engine. Growth capital is going instead into (a) solar (+15 MWp/yr target, +11.4 MWp in progress at end-2025), (b) biomass co-firing (expanded to 70 MW of the 280 MW Babelan unit in 2025), (c) the two new renewables subsidiaries (§1.3, not yet capitalised), and (d) whatever the unexplained substation project turns out to serve. The absence of any announced new baseload plant — despite management repeatedly flagging data-center demand as a strategic priority — is itself informative: **management's stated plan is to serve the data-center ramp from existing capacity and reserve margin, not from new generation**, at least through 2028.
+
+## 2.4 Process — how the product is made and what it costs
+
+### The physical/commercial process
+
+```
+Buy gas (PGN/PEP, 58% of fuel $) ──┐
+Buy coal (AGM/Adaro/Kideco, 29%) ──┼─► Generate (1,190 MW, 54% avg capacity factor) ──► Transmit (150kV)
+Buy biomass (4%) ───────────────────┘                                                        │
+Diesel backup (9%, spiked in 2025) ─────────────────────────────────────────────────────────┘
+                                                                                                ▼
+                                                                               Distribute (20kV) to estate tenants
+                                                                               (incl. data centers) & to PLN
+                                                                                                │
+                                            Bill in Rupiah, monthly FX adjustment,              ▼
+                                            fuel-component pass-through (formula undisclosed) ─► Collect (18-day
+                                                                                                   industrial /
+                                                                                                   30-day PLN terms;
+                                                                                                   ~1-month deposit)
+```
+
+### Cost structure: US$294.8m fuel + US$146.9m other opex = US$441.7m, 79.8% of revenue (FY2025) [AR2025 p.175, 420–422]
+
+| Line | 2025 | % of revenue | 2024 | % of revenue |
+|---|---|---|---|---|
+| Fuel expenses | 294.8m | 53.3% | 272.1m | 49.7% |
+| Depreciation | 61.8m | 11.2% | 59.8m | 10.9% |
+| Employee expenses | 49.5m | 8.9% | 56.6m | 10.4% |
+| Repair & maintenance | 15.2m | 2.7% | 17.1m | 3.1% |
+| Other operating expenses | 20.4m | 3.7% | 19.2m | 3.5% |
+| **Operating profit** | **105.5m** | **19.1%** | **111.3m** | **20.4%** |
+
+Fuel is now more than half of revenue, up from 49.7% a year earlier and from 42% as recently as 2020 — the single most important line in the P&L, and the one the Company gives the least numeric detail on. **The 2025 margin story is entirely a fuel story**: fuel cost per kWh sold rose from 6.58¢ to 7.10¢ (+8%) on flat volume because diesel substitution during the gas disruption cost US$22.0m more than the year before (US$4.0m → US$26.0m), while gas itself actually cost 1.7% less and coal 3.2% less [AR2025 p.176–177, 259–267]. Company-defined EBITDA margin fell from 37.0% to 33.8% as a direct result.
+
+**The tariff mechanism — what is and is not disclosed.** Across six annual reports and seven decks, the Company states only: (1) a "Government-approved electricity tariff formula" allows the fuel component to be passed through to customers [FS Note 31f]; (2) customer bills carry a monthly Rupiah/US-dollar adjustment; (3) customers post a security deposit of roughly one month's estimated bill, pay within 18 days (PLN: 30 days), and incur a 2%/month late fee. **Never disclosed, in any year**: whether industrial customers are billed on a two-part tariff (a capacity/kVA charge plus an energy/kWh charge, which the very existence of "energized capacity" contracts strongly implies) or on energy alone; the fuel-index formula itself; any minimum-take or contract-tenor terms, for ordinary industrial customers or for data centers specifically; and the realised tariff in Rupiah or cents per kWh (computable only by dividing revenue by volume, never printed). The 2016 IPO prospectus is again the exception: it discloses a **capacity charge of Rp9,000/kVA/month against a regulatory cap of Rp15,000**, plus a per-kWh usage charge with full gas-price pass-through [PRO p.165–166] — a structure management said at the time it deliberately underpriced (relative to the cap) "to encourage FDI." Whether that two-part structure, or anything like it, still applies a decade later is not confirmed by any subsequent filing.
+
+### Realised revenue and fuel cost per kWh sold, FY2020–FY2025 and interim periods [calculated from segment revenue ÷ GWh and total fuel expense ÷ total GWh; AR2020–AR2025, decks]
+
+| | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 | 1H25 | 1H26 |
+|---|---|---|---|---|---|---|---|---|
+| Industrial, US¢/kWh | 13.31 | 13.34 | 13.81 | 14.27 | 14.00 | **14.42** | 14.01 | 14.03 |
+| PLN, US¢/kWh | 10.60 | 8.75 | 7.66 | 7.79 | 9.86 | 7.95 | 8.92 | 8.56 |
+| Blended, US¢/kWh | 12.33 | 12.23 | 12.47 | 12.83 | 13.23 | 13.34 | 12.95 | 13.28 |
+| Fuel cost/kWh sold, US¢ | 5.28 | 5.44 | 5.93 | 6.26 | 6.58 | 7.10 | 6.54 | 6.68 |
+| **(Revenue − fuel)/kWh, US¢** | **7.05** | **6.78** | **6.55** | **6.57** | **6.65** | **6.23** | 6.41 | 6.60 |
+
+The gross per-kWh spread over fuel has **compressed 12% since 2020** (7.05¢ → 6.23¢) even as the industrial tariff itself rose 8% — evidence that fuel-cost pass-through is either partial or lagged, not the full, contemporaneous formula the Company's one-line disclosure implies. This is the single most important unit-economics fact for the data-center model in §3.7: if new data-center load is billed on the same blended terms as everything else, its margin should be assumed to follow this compressing trend, not the higher historical spread.
+
+## 2.5 Distribution — how the product is sold
+
+- **Industrial:** direct billing to >2,500 tenants of the five estates, covering 96.6% of estate occupants [AR2025 p.166]. No named-customer concentration disclosure exists for industrial customers (unlike PLN, no industrial customer is named or sized) — a genuine gap, since it would show whether the data-center ramp is one or two large hyperscale accounts or many mid-sized colocation operators. Churn is negligible (0.4% in 2025) and bad-debt experience nil for industrial customers.
+- **PLN:** a single wholesale offtake contract, POWR's only customer disclosed above 10% of revenue (10% in 2025, 14% in 2024) [AR2025 p.420].
+- **Green layer:** I-REC sales (renewable certificates, 79,580 MWh in 2025 vs 6,018 MWh in 2023 — a 13x rise in two years, though absolute revenue is not disclosed and is almost certainly immaterial, likely \<US$0.1m at typical Indonesian I-REC prices of ~US$1–2/MWh) [calculated, illustrative] and rooftop solar leased directly to customer sites, accounted for as finance leases rather than owned generation.
+
+### Who is actually buying the data-center power — from public sources, not POWR's own disclosure
+
+POWR never names a data-center customer. Public industry sources (datacentermap.com, company press releases, trade press; treat as lower-confidence than the filings) identify a cluster of hyperscale/colocation operators with facilities inside or adjacent to POWR's estates, most prominently **DCI Indonesia** (named as a logo partner in POWR's own FY2021–FY2022 decks, before the Company stopped naming customers), **EdgeConneX** (formerly GTN Data Center, acquired May 2022, expanding a Lippo Cikarang campus toward a reported 200+ MW), **Datacomm Diangraha** and **MettaDC** (Jababeka), and a planned Keppel/IndoData facility at MM-2100. A materially larger cluster of announced hyperscale projects (NeutraDC/Telkom, Digital Edge, Princeton Digital Group, DAMAC/EDGNEX — collectively over 1 GW of announced capacity) sits in the neighbouring **GIIC estate at Deltamas, which is PLN-served, not a POWR estate** — a distinction worth holding onto, because headline "Cikarang data-center capacity" figures in trade press routinely blend POWR's addressable market with a much larger PLN-served cluster next door [web research, single-sourced trade press — see §2.7 caveats].
+
+## 2.6 Key variables — what actually moves the model
+
+Sensitivities calculated on FY2025 figures at the FY2025 22.8% effective tax rate, against attributable net profit of US$72.1m [all calculated].
+
+| # | Variable | Weight | Range seen | Sensitivity | Net-profit impact |
+|---|---|---|---|---|---|
+| 1 | **Data-center volume ramp** | 9.1% of industrial kWh (2025) = ~314 GWh; guided to 20% by 2028F | 2%→9% (2019–25 actual); 14%/17%/20% guided (2026–28F); 2022/2023 guidance missed by ~35–45% | See full model, §3.7 | **±US$12–35m/yr by 2028F depending on case** (§3.7) |
+| 2 | **Gas supply reliability** | Gas = 58% of fuel cost; diesel substitution cost +US$22.0m in 2025 alone | Diesel cost 4.0m (2024) → 26.0m (2025); "unprecedented," still interrupted at FY25 year-end | Every 10 percentage points of gas volume forced onto diesel ≈ +US$4–5m fuel cost [rough, calculated from the 2025 swing] | −US$3–4m per 10pp diesel substitution, after tax |
+| 3 | **Fuel-pass-through completeness/lag** | Spread compressed 7.05¢→6.23¢/kWh, 2020–2025 (−12%) | Historical range 6.23–7.05¢ | ±0.1¢/kWh spread on 4,150 GWh sold | ±US$3.2m pre-tax = **±US$2.5m post-tax** |
+| 4 | **PLN take-or-pay compliance** | PLN = 10% of revenue; 2025 delivery 53% vs 72% floor, US$0.6m penalty | 53–78% of the 150 MW base delivered, 2020–2025 | Full 72% delivery vs 2025's 53% = +250 GWh at PLN's 7.95¢ | **+US$14.9m revenue** (mechanical; margin impact smaller since PLN pricing tracks its own gas cost) |
+| 5 | **FX (Rupiah) pass-through lag** | Bills in Rp with monthly USD adjustment; net Rp asset position US$67.6m | ±10% IDR move ⇒ ±US$6.76m PBT [Company-disclosed sensitivity, AR2025 p.430] | Company-stated | **±US$5.2m post-tax** at 22.8% |
+| 6 | **Interest income / cash yield** | Interest income (net) fell from US$19.5m (2024) to US$14.5m (2025) as cash was used to redeem the 2026 notes | USD deposit rates 4.15–5.60% (2025) | | −US$5.0m of the 2025 profit decline is this line alone |
+| 7 | **Board/related remuneration** | US$22.4–26.6m/yr, 31–37% of net profit in weak years | Rose every year 2013–2025 including years profit fell | | Not a "sensitivity" so much as a standing ~US$25m/yr claim on profit before it reaches shareholders |
+
+**Reading it:** unlike a commodity producer, POWR's near-term earnings volatility comes overwhelmingly from **fuel-supply reliability and the completeness of cost pass-through**, not from price. Over a multi-year horizon, however, variable #1 dominates everything else — it is the only line item that can plausibly double the Company's earnings power by 2028, and it is the one variable POWR gives investors the least information to model (§3.7).
+
+## 2.7 Demand
+
+**Data-center demand — the story that matters.** Indonesia's national data-center electricity demand is projected by the energy ministry (ESDM) to grow from roughly 1.1 GW in 2025 to 2.1 GW in 2026, 2.7 GW in 2027, 3.5 GW in 2028 and 5.2 GW by 2033/34, with officials stating the demand will be served by "PLN holding, PLN Batam and other [private] wilayah usaha" — i.e. explicitly including PPUs like POWR, with no policy signal (as of the sources found) forcing data centers onto PLN exclusively [ESDM, 19-Nov-2025, via investortrust.id]. Globally, JLL projects data-center capacity nearly doubling from 97 GW (2025) to ~200 GW (2030), and CBRE projects Asia-Pacific capacity growing from 32 GW (2025) to 57 GW (2030), a 12% CAGR — both cited in POWR's own 1H2026 deck as the backdrop for its Cikarang/Karawang positioning [PRES_1H26 p.19]. **Caveat, important for sizing POWR's addressable market**: a large share of the announced hyperscale pipeline for "Cikarang" (NeutraDC, Digital Edge, Princeton Digital, DAMAC/EDGNEX — collectively over 1 GW announced) sits in the GIIC/Kota Deltamas estate, which is supplied by PLN directly via dedicated substations, not by POWR — so national and even "Cikarang cluster" data-center capacity headlines materially overstate POWR's own opportunity [web research; see §2.5].
+
+**Industrial demand more broadly** tracks Indonesian manufacturing investment into the five estates; POWR's own non-data-center industrial volume has been flat (~3.1–3.3 TWh/yr) since 2021 even as new-vehicle wholesales and general industrial activity have fluctuated, suggesting the estates are close to fully built out for conventional tenants and that **incremental estate demand growth is now almost entirely a data-center phenomenon** [calculated, DECKS_notes §9b].
+
+**PLN demand** is structurally shrinking: the 300 MW of original contracted capacity (two 150 MW tranches) is down to a single 150 MW tranche expiring May 2031, with no indication of renewal or replacement.
+
+## 2.8 Supply
+
+**Competing private power utilities in Indonesia** operating a similar direct-to-industrial model are not systematically disclosed by POWR and were not comprehensively researched here (a gap); POWR describes itself as covering 96.6% of tenants within its own five estates, implying near-monopoly supply within its licensed area but no visibility into whether new estates nearby are served by competing PPUs or directly by PLN.
+
+**PLN itself** is both customer and, at the margin, competitor: any data-center operator can in principle be served directly by PLN (as the GIIC cluster next door demonstrates) rather than by POWR, so POWR's advantage is specifically the estates where its IUPTLU licence is exclusive, not a general Indonesian data-center power monopoly.
+
+**Land supply** inside POWR's five estates is a genuine constraint on the upside case: more than 40% of the combined 5,375 ha estate area remains unelectrified per the Company's own disclosure, framed as headroom, but data-center customers are also described as having "acquired land for future expansion" — i.e., land banking by anchor tenants, which could either accelerate or (if land is held speculatively without building) decouple contracted-capacity headlines from real near-term load.
+
+---
+
+# 03 — UNIT ECONOMICS
+
+## 3.1 Capital structure at 31-Dec-2025
+
+**Total assets: US$1,191.5m**
+
+| Assets | US$m | % of TA | Funded by | US$m | % of TA |
+|---|---|---|---|---|---|
+| Cash & equivalents | 174.2 | 14.6% | Trade & other payables, accrued | 42.9 | 3.6% |
+| Investments (time deposits, bonds) | 135.1 | 11.3% | Customers' deposits | 48.1 | 4.0% |
+| Trade & other receivables | 48.8 | 4.1% | **Senior Notes 2035 (net)** | **343.3** | **28.8%** |
+| Inventories | 63.5 | 5.3% | Other non-current (DTL, employee benefits, leases) | 30.0 | 2.5% |
+| **PPE, net** | **723.4** | **60.7%** | **Total liabilities** | **476.5** | **40.0%** |
+| Finance-lease receivables, other non-current | 46.6 | 3.9% | **Total equity** | **715.0** | **60.0%** |
+| **Total** | **1,191.5** | 100% | **Total** | **1,191.5** | 100% |
+
+By far the most conservative balance sheet in this series of teardowns: **equity funds 60% of assets**, gross debt is a single bullet bond, and the Company holds enough cash and investments (US$309.3m) to cover 90% of that bond outright.
+
+### Debt
+
+| | 31-Dec-2025 | 31-Dec-2024 |
+|---|---|---|
+| Senior Notes 2035, 5.65%, principal | 350.0 | — |
+| Senior Notes 2026, 4.95%, principal | — | 500.0 |
+| Net debt (notes less cash & time deposits >3m) | **72.5** | 99.9 |
+| Net debt / company-defined EBITDA | **0.4x** | 0.5x |
+| EBITDA / finance costs [calculated] | 7.0x | 7.5x |
+
+The US$350m Senior Notes due 12-Mar-2035 (issued March 2025, SGX-listed, coupon 5.65% semi-annual) refinanced the US$500m 4.95% notes due 2026 (redeemed at par April 2025) — the first time the Company has touched the capital markets since 2016. No bank debt is drawn; US$122.0m of committed but undrawn bank lines sit as further headroom. Covenants on the new notes are "investment-grade style" (limits on liens, guarantees, mergers, asset sales) with no debt-incurrence or restricted-payment test, a materially lighter package than the 2026 notes carried. **Leverage policy was tightened in 2025** (net debt/EBITDA cap cut from 3.0x to 2.0x; minimum cash floor of US$100m introduced) even as actual leverage kept falling — read together with the 83–96% dividend payout, capital allocation is now almost entirely a function of the dividend policy, not of the balance sheet. **First investment-grade ratings were achieved in 2025/26** (Moody's Baa3, S&P BBB-, both stable) [AR2025 p.198, 414, 435].
+
+### Liquidity
+
+No principal maturity until 2035 on any disclosed debt instrument. Current ratio 7.8x (2024: 10.7x — still extremely liquid even after it fell, because the 2025 notes-refinancing used internal cash). Trade receivables are 100% Rupiah-denominated and third-party; PLN alone is 12% of receivables (26% in 2024) — a meaningful, single-name Rupiah/state-utility credit exposure, though PLN has never defaulted in the period covered.
+
+## 3.2 Financial performance FY2019–FY2025
+
+### Income statement (US$m)
+
+| | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+|---|---|---|---|---|---|---|---|
+| Net sales | 588.5 | 465.9 | 514.9 | 550.5 | 546.1 | 547.0 | 553.5 |
+| — YoY | — | −20.8% | +10.5% | +6.9% | −0.8% | +0.2% | +1.2% |
+| Fuel expenses | (286.5) | (199.4) | (229.2) | (261.5) | (266.4) | (272.1) | (294.8) |
+| Depreciation | (60.2) | (55.6) | (55.8) | (56.5) | (58.2) | (59.8) | (61.8) |
+| Employee expenses | (51.5) | (49.3) | (47.4) | (50.7) | (57.4) | (56.6) | (49.5) |
+| Other opex (R&M, other, net of other income/expense) | (27.5) | (33.7) | (37.6) | (48.1) | (24.5) | (47.1) | (41.9) |
+| **Operating profit** | **162.8** | **127.8** | **144.9** | **133.6** | **124.6** | **111.3** | **105.5** |
+| Operating margin | 27.7% | 27.4% | 28.1% | 24.3% | 22.8% | 20.4% | 19.1% |
+| Net finance items | (22.3) | (22.7) | (24.2) | (22.3) | (12.3) | (7.4) | (12.2) |
+| Profit before tax | 140.4 | 105.1 | 120.7 | 111.3 | 112.3 | 103.9 | 93.3 |
+| Tax | (26.9) | (30.3) | (30.3) | (38.8) | (35.3) | (28.6) | (21.3) |
+| **Net profit** | **113.5** | **74.8** | **90.4** | **72.5** | **77.0** | **75.3** | **72.1** |
+| Net margin | 19.3% | 16.0% | 17.6% | 13.2% | 14.1% | 13.8% | 13.0% |
+| EPS (US$) | 0.0071 | 0.0047 | 0.0057 | 0.0046 | 0.0049 | 0.0048 | 0.0046 |
+
+*Source: AR2020–AR2025, reclassified onto a consistent by-nature basis (see TIMESERIES.md for the full reconciliation and line-item detail).*
+
+**The headline is a company that has not grown its bottom line in six years.** Net profit peaked at US$113.5m in FY2019 and has run in a US$72–90m band ever since, with operating margin compressing steadily from 27.7% to 19.1%, almost entirely a fuel-cost story (§2.4) layered on flat-to-declining volume outside data centers. This is the context that makes the data-center ramp strategically important: **it is close to the only source of organic earnings growth the Company has left.**
+
+### Key ratios [calculated]
+
+| | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+|---|---|---|---|---|---|---|---|
+| Gross-ish margin (sales − fuel) | 51.3% | 57.2% | 55.5% | 52.5% | 51.2% | 50.3% | 46.7% |
+| Company EBITDA margin | 38.5% | 40.5% | 40.4% | 38.1% | 37.5% | 37.0% | 33.8% |
+| ROE (net profit / avg equity) | — | 11.6% | 13.9% | 10.6% | 11.1% | 10.6% | 10.1% |
+| Net debt / EBITDA | 1.3x | 1.4x | 1.3x | 0.9x | 0.5x | 0.5x | 0.4x |
+| Dividend payout | 64% | 79% | 73% | 96% | 95% | 96% | ≥32% (interim only; final TBD) |
+
+### 1H2026 — the trend into the current year
+
+| US$m | 1Q25 | 1Q26 | YoY | 1H25 | 1H26 | YoY |
+|---|---|---|---|---|---|---|
+| Revenue | 135.5 | 128.2 | −5.4% | 271.3 | 274.8 | +1.3% |
+| — Industrial | 116.1 | 118.0 | +1.6% | 232.4 | 250.4 | +7.8% |
+| — PLN | 19.4 | 10.2 | −47.4% | 38.9 | 24.4 | −37.4% |
+| Operating profit | 30.1 | 26.4 | −12.3% | 58.4 | 60.5 | +3.5% |
+| EBITDA (company def.) | 51.4 | 45.7 | −11.1% | 101.1 | 102.7 | +1.5% |
+| Net profit | 16.9 | 17.5 | +3.6% | 39.6 | 37.1 | **−6.3%** |
+| Effective tax rate | 31.6% | 26.8% | | 21.7% | 33.1% | |
+
+**The entire 1H2026 profit decline is a tax-line phenomenon, not an operating one**: operating profit and EBITDA both grew year-on-year, but the effective tax rate jumped from 21.7% to 33.1% (implied 2Q26 rate ~38%), for reasons neither the Company's decks nor any filing in hand explain [calculated from DK-1H26]. Industrial revenue growth (+7.8%) continued to outpace the flat non-DC base, consistent with the data-center ramp continuing through 1H2026 (data centers reached 12% of industrial kWh in 1Q26 and 1H26, up from 9% for full-year 2025) even as PLN revenue nearly halved on the ongoing gas-supply disruption.
+
+## 3.3 Revenue structure
+
+```
+FY2025 net sales US$553.5m
+├── Industrial            498.2  (90.0%)  ── of which data centers ≈ 9.1% of industrial GWh [company-disclosed share]
+│                                              ≈ US$45m of revenue [calculated, §3.7]
+└── PLN                     55.3  (10.0%)  ── legacy 150 MW take-or-pay contract, expires May 2031
+```
+
+Single reportable segment (electricity generation and distribution); all operations in Indonesia; **no revenue breakdown by data-center vs other industrial customer appears anywhere in the audited financial statements** — the only split the Company gives is the industrial-sector pie chart in the annual report MD&A, from which the §3.7 model is built.
+
+## 3.4 Cost structure summary (FY2025, % of revenue) [calculated]
+
+```
+Revenue                                    100.0%    553.5
+  Fuel (gas 31.0% / coal 15.4% / diesel 4.7% / biomass 2.2%)  53.3%    294.8
+  Depreciation                              11.2%     61.8
+  Employee expenses                          8.9%     49.5
+  Repair & maintenance                       2.7%     15.2
+  Other operating expenses                   3.7%     20.4
+  Net other income/(expense)                 1.1%      6.3
+= Operating profit                          19.1%    105.5
+  Net finance cost (finance costs less interest income)  2.2%     12.2
+  Tax                                        3.8%     21.3
+= Net profit                                13.0%     72.1
+```
+
+## 3.5 Unit economics
+
+### Per average MVA of industrial energized capacity, FY2025 [calculated]
+
+| | Industrial (all) | Data centers | Non-data-center industrial |
+|---|---|---|---|
+| Average energized MVA (2024→2025 avg) | 1,365 | 219.5 | 1,145.5 |
+| Revenue (US$m) | 498.2 | ~45.3 [calculated] | ~452.9 [calculated] |
+| Revenue per average MVA (US$'000) | 365 | ~206 | ~395 |
+| Implied GWh per average MVA | 2.53 | ~1.43 | ~2.75 |
+| Implied load factor (MVA≈MW at unity power factor, indicative only) | ~29% | **~16%** | ~31% |
+
+**The single most important unit-economics fact in this report**: data centers generate roughly **half the revenue per contracted MVA** that the rest of the industrial book does, because they are drawing at a far lower load factor against the capacity they have contracted. This is normal for data centers everywhere (capacity is reserved years ahead of a phased IT-load ramp), but it means the MVA growth the Company advertises is a leading, not a coincident, indicator of revenue — and it is the central mechanic the §3.7 model has to get right.
+
+### Marginal economics of incremental data-center load (FY2025 cost basis) [calculated, illustrative]
+
+Per 100 GWh/yr of additional data-center load, billed at the 2025 industrial average tariff and fuel cost:
+
+| | US$m |
+|---|---|
+| Revenue (14.4¢/kWh) | 14.4 |
+| Fuel (7.1¢/kWh, 2025's disrupted level; 6.6¢ at 2024's more normal level) | (7.1) / (6.6) |
+| Gross spread | 7.3 / 7.8 |
+| Marginal opex (assumed; see §3.7 methodology) | ~(1.0–1.7) |
+| Pre-tax contribution | ~5.6–6.8 |
+| **After-tax contribution (22.8%)** | **~US$4.3–5.3m per 100 GWh** |
+
+Because the fleet is running well below its reserve margin, **incremental load requires close to no incremental fixed capex or fixed opex** — the marginal-cost logic here is closer to a software company's than a capital-intensive generator's, which is exactly why the data-center ramp matters disproportionately to earnings growth despite being a minority of volume.
+
+## 3.6 Market valuation
+
+| Metric | Value | Basis |
+|---|---|---|
+| Share price | Rp1,020 | 14-Sep-2026 (most recent reliable data point found; see caveat below) |
+| Shares outstanding (ex-treasury) | 15,851,499,100 | AR2025 p.118 |
+| Market cap | Rp16.17tn ≈ **US$905m** | [calculated at Rp17,856/US$, the Company's own 30-Jun-2026 rate] |
+| Trailing P/E | ~12.99x → ~13.0x | stockanalysis.com, 14-Sep-2026 |
+| Dividend yield (trailing) | ~8.2% | Rp73.7–75.9 trailing DPS |
+| Net debt/EBITDA | 0.4x | AR2025 |
+
+**Caveat on the price**: the most recent verifiable data point found was 14-Sep-2026 (Rp1,020, up sharply from Rp705–910 earlier in 2026); an independent stockanalysis.com fetch on the day of writing returned a stale Rp910/24-Aug-2026 cache. This report is compiled 21–22-Sep-2026; the reader should treat Rp1,020 as directionally current but re-check the live price before acting on any of the multiples below.
+
+### Peers (partial — data collection was cut short by a tool-availability limit; treat as indicative)
+
+| Company | Market | Trailing P/E | Note |
+|---|---|---|---|
+| **POWR** | IDX | ~13.0x | Net cash-like, 8%+ yield, first IG ratings |
+| Blue Bird (BIRD) | IDX (different sector, for context) | ~6.5x | Cross-reference only, not a true peer |
+| EGCO | Thailand | ~12.2x forward | Thai IPP; distorted trailing P/E |
+| GPSC / BGRIM / GULF | Thailand | not retrieved | Thai power producers with some IPP/industrial exposure |
+| One un-named sell-side "regional utility peer" set | — | 18.4x P/E, 13.6x EV/EBITDA | Stockbit, 8-Sep-2026, single-sourced |
+
+**An independent sell-side model exists and is a useful cross-check** (Stockbit Snips, 8-Sep-2026, single broker/platform, not verified against a second source): net income US$72m (2025A, matches AR2025 exactly), US$90m (2026F), US$100m (2027F) — implying **~+US$18m and +US$10m of year-on-year growth in 2026 and 2027**, almost entirely attributable, on Stockbit's own framing, to data-center volume and gas-supply normalisation, since the non-DC business is flat. Stockbit's own DC utilisation-based model estimates ~18% utilisation in 2025 rising to ~24% by 2026–27F, and states a sensitivity of **+US$0.75m of 2026F net income per +1 percentage point of utilisation** — both figures independently reconcile within about a percentage point of the bottom-up model built in §3.7 below, which is a meaningful cross-check given the two models were built from different starting assumptions.
+
+## 3.7 Scenario: the data-center earnings model
+
+This is the section the report exists to answer. POWR discloses a capacity path and a volume-share path for data centers but not a tariff, a margin, or a customer count — so the model below is built bottom-up from what is disclosed, using three convergent approaches, and presented as a range rather than a point estimate.
+
+### Step 1 — anchor on what FY2025 actually shows
+
+Data centers were **9.1% of industrial kWh sold in 2025** (the one year the Company's sector pie chart is granular enough to isolate) [AR2025 p.161, mapped against PRES_FY25 p.6/p.19]. Applied to 3,455 GWh of industrial sales: **~314 GWh of data-center consumption**. At the industrial-average realised tariff of 14.42¢/kWh (the Company does not disclose a DC-specific tariff, so this is the working assumption, flagged as the model's single biggest source of error): **~US$45.3m of 2025 data-center revenue**, or about **8.2% of total company revenue**. At the 2025 fuel cost of 7.10¢/kWh, the gross spread is ~US$23.3m — roughly **12% of company-defined FY2025 EBITDA** [all calculated].
+
+### Step 2 — project forward on the Company's own guided path
+
+The Company guides data centers to **14% / 17% / 20%** of industrial kWh for 2026F/2027F/2028F (stated CAGR 34% for energized MVA, 2019–2028F) [AR2025 p.48, 197; PRES_FY25 p.19]. Holding non-data-center industrial volume flat at its 2021–2025 average of ~3,144 GWh/yr (the demonstrated pattern — see §2.7) and solving for total industrial volume at each data-center share:
+
+| | 2026F | 2027F | 2028F |
+|---|---|---|---|
+| Data-center share of industrial kWh (Company guidance) | 14% | 17% | 20% |
+| Implied total industrial GWh [calc: 3,144/(1−share)] | 3,656 | 3,788 | 3,930 |
+| **Implied data-center GWh** | **512** | **644** | **786** |
+
+### Step 3 — cross-check against the independent (Stockbit) model
+
+Stockbit's total-sales-based data-center share (7%/12%/14% of *total* sales, a different denominator that includes PLN) implies data-center GWh of 291 (2025) / **525 (2026F)** / **645 (2027F)** on their own total-sales forecast — within 3% of the Company-guidance-based figures above (512 and 644) despite starting from an entirely different base and a different analyst. **This convergence is the strongest evidence in the whole report that the ~500–650 GWh 2026–27 range is a reasonable central estimate**, even though neither source discloses the tariff needed to turn it into profit.
+
+### Step 4 — three scenarios, with explicit assumptions
+
+| Assumption | Bear | Base | Bull |
+|---|---|---|---|
+| DC share of industrial kWh, 2026F/27F/28F | 11.5% / 12.0% / 12.5% (ramp stalls near 2025's pace — precedented: 2022 and 2023 guidance both missed by 30–45%) | 14% / 17% / 20% (Company's own current guidance, cross-checked in Step 3) | 16% / 20% / 25% (1H26 already running at 12% vs FY25's 9% — ahead of the Company's own full-year path; regional hyperscale pipeline of >1 GW nearby) |
+| Revenue per kWh (DC) | 13.0¢ (assumes DC customers negotiate a capacity-heavy, lower blended rate as volumes scale) | 14.42¢ (2025 industrial average, no DC-specific discount assumed) | 14.42¢ (held at 2025 average) |
+| Fuel cost per kWh | 7.1¢ (2025's disrupted level persists) | 6.6¢ (2024 level — gas supply normalises; the "Akasia Bagus" PEP arrangement reported effective 3Q26) | 6.3¢ (normalises further; more renewables in the mix) |
+| Marginal opex per kWh [assumption, since reserve margin absorbs most incremental load] | 1.7¢ | 1.3¢ | 1.0¢ |
+| Effective tax rate | 30% | 22.8% (2025 actual) | 21.7% (1H25 level) |
+
+### Step 5 — results (US$m unless stated)
+
+| Case | Year | DC GWh | Revenue | Fuel | Spread | Marginal opex | Pre-tax | **Net income** | % of FY25 group NI (72.1m) |
+|---|---|---|---|---|---|---|---|---|---|
+| Bear | 2026F | 409 | 53.1 | 29.0 | 24.1 | 6.9 | 17.2 | **12.0** | 17% |
+| Bear | 2027F | 429 | 55.7 | 30.4 | 25.3 | 7.3 | 18.0 | **12.6** | 17% |
+| Bear | 2028F | 449 | 58.4 | 31.9 | 26.5 | 7.6 | 18.9 | **13.2** | 18% |
+| **Base** | **2026F** | **512** | **73.8** | **33.8** | **40.0** | **6.7** | **33.4** | **25.8** | **36%** |
+| **Base** | **2027F** | **644** | **92.9** | **42.5** | **50.4** | **8.4** | **42.0** | **32.4** | **45%** |
+| **Base** | **2028F** | **786** | **113.3** | **51.9** | **61.5** | **10.2** | **51.2** | **39.6** | **55%** |
+| Bull | 2026F | 599 | 86.4 | 37.7 | 48.6 | 6.0 | 42.6 | **33.4** | 46% |
+| Bull | 2027F | 786 | 113.3 | 49.5 | 63.8 | 7.9 | 56.0 | **43.8** | 61% |
+| Bull | 2028F | 1,048 | 151.1 | 66.0 | 85.1 | 10.5 | 74.6 | **58.4** | 81% |
+
+*Full arithmetic: /home/claude/POWR/dc_model.py, run and verified independently of this write-up.*
+
+**Per-share and re-rating impact, base case** (15,850m shares outstanding, US$/share):
+
+| Year | DC net income | EPS contribution | Rp/share equivalent (at Rp17,856/US$) | Implied market-cap contribution at 9x P/E | at 13x P/E |
+|---|---|---|---|---|---|
+| 2026F | US$25.8m | +$0.00163 | +Rp29 | +US$232m | +US$335m |
+| 2027F | US$32.4m | +$0.00204 | +Rp37 | +US$292m | +US$421m |
+| 2028F | US$39.6m | +$0.00250 | +Rp45 | +US$356m | +US$515m |
+
+Against an ~US$905m current market cap, the base case alone implies data centers could plausibly be worth **US$230–520m of that market cap by 2028**, depending on the multiple the market ultimately assigns — a large fraction of the total, and the clearest quantitative statement this report can make of why the stock has re-rated through 2026 (Rp705 in early 2026 to Rp1,020 by September).
+
+### Step 6 — where this model is weakest, stated plainly
+
+1. **The DC-specific tariff is an assumption, not a disclosed fact.** If data centers are billed predominantly on a capacity (kVA) charge with a low usage component — plausible, given the low observed load factor (§3.5) — then applying the industrial-average energy tariff to DC GWh could meaningfully overstate revenue in the ramp-up years and understate it once utilisation matures. The Company has never published a DC-specific rate card.
+2. **Load factor could re-rate either direction.** If contracted MVA keeps growing faster than actual draw (as it has since 2023 — DC load factor fell from ~23% in 2019–22 to ~13–16% in 2023–25), the base case's implied load-factor recovery to ~21–22% by 2028F may be optimistic; if instead hyperscale tenants ramp faster than colocation tenants historically have (plausible given the AI-driven nature of the current pipeline), the bull case could understate revenue.
+3. **Marginal opex is an assumption**, not derived from any disclosed DC-specific cost line; it is inferred from the fact that reserve margin absorbs most incremental volume without new fixed capex.
+4. **The "flat non-DC industrial volume" assumption** is well-supported by 2021–2025 data but is itself an extrapolation.
+
+## 3.8 Roadmap and what to watch
+
+1. **Data-center share of industrial kWh, quarterly.** The single most important number the Company already discloses; watch for whether 1H26's 12% (already ahead of the FY2025 pace of 9%) continues to run ahead of the Company's own 14% FY2026 guidance.
+2. **Gas-supply normalisation.** The PEP "Akasia Bagus" arrangement and PGN well-depletion recovery are the swing factor for whether fuel cost per kWh reverts toward 6.6¢ or stays near 7.1¢ — worth roughly US$0.5¢/kWh × 4,150 GWh ≈ US$20m of pre-tax profit either way.
+3. **The unexplained US$28.7m substation project** — watch AR2026 for whether it is finally described as data-center-related infrastructure, which would be the first hard evidence of DC-specific capex.
+4. **1H2026's tax-rate spike** (33.1% vs 21.7% in 1H25) — unexplained in every source read; watch whether it reverses or becomes the new normal, since it alone explained the entire 1H26 net-profit decline despite operating profit growth.
+5. **Free-float compliance** by the March 2027 IDX deadline — the treasury-share sell-down could add modest sustained selling pressure through 2026–27 independent of fundamentals.
+6. **2026 final dividend** (not yet declared in the documents read) as a read on whether the Company intends to keep payout near 95% given the tightened 2.0x leverage cap and the need to fund the gas-engine and substation projects.
+7. **Named data-center customers/customer count** — a disclosure the Company could add at low cost and has not; its absence is the main reason this report's central number carries a ±40% range rather than a point estimate.
+8. **Disclosure fixes to ask for:** DC customer count and named operators; DC-specific tariff terms; gas price (US$/MMBtu) and volumes; generation GWh by plant; the EBITDA definition; per-person board remuneration; the purpose of the substation CIP project; the FY2025 final dividend; reconciliation of the US$7.4m gas-incident insurance claim referenced in investor decks but absent from the audited financial statements.
+
+---
+
+# SUMMARY VERDICT
+
+**What it is.** POWR is a debt-light, high-payout, single-segment power utility whose legacy business — selling gas- and coal-fired electricity to industrial tenants of five Jakarta-adjacent estates, plus a shrinking wholesale contract with PLN — has not grown its bottom line since 2019. Layered on top of that flat base is a genuinely fast-growing data-center customer class that the Company is happy to describe in capacity terms (MVA, guided to nearly double by 2028) and much less happy to describe in economic terms (no disclosed tariff, margin, or customer count).
+
+**What it earns through the cycle.** Excluding the estimated data-center contribution, the rest of the business generated roughly US$47–60m of net income in FY2025 [calculated: US$72.1m total less the ~US$12–25m range of data-center contribution depending on which case is applied retrospectively] — a business earning a high-teens operating margin on a fully-depreciated, low-capex asset base, funded almost entirely by equity, and paying out 85–95% of profit as dividend. On today's ~US$905m market cap that legacy business alone, at ~13x trailing earnings for the whole company, is not expensive for a monopoly-like, investment-grade-rated utility yielding over 8%.
+
+**What has to be true for the data-center upside to work.** Three things, in order of how much the model depends on them: (1) the Company's own 14%/17%/20% industrial-kWh-share guidance for 2026–28 has to hold, or come close — its forecasting record on this specific metric is mixed (two clear misses in 2022–23, on-target from 2024); (2) whatever tariff data centers actually pay has to be reasonably close to the industrial average used throughout this model, since no disclosed rate card confirms or refutes that assumption; (3) gas supply has to stabilise, because every dollar of margin the data-center ramp generates can be offset by continued diesel substitution at the fuel-cost line.
+
+**What would break it.** A repeat of 2022–23's forecasting pattern (guided capacity growth that does not convert to guided volume growth) would leave data centers contributing closer to the bear case's US$12–13m/year than the base case's US$26–40m — not existential for a company this conservatively financed, but a meaningful drag on the re-rating the stock has already enjoyed through 2026. A prolonged gas-supply crisis, on top of a stalled DC ramp, would be the genuine downside case, given fuel is now 53% of revenue and the single biggest swing factor in every year examined.
+
+**Position.** On the filings, POWR looks like one of the few clean, liquid ways to buy Indonesia's data-center power-demand theme on the IDX, at a reasonable multiple for the legacy business and a real — if wide — range of optionality on top from data centers, worth plausibly US$230–520m of incremental market value by 2028 in the base case alone (§3.7). The asymmetry is that almost all of the uncertainty in that number is disclosure-driven, not business-driven: the Company knows its own data-center revenue and tariff and has chosen not to publish either. A reader underwriting this stock is, in effect, underwriting management's capacity guidance and its fuel-pass-through claim, with only an independent sell-side model (itself single-sourced) as a cross-check.
+
+*This is an analytical view of the business from its filings, not investment advice. I'm not a financial advisor.*
+
+---
+
+## Anything odd — digest
+
+| # | Item | Where | Why it matters |
+|---|---|---|---|
+| 1 | Data-center customer count, names, tariff, take-or-pay/tenor, load factor never disclosed in six annual reports or seven decks | All filings, searched exhaustively (terms listed in each year's notes) | The single largest gap in an otherwise detailed filer; forces the whole §3.7 model to be built on assumptions |
+| 2 | Company-defined "EBITDA" does not equal operating profit + depreciation; the gap (US$12.6–19.9m in 2023–25) is never defined in any MD&A | AR2023 p.182 explicitly says the definition is not given (indenture definition); AR2025's deck footnote finally states it (net profit + interest + tax + D&A + non-cash + non-recurring) but no AR repeats it | Company-reported EBITDA margins (33.8–40.5%) overstate the "clean" operating-profit-plus-depreciation basis (30.2–39.4%) by up to 4pp in some years |
+| 3 | US$28.7m "substation project" in construction-in-progress, 85% complete at both end-2024 and end-2025 (i.e., no progress in a year), purpose never stated | AR2025 Note 8, p.401 | Large enough and unexplained enough to plausibly be DC-related grid reinforcement; the Company never confirms or denies |
+| 4 | Board+Commissioner remuneration (US$22.4–26.6m/yr depending on perimeter) is 31–37% of net profit in years profit fell, and rose every year 2013–2025 including 2022 (profit −20%) and 2025 (profit −4%) | Governance chapters and FS Note 1d across all six ARs | No per-person disclosure in any year; two different remuneration perimeters (governance chapter vs FS note) never reconcile |
+| 5 | 2025 gas-incident insurance claim (US$7.4m, "approved," per investor decks) appears nowhere in the audited FY2025 financial statements | PRES_1H26/PRES_3M26 vs AR2025 (searched exhaustively, incl. OCR of image-only FS pages) | Either the claim sits inside an unexplained US$3.6m "other" expense line, or it genuinely has not been booked; unresolved |
+| 6 | 1H2026 net profit fell 6.3% despite operating profit and EBITDA both rising, entirely because the effective tax rate jumped from 21.7% to 33.1% | DK-1H26; no explanation in any deck | A single-line swing large enough to flip the headline growth story from positive to negative |
+| 7 | Three different 2023 capex figures in the same annual report (US$24.3m MD&A vs US$27.85m cash-flow vs US$30.76m fixed-asset note) | AR2023 p.184, 389, 431 | Never reconciled; use the cash-flow figure as most reliable |
+| 8 | 2016 IPO-era balance-sheet engineering: a Rp1.83tn stock dividend (capitalising retained earnings) immediately followed by a token US$5.0m cash dividend, then a tax-basis asset revaluation producing a US$69.5m one-off deferred-tax credit that inflated Q1-2016 reported profit 4.4x | PROSPECTUS2016 p.418–427, 490 | Entirely historical (pre-IPO), but shows the pattern of balance-sheet management around the listing event |
+| 9 | Coal and gas supplier-purchase disclosures never sum to the reported fuel-expense line (2025: coal gap US$23.6m; gas suppliers ≈99% reconciled, closer) | AR2022–AR2025 fuel notes | Freight, shipping (via BLJ) and spot purchases presumably explain the gap, but it is never stated |
+| 10 | S&P's own rating is printed as both "BBB" and "BBB-" within the same annual report | AR2025 p.191 vs pp.45, 57, 192, 198 | Typo-level, but symptomatic of the filing's general looseness on cross-references |
+| 11 | Developer fees (paid to unnamed estate developers) have sat at 0.8–0.9% of industrial revenue every year since at least 2013 | PROSPECTUS2016 through AR2025 | Strongly suggests a formula-driven related-party-adjacent arrangement never disclosed as such |
+| 12 | PT Jababeka Infrastruktur held 21% of POWR from 1997–2003; Sutanto Joso (POWR's founder and current President Commissioner) sat on Jababeka's own board 1989–2002 | PROSPECTUS2016 p.108–110, 117 | Zero trace of this history in any of the six annual reports; the two companies' historical entanglement is invisible to a reader who only has the ARs |
+| 13 | BLJ's 0.002% minority shareholder is named "Janti Joso Brasali" — a surname spanning both controlling families | Every AR, p.120-146 range | Never explained |
+| 14 | Net capacity factor calculations imply generation (~4,390–4,620 GWh) that does not reconcile cleanly to reported sales + stated 0.5–0.7% network losses | Multiple ARs, calculated | The denominator the Company uses for "capacity factor" (926 MW, excluding standby units) is never fully explained |
+
+## NOT DISCLOSED (material)
+
+- Data-center customer count, named operators, DC-specific tariff/contract terms, take-or-pay or minimum-charge terms, tenor, and DC revenue/margin in any form
+- The industrial tariff formula: whether a two-part (capacity + energy) structure applies today, the fuel-index formula, and any minimum-take or tenor terms for ordinary industrial customers
+- Gas price (US$/MMBtu) and volumes (BBTUD) for POWR's own PGN/PEP contracts; whether POWR's gas qualifies for the government's HGBT US$7/MMBtu price
+- Coal tonnage and price (US$/tonne)
+- Generation (GWh) by plant, heat rate methodology, and the precise capacity-factor denominator
+- Named individual ultimate beneficial owners above the three holding companies
+- Per-person board and key-management remuneration
+- The IUPTLU licence's precise expiry date (only the pre-2016 MEMR renewal — "30 years from 11-Dec-2006" — is confirmed; no later renewal date is stated)
+- FY2025 final dividend (interim only was in the documents read)
+- The purpose of the US$28.7m substation construction-in-progress project
+- Reconciliation of the US$7.4m gas-incident insurance claim referenced in decks but absent from the audited FY2025 financial statements
+- A full, comparable competitor set of other Indonesian PPUs (own research gap, not just a company non-disclosure)
+
+---
+
+## Sources
+
+| Document | Pages | Period covered | Used for |
+|---|---|---|---|
+| IPO Prospectus (Indonesian), June 2016 | 602 | FY2013–FY2015 audited; unaudited 3M-2016 | History, ownership history and UBOs, IPO mechanics, tariff structure (uniquely candid), gas contracts, licence terms |
+| AR2020 — Annual Report 2020 (incl. audited FS, EY) | 676 | FY2020; comparative FY2019, highlights to FY2018 | FY2019–2020 financials, COVID impact, earliest data-center disclosure, ownership/boards at Dec-2020 |
+| AR2021 — Annual Report 2021 | 596 | FY2021; comparative FY2020, some FY2019 | FY2021 financials, ownership/boards, data-center and tariff data |
+| AR2022 — Annual Report 2022 | 466 | FY2022; comparative FY2021 | FY2022 financials (2022 energy-price-spike year), ownership/boards, related parties |
+| AR2023 — Annual Report 2023 | 474 | FY2023; comparative FY2022 | FY2023 financials, PLN PPA detail, contradictions/oddities, litigation |
+| AR2024 — Annual Report 2024 | 468 | FY2024; comparative FY2023 | FY2024 financials, 2024 gas-supply disruption (first phase), PLN PPA mechanics verification |
+| AR2025 — Annual Report 2025 | 438 | FY2025; comparative FY2024 | The primary source for this report: full financials, 2025 gas incident, notes refinancing, ownership/boards/remuneration, data-center and tariff data, related parties |
+| PRES_FY21 – PRES_FY25, PRES_3M26, PRES_1H26 — seven investor-presentation decks | 16–26 each | FY2021 through 1H2026 | The data-center MVA/share time series and its forecast path across seven successive decks (used to check the Company's own forecasting record), quarterly financials, gas-incident updates, treasury-share/free-float disclosure |
+| Web research (compiled 21–22-Sep-2026) | — | 2024–Sep-2026 | Indonesian PPU regulation and gas-price policy (ESDM, murdonolaw.com); data-center demand outlook (JLL/CBRE via POWR's own deck; ESDM via investortrust.id); named data-center operators in the Cikarang/Karawang cluster (datacentermap.com, company press releases — lower confidence, not cross-verified); share price and valuation (stockanalysis.com, investing.com); independent sell-side model (Stockbit Snips, 8-Sep-2026, single-sourced) |
+
+*Page counts are PDF pages. All annual reports and the prospectus were read through text extraction with the table of contents mapped first (the FY2025 audited financial-statement pages, which are scanned images, were OCR'd). Figures marked `[calculated]` are derived here. Anything labelled "inference" or "web research, single-sourced" is a lower-confidence reading, not a company or independently-verified statement.*

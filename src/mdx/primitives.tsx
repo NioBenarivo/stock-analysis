@@ -48,7 +48,7 @@ function HeadingAnchor({ id }: { id?: string }) {
 // rehype-slug puts an `id` on every heading; these expose it as a hover anchor.
 export function H2({ id, children, ...props }: ComponentPropsWithoutRef<'h2'>) {
   return (
-    <h2 id={id} className="group scroll-mt-20" {...props}>
+    <h2 id={id} className="group scroll-mt-28 sm:scroll-mt-20" {...props}>
       {children}
       <HeadingAnchor id={id} />
     </h2>
@@ -57,7 +57,7 @@ export function H2({ id, children, ...props }: ComponentPropsWithoutRef<'h2'>) {
 
 export function H3({ id, children, ...props }: ComponentPropsWithoutRef<'h3'>) {
   return (
-    <h3 id={id} className="group scroll-mt-20" {...props}>
+    <h3 id={id} className="group scroll-mt-28 sm:scroll-mt-20" {...props}>
       {children}
       <HeadingAnchor id={id} />
     </h3>
@@ -70,7 +70,7 @@ export function H1({ id, children, ...props }: ComponentPropsWithoutRef<'h1'>) {
   return (
     <h1
       id={id}
-      className="group mt-12 scroll-mt-20 border-b border-slate-200 pb-2 text-xl dark:border-slate-800"
+      className="group mt-12 scroll-mt-28 sm:scroll-mt-20 border-b border-slate-200 pb-2 text-xl dark:border-slate-800"
       {...props}
     >
       {children}
@@ -81,7 +81,7 @@ export function H1({ id, children, ...props }: ComponentPropsWithoutRef<'h1'>) {
 
 export function H4({ id, children, ...props }: ComponentPropsWithoutRef<'h4'>) {
   return (
-    <h4 id={id} className="group scroll-mt-20" {...props}>
+    <h4 id={id} className="group scroll-mt-28 sm:scroll-mt-20" {...props}>
       {children}
       <HeadingAnchor id={id} />
     </h4>

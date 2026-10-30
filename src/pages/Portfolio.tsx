@@ -34,7 +34,10 @@ const EVENT_FILTERS: { type: EventType; label: string }[] = [
 // never change, so this is computed once rather than per render.
 const cashRows = cashFlows.reduce<(PortfolioEvent & { running: number })[]>((rows, flow) => {
   const previous = rows.length > 0 ? rows[rows.length - 1].running : 0
-  return [...rows, { ...flow, running: previous + (flow.type === 'deposit' ? flow.amount : -flow.amount) }]
+  return [
+    ...rows,
+    { ...flow, running: previous + (flow.type === 'deposit' ? flow.amount : -flow.amount) },
+  ]
 }, [])
 
 const netCashIn = cashRows.length > 0 ? cashRows[cashRows.length - 1].running : 0
@@ -50,10 +53,7 @@ export default function Portfolio() {
     [],
   )
 
-  const shown = useMemo(
-    () => allEvents.filter((event) => !hidden.includes(event.type)),
-    [hidden],
-  )
+  const shown = useMemo(() => allEvents.filter((event) => !hidden.includes(event.type)), [hidden])
 
   function toggle(type: EventType) {
     setHidden((current) =>
@@ -76,8 +76,8 @@ export default function Portfolio() {
               <code className="rounded bg-slate-100 px-1 py-0.5 dark:bg-slate-800">
                 src/data/portfolio.local.ts
               </code>
-              , which is deliberately kept out of git so real balances never reach a public
-              site. Run the app locally to see the chart.
+              , which is deliberately kept out of git so real balances never reach a public site.
+              Run the app locally to see the chart.
             </p>
           </div>
         </div>
@@ -102,7 +102,7 @@ export default function Portfolio() {
         </div>
 
         <div
-          className={`mb-8 grid grid-cols-2 gap-4 ${hasCashFlows ? 'lg:grid-cols-3' : 'lg:grid-cols-4'}`}
+          className={`mb-8 grid grid-cols-2 gap-3 sm:gap-4 ${hasCashFlows ? 'lg:grid-cols-3' : 'lg:grid-cols-4'}`}
         >
           <Stat label="Market value" value={formatRupiah(latestMonth.marketValue)} />
           <Stat
@@ -168,8 +168,8 @@ export default function Portfolio() {
 
         {months.length < 2 && (
           <p className="mt-3 text-xs text-slate-400 dark:text-slate-500">
-            One statement so far, so there is no growth line yet — every marker sits at the
-            31 January value. Add more months to{' '}
+            One statement so far, so there is no growth line yet — every marker sits at the 31
+            January value. Add more months to{' '}
             <code className="rounded bg-slate-100 px-1 py-0.5 dark:bg-slate-800">
               portfolio.local.ts
             </code>{' '}
@@ -258,10 +258,7 @@ export default function Portfolio() {
         </Section>
 
         {hasCashFlows && (
-          <Section
-            title="Cash in and out"
-            caption={`Net ${formatRupiah(netCashIn)}`}
-          >
+          <Section title="Cash in and out" caption={`Net ${formatRupiah(netCashIn)}`}>
             <table className="w-full text-sm">
               <thead>
                 <Tr head>
@@ -282,9 +279,7 @@ export default function Portfolio() {
                       </span>
                     </Td>
                     <Td>
-                      <span className="text-slate-500 dark:text-slate-400">
-                        {row.note ?? '—'}
-                      </span>
+                      <span className="text-slate-500 dark:text-slate-400">{row.note ?? '—'}</span>
                     </Td>
                     <Td right>
                       <span className={row.type === 'deposit' ? UP : DOWN}>
@@ -317,8 +312,8 @@ export default function Portfolio() {
 
         {hasCashFlows && !lifetimeCashKnown && (
           <p className="mt-3 text-xs text-slate-400 dark:text-slate-500">
-            These transfers start inside the statement window, so the chart's cash line
-            begins at the {since} portfolio value and adds them from there. Give{' '}
+            These transfers start inside the statement window, so the chart's cash line begins at
+            the {since} portfolio value and adds them from there. Give{' '}
             <code className="rounded bg-slate-100 px-1 py-0.5 dark:bg-slate-800">
               openingBalance
             </code>{' '}
@@ -330,10 +325,7 @@ export default function Portfolio() {
           </p>
         )}
 
-        <Section
-          title="Activity"
-          caption={`${shown.length} of ${allEvents.length} entries`}
-        >
+        <Section title="Activity" caption={`${shown.length} of ${allEvents.length} entries`}>
           <table className="w-full text-sm">
             <thead>
               <Tr head>
@@ -391,11 +383,11 @@ function Stat({
   tone?: 'up' | 'down'
 }) {
   return (
-    <div className="rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900">
+    <div className="rounded-xl border border-slate-200 bg-white p-3 sm:p-4 dark:border-slate-800 dark:bg-slate-900">
       <p className="text-xs text-slate-500 dark:text-slate-400">{label}</p>
       {/* Proportional figures: tabular digits read loose at this size. */}
       <p
-        className={`mt-1 text-lg font-semibold ${
+        className={`mt-1 text-base sm:text-lg font-semibold ${
           tone === 'up' ? UP : tone === 'down' ? DOWN : 'text-slate-900 dark:text-white'
         }`}
       >

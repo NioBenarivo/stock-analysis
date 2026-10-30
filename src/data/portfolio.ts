@@ -88,6 +88,15 @@ export function unrealised(month: MonthSnapshot) {
   return { value, percent: month.costBasis === 0 ? 0 : (value / month.costBasis) * 100 }
 }
 
+/**
+ * Holdings plus cash — the "Equity" the Stockbit app reports, to the rupiah.
+ * The statement's own Equity NAB is market value plus undue trading, so it
+ * leaves out whatever cash sits in the RDN.
+ */
+export function totalEquity(month: MonthSnapshot): number {
+  return month.marketValue + month.cash
+}
+
 export function totalOf(type: EventType): number {
   return events.filter((event) => event.type === type).reduce((sum, e) => sum + e.amount, 0)
 }
@@ -128,8 +137,7 @@ export const lifetimeCashKnown: boolean =
  * outside the money put in, and it would surface later as profit.
  */
 export const openingBalance: number =
-  data?.openingBalance ??
-  (months.length > 0 ? months[0].marketValue + months[0].cash : 0)
+  data?.openingBalance ?? (months.length > 0 ? totalEquity(months[0]) : 0)
 
 /** Net of every deposit less every withdrawal up to and including `date`. */
 export function netCashInBy(date: string): number {
@@ -147,9 +155,7 @@ export function netCashInBy(date: string): number {
  * value, so counting them again would double them — only later ones are added.
  */
 export function contributedBy(date: string): number {
-  const since = lifetimeCashKnown
-    ? cashFlows
-    : cashFlows.filter((f) => f.date > months[0]?.date)
+  const since = lifetimeCashKnown ? cashFlows : cashFlows.filter((f) => f.date > months[0]?.date)
   return (
     openingBalance +
     since
@@ -161,7 +167,7 @@ export function contributedBy(date: string): number {
 /** Everything made on the money put in: value now, less what was contributed. */
 export function profitOn(month: MonthSnapshot) {
   const contributed = contributedBy(month.date)
-  const value = month.marketValue + month.cash
+  const value = totalEquity(month)
   const gain = value - contributed
   return { contributed, value, gain, percent: contributed === 0 ? 0 : (gain / contributed) * 100 }
 }

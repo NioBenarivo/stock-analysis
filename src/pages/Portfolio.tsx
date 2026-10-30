@@ -15,6 +15,7 @@ import {
   lifetimeCashKnown,
   months,
   profitOn,
+  totalEquity,
   totalOf,
   unrealised,
   type EventType,
@@ -138,7 +139,12 @@ export default function Portfolio() {
             value={formatRupiah(dividends)}
             detail={`${allEvents.filter((e) => e.type === 'dividend').length} payments`}
           />
-          <Stat label="Equity NAB" value={formatRupiah(latestMonth.equityNav)} />
+          {/* Matches the app's "Equity"; the statement's NAB leaves RDN cash out. */}
+          <Stat
+            label="Total equity"
+            value={formatRupiah(totalEquity(latestMonth))}
+            detail={`NAB ${formatRupiah(latestMonth.equityNav)}`}
+          />
         </div>
 
         {/* One filter row, above everything it scopes — the chart and the
@@ -234,6 +240,7 @@ export default function Portfolio() {
                 <Th right>Cost basis</Th>
                 <Th right>Unrealised</Th>
                 <Th right>Cash</Th>
+                <Th right>Total equity</Th>
                 <Th right>Equity NAB</Th>
               </Tr>
             </thead>
@@ -249,6 +256,11 @@ export default function Portfolio() {
                       <span className={delta >= 0 ? UP : DOWN}>{formatRupiah(delta)}</span>
                     </Td>
                     <Td right>{formatRupiah(month.cash)}</Td>
+                    <Td right>
+                      <span className="font-medium text-slate-900 dark:text-white">
+                        {formatRupiah(totalEquity(month))}
+                      </span>
+                    </Td>
                     <Td right>{formatRupiah(month.equityNav)}</Td>
                   </Tr>
                 )
